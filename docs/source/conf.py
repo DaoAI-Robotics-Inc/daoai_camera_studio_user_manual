@@ -3,8 +3,8 @@
 # -- Project information
 
 project = '3D相机使用指南'
-copyright = '2021, Matt'
-author = 'Matt'
+copyright = '2021 DaoAI Robotics Inc.'
+author = 'DaoAI'
 
 release = '0.1'
 version = '0.1.0'
