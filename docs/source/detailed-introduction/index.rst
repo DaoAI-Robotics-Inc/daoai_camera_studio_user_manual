@@ -5,7 +5,6 @@ This section will provide detailed information on the different functionalities 
 
 .. toctree::
    :maxdepth: 3
-   :caption: Detailed Introduction
    
    Connecting
    Histograms

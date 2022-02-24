@@ -5,7 +5,6 @@ This section will provide a quickstart guide on how to easily set up and use you
 
 .. toctree::
    :maxdepth: 3
-   :caption: Quickstart Guide
    
    Hardware Setup
    Connect Camera
