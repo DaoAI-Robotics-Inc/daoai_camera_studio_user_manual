@@ -5,7 +5,7 @@ Connecting your camera in our Camera Studio software is simple. Refer to the *Co
 
 To disconnect your camera, first click the camera ID in the top right area of the main window.
 
-.. image:: images/main_window_camera_id.PNG
+.. image:: images/main_window_camera_id.png
     :scale: 50%	
     :align: center
 
@@ -13,6 +13,6 @@ To disconnect your camera, first click the camera ID in the top right area of th
 
 From there, you should see the **Manage Cameras** window, where you can click disconnect.
 
-.. image:: images/manage_cameras_disconnect.PNG
+.. image:: images/manage_cameras_disconnect.png
     :scale: 50%	
     :align: center

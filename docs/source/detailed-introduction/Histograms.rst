@@ -8,6 +8,6 @@ The histogram window provides a visualization of the distribution of pixels' col
 Click “Histogram” in the upper left corner to toggle the histogram window. The histogram plot will pop up on the screen automatically. Inside this window, there are two different 
 tabs for switching between linear distribution and logarithimic distribution.
 
-.. image:: images/histogram.PNG
+.. image:: images/histogram.png
     :scale: 40%	
     :align: center

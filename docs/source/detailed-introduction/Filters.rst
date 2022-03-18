@@ -77,7 +77,7 @@ use, the more measurement error will be compensated. Note that, it's possible to
 
 **Color Balance**
 
-.. image:: images/color_balance.PNG
+.. image:: images/color_balance.png
     :align: center
 
 By increasing the corresponding value of R/G/B, you can make the image closer to that color. The default value is 1, the minimum is 0.5, and the maximum is 2.

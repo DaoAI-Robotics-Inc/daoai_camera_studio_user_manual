@@ -9,6 +9,6 @@ There are three capture modes to choose from in Camera Studio:
 2. **Auto** performs a single capture using automatically calculated capture settings.
 3. **Live** performs continuous captures using the current frames.
 
-.. image:: images/main_window_capture_modes.PNG
+.. image:: images/main_window_capture_modes.png
     :scale: 50%	
     :align: center

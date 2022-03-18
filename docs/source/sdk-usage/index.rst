@@ -11,7 +11,7 @@ In Windows, navigate to Edit the system environment variables → Environment Va
 
 In Visual Studio, navigate to Debug → SDK Example Properties. You'll need to stay in the Properties menu for the remaining steps as well.
 
-.. image:: images/sdk_guide_1.PNG
+.. image:: images/sdk_guide_1.png
     :align: center
 
 |
@@ -20,10 +20,10 @@ When making changes to the project properties, make sure the Configuration and P
 Additional Include Directories under C/C++ → General, click on the field's dropdown arrow and click Edit, and add the path to the SDK include directory, which contains the 
 library header files.
 
-.. image:: images/sdk_guide_2.PNG
+.. image:: images/sdk_guide_2.png
     :align: center
 
-.. image:: images/sdk_guide_3.PNG
+.. image:: images/sdk_guide_3.png
     :align: center
 
 |
@@ -33,20 +33,20 @@ library header files.
 Navigate to Linker → General, click on the field's dropdown arrow and click Edit, and add the path to the SDK lib directory, which contains the .lib library object files that 
 need to be linked.
 
-.. image:: images/sdk_guide_4.PNG
+.. image:: images/sdk_guide_4.png
     :align: center
 
-.. image:: images/sdk_guide_5.PNG
+.. image:: images/sdk_guide_5.png
     :align: center
 
 |
 
 Finally, navigate to Linker → Input, click on the field's dropdown arrow and click Edit, and add slc_dll.lib as an entry.
 
-.. image:: images/sdk_guide_6.PNG
+.. image:: images/sdk_guide_6.png
     :align: center
 
-.. image:: images/sdk_guide_7.PNG
+.. image:: images/sdk_guide_7.png
     :align: center
 
 |

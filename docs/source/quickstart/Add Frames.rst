@@ -11,7 +11,7 @@ sets of images for each capture.
 In the right panel of the main window, you should see the existing frames. If you haven't made any changes, there should be just one frame. To add another frame, click the plus 
 button.
 
-.. image:: images/main_window_add_frame.PNG
+.. image:: images/main_window_add_frame.png
     :scale: 50%	
     :align: center
 
@@ -19,7 +19,7 @@ button.
 
 You can edit the settings of the existing frames by clicking their drop downs and adjusting the sliders.
 
-.. image:: images/main_window_frames.PNG
+.. image:: images/main_window_frames.png
     :scale: 50%	
     :align: center
 
