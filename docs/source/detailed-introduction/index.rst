@@ -7,6 +7,11 @@ This section will provide detailed information on the different functionalities 
    :maxdepth: 3
    
    Connecting
-   Histograms
    Frames
    Filters
+   2D Preview
+   Captures
+   Display Tabs
+   Histograms
+   Saving And Loading
+   Temperature Regulation

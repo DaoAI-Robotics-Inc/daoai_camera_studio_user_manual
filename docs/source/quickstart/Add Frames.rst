@@ -5,6 +5,8 @@ This page will provide instructions on how to add frames.
 
 |
 
+**Adding additional frames**
+
 Frames are used to control the capture settings, allowing you to alter properties like exposure stop, brightness, and gain. By adding additional frames, you can capture multiple 
 sets of images for each capture.
 
@@ -16,6 +18,8 @@ button.
     :align: center
 
 |
+
+**Editing Frame Parameters**
 
 You can edit the settings of the existing frames by clicking their drop downs and adjusting the sliders.
 
