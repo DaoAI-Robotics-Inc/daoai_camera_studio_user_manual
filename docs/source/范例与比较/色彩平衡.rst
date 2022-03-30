@@ -1,0 +1,27 @@
+色彩平衡
+========
+
+R偏向色彩平衡, 如下图
+
+.. figure:: /范例与比较/images/color1.png
+    :align: center
+|
+.. caution:: 当R值设置为2时，图像的色调更接近于红色
+
+
+G偏向色彩平衡, 如下图
+
+.. figure:: /范例与比较/images/color2.png
+    :align: center
+
+|
+.. caution:: 当G值设置为2时，图像的色调更接近于绿色。
+
+B偏向色彩平衡, 如下图
+
+.. figure:: /范例与比较/images/color3.png
+    :align: center
+|
+.. caution:: 当B值设置为2时，图像的色调更接近于蓝色
+
+|
