@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = '3D相机使用指南'
-copyright = '2021, Matt'
-author = 'Matt'
+project = 'DaoAI Camera Studio User Manual'
+copyright = '2021 DaoAI Robotics Inc.'
+author = 'DaoAI'
 
 release = '0.1'
 version = '0.1.0'
@@ -29,7 +29,7 @@ intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
 
-language = 'zh_CN'
+language = 'en'
 # -- Options for HTML output
 
 html_theme = 'sphinx_rtd_theme'
