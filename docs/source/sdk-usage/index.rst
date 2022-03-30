@@ -1,24 +1,23 @@
-SDK Usage
+软件开发工具包的使用
 ===========
 
-This page will walk you through how to set up a project using our SDK.
+本页将引导您了解如何使用我们的软件开发包的设置项目。
 
-**Step 1. Add the path to slc_dll.dll to the Path system variable**
+**步骤 1. 将 slc_dll.dll 的路径添加到 Path 系统变量**
 
-In Windows, navigate to Edit the system environment variables → Environment Variables. The new entry to the path system variable should be the path\to\DaoAI Studio\SDK\bin.
+在 Windows 中，导航到编辑系统环境变量 → 环境变量。 路径系统变量的新条目应该是 path\to\DaoAI Studio\SDK\bin。
 
-**Step 2. Update include directories in Visual Studio**
+**步骤 2. 更新 Visual Studio 中的包含目录**
 
-In Visual Studio, navigate to Debug → SDK Example Properties. You'll need to stay in the Properties menu for the remaining steps as well.
+在 Visual Studio 中，导航到调试 → SDK 示例属性。 您还需要留在“属性”菜单中执行其余步骤
 
 .. image:: images/sdk_guide_1.png
     :align: center
 
 |
 
-When making changes to the project properties, make sure the Configuration and Platform are set correctly (Release, x64). To update the include directories, first navigate to 
-Additional Include Directories under C/C++ → General, click on the field's dropdown arrow and click Edit, and add the path to the SDK include directory, which contains the 
-library header files.
+更改项目属性时，请确保配置和平台设置正确（发布，x64）。 要更新包含目录，首先导航到 C/C++ → 常规下的附加包含目录，单击字段的下拉箭头并单击编辑，然后添加 SDK 包含目录的路径，其中包含
+库头文件。
 
 .. image:: images/sdk_guide_2.png
     :align: center
@@ -28,10 +27,10 @@ library header files.
 
 |
 
-**3. Update linker settings in Visual Studio**
+**步骤 3. 在 Visual Studio 中更新链接器设置**
 
-Navigate to Linker → General, click on the field's dropdown arrow and click Edit, and add the path to the SDK lib directory, which contains the .lib library object files that 
-need to be linked.
+
+引导链接到常规，单击字段的下拉箭头并单击编辑，并将路径添加到 SDK lib 目录，其中包含需要链接的 .lib 库对象文件。
 
 .. image:: images/sdk_guide_4.png
     :align: center
@@ -41,7 +40,7 @@ need to be linked.
 
 |
 
-Finally, navigate to Linker → Input, click on the field's dropdown arrow and click Edit, and add slc_dll.lib as an entry.
+最后，导航到链接器 → 输入，单击字段的下拉箭头并单击编辑，并将 slc_dll.lib 添加为条目。
 
 .. image:: images/sdk_guide_6.png
     :align: center
@@ -50,5 +49,4 @@ Finally, navigate to Linker → Input, click on the field's dropdown arrow and c
     :align: center
 
 |
-
-When you are finished these steps, apply the changes and click OK.
+完成这些步骤后，应用更改并单击确定。

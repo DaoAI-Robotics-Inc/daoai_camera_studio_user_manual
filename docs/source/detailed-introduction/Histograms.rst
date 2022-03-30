@@ -1,22 +1,20 @@
-Histograms
+直方图
 ===========
 
-The histogram window provides a visualization of the distribution of the RGB values (0-255) of all the pixels in the image.
+直方图窗口提供图像中所有可视化像素的 RGB 值 (0-255)。
 
 |
 
-**Goal:** To have the highest column in the logarithmic histogram to around 128 to avoid 255 overexposures. This can be achieved by adding frames and adjusting exposure levels. 
+**目的:** 将对数直方图中的最高列设置为 128 左右，以避免 255 次过度曝光。 这可以通过添加帧和调整曝光级别来实现。
 
-Click “Histogram” in the upper left corner to toggle the histogram window. The histogram plot will pop up on the screen automatically. Inside this window, there are two different 
-tabs for switching between graphs of a linear distribution and logarithmic distribution. Overexposed pixels are marked a red color so you can easily see them. If there are a large 
-number of pixels in 255 range, the image is overexposed. Shorter exposure time or lower brightness should be chosen to limit the overexposure.
+单击左上角的“直方图”以切换直方图窗口。 直方图将自动在屏幕上弹出。 在此窗口内，有两个不同的选项卡用于在线性分布图和对数分布图之间切换。 曝光过度的像素被标记为红色，因此您可以轻松看到它们。 如果 255 范围内有大量像素，则图像曝光过度。 应选择较短的曝光时间或较低的亮度来限制过度曝光。
 
 .. figure:: images/histogram_linear.png
     :align: center
     
-    Linear distribution
+    线性分布
 
 .. figure:: images/histogram_logarithmic.png
     :align: center
     
-    Logarithmic distribution
+    对数分布

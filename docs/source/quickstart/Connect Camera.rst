@@ -1,14 +1,13 @@
-Connecting the Camera
+连接相机
 ===============
 
-This page will provide instructions on how to connect the camera to the Camera Studio software.
+本页将提供有关如何将相机连接到三维视觉感知系统软件的说明。
 
 |
 
-**Connect 3D Camera**
+**连接3D相机**
 
-Click the refresh button icon to search for and update the available 3D systems connected to the software. If successful, a camera ID will fill in the text box and any other 3D 
-systems can be found via the right drop-down box. Select the desired 3D system and click "Connect". 
+单击刷新按钮图标以搜索和更新连接到该软件的可用3D相机系统。如果成功，照相机ID将填充文本框，任何其他3D相机可以通过右侧的下拉框找到系统。选择所需的3D系统，然后单击“连接”。
 
 .. image:: images/manage_cameras_refresh.png
     :scale: 50%	
@@ -16,10 +15,9 @@ systems can be found via the right drop-down box. Select the desired 3D system a
 
 |
 
-**Disconnect 3D Camera**
+**断链3D相机**
 
-To disconnect your 3D system, you can click the top right camera icon which will pop up the manage camera dialogue. Then you can click “Disconnect”. The camera ID shown in the 
-textbox should clear upon a successful disconnect.
+要断开3D系统，可以单击右上角的摄像头图标，该图标将弹出管理摄像头对话框。然后可以点击“断开连接”。信息框应在成功断开连接时清除。
 
 .. image:: images/manage_cameras_disconnect.png
     :scale: 50%	

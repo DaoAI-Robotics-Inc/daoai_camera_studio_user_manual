@@ -1,17 +1,18 @@
-Adding Frames
+添加帧数
 ==============
 
-This page will provide instructions on how to add frames.
+
+本页将提供有关如何添加帧数的说明。
 
 |
 
-**Adding additional frames**
+**添加额外的帧数**
 
-Frames are used to control the capture settings, allowing you to alter properties like exposure stop, brightness, and gain. By adding additional frames, you can capture multiple 
-sets of images for each capture.
+帧用于控制捕捉设置，允许您更改曝光停止、亮度和增益等属性。通过添加其他帧，您可以捕获多个。
+每个捕获的图像集。
 
-In the right panel of the main window, you should see the existing frames. If you haven't made any changes, there should be just one frame. To add another frame, click the plus 
-button.
+在主窗口的右侧面板中，您应该看到现有的帧数。如果您没有进行任何更改，则应该只有一个帧。要添加另一个帧数，请单击加号按钮。
+。
 
 .. image:: images/main_window_add_frame.png
     :scale: 50%	
@@ -19,9 +20,9 @@ button.
 
 |
 
-**Editing Frame Parameters**
+**编辑帧数参数**
 
-You can edit the settings of the existing frames by clicking their drop downs and adjusting the sliders.
+您可以通过单击现有帧的下拉列表并调整滑块来编辑现有帧的设置
 
 .. image:: images/main_window_frames.png
     :scale: 50%	
@@ -29,4 +30,4 @@ You can edit the settings of the existing frames by clicking their drop downs an
 
 |
 
-After you have all the frames you need, you can start doing captures using these different frame settings.
+在拥有了所需的所有帧之后，您可以开始使用这些不同的帧设置进行捕捉。

@@ -1,14 +1,14 @@
-DaoAI Camera Overview
-======================
+DaoAI Camera Overview DaoAI相机概述
+==================================
 
-This page gives an overview of DaoAI's product line. DaoAI offers a wide range of 3D cameras for different working distances and use cases. Compared to our competitors, our cameras 
-provide:
+本页概述了 DaoAI 的产品线。 DaoAI 为不同的工作距离和用例提供了广泛的 3D 相机。 与我们的竞争对手相比，我们的相机
+提供：
 
-* Accurate, high resolution captures under a variety of lighting conditions
-* Fast capture and on-cam processing times
-* Powerful filtering and post-processing tools for improving the quality of generated point clouds
-* Stable capture performance under temperatures ranging from 0-40 degrees celsius
-* IP65 rated dust tight and water resistant chassis
-* Easy integration with most major robotics brands
+* 在各种照明条件下进行准确、高分辨率的拍摄
+* 快速捕捉和现场处理时间
+* 强大的过滤和后处理工具，用于提高生成点云的质量
+* 在 0-40 摄氏度的温度范围内具有稳定的捕获性能
+* IP65 级防尘防水机箱
+* 与大多数主要机器人品牌轻松集成
 
-Our DaoAI Camera Studio application is the supporting graphical user interface software that allows users to directly interact with our DaoAI 3D Camera systems.
+我们的 DaoAI Camera Studio 应用程序是支持图形用户界面软件，允许用户直接与我们的 DaoAI 3D 相机系统交互。

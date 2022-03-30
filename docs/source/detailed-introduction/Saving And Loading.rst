@@ -1,33 +1,31 @@
-Saving and Loading 
-===================
+保存和加载
+=========
 
-Camera Studio allows you to save and load point cloud data as well as custom capture settings.
+ 三位感知视觉系统允许您保存和加载点云数据以及自定义采集设置。
 
 |
 
-**Load Point Cloud File**
+**加载点云文件**
 
-In the upper left corner click “File” →  “Load 3D Data” to select the point cloud file (ending with .daf). Note that the path cannot contain Chinese characters. When a point 
-cloud is displayed, the load is successful.
+在左上角点击“文件”→“加载3D数据”选择点云文件（以.daf结尾）。 注意路径不能包含中文字符。 当显示点云时，加载成功。
 
-**Save Point Cloud File**
+**保存点云文件**
 
-In the upper left corner, after capturing the image to generate the point cloud, click "File" → "Save 3D data" , enter the name of the new file, and click Save.
+在左上角，抓拍图像生成点云后，点击“文件”→“保存3D数据”，输入新建文件的名称，点击保存。
 
-**Save Setting**
+**保存设置**
 
-Save settings file: click "File" →  ”Save Setting as" in the upper left corner, enter the name of the new settings file or select the overwritten settings file, and click Save.
+保存设置文件：点击左上角“文件”→“设置另存为”，输入新设置文件的名称或选择覆盖的设置文件，点击保存。
 
-**Load Setting**
+**加载设置**
 
-Make sure the 3D camera is connected, click "File" and ”Load Setting" in the upper left corner, select the settings file (ending with .cfg). Note that the path cannot contain 
-Chinese characters.
+确保3D相机已连接，点击左上角“文件”和“加载设置”，选择设置文件（以.cfg结尾）。注意路径不能包含汉字。
 
-(The settings file saves the settings of the 3D camera when capturing images, including all the options in the main window and system settings)
+（设置文件保存了3D相机拍摄图像时的设置，包括主窗口中的所有选项和系统设置）
 
 |
 
 .. figure:: images/file_menu.png
     :align: center
     
-    File dropdown menu
+    文件下拉菜单

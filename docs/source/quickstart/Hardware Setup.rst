@@ -1,7 +1,6 @@
-Hardware Setup
+硬件设置
 ===============
 
-This page will provide instructions on how to connect your DaoAI camera to be used with DaoAI Camera Studio.
+本页将提供如何将您的DaoAI相机连接到DaoAI 三维视觉感知系统的说明。
 
-To set up the camera, plug in it's power cable and connect it to your machine that has Camera Studio installed via USB 
-(Or Ethernet for remote controlled cameras)
+连接相机，请先插入电源线然后通过USB 3.0连接相机到有安装3D视觉感知系统的机器. （或通过以太网来远程连接）
