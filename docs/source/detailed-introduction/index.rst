@@ -1,7 +1,7 @@
-Detailed Introduction
-=====================
+细节介绍
+========
 
-This section will provide detailed information on the different functionalities of our Camera Studio software.
+本节将提供有关我们的三维感知视觉软件不同功能的详细信息。
 
 .. toctree::
    :maxdepth: 3

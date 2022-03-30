@@ -1,19 +1,17 @@
-2D Preview
+2D 相机预览
 ===========
 
-The 2D Preview feature is used to retrive a preview image of the scene before you perform a capture
+2D预览功能用于在执行捕获之前检索场景的预览图像。
 
 |
 
-To perform a 2D Preview, click "Show 2D Preview" in the frame drop down menu corresponding to the one you want previewed. The preview will automatically appear in the “2D Camera 
-Preview” visual tab. If the frame settings is collapsed, you can click the “eye” icon in order to preview that frame. In the “2D Camera Preview” tab, if the image has red spots, 
-that means those pixels are overexposed under the current frame settings.
+要执行2D预览，请在与您要预览的帧数对应的框架下拉菜单中单击“显示2D预览”。预览将自动出现在“2D相机”的可视预览中。如果帧数设置有问题的话，可以单击“眼睛”图标以预览该框架。在“2D相机预览”选项卡中，如果图像有红色斑点，这意味着这些像素在当前帧设置下过度曝光。
 
 .. image:: images/2d_preview.png
     :align: center
 
-If there exists a 2D Camera Preview, you can click on the color picker icon in the top bar of the main window in order to find the RGB values of the pixel at your cursor's 
-position in the image preview. The values will be updated on the top bar as well as displayed on the bottom left corner.
+如果存在2D相机预览，您可以单击主窗口顶部栏中的颜色选择器图标，以查找光标所在位置的像素的RGB值。图像预览中的位置。这些值将在顶部栏上更新，并显示在左下角。
+
 
 .. image:: images/2d_preview_rgb.png
     :align: center

@@ -1,35 +1,33 @@
-Temperature Regulation
-=======================
+温度调节
+=========
 
-If a temperature sensor is available in your 3D system, the system will display the corresponding temperature in the top right corner of the main menu. By default, if the 
-temperature sensor is available, a temperature control system will be enabled. 
+如果您的 3D 系统中有温度传感器，系统将在主菜单的右上角显示相应的温度。 默认情况下，如果温度传感器可用，则会启用温度控制系统。
 
 |
 
-**Modes**
-There are two modes for temperature control: normal and regulating
+**模式**
 
-**Normal**: This is the regular mode in which all software features are enabled including captures, 2D previewing, etc. While the temperature control status is normal, the 
-temperature icon in the main window will appear green.
+温度控制有两种模式：正常和调节
+
+**一般**: 这是常规模式，所有软件功能都启用，包括捕捉、2D 预览等。当温度控制状态正常时，主窗口中的温度图标将显示为绿色。
 
 .. figure:: images/temperature_normal.png
     :align: center
 
-    Temperature icon is green
+    温度图标为绿色
 
-**Regulating**: In this mode, the temperature of the system is abnormal and the main capture features (Auto, Live, Capture, Preview) are disabled in order for the system to 
-regulate the temperature. When in this mode, a temperature control algorithm will be run in order to normalize the system again. While the temperature control status is 
-regulating, the temperature icon in the main window will appear red.
+**可调节**: 在此模式下，系统温度异常，主要捕获功能（自动、实时、捕获、预览）被禁用，以便系统调节温度。 在此模式下，将运行温度控制算法以再次使系统正常化。 在调节温度控制状态时，主窗口中的温度图标将显示为红色。
 
 .. figure:: images/temperature_notification.png
     :align: center
     
-    Notification that temperature regulation has started
+    通知：温度调节开始通知
+|
 
 .. figure:: images/temperature_regulating.png
     :align: center
 
-    Temperature icon is red
+    温度图标为红色
+|
 
-While Camera Studio is regulating temperature, some functionality is disabled in order for the temperature regulating feature to work effectively. You will have to wait for the 
-temperature to be regulated to a suitable level, or disable the temperature regulation feature before you can use these functionalities are re-enabled.
+ 在三维感知视觉软件调节温度时，会禁用某些功能以使温度调节功能有效工作。 您必须等待温度调节到合适的水平，或禁用温度调节功能，然后才能重新启用这些功能。

@@ -1,13 +1,13 @@
-Capturing Images
+图像捕获
 ==========
 
-This page will provide instructions on how perform captures in Camera Studio.
+本页将提供有关如何在三维视觉感知系统中进行图片捕获的说明。
 
-There are three capture modes to choose from in Camera Studio:
+在三维视觉感知系统中有三种捕捉模式可供选择：
 
-1. **Capture** performs a single capture using the current frames.
-2. **Auto** performs a single capture using automatically calculated capture settings.
-3. **Live** performs continuous captures using the current frames.
+1. **拍摄**  使用当前帧执行单张捕获。
+2. **自动** 使用自动计算的捕获设置执行单张捕获。
+3. **实时** 使用当前帧设置执行连续捕获。
 
 .. image:: images/main_window_capture_modes.png
     :scale: 50%	

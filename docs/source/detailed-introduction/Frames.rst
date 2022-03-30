@@ -1,49 +1,40 @@
-Frames
+帧数
 =======
 
-Frames are used to adjust exposure stop, brightness, and gain levels that are applied when doing captures. Camera Studio allows you to add multiple frames with different settings 
-to capture multiple image groups and fine tune the quality of your resulting images.
+帧用于调整在捕捉时应用的曝光停止、亮度和增益级别。 三维感知识别系统允许您添加具有不同设置的多个帧以捕获多个图像组并微调生成图像的质量。
 
 |
 
-Adding Frames
+添加帧数
 --------------
 
-When an image does not meet the expected requirements, you can achieve more precise exposure levels by frames by adding more frames and with different exposure file settings. 
-For example, two frames set 2 different exposure values as -1 and 0 respectively to make up for the situation that a single frame -1 is too dark or a single frame 0 is too bright.
+当图像不符合预期要求时，您可以通过添加更多帧并使用不同的曝光文件设置来实现更精确的逐帧曝光级别。 例如，两帧设置2个不同的曝光值分别为-1和0，以弥补单帧-1太暗或单帧0太亮的情况。
 
-Click the “+" button on the right frame settings menu in order to add more frames. Similarly, you can click on the trash can icon to delete a corresponding frame. The minimum 
-number of frames is 1. 
+单击右侧帧设置菜单上的“+”按钮以添加更多帧。同样，您可以单击垃圾桶图标删除相应的帧。最小帧数为 1。
 
 .. figure:: images/frames_add_remove.png
     :align: center
 
-    Add and remove buttons
+    添加和删除按钮
 
 .. figure:: images/frames_dropdown.png
     :align: center
     
-    Dropdown menu reveals parameters
+    下拉菜单显示参数
 
 |
 
-Frame Parameters
+帧值参数
 -----------------
 
-**Exposure Stop**
+**曝光停止**
 
-Responsible for adjusting the exposure time. The level of exposure stops are -1, 0, 1, 2, 3, 4. By moving the exposure stop by 1 increment, the pixel intensity should 
-approximately double. The most commonly used exposure levels are -1, 0, and 1. 
+主要负责调整曝光时间。 曝光停止的级别为 -1、0、1、2、3、4。通过将曝光停止移动 1 个增量，像素强度应该大约加倍。 最常用的曝光级别是 -1、0 和 1。
 
+**亮度**
 
-**Brightness**
+主要负责调整图像的亮度。 可能的值是 1、2、3。同样，每次增量变化都会以 2 倍影响强度。
 
-Responsible for adjusting the brightness of the image. The possible values are 1, 2, 3. Again, each incremental change will affect the intensity by a factor of 2.
+**增益**
 
-
-**Gain**
-
-Responsible for increasing the ISO value or sensitivity of the camera. The span ranges from 0, 1, 2, 3, 4 where 0 is the base point 0dB and 4 corresponds to the highest value 
-24dB (each slider increment causes 6dB change). When the gain is increased or decreased by 6dB, the gain effect is twice as much as that of the previous one. The conversion 
-formula is: 20 x log (gain multiple) = + /-gain dB value.
-
+主要负责提高相机的ISO值或感光度。 跨度范围为 0、1、2、3、4，其中 0 是基点 0dB，4 对应于最大值 24dB（每个滑块增量会导致 6dB 变化）。 当增益增加或减少6dB时，增益效果是前一次的两倍。 转换公式为：20 x log（增益倍数）= + /-增益 dB 值。

@@ -1,7 +1,6 @@
-DaoAI Camera Overview
+DaoAI相机概述
 ======================
 
-This page gives an overview of DaoAI's product line. DaoAI offers a wide range of 3D cameras for different working distances and use cases. 
-Our cameras provide accurate and high resolution point clouds without sacrificing speed or precision.
+本页概述了 DaoAI 的产品线。 DaoAI 为不同的工作距离和应用场景提供了多种3D 相机。 我们的相机在不牺牲速度或精度的情况下提供准确和高分辨率的点云。
 
-Our DaoAI Camera Studio application is the supporting graphical user interface software that allows users to directly interact with our DaoAI 3D Systems.
+我们的 DaoAI 三维感知视觉应用程序是支持图形用户界面软件，允许用户直接与我们的 DaoAI 3D 感知视觉系统交互。
