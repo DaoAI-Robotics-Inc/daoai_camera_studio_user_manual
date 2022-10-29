@@ -6,7 +6,6 @@
 .. toctree::
    :maxdepth: 3
    
-   Connecting
    Frames
    Filters
    2D Preview
@@ -15,3 +14,4 @@
    Histograms
    Saving And Loading
    Temperature Regulation
+   Console

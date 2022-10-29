@@ -1,4 +1,4 @@
-温度调节
+温度控制
 =========
 
 如果您的 3D 系统中有温度传感器，系统将在主菜单的右上角显示相应的温度。 默认情况下，如果温度传感器可用，则会启用温度控制系统。
@@ -31,3 +31,22 @@
 |
 
  在三维感知视觉软件调节温度时，会禁用某些功能以使温度调节功能有效工作。 您必须等待温度调节到合适的水平，或禁用温度调节功能，然后才能重新启用这些功能。
+
+禁用温度控制
+-----------
+
+当温度传感器故障时, 您也可以禁用温度控制功能来继续使用软件。
+
+您可以在弹出温度警告时, 点击"Disable Temerature Regulation"来禁用温度控制。
+
+.. figure:: images/temperature_notification.png
+   :align: center
+    
+|
+
+您也可以在上方菜单的 文件 -> temperature control 取消勾选以禁用温度控制功能。
+
+.. figure:: images/temperature_disable.png
+   :align: center
+    
+|
