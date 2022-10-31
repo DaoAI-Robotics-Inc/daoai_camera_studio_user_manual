@@ -14,24 +14,28 @@
 
 .. image:: images/tab_2d_color.png
     :align: center
+
 |
 
-**感兴趣的区域 **
+**感兴趣的区域**
 
 .. image:: images/roi.png
     :align: center
+
 |
 
 感兴趣的区域可以在2D颜色选项中剪裁并显示出来。 您可以单击选项卡右上角的按钮并在图中框选出一个感兴趣的区域。
 
 .. image:: images/roi_step.png
     :align: center
+
 |
 
 当裁剪了显示区域后，您必须单击“保存区域”来保存它。 现在，只要打开 ROI, 所有未来的捕获都会记住这个保存的区域, 并且只会在“点云”和“2D 颜色”选项卡中显示该区域。 
 
 .. image:: images/roi_after.png
     :align: center
+
 |
 
 
@@ -39,10 +43,11 @@
 
 .. image:: images/roi_remove.png
     :align: center
+
 |
 
 2D 深度选项
-----------
+-------------
 
 2D 深度显示选项卡将每个有效像素的深度值编码为其颜色。
 蓝色代表短距离, 红色代表远距离(以毫米为单位)。
@@ -65,6 +70,7 @@
 
 .. image:: images/tab_point_cloud.png
     :align: center
+
 |
 
 * 鼠标左键旋转点云。
@@ -90,5 +96,6 @@
 
 .. image:: images/tab_2d_preview.png
     :align: center
+
 |
 

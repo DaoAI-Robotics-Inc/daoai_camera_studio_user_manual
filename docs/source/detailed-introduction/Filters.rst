@@ -47,7 +47,7 @@
 |
 
 相位质量滤波器
--------------
+----------------
 
 .. figure:: images/phase_quality_filter.png
     :align: center
@@ -90,6 +90,7 @@
     :align: center
     
     使用卷积核大小为9x9的高斯滤波后的点云
+
 |
 
 中值滤波器
@@ -115,7 +116,7 @@
 |
 
 法线量滤波器
----------
+-------------
 
 .. figure:: images/face_normal_filter.png
     :align: center
@@ -139,7 +140,7 @@
 |
 
 移除小型离散区域
----------------
+-----------------
 
 .. figure:: images/remove_small_area.png
     :align: center
@@ -162,7 +163,7 @@
 
 
 平滑过滤
----------
+-----------
 
 .. figure:: images/smooth_filter.png
     :align: center
@@ -218,7 +219,7 @@ fill order指填补的方向:
 |
 
 饱和滤镜
----------
+----------
 
 .. figure:: images/saturation_filter.png
     :align: center
@@ -242,7 +243,7 @@ fill order指填补的方向:
 |
 
 对比度失真滤镜
---------------
+----------------
 
 .. figure:: images/phase_quality_filter.png
     :align: center
@@ -281,7 +282,7 @@ fill order指填补的方向:
 |
 
 色彩均衡
---------
+----------
 
 .. figure:: images/color_balance.png
     :align: center
@@ -309,6 +310,7 @@ fill order指填补的方向:
     :align: center
 
     B 偏色平衡
+
 |
 
 .. figure:: images/color_balance_awb.png
@@ -324,10 +326,12 @@ fill order指填补的方向:
     :align: center
 
     在图中框选区域
+
 |
 
 .. figure:: images/color_balance_after.png
     :align: center
 
     自动白平衡后的图片
+    
 |

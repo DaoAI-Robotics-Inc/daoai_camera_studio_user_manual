@@ -14,15 +14,17 @@
 
 .. image:: images/single_capture.png
     :align: center
+
 |
 
 自动采集
------
+---------
 
 当你点击“自动”时，将对图像环境进行分析，并自动生成帧，来最大化最终的动态范围图片。然后，将使用新的帧设置进行单次采集。在此模式下，您还可以指定最大采集时间。此设置将更改帧数的最大的曝光时间
 
 .. image:: images/auto_capture.png
     :align: center
+
 |
 
 实时采集
@@ -32,6 +34,7 @@
  
 .. image:: images/live_capture.png
     :align: center
+    
 |
 
 保存和加载数据

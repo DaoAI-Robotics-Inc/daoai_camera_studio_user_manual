@@ -8,7 +8,7 @@
    
    Frames
    Filters
-   2D Preview
+   2DPreview
    Captures
    Display Tabs
    Histograms

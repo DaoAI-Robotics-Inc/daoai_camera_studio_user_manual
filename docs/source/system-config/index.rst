@@ -7,6 +7,7 @@
 
 .. figure:: images/sys_config.png
    :align: center
+
 |
 
 
@@ -16,6 +17,7 @@
 
 .. figure:: images/save_img.png
    :align: center
+
 |
 
 - **启用调试日志**:
@@ -23,6 +25,7 @@
    
 .. figure:: images/save_img.png
    :align: center
+
 |
 
 - **保存日志**:
@@ -30,6 +33,7 @@
 
 .. figure:: images/save_log.png
    :align: center
+
 |
 
 .. warning::
@@ -44,6 +48,7 @@
 
 .. figure:: images/collect_log.png
    :align: center
+
 |
 
 - **上传参数**:
@@ -51,6 +56,7 @@
 
 .. figure:: images/upload_params.png
    :align: center
+
 |
 
 - **校准模式**:
@@ -58,6 +64,7 @@
 
 .. figure:: images/cali_mode.png
    :align: center
+
 |
 
 - **配置相机IP**:
@@ -65,6 +72,7 @@
 
 .. figure:: images/set_ip.png
    :align: center
+
 |
 
 - **重置投影仪**:
@@ -72,6 +80,7 @@
 
 .. figure:: images/reboot_projector.png
    :align: center
+
 |
 
 - **升级软件**:
@@ -79,6 +88,7 @@
 
 .. figure:: images/update.png
    :align: center
+   
 |
 
 
