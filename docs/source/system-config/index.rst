@@ -10,8 +10,6 @@
 
 |
 
-
-
 - **保存采集原始图片**:
    保存采集过程中的所有原始光栅图片到选择的路径下。
 
@@ -23,7 +21,7 @@
 - **启用调试日志**:
    会在控制台中显示更详细的调试信息。
    
-.. figure:: images/save_img.png
+.. figure:: images/detailed_log.png
    :align: center
 
 |
@@ -41,7 +39,7 @@
    请不要在写入Log时启用控制台信息过滤。只有显示在控制台的内容会被写进log.
 
 .. tip::
-   Log文件的保存路径在 "C:\用户\<用户名>>\AppData\Local\DaoAI\Camera Studio\logs\" 目录下
+   Log文件的保存路径在 "C:\\用户\\<用户名>\\AppData\\Local\\DaoAI\\Camera Studio\\logs\\" 目录下
 
 - **收集日志**:
    仅对网口相机有效。获取树莓派和Jetson Log文件, 同样存放在小贴士中提到的路径下。 

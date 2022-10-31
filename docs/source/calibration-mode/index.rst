@@ -10,9 +10,11 @@
 .. figure:: images/cali_ui.png
    :align: center
 
-曝光值, 亮度, 和增益参数与帧值参数同理。
+|
 
-.. figure:: images/cali_ui.png
+曝光值, 亮度, 和增益参数与 :ref:`帧值参数` 同理。
+
+.. figure:: images/cali_brightness_settings.png
    :align: center
 
 |
@@ -40,7 +42,7 @@
 
 校准模式请选择"Multi Phase"模式。
 
-.. figure:: images/path.png
+.. figure:: images/cali_mode.png
    :align: center
 
 |
