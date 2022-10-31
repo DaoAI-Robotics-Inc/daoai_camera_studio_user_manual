@@ -18,17 +18,21 @@
 
 1. 首先启用ROI, 框选出感兴趣的区域然后保存。
 
-.. figure:: images/roi_auto_1.png
+.. figure:: images/roi_auto_2.png
     :align: center 
 |
 
 2. 鼠标悬停在Auto上, 分配拍摄时间, 然后点击Auto自动生成参数并拍摄。 
 
-.. figure:: images/roi_auto_2.png
+.. figure:: images/roi_auto_3.png
     :align: center 
 |
 
 3. 如果之后不需要可以取消ROI设置, 然后也可以再进一步手动微调。
+
+.. figure:: images/roi_auto_4.png
+    :align: center 
+|
 
 
 如何正确的缩减帧数
@@ -47,3 +51,7 @@
 |
 
 2. 如果只有两帧, 可以将两帧合并成一帧: 删除第二帧，第一帧的帧值参数取两帧的平均值 然后删除第二帧。这样同样在减少一帧的前提下, 对最终图像的亮度影响最低。
+
+.. figure:: images/del_frame_3.png
+    :align: center 
+|

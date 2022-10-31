@@ -9,6 +9,7 @@
 ---------
 
 .. figure:: images/intensity_threshold.png
+    :align: center
 
 |
 
@@ -25,6 +26,7 @@
 ---------
 
 .. figure:: images/outlier_threshold.png
+    :align: center
 
 |
 
@@ -48,6 +50,7 @@
 -------------
 
 .. figure:: images/phase_quality_filter.png
+    :align: center
 
 |
 
@@ -111,7 +114,7 @@
     
 |
 
-法线面过滤
+法线量滤波器
 ---------
 
 .. figure:: images/face_normal_filter.png
@@ -135,8 +138,8 @@
     
 |
 
-小区域滤波器
------------
+移除小型离散区域
+---------------
 
 .. figure:: images/remove_small_area.png
     :align: center
@@ -180,7 +183,7 @@
 
 |
 
-空洞填补
+填补空白
 ----------
 
 .. figure:: images/fill_gaps.png
@@ -214,7 +217,7 @@ fill order指填补的方向:
 
 |
 
-饱和过滤
+饱和滤镜
 ---------
 
 .. figure:: images/saturation_filter.png
@@ -229,7 +232,7 @@ fill order指填补的方向:
 .. figure:: images/saturation_before.png
     :align: center
 
-    没有饱和过滤器的点云
+    红色区域为过曝区域
 
 .. figure:: images/saturation_after.png
     :align: center
@@ -273,7 +276,7 @@ fill order指填补的方向:
     :align: center
     :scale: 60%	
 
-    使用“正确”来进行对比度失真
+    使用“补偿”来进行对比度失真修复
 
 |
 
