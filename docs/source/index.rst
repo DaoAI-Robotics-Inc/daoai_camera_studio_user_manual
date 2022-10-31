@@ -12,6 +12,7 @@ DaoAI Studio (SLC GUI)
    detailed-introduction/index
    sdk-usage/index
    system-config/index
+   calibration-mode/index
    help-center/index
    case-studies/index
    

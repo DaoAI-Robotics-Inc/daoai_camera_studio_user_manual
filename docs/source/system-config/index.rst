@@ -60,9 +60,12 @@
 |
 
 - **校准模式**:
-   启用相机校准模式, 会保存校准图片。
+   启用相机校准模式, 启用后会在主界面中显示校准界面。详细请参考 :ref:`校准模式` 章节
 
 .. figure:: images/cali_mode.png
+   :align: center
+
+.. figure:: images/cali_ui.png
    :align: center
 
 |
