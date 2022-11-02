@@ -1,6 +1,6 @@
 
 DaoAI Studio (SLC GUI)
-===================================
+=======================
 
 .. toctree::
    :numbered:
@@ -11,5 +11,8 @@ DaoAI Studio (SLC GUI)
    quickstart/index
    detailed-introduction/index
    sdk-usage/index
+   system-config/index
+   calibration-mode/index
+   help-center/index
    case-studies/index
    
