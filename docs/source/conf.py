@@ -29,10 +29,17 @@ intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
 
-language = 'en'
 # -- Options for HTML output
+language = 'zh'
 
 html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+# -- Options to Support pdf build in chinese
+latex_engine = 'xelatex'
+latex_use_xindy = False
+latex_elements = {
+    'preamble': '\\usepackage[UTF8]{ctex}\n',
+}
