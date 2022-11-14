@@ -1,28 +1,60 @@
-Connecting the Camera
-===============
+Connecting Camera
+==================
 
-This page will provide instructions on how to connect the camera to the Camera Studio software.
+This page will provide instructions on connecting cameras to DaoAI Camera Studio.
 
 |
 
-**Connect 3D Camera**
+Connecting
+----------
 
-Click the refresh button icon to search for and update the available 3D systems connected to the software. If successful, a camera ID will fill in the text box and any other 3D 
-systems can be found via the right drop-down box. Select the desired 3D system and click "Connect". 
+When starting Camera Studio, at first you will see the *Manage Cameras* window.
 
-.. image:: images/manage_cameras_refresh.png
-    :scale: 50%	
+.. image:: images/manage_cameras.png
     :align: center
 
 |
 
-**Disconnect 3D Camera**
+The refresh button updates the list of connected cameras. 
 
-To disconnect your 3D system, you can click the top right camera icon which will pop up the manage camera dialogue. Then you can click “Disconnect”. The camera ID shown in the 
-textbox should clear upon a successful disconnect.
+.. image:: images/manage_cameras_remote_refresh.png
+    :align: center
+
+|
+
+If you are using a remote controlled camera, you will have check the *Enable Remote Cameras* checkbox and specify the 
+camera's IP address first before clicking refresh.
+
+**Default IP for Remote Camera**
+ - 192.168.1.12: BPL camera, BPM camera, BPS camera, BP-AMR-GPU camera, and IN cameras;
+ - 192.168.1.2: BP-AMR相机
+
+
+Once you detect the camera you wish to connect to, click the connect button. If there are multiple cameras connected, you can choose which camera to connect to from the dropdown 
+list.
+
+.. image:: images/manage_cameras_connect.png
+    :align: center
+
+|
+
+After connected, you should see the main window.
+
+|
+
+Disconnecting
+--------------
+
+To disconnect your camera, first click the camera ID in the top right area of the main window.
+
+.. image:: images/main_window_camera_id.png
+    :align: center
+
+|
+
+From there, you should see the **Manage Cameras** window, where you can click disconnect.
 
 .. image:: images/manage_cameras_disconnect.png
-    :scale: 50%	
     :align: center
 
 |

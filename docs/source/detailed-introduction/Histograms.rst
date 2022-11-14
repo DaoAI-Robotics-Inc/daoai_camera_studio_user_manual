@@ -20,3 +20,28 @@ number of pixels in 255 range, the image is overexposed. Shorter exposure time o
     :align: center
     
     Logarithmic distribution
+
+|
+
+**Logarithmic distribution can help adjusting the brightness to desired range.**
+
+For example, as the image below, we want to adjust the peak brightness from "16-32" to "128-256".
+
+.. figure:: images/histogram_logarithmic_1.png
+    :align: center
+
+|
+
+Recall that for frame parameters, an increase of one in any field will double the brightness of the final image, and the ranges in logarithmic distribution also doubles.
+
+.. figure:: images/histogram_logarithmic_2.png
+    :align: center
+
+|
+
+Obeserve that there are 3 intervals from range "16-32" to "128-255". Then adding 3 to frame parameters can move the peak brightness to our desired range.
+
+.. figure:: images/histogram_logarithmic_3.png
+    :align: center
+
+|

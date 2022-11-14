@@ -1,5 +1,5 @@
 Temperature Regulation
-=======================
+========================
 
 If a temperature sensor is available in your 3D system, the system will display the corresponding temperature in the top right corner of the main menu. By default, if the 
 temperature sensor is available, a temperature control system will be enabled. 
@@ -33,3 +33,22 @@ regulating, the temperature icon in the main window will appear red.
 
 While Camera Studio is regulating temperature, some functionality is disabled in order for the temperature regulating feature to work effectively. You will have to wait for the 
 temperature to be regulated to a suitable level, or disable the temperature regulation feature before you can use these functionalities are re-enabled.
+
+Disable Temperature Control
+------------------------------
+
+When camera's temperature sensor is malfunctioning, you can disable the temperature control to allow normal usage of Camera Studio.
+
+You can click "Disable Temperature Regulation" when the warning dialgue is prompted to disable Temperature Control.
+
+.. figure:: images/temperature_notification.png
+    :align: center
+
+|
+
+Or you can disable Temperature Control from the menu bar: Click on "files -> temperature control" and uncheck it to disable. 
+
+.. figure:: images/temperature_disable.png
+    :align: center
+
+|

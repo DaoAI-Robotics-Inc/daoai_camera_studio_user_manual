@@ -30,20 +30,43 @@ number of frames is 1.
 Frame Parameters
 -----------------
 
+All three parameters serves the purpose of adjusting final image brightness and each increase of one in any field will double the final image brightness.
+
+When attempting to increase image brightness, you should prioritize "Brightness", then "Exposure Stop", and increase "Gain" last.
+
+.. figure:: images/frames_settings.png
+    :align: center
+    
+|
+
 **Exposure Stop**
 
-Responsible for adjusting the exposure time. The level of exposure stops are -1, 0, 1, 2, 3, 4. By moving the exposure stop by 1 increment, the pixel intensity should 
-approximately double. The most commonly used exposure levels are -1, 0, and 1. 
+Responsible for adjusting the exposure time. The level of exposure stops are -1, 0, 1, 2, 3, 4. Since increasing "Exposure Stop" increases capturing time, you should only increase this field when "Brightness" has reached maximum value. The most commonly used exposure levels are -1, 0, and 1. 
 
 
 **Brightness**
 
-Responsible for adjusting the brightness of the image. The possible values are 1, 2, 3. Again, each incremental change will affect the intensity by a factor of 2.
+Responsible for adjusting the brightness of the projecter. The possible values are 1, 2, 3. Changing this field does not increase capturing time and should prioritize this field when adjusting image brightness. 
 
 
 **Gain**
 
 Responsible for increasing the ISO value or sensitivity of the camera. The span ranges from 0, 1, 2, 3, 4 where 0 is the base point 0dB and 4 corresponds to the highest value 
 24dB (each slider increment causes 6dB change). When the gain is increased or decreased by 6dB, the gain effect is twice as much as that of the previous one. The conversion 
-formula is: 20 x log (gain multiple) = + /-gain dB value.
+formula is: 20 x log (gain multiple) = + /-gain dB value. Increasing "Gain" will reduce signal-noise ratio, therefore we should increase this field lastly.
 
+
+Point Cloud Color
+-------------------
+
+Independently capture the color for Point Cloud.
+
+.. figure:: images/point_cloud_color.png
+    :align: center
+    
+|
+
+When enabled, a settings section will expand as the image above and when capture, will collect an additional image using the setting for the Point Cloud's color.
+The additional image will be captured by projecting a white screen.
+
+The settings are similar to "Frame Parameters" except the "Exposure Time", which is in miliseconds, allowing more precisive controls. 

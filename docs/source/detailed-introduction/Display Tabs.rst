@@ -6,34 +6,64 @@ We provide a variety of different display options to visualize capture data
 |
 
 2D Color
----------
+----------
+
 The 2D Color tab shows the captured image and in this tab, the HDR mode can be selected. HDR will change the color of the image to maximize its dynamic range. HDR is useful when 
 we have multiple frames of with settings to capture the most dynamic range. 
 
 .. image:: images/tab_2d_color.png
     :align: center
+
 |
 
 **Regions of Interest**
+
+.. image:: images/roi.png
+    :align: center
+
+|
+
 Regions of interest can be set within the 2D Color tab to select a cropped region of the image to be displayed. You can click the button on the top right of the tab and draw a 
 region on the image itself.
+
+.. image:: images/roi_2.png
+    :align: center
+
+|
 
 Once you've highlighted a region, you must click “Save Region” to save it. Now whenever ROI is toggled on, all future captures will remember this saved region and will only 
 display that region in the “Point Cloud” and “2D Color” tab.
 
+.. image:: images/roi_3.png
+    :align: center
+
+|
+
 When you decide you no longer need this ROI, you can clear the saved region by clicking the three dots beside the toggle switch and clicking “Remove ROI”.
+
+.. image:: images/roi_4.png
+    :align: center
 
 |
 
 2D Depth
-------
+---------
+
 The 2D Depth display tab encodes the depth values of each valid pixel as its color. Blue represents a short distance, red represents a long distance (in millimeters) from the 
 camera. To analyze the specific values, you can toggle the “Depth” button and the depth chart legend will pop up.
 
 .. image:: images/tab_2d_depth.png
     :align: center
+
 |
+
+you can also hover your mouse over the image to see depth value.
+
+.. image:: images/tab_2d_depth_hover.png
+    :align: center
+
 |
+
 
 Point Cloud
 ------------
@@ -41,6 +71,7 @@ The Point Cloud tab displays the 3D point cloud model from the captured images. 
 
 .. image:: images/tab_point_cloud.png
     :align: center
+
 |
 
 * The left mouse button rotates the point cloud.
@@ -54,6 +85,9 @@ the accuracy of 3D camera depth measurement. Similarly, a point cloud can be loa
 
 The point cloud's color can be switched between 5 different modes: default color, green mode, HDR, pseudocolor, and mixed color (a combination of the default and pseudocolor 
 modes). To change the mode, click the display mode dropdown menu in the Point Cloud tab and select the color type.
+
+.. image:: images/tab_point_cloud_5_modes.png
+    :align: center
 
 |
 
