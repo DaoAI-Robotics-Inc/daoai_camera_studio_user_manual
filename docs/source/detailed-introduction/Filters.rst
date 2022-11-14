@@ -71,6 +71,7 @@
 ----------------
 
 .. figure:: images/gaussian_filter.png
+    :align: center
 
 |
 
@@ -108,7 +109,7 @@
 
     未设置中值滤波的点云
 
-.. figure:: images/gaussian_5x5.png
+.. figure:: images/median_after.png
     :align: center
 
     使用卷积核大小为5x5的中值滤波后的点云
@@ -245,7 +246,7 @@ fill order指填补的方向:
 对比度失真滤镜
 ----------------
 
-.. figure:: images/phase_quality_filter.png
+.. figure:: images/contrast_distortion.png
     :align: center
 
 |

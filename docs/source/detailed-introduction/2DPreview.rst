@@ -15,3 +15,5 @@
 
 .. image:: images/2d_preview_rgb.png
     :align: center
+
+|

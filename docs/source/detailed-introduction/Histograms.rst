@@ -39,3 +39,5 @@
 
 .. figure:: images/histogram_logarithmic_example_3.png
     :align: center
+
+|
