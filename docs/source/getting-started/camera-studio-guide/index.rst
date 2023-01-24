@@ -1,4 +1,4 @@
-Detailed Introduction
+Camera Studio Guide
 =====================
 
 This section will provide detailed information on the different functionalities of our Camera Studio software.

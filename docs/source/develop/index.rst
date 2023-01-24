@@ -1,5 +1,5 @@
-SDK Usage
-===========
+Develop - Create a New Project
+==================================
 
 This page will walk you through how to set up a project using our SDK.
 
