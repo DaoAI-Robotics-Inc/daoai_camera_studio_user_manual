@@ -16,13 +16,13 @@ DaoAI Studio (SLC GUI)
 
 .. toctree::
    :maxdepth: 2
-   :caption: SOFTWARE
+   :caption: DEVELOP
 
    detailed-introduction/index
 
 .. toctree::
    :maxdepth: 2
-   :caption: REFERENCE ARTICLES
+   :caption: REFERENCE
 
    sdk-usage/index
 
@@ -31,3 +31,7 @@ DaoAI Studio (SLC GUI)
    :caption: SUPPORT
 
    case-studies/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: RESOURCES
