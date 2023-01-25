@@ -6,10 +6,11 @@ DaoAI Studio (SLC GUI)
    :maxdepth: 2
    :caption: GETTING STARTED
 
+   getting-started/camera-overview/index
    getting-started/user-guide/index
    getting-started/quickstart/index
    getting-started/camera-studio-guide/index
-   getting-started/camera-overview/index
+   getting-started/detailed-introduction/index
 
 .. toctree::
    :maxdepth: 2
@@ -22,7 +23,7 @@ DaoAI Studio (SLC GUI)
 
 .. toctree::
    :maxdepth: 2
-   :caption: case studies
+   :caption: CASE STUDIES
 
    case-studies/index
    case-studies/capturing-high-quality-point-clouds/index
