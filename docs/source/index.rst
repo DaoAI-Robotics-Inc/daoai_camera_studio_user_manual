@@ -17,7 +17,6 @@ DaoAI Studio (SLC GUI)
 
    develop/index
    develop/connect-camera/index
-   develop/capture/index
    develop/sample-code/index
 
 .. toctree::
