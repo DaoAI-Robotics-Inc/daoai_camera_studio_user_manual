@@ -3,7 +3,7 @@ Service and Maintenance
 
 The device contains no user-serviceable parts inside. The product warranty will be void if opened.
 
-Follow the below instructions to ensure that your Zivid camera is well maintained:
+Follow the below instructions to ensure that your camera is well maintained:
 
 - Check screw connections and connectors at regular intervals.
 
