@@ -10,7 +10,15 @@ Detailed Introduction
    available_views
    toolbar
    quick_reference_index
-
+   Frames
+   Filters
+   2DPreview
+   Captures
+   Display Tabs
+   Histograms
+   Saving And Loading
+   Temperature Regulation
+   Console
 
 
 

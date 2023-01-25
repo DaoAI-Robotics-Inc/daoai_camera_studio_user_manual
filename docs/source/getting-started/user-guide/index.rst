@@ -1,10 +1,15 @@
 User Guide
-============
-
+==============
 
 .. toctree::
-    :maxdepth: 3
+   :maxdepth: 2
+   
+   system-requirements/overview  
+   unboxing/overview
+   mechanical-installation/overview
+   connectivity-power/overview
+   service-maintenance/overview
 
-    service-and-maintenance
-    software-installation
+
+
 
