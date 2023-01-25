@@ -28,7 +28,6 @@ Our DaoAI Camera Studio application is the supporting graphical user interface s
 
    develop/index
    develop/connect-camera/index
-   develop/capture/index
    develop/sample-code/index
 
 .. toctree::
