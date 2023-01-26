@@ -3,6 +3,7 @@ Case Studies
 
 .. contents:: 
    :local:
+   
 
 Using ROI to Allow Auto Capture Better Generate Frame Parameters 
 --------------------------------------------------------------------

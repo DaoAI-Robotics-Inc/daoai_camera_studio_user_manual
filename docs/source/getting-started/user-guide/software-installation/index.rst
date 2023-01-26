@@ -1,4 +1,4 @@
-DaoAI Camera Overview
+Software Installation
 ======================
 
 This page gives an overview of DaoAI's product line. DaoAI offers a wide range of 3D cameras for different working distances and use cases. Compared to our competitors, our cameras 

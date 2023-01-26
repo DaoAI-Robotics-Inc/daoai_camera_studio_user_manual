@@ -17,11 +17,10 @@ Our DaoAI Camera Studio application is the supporting graphical user interface s
    :maxdepth: 2
    :caption: GETTING STARTED
 
-   getting-started/camera-overview/index
    getting-started/user-guide/index
-   getting-started/software-installation/index
-   getting-started/detailed-introduction/index
    getting-started/quick-start/index
+   getting-started/detailed-introduction/index
+   
 
 .. toctree::
    :maxdepth: 2
@@ -36,7 +35,7 @@ Our DaoAI Camera Studio application is the supporting graphical user interface s
    :caption: CASE STUDIES
 
    case-studies/index
-   case-studies/capturing-high-quality-point-clouds/index
+   case-studies/captruing-high-quality-point-clouds/index
    case-studies/evaluate-accuracy/index
    case-studies/infield-calibration/index
    case-studies/hand-eye-calibration/index
@@ -49,6 +48,8 @@ Our DaoAI Camera Studio application is the supporting graphical user interface s
    reference/camera-settings/index
    reference/calculators/index
    reference/hardware/index
+   reference/datasheet/index
+   
 
 .. toctree::
    :maxdepth: 2
@@ -64,3 +65,4 @@ Our DaoAI Camera Studio application is the supporting graphical user interface s
    :caption: RESOURCES
 
    resources/release-notes/index
+
