@@ -19,7 +19,7 @@ Our DaoAI Camera Studio application is the supporting graphical user interface s
 
    getting-started/user-guide/index
    getting-started/quick-start/index
-   getting-started/detailed-introduction/index
+   getting-started/camera-studio-guide/index
    
 
 .. toctree::

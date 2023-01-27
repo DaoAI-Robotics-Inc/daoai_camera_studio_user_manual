@@ -10,5 +10,4 @@ This section will provide a quickstart guide on how to easily set up and use you
    Connect Camera
    Add Frames
    Capturing
-   Insturctions for Saving Point Cloud
-   
+   Saving Point Cloud
