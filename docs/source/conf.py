@@ -21,6 +21,11 @@ extensions = [
     'sphinxcontrib.video',
 ]
 
+html_static_path = ['_static']
+
+html_css_files = [
+    'css/custom.css',
+]
 
 
 intersphinx_mapping = {
