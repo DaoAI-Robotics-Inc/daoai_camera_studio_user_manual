@@ -11,6 +11,8 @@ Search for Related Suggestions
 
 .. image:: images/help_center_all_requests.png
 
+All the feature suggestion that are currently being processed will be shown in the list.
+
 .. image:: images/help_center_requests_list.png
 
 You can adjust the filters to search for specific requests.
