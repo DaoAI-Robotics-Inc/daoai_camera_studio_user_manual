@@ -40,7 +40,7 @@ Help
    * - Help
      - Function
    * - Search Online Help
-     - Toggle show or hide console.
+     - Open the DaoAI Camera Studio User Manual in the browser.
    * - About DaoAI Studio
      - Show help page, with software version and contact information.
 
