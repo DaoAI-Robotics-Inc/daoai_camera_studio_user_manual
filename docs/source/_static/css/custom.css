@@ -1,13 +1,17 @@
 .wy-nav-content {
-    max-width: none;
+    /* max-width: none; */
 }
 
 body {
-    /* font-family: Luminari, fantasy, sans-serif; */
-    /* color: darkred; */
-    /* text-shadow: 3px 3px #ff0000; */
+    /* font-family: Luminari, fantasy, sans-serif;
+    color: darkred;
+    text-shadow: 1px 1px black; */
 }
 
 h1 {
-    /* font-family: Luminari, fantasy, sans-serif; */
+    /* font-family: Luminari, fantasy, sans-serif;  */
+}
+
+img {
+    max-width: 60%;
 }

@@ -4,12 +4,19 @@ Control Panel
 Camera
 -------
 
+.. include:: Connect Camera.rst
 
 
 Capture
 --------
 
 .. include:: Captures.rst
+
+
+HDR
+---------
+
+
 
 Frames
 ---------

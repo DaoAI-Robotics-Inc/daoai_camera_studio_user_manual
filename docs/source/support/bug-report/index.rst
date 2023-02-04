@@ -23,7 +23,7 @@ Search for Related Bug Reports
 
 .. image:: images/help_center_search_bar.png
 
-You can search for the keyword
+You can search for the keyword, or adjust the filter to see if similar issues have been reported or resolved.
 
 .. image:: images/help_center_see_all_request.png
 
@@ -36,28 +36,34 @@ To report a bug, please go the `Help Center <https://daoai.atlassian.net/service
 
 .. image:: images/help_center_home_report_a_bug.png
 
-Please fill in as much information as possible (e.g. software version) so that we can resolve the problem as quickly as possible.
+| You will be directed to the report a bug page.
+| Please fill in as much information as possible (e.g. software version) so that we can resolve the problem as quickly as possible.
 
 .. image:: images/help_center_report_bug_page.png
 
-To check your software version: 
-Locate the top menu bar --> select "Help" --> select "About DaoAI Studio".
+| To check your software version: 
+| Locate the top menu bar → select "Help" → select "About DaoAI Studio".
 
 .. image:: images/help_center_check_version.png
 
-You can find the software version under the DaoAI Studio logo. In this case, the software version is 2.22.10.0_103.
+| You can find the software version under the DaoAI Studio logo. 
+| In this case, the software version is 2.22.10.0_103.
 
 .. image:: images/help_center_check_version_window.png
 
 
-If you encountered a crash, you can find the dmp file via the path C:\ProgramData\DaoAI\Camera Studio\Crashpad\db\reports.
+| If you encountered a crash, please attach the dmp file in your report.
+| You can find the dmp file via the path C:\\ProgramData\\DaoAI\\Camera Studio\\Crashpad\\db\\reports.
 
+If you cannot see the ProgramData folder, you may have to change the view settings:
 
-Here are some other information that would be nice to have:
+.. image:: images/show_hidden_items.png
+
+Here are some other information that would be nice to have in the Description section:
 
     - Steps to reproduce the issue
     - Software version, working environment
     - Your name
-    - Contact email address and phone number (so that we can update you on the feature)
+    - Contact email address and phone number (so that we can update you on the reported bug)
 
 |

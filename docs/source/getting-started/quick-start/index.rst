@@ -7,7 +7,8 @@ This section will provide a quickstart guide on how to easily set up and use you
    :maxdepth: 3
    
    Hardware Setup
-   Connect Camera
    Add Frames
    Capturing
    Saving Point Cloud
+
+   quickstart-guide
