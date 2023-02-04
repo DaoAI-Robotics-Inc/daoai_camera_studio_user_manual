@@ -1,6 +1,49 @@
 Quick Reference Index
 =======================
 
+
+File
+------------
+
+.. list-table:: 
+   :widths: 25 50
+   :header-rows: 1
+
+   * - File
+     - Function
+   * - Save Settings
+     - Save the current camera settings.
+   * - Save Settings As
+     - Export the current camera settings.
+   * - Load 3D Data
+     - Load point cloud data from file.
+
+View
+------------
+
+.. list-table:: 
+   :widths: 25 50
+   :header-rows: 1
+
+   * - View
+     - Function
+   * - Show Operator Console
+     - Toggle show or hide console.
+
+Help
+------------
+
+.. list-table:: 
+   :widths: 25 50
+   :header-rows: 1
+
+   * - Help
+     - Function
+   * - Search Online Help
+     - Toggle show or hide console.
+   * - About DaoAI Studio
+     - Show help page, with software version and contact information.
+
 Hotkeys
 ------------
 
