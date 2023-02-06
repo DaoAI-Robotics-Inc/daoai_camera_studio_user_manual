@@ -3,10 +3,36 @@
 
 We provide a variety of different display options to visualize the captured data:
 
+    - Point Cloud 
     - 2D Color
     - 2D Depth
-    - Point Cloud 
     - 2D Preview
+
+Point Cloud
+------------
+The Point Cloud tab displays the 3D point cloud model from the captured images. The point cloud view can be rotated and moved around using the mouse.
+
+.. image:: images/tab_point_cloud.png
+    :align: center
+
+|
+
+* The left mouse button rotates the point cloud.
+* Right mouse button drags point cloud.
+* Mouse wheel zooms in and out of point cloud.
+* Keyboard button "c" toggles RGB point cloud and pure green point cloud.
+* Keyboard button "r" restores the camera view to its original state. 
+
+The point cloud can also be saved as a .daf, .ply, or .pcd file. This is done under “File” →  “Save 3D Data”. Saving the whiteboard object into ply format can be used to detect 
+the accuracy of 3D camera depth measurement. Similarly, a point cloud can be loaded via “File” → “Load 3D Data” - once loaded, the point cloud will be displayed in this tab.
+
+The point cloud's color can be switched between 5 different modes: default color, green mode, HDR, pseudocolor, and mixed color (a combination of the default and pseudocolor 
+modes). To change the mode, click the display mode dropdown menu in the Point Cloud tab and select the color type.
+
+.. image:: images/tab_point_cloud_5_modes.png
+    :align: center
+
+|
 
 2D Color
 ----------
@@ -33,33 +59,6 @@ camera. To analyze the specific values, you can toggle the “Depth” button an
 You can also hover your mouse over the image to see depth value.
 
 .. image:: images/tab_2d_depth_hover.png
-    :align: center
-
-|
-
-
-Point Cloud
-------------
-The Point Cloud tab displays the 3D point cloud model from the captured images. The point cloud view can be rotated and moved around using the mouse.
-
-.. image:: images/tab_point_cloud.png
-    :align: center
-
-|
-
-* The left mouse button rotates the point cloud.
-* Right mouse button drags point cloud.
-* Mouse wheel zooms in and out of point cloud.
-* Keyboard button "c" toggles RGB point cloud and pure green point cloud.
-* Keyboard button "r" restores the camera view to its original state. 
-
-The point cloud can also be saved as a .daf, .ply, or .pcd file. This is done under “File” →  “Save 3D Data”. Saving the whiteboard object into ply format can be used to detect 
-the accuracy of 3D camera depth measurement. Similarly, a point cloud can be loaded via “File” → “Load 3D Data” - once loaded, the point cloud will be displayed in this tab.
-
-The point cloud's color can be switched between 5 different modes: default color, green mode, HDR, pseudocolor, and mixed color (a combination of the default and pseudocolor 
-modes). To change the mode, click the display mode dropdown menu in the Point Cloud tab and select the color type.
-
-.. image:: images/tab_point_cloud_5_modes.png
     :align: center
 
 |

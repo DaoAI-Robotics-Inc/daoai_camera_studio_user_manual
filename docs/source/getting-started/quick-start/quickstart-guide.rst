@@ -1,4 +1,4 @@
-Quickstart Guide
+SDK
 ====================
 
 Introduction

@@ -13,11 +13,6 @@ Capture
 .. include:: Captures.rst
 
 
-HDR
----------
-
-
-
 Frames
 ---------
 
