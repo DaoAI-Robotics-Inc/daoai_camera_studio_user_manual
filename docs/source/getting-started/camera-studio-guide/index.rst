@@ -17,6 +17,6 @@ This allows the user to explore the functionality of the DaoAI Cameras, configur
 
 
 .. Note::
-   You can download the DaoAI Camera Studio Guide as a PDF.
+   You can `download <https://daoai-robotics-inc-daoai-camera-studio-user-manul.readthedocs-hosted.com/_/downloads/en/english/pdf/>`_ the DaoAI Camera Studio User Manual as a PDF.
 
 .. make video

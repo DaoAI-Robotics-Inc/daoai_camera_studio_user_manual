@@ -25,7 +25,7 @@ Search for Related Bug Reports
 
 You can search for the keyword, or adjust the filter to see if similar issues have been reported or resolved.
 
-.. image:: images/help_center_see_all_request.png
+.. image:: images/help_center_see_bug_report_list.png
 
 |
 
@@ -58,6 +58,8 @@ To report a bug, please go the `Help Center <https://daoai.atlassian.net/service
 If you cannot see the ProgramData folder, you may have to change the view settings:
 
 .. image:: images/show_hidden_items.png
+
+.. image:: images/show_program_data_folder.png
 
 Here are some other information that would be nice to have in the Description section:
 
