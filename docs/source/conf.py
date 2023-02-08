@@ -18,6 +18,9 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
     'sphinx_tabs.tabs',
+    'sphinxcontrib.video',
+    'sphinx.ext.autosectionlabel'
+
 ]
 
 
