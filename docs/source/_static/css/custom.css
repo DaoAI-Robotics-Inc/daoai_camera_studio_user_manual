@@ -1,5 +1,5 @@
 .wy-nav-content {
-    /* max-width: none; */
+    max-width: none;
 }
 
 body {
@@ -13,5 +13,5 @@ h1 {
 }
 
 img {
-    max-width: 60%;
+    /* max-width: 60%; */
 }

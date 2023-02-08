@@ -11,6 +11,4 @@ This page will provide simple instructions for saving point clouds in DaoAI Came
 
 3. Select "Files" (the first button in the upper-left corner).
 
-4. Select "Save 3D data" from the File dropdown menu.
-
-5. Select a path to save the point cloud.
+4. Select "Save 3D data" from the File dropdown menu to save the point clouds.

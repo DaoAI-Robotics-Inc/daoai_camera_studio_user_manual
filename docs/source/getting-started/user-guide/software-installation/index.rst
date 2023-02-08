@@ -1,11 +1,17 @@
+======================
 Software Installation
 ======================
 
+.. toctree::
+    :maxdepth: 1
+    :hidden:
+
+    network-configuration
+
 Before Installing the DaoAI Camera Studio Software:
 
-- Check the GPU Requirements
+- Check the GPU Requirements (GTX 1050 Ti)
 - Check GPU driver is up to date
-- Verify that OpenCL driver is installed
 
 Installation Steps:
 
@@ -30,3 +36,8 @@ Installation Steps:
 6. If you have the "Launch DaoAI 3D EN.exe" checkbox selected (default), you will be greeted with the DaoAI Camera Studio startup window.
 
 .. image:: images/software_installation_5.png
+
+|
+
+.. .. include:: network-configuration.rst
+    

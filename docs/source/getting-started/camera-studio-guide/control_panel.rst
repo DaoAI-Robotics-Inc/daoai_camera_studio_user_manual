@@ -27,3 +27,7 @@ Temperature Regulation
 ----------------------------
 
 .. include:: Temperature Regulation.rst
+
+.. include:: Histograms.rst
+
+    

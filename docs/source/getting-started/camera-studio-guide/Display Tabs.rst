@@ -7,6 +7,7 @@ We provide a variety of different display options to visualize the captured data
     - 2D Color
     - 2D Depth
     - 2D Preview
+    - Region of Interest
 
 Point Cloud
 ------------
