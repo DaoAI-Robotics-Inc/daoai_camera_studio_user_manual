@@ -20,7 +20,7 @@ Prerequisites
 Initialize
 ------------
 
-Calling any of the APIs in the DaoAI SDK requires initializing the Zivid application and keeping it alive while the program runs.
+Calling any of the APIs in the DaoAI Camera SDK requires initializing the Zivid application and keeping it alive while the program runs.
 
 .. tabs::
 

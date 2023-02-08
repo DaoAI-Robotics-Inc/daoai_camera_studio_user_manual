@@ -1,15 +1,7 @@
 Camera Settings
 =================
 
-In this article we will explore various DaoAI camera settings. This includes settings to control exposure and light patterns, various correction and removal filters, and color image settings.
-
-To learn more about how to use the camera settings please follow the tutorial :ref:`Capturing High Quality Point Clouds`.
-
-If you are unfamiliar with the concept of stops, or how a camera measures light, we recommend that you read these articles first:
-
-- :ref:`Introduction to Stops`
-
-- :ref:`Detectable Light Intensity in a Camera Capture`
+The table below shows the default settings for different DaoAI camera models.
 
 
 Default Settings
@@ -20,10 +12,129 @@ The table below shows the default settings for different DaoAI camera models.
 .. list-table:: 
    :header-rows: 1
 
-   * - Settings
-     - Range
-     - Camera1
-     - Camera2
+   * - Models
+     - BP AMR
+     - BP AMR-GPU
+     - BP-S
+     - BP-M
+     - BP-L
    * - Exposure Time (us)
-     - xxxx - xxxxx
-     - xxxx - xxxxx
+     - 
+     - 
+     - 
+     - 
+     -
+   * - Aperture
+     - 
+     - 
+     - 
+     - 
+     -
+   * - Gain
+     - 
+     - 
+     - 
+     - 
+     -
+   * - Projector Brightness
+     - 
+     - 
+     - 
+     - 
+     -
+   * - Noise Enabled
+     - 
+     - 
+     - 
+     - 
+     -
+   * - Noise Threshold
+     - 
+     - 
+     - 
+     - 
+     -
+   * - Outlier Threshold
+     - 
+     - 
+     - 
+     - 
+     -
+   * - Reflection
+     - 
+     - 
+     - 
+     - 
+     -
+   * - Contrast Distortion Correction Enabled
+     - 
+     - 
+     - 
+     - 
+     -
+   * - Contrast Distortion Correction Strength
+     - 
+     - 
+     - 
+     - 
+     -
+   * - Contrast Distortion Removal Enabled
+     - 
+     - 
+     - 
+     - 
+     -
+   * - Gaussian Enabled
+     - 
+     - 
+     - 
+     - 
+     -
+   * - Gaussian Sigma
+     - 
+     - 
+     - 
+     - 
+     -
+   * - Red Balance
+     - 
+     - 
+     - 
+     - 
+     -
+   * - Green Balance
+     - 
+     - 
+     - 
+     - 
+     -
+   * - Blue Balance
+     - 
+     - 
+     - 
+     - 
+     -
+   * - Gamma
+     - 
+     - 
+     - 
+     - 
+     -
+   * - Mode
+     - 
+     - 
+     - 
+     - 
+     -
+
+|
+
+It is possible to read various settings info from the SDK.
+
+Default camera settings:
+
+.. tabs::
+
+    .. tab:: C++
+        .. code-block::
+            abc 
