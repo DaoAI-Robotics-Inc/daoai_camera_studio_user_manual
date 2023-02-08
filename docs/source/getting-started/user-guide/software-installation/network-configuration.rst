@@ -54,6 +54,30 @@ Click **OK** to finish configuration.
 .. note:: 
   Please make sure the IP addresses of all connected cameras are different from each other, otherwise you may run into problem when trying to connect :ref:`multiple cameras <Using Multiple DaoAI Cameras>`.
 
+|
+
+Check Cameras' IP Addresses
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+If you don't know a camera's IP address, you can use `MobaXterm <https://mobaxterm.mobatek.net/download-home-edition.html>`_ to check.
+
+Open MobaXterm.
+
+.. image:: images/x_open.png
+
+From **Tools** dropdown list, select **Network Scanner**.
+
+.. image:: images/x_tools.png
+
+Input **192.168.1.1 --> 254** in **IP Address Range**, then click **Start Scan**.
+
+.. image:: images/x_scan.png
+
+After scanning, it will list all discoverable IP addresses in the local network. 
+
+.. image:: images/x_results.png
+
+|
+
 Version History
 ~~~~~~~~~~~~~~~~~~~
 
