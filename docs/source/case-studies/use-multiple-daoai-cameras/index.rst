@@ -29,5 +29,5 @@ If it is a remote camera, select the **Enable Remote Camera** checkbox and enter
 .. image:: images/v_platform_added.png
 
 .. note:: 
-    For multiple Remote Cameras, make sure you have configured your cameras' IP addresses (see :ref:`Network Configuration`), otherwise you may have issue finding the cameras.
+    For multiple Remote Cameras, make sure you have configured your cameras' IP addresses (see :ref:`Network Configuration`), otherwise you may have issue finding or connecting the cameras.
 
