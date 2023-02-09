@@ -4,7 +4,7 @@ User Guide
 This guide will help you get started with DaoAI Camera Studio. The detailed datasheet for the DaoAI Camera Studio is available at the following links:
 
 - `BPLV2 datasheet <http://www.google.com>`_ 
-- `BPLV2 datasheet <>`_ 
+
 
 .. toctree::
    :maxdepth: 1
