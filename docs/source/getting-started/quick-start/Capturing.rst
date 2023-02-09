@@ -1,5 +1,7 @@
+.. _Capturing Images:
+
 Capturing Images
-==========
+====================
 
 This page will provide instructions on how perform captures in Camera Studio.
 
