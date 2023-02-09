@@ -1,5 +1,5 @@
-.. Captures
-.. =========
+Captures
+----------
 
 Performing captures is one of the main features of our Camera Studio software. Camera Studio has 3 capture modes to choose from:
 

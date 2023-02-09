@@ -1,5 +1,5 @@
-.. Frames
-.. =======
+Frames
+-------
 
 Frames are used to adjust exposure stop, brightness, and gain levels that are applied when doing captures. Camera Studio allows you to add multiple frames with different settings 
 to capture multiple image groups and fine tune the quality of your resulting images.

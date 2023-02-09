@@ -1,5 +1,5 @@
-.. Temperature Regulation
-.. ========================
+Temperature Regulation
+-------------------------
 
 If a temperature sensor is available in your 3D system, the system will display the corresponding temperature in the top right corner of the main menu. By default, if the 
 temperature sensor is available, a temperature control system will be enabled. 

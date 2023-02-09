@@ -1,5 +1,5 @@
-.. Filters
-.. ========
+Filters
+--------
 
 This section describes the filters used for pre and post processing images in order to improve the point cloud quality.
 

@@ -1,7 +1,6 @@
 Quick Reference Index
 =======================
 
-
 File
 ------------
 
@@ -11,12 +10,18 @@ File
 
    * - File
      - Function
+   * - Load Setting
+     - Load camera settings from file.
    * - Save Settings
      - Save the current camera settings.
    * - Save Settings As
      - Export the current camera settings.
    * - Load 3D Data
      - Load point cloud data from file.
+   * - Save 3D Data
+     - Save point cloud data to file.
+   * - Temperature Control
+     - Enable/Disable temperature control system.
 
 View
 ------------

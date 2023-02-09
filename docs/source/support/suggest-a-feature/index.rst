@@ -1,3 +1,5 @@
+.. _Suggest a Feature:
+
 Suggest a Feature
 ==================
 

@@ -1,3 +1,5 @@
+.. _Camera Studio Guide:
+
 Camera Studio Guide
 =======================
 
@@ -11,7 +13,7 @@ Camera Studio Guide
 
 This section will provide a detailed walkthrough on using the DaoAI Camera Studio.
 
-DaoAI Camera Studio is the graphical user interface for the :ref:`DaoAI Software Development Kit`.
+DaoAI Camera Studio is the graphical user interface for the DaoAI Software Development Kit.
 This allows the user to explore the functionality of the DaoAI Cameras, configure the camera settings in any environment conditions, and capture high defiinition 3D point clouds with high accuracy.
 
 
