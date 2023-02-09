@@ -1,5 +1,5 @@
-Connecting Camera
-------------------
+Connecting & Disconnecting Camera
+-------------------------------------
 
 The first step of using the DaoAI Camera Studio is to connect your cameras. 
 

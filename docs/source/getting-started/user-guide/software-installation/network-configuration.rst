@@ -16,9 +16,6 @@ Default Configuration
    * - BP Series
      - 192.168.1.2
      - 255.255.255.0
-   * - IN Series
-     - 
-     - 
 
 | Any IP address in the subnet range is valid (e.g. For BP series camera: 192.168.1.0 - 192.168.1.255).
 | If you have not configured the camera IP address before, the camera's IP address will be the default IP address as in the above table.
