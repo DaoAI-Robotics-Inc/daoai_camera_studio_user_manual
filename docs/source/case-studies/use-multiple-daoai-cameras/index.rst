@@ -3,10 +3,7 @@
 Using Multiple DaoAI Cameras
 =============================
 
-DaoAI offers two camera series, the Bin Picking series (BP-S, BP-M, BP-L, BP-AMR, BP-AMR-GPU) and the Inspection series (IN-S, IN-M, IN-L).
-
-
-**DaoAI Vision** allows you to operate multiple DaoAI Cameras of the same series simultaneously (e.g. connecting both BP-S and BP-L).
+**DaoAI Vision** allows you to operate multiple DaoAI Cameras of the BP series simultaneously (e.g. connecting both BP-S and BP-L).
 
 However, it comes with some limitations: 
 

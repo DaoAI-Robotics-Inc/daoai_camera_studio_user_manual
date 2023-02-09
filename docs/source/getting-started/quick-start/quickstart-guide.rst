@@ -12,15 +12,15 @@ Initialize
 
 .. tabs::
 
-   .. tab:: C++
+   .. group-tab:: C++
 
       Apples are green, or sometimes red.
 
-   .. tab:: C#
+   .. group-tab:: C#
 
       Pears are green.
 
-   .. tab:: Python
+   .. group-tab:: Python
 
       Oranges are orange.
 
@@ -29,15 +29,15 @@ Connect
 
 .. tabs::
 
-   .. tab:: C++
+   .. group-tab:: C++
 
       Apples are green, or sometimes red.
 
-   .. tab:: C#
+   .. group-tab:: C#
 
       Pears are green.
 
-   .. tab:: Python
+   .. group-tab:: Python
 
       Oranges are orange.
 
@@ -47,15 +47,15 @@ Configure
 
 .. tabs::
 
-   .. tab:: C++
+   .. group-tab:: C++
 
       Apples are green, or sometimes red.
 
-   .. tab:: C#
+   .. group-tab:: C#
 
       Pears are green.
 
-   .. tab:: Python
+   .. group-tab:: Python
 
       Oranges are orange.
 
@@ -64,15 +64,15 @@ Capture
 
 .. tabs::
 
-   .. tab:: C++
+   .. group-tab:: C++
 
       Apples are green, or sometimes red.
 
-   .. tab:: C#
+   .. group-tab:: C#
 
       Pears are green.
 
-   .. tab:: Python
+   .. group-tab:: Python
 
       Oranges are orange.
 
@@ -81,15 +81,15 @@ Save
 
 .. tabs::
 
-   .. tab:: C++
+   .. group-tab:: C++
 
       Apples are green, or sometimes red.
 
-   .. tab:: C#
+   .. group-tab:: C#
 
       Pears are green.
 
-   .. tab:: Python
+   .. group-tab:: Python
 
       Oranges are orange.
 
