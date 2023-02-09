@@ -19,6 +19,8 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx_tabs.tabs',
     'sphinxcontrib.video',
+    'sphinx.ext.autosectionlabel'
+
 ]
 
 html_static_path = ['_static']
@@ -34,6 +36,7 @@ intersphinx_mapping = {
 intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
+html_static_path = ['_static']
 
 language = 'en'
 # -- Options for HTML output
