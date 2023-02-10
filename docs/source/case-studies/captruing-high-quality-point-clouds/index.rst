@@ -28,4 +28,4 @@ In this part of the tutorial, we will present a 3D imaging technique. This techn
     :maxdepth: 1
 
     working-distance-and-camera-positioning/index
-    ../../getting-started/detailed-introduction/Filters.rst
+    ../../getting-started/camera-studio-guide/Filters.rst
