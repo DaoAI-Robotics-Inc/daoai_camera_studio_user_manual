@@ -13,4 +13,3 @@ provide:
 
 Our DaoAI Camera Studio application is the supporting graphical user interface software that allows users to directly interact with our DaoAI 3D Camera systems.
 
-.. video:: ./video/1.mp4
