@@ -37,7 +37,7 @@ Once we know what region we want to image, we can check if it satisfies the reco
 .. warning::
     Be aware that the noise is proportional to the working distance, and that the spatial resolution is inversely proportional to the working distance.
 
-We may proceed if all requirements for working distance, FOV, resolution and precision can be satisfied with a single camera position. If not, we need to consider using robot mounting, multiple cameras and so on. In that case we recommend that you contact customersuccess@zivid.com and we will help you find a solution.
+We may proceed if all requirements for working distance, FOV, resolution and precision can be satisfied with a single camera position. If not, we need to consider using robot mounting, multiple cameras and so on. In that case we recommend that you contact support@daoai.com and we will help you find a solution.
 
 Angle the camera
 -------------------------------

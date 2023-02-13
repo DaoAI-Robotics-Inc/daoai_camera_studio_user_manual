@@ -17,7 +17,7 @@ Support data transfer rates up to 4.8Gbps
 Backwards compatible with computer USB 2.0 and USB 1.1 ports - these cables   also allow connection of USB 3.0 devices to legacy USB 2.0 computers
 
 .. note::
-    Use only DaoAI approved copper cables and active optical extenders. Ensure that all connections are screwed in tightly. Using a direct cable from the PC to the Zivid camera works better than connecting the camera via a USB hub.
+    Use only DaoAI approved copper cables and active optical extenders. Ensure that all connections are screwed in tightly. Using a direct cable from the PC to the DaoAI camera works better than connecting the camera via a USB hub.
 
 Longer USB copper cables are known to be susceptible to data transfer errors if poorly connected. For this reason, DaoAI strongly recommends that the cables are carefully checked before use or if run time errors occur. It is also strongly recommended to tighten the M2 Jack screws on the camera side with a screwdriver when setting up the camera. The USB connector needs to be screwed in completely to ensure the watertight IP rating of the camera.
 
