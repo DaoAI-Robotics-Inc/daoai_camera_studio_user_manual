@@ -63,7 +63,7 @@ Hotkeys
 Filters
 ---------
 
-Please refer to the :ref:`Filters` page for more details.
+Please refer to the :ref:`Filters_full` page for more details.
 
 +-----------------------------+---------------------------------------------------------------------------------------------------+
 | Filters                     | Function                                                                                          |
