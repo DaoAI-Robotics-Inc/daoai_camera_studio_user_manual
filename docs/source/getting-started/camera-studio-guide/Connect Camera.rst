@@ -24,8 +24,8 @@ If you are using a remote controlled camera, you will have check the *Enable Rem
 camera's IP address first before clicking refresh.
 
 **Default IP for Remote Camera**
- - **192.168.1.12**: BP-L camera, BP-M camera, BP-S camera, BP-AMR-GPU camera, and IN cameras
- - **192.168.1.2**: BP-AMR camera
+ - **192.168.1.2**: BP-L camera, BP-M camera, BP-S camera, BP-AMR-GPU camera, and IN cameras
+ - **192.168.1.12**: BP-AMR camera
 
 
 Once you detect the camera you wish to connect to, click the **Connect** button. 

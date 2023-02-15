@@ -1,5 +1,3 @@
-.. _Using Multiple DaoAI Cameras:
-
 Using Multiple DaoAI Cameras
 =============================
 

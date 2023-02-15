@@ -1,5 +1,3 @@
-.. _Camera Studio Guide:
-
 Camera Studio Guide
 =======================
 

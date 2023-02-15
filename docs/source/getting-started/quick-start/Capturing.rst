@@ -1,5 +1,3 @@
-.. _Capturing Images:
-
 Capturing Images
 ====================
 

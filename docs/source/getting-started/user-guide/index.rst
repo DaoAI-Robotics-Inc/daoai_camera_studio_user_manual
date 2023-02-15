@@ -142,6 +142,7 @@ We recommend that you follow the user guide by starting with Unboxing. If you ar
          .. tab:: Launch
 
             The North Star.
+            
 The user guide in PDF can be found at the following links:
 
 - `BPLV2 datasheet <http://www.google.com>`_
