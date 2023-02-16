@@ -10,7 +10,7 @@ Introduction
 
 This tutorial describes how to use the DaoAI SDK to capture point clouds and 2D images.
 
-For MATLAB see Zivid Capture Tutorial for MATLAB.
+For MATLAB see DaoAI Capture Tutorial for MATLAB.
 
 Prerequisites
 ~~~~~~~~~~~~~~~~~~~
@@ -20,7 +20,7 @@ Prerequisites
 Initialize
 ------------------
 
-Calling any of the APIs in the DaoAI Camera SDK requires initializing the Zivid application and keeping it alive while the program runs.
+Calling any of the APIs in the DaoAI Camera SDK requires initializing the DaoAI application and keeping it alive while the program runs.
 
 .. tabs::
 
@@ -28,19 +28,19 @@ Calling any of the APIs in the DaoAI Camera SDK requires initializing the Zivid 
 
       .. code-block:: C++
          
-         Zivid::Application zivid;
+         DaoAI::Application DaoAI;
 
    .. tab:: C#
 
       .. code-block:: c#
 
-         var zivid = new Zivid.NET.Application();
+         var DaoAI = new DaoAI.NET.Application();
 
    .. tab:: Python
 
       .. code-block:: python
 
-         app = zivid.Application()
+         app = DaoAI.Application()
 
 Connect
 ------------------

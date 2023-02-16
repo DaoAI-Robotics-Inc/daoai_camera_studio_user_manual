@@ -8,7 +8,11 @@ Dimensions
 
    .. group-tab:: BP SAMLL
 
-      Linux tab content - tab set 1
+      .. image:: images/amr_1.png
+         :align: center
+   
+      .. image:: images/amr_2.png
+         :align: center
 
    .. group-tab:: BP MEDIUM
 
@@ -50,7 +54,10 @@ Mounting Specifications
 
    .. group-tab:: BP SAMLL
 
-      Linux tab content - tab set 1
+        The DaoAI BP SAMLL camera has four M5 mounting holes, one Ø5 positioning hole, and one obround alignment hole. To ensure not to damage the threads, we recommend not exceeding the specified maximum torque value when fastening the screws.
+
+       .. image:: images/amr_3.png
+         :align: center
 
    .. group-tab:: BP MEDIUM
 
@@ -68,9 +75,7 @@ Mounting Specifications
       The DaoAI BP AMR camera has four M5 mounting holes, one Ø5 positioning hole, and one obround alignment hole. To ensure not to damage the threads, we recommend not exceeding the specified maximum torque value when fastening the screws.
 
        .. image:: images/amr_3.png
-         :align: center
-
-      
+         :align: center   
 
    .. group-tab:: BP AMR-GPU
 

@@ -18,8 +18,7 @@ Connectors
     .. image:: images/medium.png
         :align: center
 
-
-    A. Power Connector 24V,5A DC
+    A. Power Connector 24V,10A DC
     B. Ethernet Connector CAT 6 or higher
 
    .. group-tab:: BP LARGE
@@ -27,15 +26,13 @@ Connectors
     .. image:: images/large.png
         :align: center
 
-
-    A. Power Connector 24V,5A DC
-    B. Ethernet Connector CAT 6 or higher
+    A. Ethernet Connector CAT 6 or higher
+    B. Power Connector 24V,5A DC
    
    .. group-tab:: BP AMR
 
     .. image:: images/amr.png
         :align: center
-
 
     A. Power Connector 24V,5A DC
     B. Ethernet Connector CAT 6 or higher
@@ -52,6 +49,117 @@ Connectors
 
 Power supply interface
 ^^^^^^^^^^^^^^^^^^^^^^^
+.. tabs::
+
+   .. group-tab:: BP SAMLL
+
+    +-----------------------+--------+------------------------------+
+    | Pinout                |  Pin   |  Purpose                     | 
+    +=======================+========+==============================+
+    |                       |   1    |  DC24V                       |
+    |                       +--------+------------------------------+
+    |.. image:: images/1.png|   2    |  RGND                        | 
+    |  :align: center       +--------+------------------------------+
+    |                       |   3    |  TRGE                        | 
+    |                       +--------+------------------------------+
+    |                       |   4    |  TGND                        | 
+    |                       +--------+------------------------------+
+    |                       |   5    |  SGND                        | 
+    |                       +--------+------------------------------+
+    |                       |   6    |  Reserved, do not connect    | 
+    +-----------------------+--------+------------------------------+
+
+    .. tip::
+        - PGND: represent the "power ground"
+        - AGND: represent the "analog ground"
+        - DGND: represent the "digital ground"
+        - SGND: represent the "signal ground"
+
+
+   .. group-tab:: BP MEDIUM
+
+    +-----------------------+--------+------------------------------+
+    | Pinout                |  Pin   |  Purpose                     | 
+    +=======================+========+==============================+
+    |                       |   1    |  DC24V                       |
+    |                       +--------+------------------------------+
+    |.. image:: images/1.png|   2    |  RGND                        | 
+    |  :align: center       +--------+------------------------------+
+    |                       |   3    |  TRGE                        | 
+    |                       +--------+------------------------------+
+    |                       |   4    |  TGND                        | 
+    |                       +--------+------------------------------+
+    |                       |   5    |  SGND                        | 
+    |                       +--------+------------------------------+
+    |                       |   6    |  Reserved, do not connect    | 
+    +-----------------------+--------+------------------------------+
+
+    .. tip::
+        - PGND: represent the "power ground"
+        - AGND: represent the "analog ground"
+        - DGND: represent the "digital ground"
+        - SGND: represent the "signal ground"
+
+   .. group-tab:: BP LARGE
+
+    +-----------------------+--------+------------------------------+
+    | Pinout                |  Pin   |  Purpose                     | 
+    +=======================+========+==============================+
+    |                       |   1    |  DC24V                       |
+    |                       +--------+------------------------------+
+    |.. image:: images/1.png|   2    |  RGND                        | 
+    |  :align: center       +--------+------------------------------+
+    |                       |   3    |  TRGE                        | 
+    |                       +--------+------------------------------+
+    |                       |   4    |  TGND                        | 
+    |                       +--------+------------------------------+
+    |                       |   5    |  SGND                        | 
+    |                       +--------+------------------------------+
+    |                       |   6    |  Reserved, do not connect    | 
+    +-----------------------+--------+------------------------------+
+
+    .. tip::
+        - PGND: represent the "power ground"
+        - AGND: represent the "analog ground"
+        - DGND: represent the "digital ground"
+        - SGND: represent the "signal ground"
+
+   .. group-tab:: BP AMR
+
+    +-----------------------+--------+------------------------------+
+    | Pinout                |  Pin   |  Purpose                     | 
+    +=======================+========+==============================+
+    |                       |   1    |  DC24V                       |
+    |                       +--------+------------------------------+
+    |.. image:: images/2.png|   2    |  RGND                        | 
+    |  :align: center       +--------+------------------------------+
+    |                       |   3    |  SGND                        | 
+    +-----------------------+--------+------------------------------+
+
+    .. tip::
+        - PGND: represent the "power ground"
+        - AGND: represent the "analog ground"
+        - DGND: represent the "digital ground"
+        - SGND: represent the "signal ground"
+
+   
+   .. group-tab:: BP AMR-GPU
+
+    +-----------------------+--------+------------------------------+
+    | Pinout                |  Pin   |  Purpose                     | 
+    +=======================+========+==============================+
+    |                       |   1    |  DC24V                       |
+    |                       +--------+------------------------------+
+    |.. image:: images/2.png|   2    |  RGND                        | 
+    |  :align: center       +--------+------------------------------+
+    |                       |   3    |  SGND                        | 
+    +-----------------------+--------+------------------------------+
+
+    .. tip::
+        - PGND: represent the "power ground"
+        - AGND: represent the "analog ground"
+        - DGND: represent the "digital ground"
+        - SGND: represent the "signal ground"
 
 
 
@@ -120,7 +228,7 @@ Connecting to the computer
 
    .. group-tab:: BP SAMLL
 
-    1. Plug the power supply first into the "24V"
+    1. Plug the power supply first into the "24V "
     2. Plug the ethernet cable into the camera and connect it to your computer
     3. Plug the power supply into a power outlet.
 
@@ -133,13 +241,7 @@ Connecting to the computer
 
     The DaoAI BP Small camera is protected against reverse polarity and against overheating by a thermistor that physically removes the power.
 
-    The DaoAI BP Small camera is protected against reverse polarity and against overheating by a thermistor that physically removes the power.
-
-    The DaoAI BP Small camera uses Ethernet communication and needs 10 Gbps for best performance. Your computer may not have a port for 10 Gigabit Ethernet. In that case, you can connect to it using an adaptor for 10GBASE-T (10 Gbps copper Ethernet) to Thunderbolt 3. At a reduced performance you can also use 1000BASE-T and NBASE-T (1 Gbps, 2.5 Gbps, and 5 Gbps over copper) to USB adapters.
-
-    .. caution::
-       USB-based network adapters have reduced and more variable capture speed, and can occasionally give errors when using the camera. Our recommendation is to use 10Gb PCI Express cards for optimal performance. 
-   
+    The DaoAI BP Small camera uses Ethernet communication and needs 1 Gbps for  performance. 
     
     Network Topology
         The DaoAI BP Small camera supports the following network topologies:
@@ -173,13 +275,7 @@ Connecting to the computer
 
     The DaoAI BP Medium camera is protected against reverse polarity and against overheating by a thermistor that physically removes the power.
 
-    The DaoAI BP Medium camera is protected against reverse polarity and against overheating by a thermistor that physically removes the power.
-
-    The DaoAI BP Medium camera uses Ethernet communication and needs 10 Gbps for best performance. Your computer may not have a port for 10 Gigabit Ethernet. In that case, you can connect to it using an adaptor for 10GBASE-T (10 Gbps copper Ethernet) to Thunderbolt 3. At a reduced performance you can also use 1000BASE-T and NBASE-T (1 Gbps, 2.5 Gbps, and 5 Gbps over copper) to USB adapters.
-
-    .. caution::
-       USB-based network adapters have reduced and more variable capture speed, and can occasionally give errors when using the camera. Our recommendation is to use 10Gb PCI Express cards for optimal performance. 
-   
+    The DaoAI BP Medium camera uses Ethernet communication and needs 1 Gbps for performance.
     
     Network Topology
         The DaoAI BP Medium camera supports the following network topologies:
@@ -213,16 +309,10 @@ Connecting to the computer
 
     The DaoAI BP LARGE camera is protected against reverse polarity and against overheating by a thermistor that physically removes the power.
 
-    The DaoAI BP LARGE camera is protected against reverse polarity and against overheating by a thermistor that physically removes the power.
+    The DaoAI BP LARGE camera uses Ethernet communication and needs 1 Gbps for performance.
 
-    The DaoAI BP LARGE camera uses Ethernet communication and needs 10 Gbps for best performance. Your computer may not have a port for 10 Gigabit Ethernet. In that case, you can connect to it using an adaptor for 10GBASE-T (10 Gbps copper Ethernet) to Thunderbolt 3. At a reduced performance you can also use 1000BASE-T and NBASE-T (1 Gbps, 2.5 Gbps, and 5 Gbps over copper) to USB adapters.
-
-    .. caution::
-       USB-based network adapters have reduced and more variable capture speed, and can occasionally give errors when using the camera. Our recommendation is to use 10Gb PCI Express cards for optimal performance. 
-   
-    
     Network Topology
-        The DaoAI BP Medium camera supports the following network topologies:
+        The DaoAI BP large camera supports the following network topologies:
 
     .. list-table::
         :widths: 25 25 
@@ -253,16 +343,10 @@ Connecting to the computer
 
     The DaoAI BP AMR camera is protected against reverse polarity and against overheating by a thermistor that physically removes the power.
 
-    The DaoAI BP AMR camera is protected against reverse polarity and against overheating by a thermistor that physically removes the power.
-
-    The DaoAI BP AMR camera uses Ethernet communication and needs 10 Gbps for best performance. Your computer may not have a port for 10 Gigabit Ethernet. In that case, you can connect to it using an adaptor for 10GBASE-T (10 Gbps copper Ethernet) to Thunderbolt 3. At a reduced performance you can also use 1000BASE-T and NBASE-T (1 Gbps, 2.5 Gbps, and 5 Gbps over copper) to USB adapters.
-
-    .. caution::
-       USB-based network adapters have reduced and more variable capture speed, and can occasionally give errors when using the camera. Our recommendation is to use 10Gb PCI Express cards for optimal performance. 
-   
+    The DaoAI BP AMR camera uses Ethernet communication and needs 1 Gbps for performance. 
     
     Network Topology
-        The DaoAI BP Medium camera supports the following network topologies:
+        The DaoAI BP AMR camera supports the following network topologies:
 
     .. list-table::
         :widths: 25 25 
@@ -293,16 +377,10 @@ Connecting to the computer
 
     The DaoAI BP AMR camera is protected against reverse polarity and against overheating by a thermistor that physically removes the power.
 
-    The DaoAI BP AMR camera is protected against reverse polarity and against overheating by a thermistor that physically removes the power.
+    The DaoAI BP AMR camera uses Ethernet communication and needs 1 Gbps for performance. 
 
-    The DaoAI BP AMR camera uses Ethernet communication and needs 10 Gbps for best performance. Your computer may not have a port for 10 Gigabit Ethernet. In that case, you can connect to it using an adaptor for 10GBASE-T (10 Gbps copper Ethernet) to Thunderbolt 3. At a reduced performance you can also use 1000BASE-T and NBASE-T (1 Gbps, 2.5 Gbps, and 5 Gbps over copper) to USB adapters.
-
-    .. caution::
-       USB-based network adapters have reduced and more variable capture speed, and can occasionally give errors when using the camera. Our recommendation is to use 10Gb PCI Express cards for optimal performance. 
-   
-    
     Network Topology
-        The DaoAI BP Medium camera supports the following network topologies:
+        The DaoAI BP AMR-GPU camera supports the following network topologies:
 
     .. list-table::
         :widths: 25 25 

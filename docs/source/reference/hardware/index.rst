@@ -7,6 +7,5 @@ This section provides articles releated to the DaoAI hardware.
 
   cleaning-instruction/index
   ethernet-cable/index
-  usb-cable/index
   power-cable/index
   recommended-industrial-pc/index

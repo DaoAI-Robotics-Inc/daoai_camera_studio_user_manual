@@ -4,7 +4,7 @@ Samples
 .. contents:: 
    :local:
 
-Dive straight into programming the Zivid camera with your preferred programming language.
+Dive straight into programming the DaoAI camera with your preferred programming language.
 
 
 List of Samples

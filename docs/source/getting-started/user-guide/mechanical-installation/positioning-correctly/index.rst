@@ -1,4 +1,4 @@
-Positionin Correctly
+Positioning Correctly
 =================================
 The camera and the projector have an angle with respect to the center axis. This should be considered if it is desired to have the camera perpendicular to the scene.
 
@@ -40,27 +40,27 @@ Ambient light might reduce performance. Consider blocking direct light affecting
 
    .. group-tab:: BP SAMLL
 
-    .. image:: images/large_1.png
+    .. image:: images/fov.png
         :align: center
 
    .. group-tab:: BP MEDIUM
 
-    .. image:: images/amr_1.png
+    .. image:: images/fov.png
         :align: center
 
    .. group-tab:: BP LARGE
 
-    .. image:: images/large_1.png
+    .. image:: images/fov.png
         :align: center
    
    .. group-tab:: BP AMR
 
-    .. image:: images/amr_1.png
+    .. image:: images/fov.png
         :align: center
       
    .. group-tab:: BP AMR-GPU
 
-    .. image:: images/amr_1.png
+    .. image:: images/fov.png
         :align: center
 
 .. note::
@@ -78,7 +78,7 @@ For bin-picking applications, place the DaoAI BP camera projector above the back
 
 Cooling clearance
 ----------------------------------
-DaoAI BP cameras use active and passive cooling, allow some space around the device for airflow, and do not block the air opening on its front and rear sides. See the datasheets for the operating temperature range for your camera.
+DaoAI BP LARGE cameras use active and passive cooling, other BP cameras use passive cooling, they all allow some space around the device for airflow, and do not block the air opening on its front and rear sides. See the datasheets for the operating temperature range for your camera.
 
 Signal protection
 ---------------------------------
