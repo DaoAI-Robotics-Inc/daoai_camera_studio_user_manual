@@ -5,7 +5,7 @@ This page will walk you through how to set up a project using our SDK.
 
 **Step 1. Add the path to slc_dll.dll to the Path system variable**
 
-In Windows, navigate to Edit the system environment variables → Environment Variables. The new entry to the path system variable should be the path\to\DaoAI Studio\SDK\bin.
+In Windows, navigate to Edit the system environment variables → Environment Variables. The new entry to the path system variable should be the <path to DaoAI Studio>\\SDK\\bin.
 
 **Step 2. Update include directories in Visual Studio**
 
