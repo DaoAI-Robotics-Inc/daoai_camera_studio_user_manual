@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'DaoAI Camera Studio User Manual'
-copyright = '2021 DaoAI Robotics Inc.'
+copyright = '2021-2023 DaoAI Robotics Inc.'
 author = 'DaoAI'
 
 release = '0.1'
@@ -17,9 +17,17 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
+    'sphinx_tabs.tabs',
+    'sphinxcontrib.video',
+    'sphinx.ext.autosectionlabel'
+
 ]
 
+html_static_path = ['_static']
 
+html_css_files = [
+    'css/custom.css',
+]
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
@@ -28,6 +36,7 @@ intersphinx_mapping = {
 intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
+html_static_path = ['_static']
 
 # -- Options for HTML output
 language = 'zh'
