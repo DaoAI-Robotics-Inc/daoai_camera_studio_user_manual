@@ -1,104 +1,105 @@
-Frequently Asked Questions (FAQ)
+常见问题解答（FAQ）
 =================================
 
-What depth sensing technology is used?
+DaoAI使用了什么深度感应技术？
 --------------------------------------------------------------
 
-The DaoAI Cameras calculates the depth information of the scene by projecting structured light into the environment. 
-This technology allows high resistant to ambient light, and ensures high accuracy in any light environment.
+DaoAI摄像机通过将结构光投射到环境中来计算场景的深度信息。
+这种技术可以高抗环境光，并确保在任何光线环境下的高精确度。
 
 
-Is the light harmful?
+光线是否有害？
 --------------------------------------------------------------
 
-| The lights are very safe. 
-| However, please avoid staring into the light directly as it could still cause temporary damages to your eyes and affect your vision.
+| 灯光是非常安全的。
+| 但是，请避免直接盯着灯光看，因为它仍然可能对你的眼睛造成暂时的损害，影响你的视力。
 
-Safety Standards
+安全标准
 --------------------------------------------------------------
 
-| All of the DaoAI Cameras are industrial graded, with IP65 rated enclosure, which protects the DaoAI Cameras from low pressure water jets, condensation, and water spray.
-| On top of that, the cameras also offer high thermal stability, which allows the camera to function reliably in dynamic working conditions.
+| 所有的DaoAI摄像机都是工业级的，IP65等级的外壳，可以保护DaoAI摄像机免受低压水枪、冷凝水和水雾的影响。
+| 除此之外，相机还具有很高的热稳定性，这使得相机在动态的工作环境中能够可靠地运行。
 
 
-How much does the camera weigh?
+相机的重量是多少？
 --------------------------------------------------------------
 
-The Bin Picking Series Cameras weigh from 1.2kg to 5.2kg depending on the camera model:
+拣选系列相机的重量从1.2公斤到5.2公斤不等，取决于相机的型号。
 
-    - BP-S: 2.3kg
-    - BP-M: 5kg
-    - BP-L: 5.2kg
-    - BP-AMR-GPU: 2.1kg
-    - BP-AMR: 1.2kg
+    - BP-S: 2.3公斤
+    - BP-M: 5公斤
+    - BP-L：5.2公斤
+    - BP-AMR-GPU：2.1公斤
+    - BP-AMR：1.2公斤
 
-The Inspection Series Cameras weigh from 3.7kg to 3.8kg depending on the camera model:
+检查系列摄像机的重量为3.7公斤至3.8公斤，取决于摄像机的型号。
 
-    - IN-XS: 3.8kg
-    - IN-S: 3.7kg
-    - IN-M: 3.7kg
+    - IN-XS: 3.8公斤
+    - IN-S：3.7千克
+    - IN-M：3.7公斤
 
-Please refer to our `Bin Picking Series page <https://www.daoai.com/3d-camera-series/bin-picking-camera-series>`_ and `Inspection Series page <https://www.daoai.com/3d-camera-series/inspection-camera-series>`_ for a more detailed field of view comparison graph and table under the SPECS section.
+请参阅我们的 `拣选系列页面<https://www.daoai.com/3d-camera-series/bin-picking-camera-series>`_ 和 `检测系列页面<https://www.daoai.com/3d-camera-series/inspection-camera-series>`_ ，在SPECS部分有更详细的视场对比图和表格。
 
-Field of View of Cameras
+摄像机的视场角
 --------------------------------------------------------------
 
-The field of view differs from camera to camera. 
+不同相机的视场是不同的。
 
-For the Bin Picking Series:
+对于Bin Picking系列。
 
     - BP-S: 665 x 394 mm
     - BP-M: 897 x 560 mm
     - BP-L: 1725 x 971 mm
-    - BP-AMR-GPU: 617 x 394 mm
+    - BP-AMR-GPU: 617 x 394 毫米
     - BP-AMR: 617 x 394 mm
 
-For the Inspection Series:
+用于检查系列。
 
     - IN-XS: 83 x 60 mm
     - IN-S: 132 x 106 mm
     - IN-M: 225 x 185 mm
 
-| Please refer to our `Bin Picking Series page <https://www.daoai.com/3d-camera-series/bin-picking-camera-series>`_ and `Inspection Series page <https://www.daoai.com/3d-camera-series/inspection-camera-series>`_ for a more detailed field of view comparison graph and table under the SPECS section.
-| Note that the values are in millimeters.
+| 请参阅我们的  `拣选系列页面<https://www.daoai.com/3d-camera-series/bin-picking-camera-series>`_ 和 `检测系列页面<https://www.daoai.com/3d-camera-series/inspection-camera-series>`_ ，在SPECS部分有更详细的视场对比图和表格。
+| 请注意，这些数值的单位是毫米。
 
-How accurate are the DaoAI Cameras?
+DaoAI相机的精确度如何？
 --------------------------------------------------------------
 
-| The DaoAI Cameras garauntee 99% point cloud correctness and have fewer outliers.
-| The Inspection Series capture fine details with 5 megapixels.
+| DaoAI相机保证了99%的点云正确率，并且离群值较少。
+| 检验系列以500万像素捕捉精细的细节。
 
-What kind of Ethernet cable should I use?
+我应该使用什么样的以太网电缆？
 --------------------------------------------------------------
 
-The CAT-6A Ethernet cable are compatible with the DaoAI Cameras.
+CAT-6A以太网电缆与DaoAI摄像机兼容。
 
-Supported Operating Systems?
+支持的操作系统？
 --------------------------------------------------------------
 
-We currently support Windows operating system.
+我们目前支持Windows操作系统。
 
-Supported APIs?
+支持的API？
 --------------------------------------------------------------
 
-What formats can files be saved?
+
+文件可以保存什么格式？
 --------------------------------------------------------------
 
-The camera configuration can be saved and exported as a ``.cfg`` file; Point clouds can be saved as ``.pcd`` files.
+摄像机配置可以保存并导出为`.cfg'文件；点云可以保存为`.pcd'文件。
 
-Expected service life of cameras?
+摄像机的预期使用寿命？
 --------------------------------------------------------------
 
-What temperatures can I safely run the cameras in?
+我可以在什么温度下安全运行摄像机？
 --------------------------------------------------------------
 
-| All the Bin Picking Camera Series and Inspecting Camera Series can be operated in 0˚C to 40˚C.
-| It is recommendated to operate the DaoAI Cameras in this temperature range to ensure the best working quality.
+| 所有的拣选相机系列和检测相机系列都可以在0˚C到40˚C的环境下运行。
+| 建议在此温度范围内操作道爱相机，以确保最佳工作质量。
 
 
-How can I access the log files to forward to Support?
+我怎样才能访问日志文件以转发给支持部门？
 --------------------------------------------------------------
 
-Please refer to our :ref:`Suggest a Feature` page for more details.
+请参考我们的 :ref:`Suggest a Feature`页面了解更多细节。
 
 |

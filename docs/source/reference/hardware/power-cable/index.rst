@@ -1,13 +1,13 @@
-DaoAI Power cable
+DaoAI电源线
 =====================================
 
 .. contents:: 
     :local:
 
-DaoAI Power Supply
+DaoAI电源
 ---------------------------------
 
-All DaoAI cameras come with a power supply of 3.2 m in length in total. The DaoAI Power Supply consists of an AC/DC adapter with an integrated DC cable (1.2 m) and a separate AC power cord (2 m). The power cord comes with EU/KOR, US/JAP, CN, or UK AC plug types.
+所有DaoAI摄像机都配有总长度为3.2米的电源。DaoAI电源包括一个集成直流电线的AC/DC适配器（1.2米）和一根独立的AC电源线（2米）。电源线带有EU/KOR、US/JAP、CN或UK交流插头类型。
 
 .. image:: images/cable.png
     :align: center
@@ -19,225 +19,224 @@ All DaoAI cameras come with a power supply of 3.2 m in length in total. The DaoA
 
     .. list-table:: 
 
-        * - Input voltage
+        * - 输入电压
           - 100-240 V AC
-        * - Input frequency
+        * - 输入频率
           - 50-60 Hz
-        * - Output voltage
+        * - 输出电压
           - 24 V DC
-        * - Output current
+        * - 输出电流
           - 10 A 
-        * - Line regulation
-          - <± 1% of rated input voltage at full load
-        * - Rise time
-          - ≦50 ms at 100-240 V AC input with full load from 10% to 
+        * - 线路调节
+          - 满负荷时，<±1%的额定输入电压
+        * - 上升时间
+          - ≦50 ms，在100-240 V交流电输入下，满载从10%到 
 
-            90% of output voltage
+            90%的输出电压
 
-        * - Dynamic load 
+        * - 动态负载 
         
-            regulation
-          - ±5% excursion for 50%-100% or 100%-50% load change of 
+            调节
+          - 50%-100%或100%-50%的负载变化时，±5%的偏移量。
           
-            DC output at any frequency up to 1 KHz (duty 50%)
-        * - Ripple/noise
-          - 1.5 % max of rated output  
-        * - Overcurrent
+            直流输出的50%-100%或100%-50%负载变化的±5%偏移，频率最高为1KHz（占空比50%）。
+        * - 纹波/噪音
+          - 最大为额定输出的1.5 %。 
+        * - 过电流
             
-            protection
-          - 110%-170% of rated output current 
+            保护
+          - 110%-170%的额定输出电流 
 
 
    .. group-tab:: BP MEDIUM
 
     .. list-table:: 
 
-        * - Input voltage
+        * - 输入电压
           - 100-240 V AC
-        * - Input frequency
-          - 50-60 Hz
-        * - Output voltage
+        * - 输入频率
+          - 50-60赫兹
+        * - 输出电压
           - 24 V DC
-        * - Output current
+        * - 输出电流
           - 10 A 
-        * - Line regulation
-          - <± 1% of rated input voltage at full load
-        * - Rise time
-          - ≦50 ms at 100-240 V AC input with full load from 10% to 
+        * - 线路调节
+          - 满负荷时，<±1%的额定输入电压
+        * - 上升时间
+          - ≦50 ms，在100-240 V交流电输入下，满载从10%到 
 
-            90% of output voltage
+            90%的输出电压
 
-        * - Dynamic load 
+        * - 动态负载 
         
-            regulation
-          - ±5% excursion for 50%-100% or 100%-50% load change of 
+            调节
+          - 50%-100%或100%-50%的负载变化时，±5%的偏移量。
           
-            DC output at any frequency up to 1 KHz (duty 50%)
-        * - Ripple/noise
-          - 1.5 % max of rated output  
-        * - Overcurrent
+            直流输出的50%-100%或100%-50%负载变化的±5%偏移，频率最高为1KHz（占空比50%）。
+        * - 纹波/噪音
+          - 最大为额定输出的1.5 %。 
+        * - 过电流
             
-            protection
-          - 110%-170% of rated output current 
-
+            保护
+          - 110%-170%的额定输出电流 
 
    .. group-tab:: BP LARGE
 
     .. list-table:: 
 
-        * - Input voltage
+        * - 输入电压
           - 100-240 V AC
-        * - Input frequency
-          - 50-60 Hz
-        * - Output voltage
+        * - 输入频率
+          - 50-60赫兹
+        * - 输出电压
           - 24 V DC
-        * - Output current
+        * - 输出电流
           - 15 A 
-        * - Line regulation
-          - <± 1% of rated input voltage at full load
-        * - Rise time
-          - ≦50 ms at 100-240 V AC input with full load from 10% to 
+        * - 线路调节
+          - 满负荷时，<±1%的额定输入电压
+        * - 上升时间
+          - ≦50 ms，在100-240 V交流电输入下，满载从10%到 
 
-            90% of output voltage
+            90%的输出电压
 
-        * - Dynamic load 
+        * - 动态负载 
         
-            regulation
-          - ±5% excursion for 50%-100% or 100%-50% load change of 
+            调节
+          - 50%-100%或100%-50%的负载变化时，±5%的偏移量。
           
-            DC output at any frequency up to 1 KHz (duty 50%)
-        * - Ripple/noise
-          - 1.5 % max of rated output  
-        * - Overcurrent
+            直流输出的50%-100%或100%-50%负载变化的±5%偏移，频率最高为1KHz（占空比50%）。
+        * - 纹波/噪音
+          - 最大为额定输出的1.5 %。 
+        * - 过电流
             
-            protection
-          - 110%-170% of rated output current 
+            保护
+          - 110%-170%的额定输出电流 
 
 
    .. group-tab:: BP AMR
 
     .. list-table:: 
 
-        * - Input voltage
+        * - 输入电压
           - 100-240 V AC
-        * - Input frequency
-          - 50-60 Hz
-        * - Output voltage
+        * - 输入频率
+          - 50-60赫兹
+        * - 输出电压
           - 24 V DC
-        * - Output current
+        * - 输出电流
           - 10 A 
-        * - Line regulation
-          - <± 1% of rated input voltage at full load
-        * - Rise time
-          - ≦50 ms at 100-240 V AC input with full load from 10% to 
+        * - 线路调节
+          - 满负荷时，<±1%的额定输入电压
+        * - 上升时间
+          - ≦50 ms，在100-240 V交流电输入下，满载从10%到 
 
-            90% of output voltage
+            90%的输出电压
 
-        * - Dynamic load 
+        * - 动态负载 
         
-            regulation
-          - ±5% excursion for 50%-100% or 100%-50% load change of 
+            调节
+          - 50%-100%或100%-50%的负载变化时，±5%的偏移量。
           
-            DC output at any frequency up to 1 KHz (duty 50%)
-        * - Ripple/noise
-          - 1.5 % max of rated output  
-        * - Overcurrent
+            直流输出的50%-100%或100%-50%负载变化的±5%偏移，频率最高为1KHz（占空比50%）。
+        * - 纹波/噪音
+          - 最大为额定输出的1.5 %。 
+        * - 过电流
             
-            protection
-          - 110%-170% of rated output current 
+            保护
+          - 110%-170%的额定输出电流 
 
     
    .. group-tab:: BP AMR-GPU
 
     .. list-table:: 
 
-        * - Input voltage
+        * - 输入电压
           - 100-240 V AC
-        * - Input frequency
-          - 50-60 Hz
-        * - Output voltage
+        * - 输入频率
+          - 50-60赫兹
+        * - 输出电压
           - 24 V DC
-        * - Output current
+        * - 输出电流
           - 10 A 
-        * - Line regulation
-          - <± 1% of rated input voltage at full load
-        * - Rise time
-          - ≦50 ms at 100-240 V AC input with full load from 10% to 
+        * - 线路调节
+          - 满负荷时，<±1%的额定输入电压
+        * - 上升时间
+          - ≦50 ms，在100-240 V交流电输入下，满载从10%到 
 
-            90% of output voltage
+            90%的输出电压
 
-        * - Dynamic load 
+        * - 动态负载 
         
-            regulation
-          - ±5% excursion for 50%-100% or 100%-50% load change of 
+            调节
+          - 50%-100%或100%-50%的负载变化时，±5%的偏移量。
           
-            DC output at any frequency up to 1 KHz (duty 50%)
-        * - Ripple/noise
-          - 1.5 % max of rated output  
-        * - Overcurrent
+            直流输出的50%-100%或100%-50%负载变化的±5%偏移，频率最高为1KHz（占空比50%）。
+        * - 纹波/噪音
+          - 最大为额定输出的1.5 %。 
+        * - 过电流
             
-            protection
-          - 110%-170% of rated output current 
+            保护
+          - 110%-170%的额定输出电流 
 
 
 
-DaoAI Power Extension Cables
+DaoAI电源延长线
 --------------------------------
 
-We also offer power extension cables in 5 m, 10 m, and 20 m options. Cables of all lengths come with a female M12 connector on one end and either a straight M12 connector on the other end (camera side). 
+我们还提供5米、10米和20米的电源延长线。所有长度的电缆都是一端有一个M12母接头，另一端（相机侧）有一个M12直接头。
 
 .. image:: images/pin.png
     :align: center
     :width: 60%
 
-DaoAI strongly recommends that the cables are carefully checked before use or if run time errors occur. We also strongly recommended to tighten the M12 Jack screw all the way in on the camera side when setting up the camera. The Power connector needs to be screwed in completely to ensure the watertight IP rating of the camera.
+DaoAI强烈建议在使用前或运行时发生错误时仔细检查电缆。我们还强烈建议在设置摄像机时，将摄像机一侧的M12插孔螺丝全部拧紧。电源接口需要完全拧入，以确保摄像机的IP防水等级。
 
 .. note::
-    When using DC power extension cables For DaoAI cameras, ensure both the PC and the camera AC/DC adapter are supplied from the same power outlet.
+    当使用直流电源延长线时 对于DaoAI摄像机，请确保PC和摄像机的AC/DC适配器都由同一个电源插座提供。
 
 .. tip::
-    DaoAI Power Extension Cables are specifically designed high-quality cables suitable for robot applications.
+    DaoAI电源延长线是专门设计的高质量电缆，适合机器人应用。
 
 .. list-table:: 
 
-        * - Wires
+        * - 电线
           - 21 AWG x 4
-        * - Cable resistance
+        * - 电缆电阻
           - < 40 Ohm/Km for each of the 4 conductors
-        * - Outer diameter (OD)
+        * - 外径(OD)
           - 5.6 ± 0.3 mm
-        * - Minimum dynamic bend radius
+        * - 最小动态弯曲半径
           - ≥ 3 x OD = 17 mm
-        * - Minimum static bend radius
+        * - 最小静态弯曲半径
           - ≥ 5 x OD = 28 mm
-        * - Bending performance
-          - Bend radius: 10 x OD = 56 mm
+        * - 弯曲性能
+          - 弯曲半径：10 x OD = 56 mm
 
-            Bend angle: ± 90°
+            弯曲角度: ± 90°
 
-            Test speed: 30 cycles per minute
+            测试速度：30次/分钟
 
-            Cycles: ≥ 5 million
+            循环次数：≥500万次
 
-            Cycles: ≥ 3 million (counter weight = 500g)
+            循环次数：≥300万次（配重=500g）。
 
-        * - Twisting performance 
-          - Twist distance: 50 mm
+        * - 扭曲性能 
+          - 扭转距离。50毫米
           
-            Twist angle: ± 270°
+            扭转角度：± 270°
 
-            Test speed: 40 cycles per minute
+            测试速度：每分钟40个循环
 
-            Cycles: ≥ 14 million
-        * - Reverse performance
-          - Fixed spot spacing: 50 mm
+            循环次数：≥1400万次
+        * - 反向性能
+          - 固定斑点间距。50毫米
 
-            Bend angle: ± 270°
+            弯曲角度：± 270°
 
-            Test speed: 40 cycles per minute
+            测试速度：每分钟40个循环
 
-            Cycles: ≥ 10 million
-        * - Tensile strength
+            循环次数：≥1000万次
+        * - 拉伸强度
           - ≥ 1200 N
 
 .. tabs::
@@ -245,7 +244,7 @@ DaoAI strongly recommends that the cables are carefully checked before use or if
    .. group-tab:: BP SAMLL
 
     +-----------------------+--------+------------------------------+
-    | Pinout                |  Pin   |  Purpose                     | 
+    | 引脚布局               |  引脚  |  用途                         | 
     +=======================+========+==============================+
     |                       |   1    |  DC24V                       |
     |                       +--------+------------------------------+
@@ -257,14 +256,14 @@ DaoAI strongly recommends that the cables are carefully checked before use or if
     |                       +--------+------------------------------+
     |                       |   5    |  SGND                        | 
     |                       +--------+------------------------------+
-    |                       |   6    |  Reserved, do not connect    | 
+    |                       |   6    |  保留，请勿连接               | 
     +-----------------------+--------+------------------------------+
 
     .. tip::
-        - PGND: represent the "power ground"
-        - AGND: represent the "analog ground"
-        - DGND: represent the "digital ground"
-        - SGND: represent the "signal ground"
+        - PGND是指电源地/机壳地，POWER GND 
+        - AGND是指模拟地，ANALOGUE GND 
+        - DGND是指数字地，DIGITAL GND 
+        - TGND是指特殊芯片参考地 
 
 
    .. group-tab:: BP MEDIUM
@@ -282,14 +281,14 @@ DaoAI strongly recommends that the cables are carefully checked before use or if
     |                       +--------+------------------------------+
     |                       |   5    |  SGND                        | 
     |                       +--------+------------------------------+
-    |                       |   6    |  Reserved, do not connect    | 
+    |                       |   6    |  保留，请勿连接               | 
     +-----------------------+--------+------------------------------+
 
     .. tip::
-        - PGND: represent the "power ground"
-        - AGND: represent the "analog ground"
-        - DGND: represent the "digital ground"
-        - SGND: represent the "signal ground"
+        - PGND是指电源地/机壳地，POWER GND 
+        - AGND是指模拟地，ANALOGUE GND 
+        - DGND是指数字地，DIGITAL GND 
+        - TGND是指特殊芯片参考地 
 
    .. group-tab:: BP LARGE
 
@@ -306,14 +305,14 @@ DaoAI strongly recommends that the cables are carefully checked before use or if
     |                       +--------+------------------------------+
     |                       |   5    |  SGND                        | 
     |                       +--------+------------------------------+
-    |                       |   6    |  Reserved, do not connect    | 
+    |                       |   6    |  保留，请勿连接               | 
     +-----------------------+--------+------------------------------+
 
     .. tip::
-        - PGND: represent the "power ground"
-        - AGND: represent the "analog ground"
-        - DGND: represent the "digital ground"
-        - SGND: represent the "signal ground"
+        - PGND是指电源地/机壳地，POWER GND 
+        - AGND是指模拟地，ANALOGUE GND 
+        - DGND是指数字地，DIGITAL GND 
+        - TGND是指特殊芯片参考地 
 
    .. group-tab:: BP AMR
 
@@ -328,10 +327,10 @@ DaoAI strongly recommends that the cables are carefully checked before use or if
     +-----------------------+--------+------------------------------+
 
     .. tip::
-        - PGND: represent the "power ground"
-        - AGND: represent the "analog ground"
-        - DGND: represent the "digital ground"
-        - SGND: represent the "signal ground"
+        - PGND是指电源地/机壳地，POWER GND 
+        - AGND是指模拟地，ANALOGUE GND 
+        - DGND是指数字地，DIGITAL GND 
+        - TGND是指特殊芯片参考地 
 
    
    .. group-tab:: BP AMR-GPU
@@ -347,10 +346,11 @@ DaoAI strongly recommends that the cables are carefully checked before use or if
     +-----------------------+--------+------------------------------+
 
     .. tip::
-        - PGND: represent the "power ground"
-        - AGND: represent the "analog ground"
-        - DGND: represent the "digital ground"
-        - SGND: represent the "signal ground"
+        - PGND是指电源地/机壳地，POWER GND 
+        - AGND是指模拟地，ANALOGUE GND 
+        - DGND是指数字地，DIGITAL GND 
+        - TGND是指特殊芯片参考地 
+
 
 
 

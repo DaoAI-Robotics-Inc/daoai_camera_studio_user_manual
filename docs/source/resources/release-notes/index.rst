@@ -1,5 +1,4 @@
-Release Notes
+发布说明
 ==================
 
-Version update informations will be listed in this page.
-
+相机工作室的更新信息将在此页面列出。

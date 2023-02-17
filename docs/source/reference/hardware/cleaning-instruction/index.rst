@@ -1,15 +1,15 @@
-Cleaning Instructions
+清洁说明
 =========================================
 
-Stains on the optical glass parts can interfere with the light signal passing through and thus affect the point cloud quality. Therefore, check and maintain the optical glass parts regularly.
+光学玻璃部件上的污渍会干扰通过的光信号，从而影响点云的质量。因此，要定期检查和维护光学玻璃部件。
 
 .. caution::
-    Do not touch the glass parts with fingers to avoid staining.
+    不要用手指触摸玻璃部件，以免沾染。
 
-If the glass parts are stained, follow the instructions for cleaning optical components:
+如果玻璃部件被染色，请按照清洁光学部件的说明进行操作。
 
-    1. Remove as much dust and dirt as possible with a blower or soft-bristled brush.
+    1. 用吹风机或软毛刷尽可能多地清除灰尘和污垢。
 
-    2. Apply a few drops of lens cleaning solution to a lens tissue (lint-free wipes) or cleaning cloth.
+    2. 将几滴镜头清洁液滴在镜头纸巾（无绒布）或清洁布上。
 
-    3. Using a circular motion, gently remove grease, fingerprints, and grime from the surface, working from the center outward.
+    3. 3.使用圆周运动，轻轻地从表面去除油脂、指纹和污垢，从中心向外进行。

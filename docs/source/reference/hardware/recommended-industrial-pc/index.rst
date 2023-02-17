@@ -1,36 +1,36 @@
-Recommended Industrial PCs
+推荐的工控机
 ==================================
 
-The table below shows recommended PC specs from High-End to Low-End grades. The expected capture speed increases from the bottom row to the top row.
+下表显示了从高端到低端等级的推荐PC规格。预期的捕获速度从最下面一行到最上面一行增加。
 
 +----------+---------------+---------------+--------+------------+-------------------+
-|  Grade   |    CPU        | Intergrated   |  RAM   |  Ethernet  |  Dedicated GPU    |
-|          |               | GPU           |        |            |                   |
+|   等级   |    CPU        | 集成           |  RAM   |  以太网    |     独立显卡       |
+|          |               | 显卡           |        |           |                   |
 +==========+===============+===============+========+============+===================+
 |          |               |               |        |            | Nvidia GTX 1080TI |
-| High-End |               |               |  16 GB |            | or GTX 1080       |
+|    高    |               |               |  16 GB |            | 或 GTX 1080       |
 |          |               |               |        |            |                   |
-+----------+  Intel i5 or  |  Intel UHD    +--------+            +-------------------+
-|          |  similar      |  630/750/770  |        |  1  GigE   | Nvidia GTX 1070   |
-| Mid-End  |  AMD          |  or similar   |        |            | or GTX 1660       |
++----------+  Intel i5 或  |  Intel UHD    +--------+            +-------------------+
+|          |  类似性能的    |  630/750/770  |        |  1  GigE   | Nvidia GTX 1070   |
+|    中    |  AMD          |  或类似性能的  |        |            | 或GTX 1660       |
 |          |               |  AMD          |        |            |                   |
 +----------+               |               |  8 GB  |            +-------------------+
 |          |               |               |        |            | Nvidia GTX 1650   |
-| Low-End  |               |               |        |            | or GTX 1050Ti     |
+|    低    |               |               |        |            | 或 GTX 1050Ti     |
 |          |               |               |        |            |                   |
 +----------+---------------+---------------+--------+------------+-------------------+
 
 .. note::
-    A 1 GigE network card provides better performance than a dedicated GPU. As a consequence, it is cheaper to get a Mid-End than a Low-End+ IPC for DaoAI camera.
+    一张千兆网卡提供的性能比专用GPU更好。因此，对于DaoAI相机来说，购买中端产品比购买低端+IPC更便宜。
 
-The PC budget should be first spent on the components in the table. If the budget is higher, your spending should roughly be done in this order:
+PC预算应首先花在表中的组件上。如果预算较高，你的支出应该大致按照这个顺序进行。
 
-- Upgrading the GPU to 1060 or similar
+- 将GPU升级到1060或类似产品
 
-- Upgrading the CPU to i7 or similar
+- 将CPU升级到i7或类似产品
 
-- Upgrading the GPU to RTX 2080
+- 将GPU升级到RTX 2080
 
-- Upgrading the CPU to i9
+- 将CPU升级到i9
 
-- Upgrading the RAM to 64 GB
+- 将内存升级到64GB

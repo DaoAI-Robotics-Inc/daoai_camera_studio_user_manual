@@ -1,13 +1,13 @@
-Camera Settings
+相机设置
 =================
 
-The table below shows the default settings for different DaoAI camera models.
+下表显示了不同型号DaoAI摄像机的默认设置。
 
 
-Default Settings
+默认设置
 ---------------------
 
-The table below shows the default settings for different DaoAI camera models.
+下表显示了不同型号的DaoAI摄像机的默认设置。
 
 .. list-table:: 
    :header-rows: 1
@@ -129,9 +129,9 @@ The table below shows the default settings for different DaoAI camera models.
 
 |
 
-It is possible to read various settings info from the SDK.
+可以从SDK中读取各种设置信息。
 
-Default camera settings:
+默认的相机设置。
 
 .. tabs::
 

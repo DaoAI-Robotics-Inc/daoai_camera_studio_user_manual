@@ -1,6 +1,6 @@
-Hardware
+硬件
 ================================
-This section provides articles releated to the DaoAI hardware.
+本节提供与DaoAI硬件相关的文章。
 
 .. toctree::
   :maxdepth: 1

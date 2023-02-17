@@ -1,20 +1,20 @@
-Bug Report
+错误报告
 ============
 
-If your issue is not addressed in the user manual nor listed on our FAQ page, you can report your issue at our `Help Center <https://daoai.atlassian.net/servicedesk/customer/portals>`_. 
+如果你的问题没有在用户手册中解决，也没有在我们的FAQ页面上列出，你可以在我们的 `帮助中心<https://daoai.atlassian.net/servicedesk/customer/portals>`_ 报告你的问题。
 
-You can also reach out to us via support@daoai.com and our team will get back to you as soon as possible!
+你也可以通过 support@daoai.com 与我们联系，我们的团队会尽快给你答复!
 
-Search for Related Articles
+搜索相关文章
 -------------------------------------
 
 .. image:: images/user_manual_search_bar.png
 
-You can type in the keyword in the search bar located in the upper left side to look for related articles on your topic. 
+你可以在位于左上方的搜索栏中输入关键词，寻找与你的主题相关的文章。
 
 .. image:: images/user_manual_search_result.png
 
-For example, we searched for the keyword "point cloud", and all articles related to point clouds are listed in the result.
+例如，我们搜索了关键词 "point cloud"，结果中列出了所有与点云有关的文章。
 
 |
 
@@ -23,49 +23,49 @@ Search for Related Bug Reports
 
 .. image:: images/help_center_search_bar.png
 
-You can search for the keyword, or adjust the filter to see if similar issues have been reported or resolved.
+你可以搜索关键词，或者调整过滤器，看看是否有类似的问题被报告或解决。
 
 .. image:: images/help_center_see_bug_report_list.png
 
 |
 
-Report a Bug
+报告一个错误
 --------------
 
-To report a bug, please go the `Help Center <https://daoai.atlassian.net/servicedesk/customer/portals>`_ and click "Report a Bug".
+要报告一个错误，请到 `帮助中心<https://daoai.atlassian.net/servicedesk/customer/portals>`_ 并点击 "报告一个错误"。
 
 .. image:: images/help_center_home_report_a_bug.png
 
-| You will be directed to the report a bug page.
-| Please fill in as much information as possible (e.g. software version) so that we can resolve the problem as quickly as possible.
+| 你将被引导到报告错误的页面。
+| 请尽可能多地填写信息（如软件版本），以便我们能尽快解决这个问题。
 
 .. image:: images/help_center_report_bug_page.png
 
-| To check your software version: 
-| Locate the top menu bar → select "Help" → select "About DaoAI Studio".
+| 要检查你的软件版本。
+| 找到顶部菜单栏→选择 "帮助"→选择 "关于DaoAI Studio"。
 
 .. image:: images/help_center_check_version.png
 
-| You can find the software version under the DaoAI Studio logo. 
-| In this case, the software version is 2.22.10.0_103.
+| 你可以在DaoAI Studio的标志下找到软件版本。
+| 本例中，软件版本为2.22.10.0_103。
 
 .. image:: images/help_center_check_version_window.png
 
 
-| If you encountered a crash, please attach the dmp file in your report.
-| You can find the dmp file via the path C:\\ProgramData\\DaoAI\\Camera Studio\\Crashpad\\db\\reports.
+| 如果你遇到了崩溃，请在报告中附上dmp文件。
+| 您可以通过 C:\\ProgramData\\DaoAI\\Camera Studio\\Crashpad\\db\\reports 这个路径找到dmp文件。
 
-If you cannot see the ProgramData folder, you may have to change the view settings:
+如果你不能看到ProgramData文件夹，你可能要改变视图设置。
 
 .. image:: images/show_hidden_items.png
 
 .. image:: images/show_program_data_folder.png
 
-Here are some other information that would be nice to have in the Description section:
+下面是一些其他的信息，如果能在描述部分中出现就更好了。
 
-    - Steps to reproduce the issue
-    - Software version, working environment
-    - Your name
-    - Contact email address and phone number (so that we can update you on the reported bug)
+    - 重现该问题的步骤
+    - 软件版本，工作环境
+    - 你的名字
+    - 联系电子邮件地址和电话号码（以便我们能向您报告最新的错误信息）
 
 |
