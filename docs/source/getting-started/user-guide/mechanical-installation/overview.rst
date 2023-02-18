@@ -1,4 +1,4 @@
-Mechanical Installation
+机械安装
 =========================
 
 .. toctree:: 

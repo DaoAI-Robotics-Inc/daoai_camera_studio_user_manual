@@ -1,94 +1,94 @@
-Quick Reference Index
+快速参考索引
 =======================
 
-File
+文件
 ------------
 
 .. list-table:: 
    :widths: 25 50
    :header-rows: 1
 
-   * - File
-     - Function
-   * - Load Setting
-     - Load camera settings from file.
-   * - Save Settings
-     - Save the current camera settings.
-   * - Save Settings As
-     - Export the current camera settings.
-   * - Load 3D Data
-     - Load point cloud data from file.
-   * - Save 3D Data
-     - Save point cloud data to file.
-   * - Temperature Control
-     - Enable/Disable temperature control system.
+   * - 文件
+     - 功能
+   * - 加载设置
+     - 从文件中加载相机设置。
+   * - 保存设置
+     - 保存当前相机设置。
+   * 将设置保存为
+     - 输出当前摄像机设置。
+   * - 加载三维数据
+     - 从文件中加载点云数据。
+   * - 保存三维数据
+     - 将点云数据保存到文件中。
+   * - 温度控制
+     - 启用/禁用温控系统。
 
-View
+查看
 ------------
 
 .. list-table:: 
    :widths: 25 50
    :header-rows: 1
 
-   * - View
-     - Function
-   * - Show Operator Console
-     - Toggle show or hide console.
+   * - 查看
+     - 职能
+   * - 显示操作员控制台
+     - 切换显示或隐藏控制台。
 
-Help
+帮助
 ------------
 
 .. list-table:: 
    :widths: 25 50
    :header-rows: 1
 
-   * - Help
-     - Function
-   * - Search Online Help
-     - Open the DaoAI Camera Studio User Manual in the browser.
-   * - About DaoAI Studio
-     - Show help page, with software version and contact information.
+   * - 帮助
+     - 功能
+   * - 搜索在线帮助
+     - 在浏览器中打开DaoAI Camera Studio用户手册。
+   * - 关于DaoAI Studio
+     - 显示帮助页面，包括软件版本和联系信息。
 
-Hotkeys
+热键
 ------------
 
 +------------------------+-------------------+----------------------------------------------------------+
-| File                   | Shortcut          | Function                                                 |
+| 文件                   | 快捷键             | 功能                                                     |
 +========================+===================+==========================================================+
-| Save Settings          | Ctrl + S          | Save the current camera settings.                        |
+| 保存设置                | Ctrl + S          | 保存当前的相机设置。                                       |
 +------------------------+-------------------+----------------------------------------------------------+
-| Save Settings As       | Crtl + Shift + S  | Export the current camera settings.                      |
+| 保存设置为              | Crtl + Shift + S  | 导出当前相机设置。                                         |
 +------------------------+-------------------+----------------------------------------------------------+
 
-Filters
+滤波器
 ---------
 
-Please refer to the :ref:`Filters` page for more details.
+更多细节请参考 :ref:`滤波器` 页面。
 
 +-----------------------------+---------------------------------------------------------------------------------------------------+
-| Filters                     | Function                                                                                          |
+| 滤波器                       | 功能                                                                                              |
 +=============================+===================================================================================================+
-| Intensity Threshold         | Filters out outliers caused by low quality pixels within dark areas in an image.                  |
+| 强度阈值                     | 过滤掉图像中黑暗区域的低质量像素造成的异常值。                                                        |
 +-----------------------------+---------------------------------------------------------------------------------------------------+
-| Outlier Threshold           | Filters out points based on their distance from their nearest neighbouring point.                 |
+| 离群阈值                     | 根据点与最近的邻接点的距离，过滤掉这些点。                                                            |
 +-----------------------------+---------------------------------------------------------------------------------------------------+ 
-| Phase Quality Filter        | Filters out low contrast areas.                                                                   |
+| 相位质量过滤器               | 滤除低对比度区域。                                                                                  |
 +-----------------------------+---------------------------------------------------------------------------------------------------+ 
-| Gaussian Filter             | Use a moving average window to apply a smoothing effect on the point cloud.                       |
+| 高斯滤波器                   | 使用移动平均窗口在点云上应用平滑效果。                                                               |
 +-----------------------------+---------------------------------------------------------------------------------------------------+ 
-| Median Filter               | Use a median sliding window to apply a smoothing effect on the point cloud.                       |
+| 中值数滤波器                 | 使用中值数滑动窗口在点云上应用平滑效果。                                                              |
 +-----------------------------+---------------------------------------------------------------------------------------------------+ 
-| Face Normal Filter          | Filters out points which surface normal vector is at an angle larger than face normal value.      |
+| 法向量滤波器                 | 过滤掉表面法线向量角度大于面法线值的点。                                                              |
 +-----------------------------+---------------------------------------------------------------------------------------------------+ 
-| Remove Small Area           | Removes small chunk of isolated point cloud.                                                      |
+| 移除小型区域                 | 移除离散的小块点云。                                                                                |
 +-----------------------------+---------------------------------------------------------------------------------------------------+ 
-| Smooth Filter               | Rounds the depth value of an organized point cloud to the nearest mm.                             |
+| 平滑过滤                     | 将点云的深度值舍入到最接近的毫米。                                                                   |
 +-----------------------------+---------------------------------------------------------------------------------------------------+ 
-| Fill Gaps                   | Fill in missing point cloud via interpolation.                                                    |
+| 填补空白                     | 通过内插法填补缺失的点云。                                                                          |
 +-----------------------------+---------------------------------------------------------------------------------------------------+ 
-| Saturation Filter           | Removes overexposed areas.                                                                        |
+| 饱和滤镜                     | 去除曝光过度的区域。                                                                                |
 +-----------------------------+---------------------------------------------------------------------------------------------------+ 
-| Contrast Distortion Filter  | Removes or corrects point cloud based on contrast.                                                |
+| 对比度失真滤镜               | 根据对比度删除或纠正点云。                                                                           |
 +-----------------------------+---------------------------------------------------------------------------------------------------+ 
-| Color Balance               | Adjusts image's colour by making the image closer to one of R, G, B.                              |
+| 色彩均衡                     | 调整图像的颜色，使图像更接近于R、G、B中的一种。                                                       |
 +-----------------------------+---------------------------------------------------------------------------------------------------+ 

@@ -1,6 +1,6 @@
-.. _Camera Studio Guide:
+.. _照相机工作室指南:
 
-Camera Studio Guide
+相机工作室指南
 =======================
 
 .. toctree::
@@ -11,13 +11,10 @@ Camera Studio Guide
    toolbar
    quick_reference_index
 
-This section will provide a detailed walkthrough on using the DaoAI Camera Studio.
+本节将详细介绍DaoAI相机工作室的使用方法。
 
-DaoAI Camera Studio is the graphical user interface for the DaoAI Software Development Kit.
-This allows the user to explore the functionality of the DaoAI Cameras, configure the camera settings in any environment conditions, and capture high defiinition 3D point clouds with high accuracy.
-
-
+DaoAI相机工作室是DaoAI软件开发工具包的图形用户界面。
+它允许用户探索DaoAI相机的功能，在任何环境条件下配置相机设置，并以高精确度捕获高清晰度的3D点云。
 
 .. Note::
-   You can `download <https://daoai-robotics-inc-daoai-camera-studio-user-manul.readthedocs-hosted.com/_/downloads/en/english/pdf/>`_ the DaoAI Camera Studio User Manual as a PDF.
-
+   您可以 `下载<https://daoai-robotics-inc-daoai-camera-studio-user-manul.readthedocs-hosted.com/_/downloads/zh/english/pdf/>`_  DaoAI相机工作室用户手册的PDF格式。

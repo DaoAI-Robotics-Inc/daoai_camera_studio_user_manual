@@ -1,8 +1,8 @@
-Depth
+深度
 -------
 
-| The 2D depth display tab encodes the depth values of each valid pixel as its color. 
-| Blue represents short distance, red represents long distance from the camera, in unit millimeter. 
-| To analyze the specific values, you can toggle the “Depth” button and the depth chart legend will pop up.
+| 二维深度显示标签将每个有效像素的深度值编码为其颜色。
+| 蓝色代表短距离，红色代表与摄像机的长距离，单位为毫米。
+| 要分析具体数值，可以拨动 "深度 "按钮，深度图例就会弹出。
 
 .. image:: images/cp_depth.png

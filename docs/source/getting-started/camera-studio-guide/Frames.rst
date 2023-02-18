@@ -1,70 +1,69 @@
-Frames
+框架
 -------
 
-Frames are used to adjust exposure stop, brightness, and gain levels that are applied when doing captures. Camera Studio allows you to add multiple frames with different settings 
-to capture multiple image groups and fine tune the quality of your resulting images.
+帧是用来调整拍摄时应用的曝光停止、亮度和增益水平的。照相机工作室允许你添加多个具有不同设置的框架 
+来捕捉多个图像组，并对生成的图像的质量进行微调。
 
-Adding Frames
+添加框架
 ~~~~~~~~~~~~~~~~~~~~
 
-When an image does not meet the expected requirements, you can achieve more precise exposure levels by adding more frames and with different exposure file settings. 
-For example, using two frames set at 2 different exposure values, -1 and 0, to make up for the situation where a single frame -1 is too dark or a single frame 0 is too bright.
+当一个图像不符合预期要求时，你可以通过添加更多的框架和不同的曝光文件设置来实现更精确的曝光水平。
+例如，使用设置为2个不同曝光值的2个帧，即-1和0，以弥补单帧-1太暗或单帧0太亮的情况。
 
-Click the "+" button on the right frame settings menu in order to add more frames. Similarly, you can click on the trash can icon to delete a corresponding frame. 
-The minimum number of frames is 1. 
+点击右边帧设置菜单上的 "+"按钮，以便添加更多的帧。同样，你可以点击垃圾桶图标来删除相应的帧。
+帧的最小数量是1。
 
 .. figure:: images/frames_add_remove.png
     :align: center
 
-    Add and remove buttons
+    添加和删除按钮
 
 .. figure:: images/frames_dropdown.png
     :align: center
     
-    Dropdown menu reveals parameters
+    下拉菜单显示的参数
 
 |
 
-Frame Parameters
+框架参数
 ~~~~~~~~~~~~~~~~~~~~
 
-All three parameters serves the purpose of adjusting final image brightness and each increase of one in any field will double the final image brightness.
+这三个参数都是为了调整最终的图像亮度，在任何领域每增加一个参数都会使最终的图像亮度增加一倍。
 
-When attempting to increase image brightness, you should prioritize "Brightness", then "Exposure Stop", and increase "Gain" last.
+当试图增加图像亮度时，你应该优先考虑 "亮度"，然后是 "曝光停止"，最后增加 "增益"。
 
 .. figure:: images/frames_settings.png
     :align: center
     
 |
 
-**Exposure Stop**
+**曝光时间**
 
-Responsible for adjusting the exposure time. The level of exposure stops are -1, 0, 1, 2, 3, 4. Since increasing "Exposure Stop" increases capturing time, you should only increase this field when "Brightness" has reached maximum value. The most commonly used exposure levels are -1, 0, and 1. 
-
-
-**Brightness**
-
-Responsible for adjusting the brightness of the projecter. The possible values are 1, 2, 3. Changing this field does not increase capturing time and should prioritize this field when adjusting image brightness. 
+负责调整曝光时间。曝光档的级别为-1、0、1、2、3、4。由于增加 "曝光档 "会增加拍摄时间，所以只有在 "亮度 "达到最大值时才可以增加这个字段。最常用的曝光等级是-1、0和1。
 
 
-**Gain**
+**亮度**
 
-Responsible for increasing the ISO value or sensitivity of the camera. The span ranges from 0, 1, 2, 3, 4 where 0 is the base point 0dB and 4 corresponds to the highest value 
-24dB (each slider increment causes 6dB change). When the gain is increased or decreased by 6dB, the gain effect is twice as much as that of the previous one. The conversion 
-formula is: 20 x log (gain multiple) = + /-gain dB value. Increasing "Gain" will reduce signal-noise ratio, therefore we should increase this field lastly.
+负责调整投影仪的亮度。可能的值是1、2、3。改变这个字段不会增加捕捉时间，在调整图像亮度时应优先考虑这个字段。
 
 
-Point Cloud Color
+**增益**
+
+负责增加相机的ISO值或灵敏度。范围从0，1，2，3，4，其中0是基点0dB，4对应最高值 
+24dB（每一个滑块的增量导致6dB的变化）。当增益增加或减少6dB时，增益效果是之前的两倍。转换公式为 
+换算公式为。20×对数（增益倍数）=+/-增益dB值。增加 "增益 "会降低信噪比，因此我们应该最后增加这个字段。
+
+点云颜色
 ~~~~~~~~~~~~~~~~~~~~
 
-Independently capture the color for Point Cloud.
+独立地采集点云的颜色。
 
 .. figure:: images/point_cloud_color.png
     :align: center
     
 |
 
-When enabled, a settings section will expand as the image above and when capture, will collect an additional image using the setting for the Point Cloud's color.
-The additional image will be captured by projecting a white screen.
+启用后，设置部分将像上面的图片一样展开，当捕获时，将使用点云的颜色设置来收集一个额外的图像。
+额外的图像将通过投射一个白屏来采集。
 
-The settings are similar to "Frame Parameters" except the "Exposure Time", which is in miliseconds, allowing more precisive controls. 
+设置与 "帧参数 "类似，除了 "曝光时间"，它的单位是毫秒，允许更精确的控制。

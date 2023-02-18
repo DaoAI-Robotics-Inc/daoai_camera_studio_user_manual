@@ -1,9 +1,9 @@
-.. _Network Configuration:
+.. _网络配置:
 
-Network Configuration
+网络配置
 ========================
 
-Default Configuration
+默认配置
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
@@ -12,70 +12,70 @@ Default Configuration
 
    * -  
      - IP
-     - Subnet mask
-   * - BP Series
+     - 子网掩码
+   * - BP系列
      - 192.168.1.2
      - 255.255.255.0
 
-| Any IP address in the subnet range is valid (e.g. For BP series camera: 192.168.1.0 - 192.168.1.255).
-| If you have not configured the camera IP address before, the camera's IP address will be the default IP address as in the above table.
+| 子网范围内的任何IP地址都是有效的（例如，对于BP系列摄像机：192.168.1.0 - 192.168.1.255）。
+| 如果您以前没有配置过摄像机的IP地址，摄像机的IP地址将是上表中的默认IP地址。
 
 
-Static IP Network Configuration - PC
+静态IP网络配置 - PC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This step is necessary for using :ref:`multiple cameras <Using Multiple DaoAI Cameras>`. 
+此步骤对于使用 :ref:`多个摄像机<使用多个DaoAI摄像机>` 
 
-Navigate to: 
+导航至: 
 
-Control Panel → Network and Internet → Network and Sharing Center → Change Adapter Settings.
+控制面板→网络和互联网→网络和共享中心→更改适配器设置。
 
 .. image:: images/control_panel_change_adapter_settings.png
 
-Right click → Properties.
+右键单击→属性。
 
 .. image:: images/control_panel_change_adapter_settings_properties.png
 
-Double click Internet Protocol Version 4 (TCP/IPv4).
+双击互联网协议版本4（TCP/IPv4）。
 
 .. image:: images/control_panel_change_adapter_settings_ipv4.png
 
-| Select **Use the following IP address** → set the IP address to 192.168.1.x. 
-| If this is the first time you are setting up the camera, the IP address should be any number other than 2 (e.g. enter 192.168.1.9).
-| Enter Subnet mask: 255.255.255.0
+| 选择**使用以下IP地址**→设置IP地址为192.168.1.x。
+| 如果这是第一次设置摄像机，IP地址应该是2以外的任何数字（例如，输入192.168.1.9）。
+| 输入子网掩码。255.255.255.0
 
 .. image:: images/control_panel_change_adapter_settings_ipv4_OK.png
 
-Click **OK** to finish configuration.
+点击 **确定**，完成配置。
 
 .. note:: 
-  Please make sure the IP addresses of all connected cameras are different from each other, otherwise you may run into problem when trying to connect :ref:`multiple cameras <Using Multiple DaoAI Cameras>`.
+  请确保所有连接的摄像机的IP地址彼此不同，否则在尝试连接时可能会遇到问题 :ref:`多个摄像机<使用多个DaoAI摄像机>`.
 
 |
 
-Check Cameras' IP Addresses
+检查摄像机的IP地址
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-If you don't know a camera's IP address, you can use `MobaXterm <https://mobaxterm.mobatek.net/download-home-edition.html>`_ to check.
+如果你不知道摄像机的IP地址，你可以使用 `MobaXterm <https://mobaxterm.mobatek.net/download-home-edition.html>`_ 来检查。
 
-Open MobaXterm.
+打开MobaXterm。
 
 .. image:: images/x_open.png
 
-From **Tools** dropdown list, select **Network Scanner**.
+从 **工具** 下拉列表中，选择 **网络扫描器**。
 
 .. image:: images/x_tools.png
 
-Input **192.168.1.1 --> 254** in **IP Address Range**, then click **Start Scan**.
+在**IP地址范围内输入**192.168.1.1-->254**，然后点击**开始扫描**。
 
 .. image:: images/x_scan.png
 
-After scanning, it will list all discoverable IP addresses in the local network. 
+扫描后，它将列出本地网络中所有可发现的IP地址。
 
 .. image:: images/x_results.png
 
 |
 
-Version History
+版本历史
 ~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
@@ -84,5 +84,5 @@ Version History
 
   * - SDK
     - 
-  * - Changes
+  * - 更改
     - 

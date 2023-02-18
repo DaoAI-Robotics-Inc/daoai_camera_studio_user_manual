@@ -1,40 +1,38 @@
-System Requirements
+系统要求
 =========================
 
 .. list-table::
     :header-rows: 0
 
-    * - **OS**
-      - Windows 10 or Linux Ubuntu 20.04
+    * - **操作系统**
+      - Windows 10或Linux Ubuntu 20.04
 
-    * - **Dedicated GPU**
-      - A dedicated GPU gives the best performance with DaoAI Camera Studio. 
+    * - **专门的GPU**
+      - 专用的GPU在DaoAI Camera Studio中能提供最好的性能。
       
-        It is also the best choice if the GPU will be used for more than DaoAI’s 
+        如果GPU将被用于超过DaoAI的计算，这也是最好的选择。
         
-        computations. A medium to high-end NVIDIA GPU with at least 3 GB 
+        中高端的NVIDIA GPU至少要有3GB内存才能达到最佳性能。
         
-        of memory is required for optimal performance. This is the 
-        
-        preferred solution for DaoAI Camera Studio.
+        内存，以获得最佳性能。这也是DaoAI相机工作室的首选方案。
             
-            Recommendations:
-                - NVIDIA GeForce GTX 1050Ti or better
-                - NVIDIA GeForce MX150 or better  
+            建议。
+                - NVIDIA GeForce GTX 1050Ti或更高版本
+                - NVIDIA GeForce MX150或更好  
 
     * - **USB**
-      - SuperSpeed USB3 port
+      - 超高速USB3端口
          
-    * - **Ethernet**
-      - Full performance:
+    * - **以太网**
+      - 全面的性能。
 
-        - 10GBASE-T (10G Copper Ethernet) adapter connected via 
+        - 10GBASE-T（10G铜缆以太网）适配器通过以下方式连接 
           
-          PCI Express or Thunderbolt 3
+          PCI Express或Thunderbolt 3
         
         
-        Reduced performance:
+        降低性能。
         
-        - 1000BASE-T and NBASE-T (1G, 2.5G, and 5G over 
+        - 1000BASE-T和NBASE-T（通过铜缆的1G、2.5G和5G）连接。
           
-          copper) connections
+          铜缆）连接

@@ -1,14 +1,14 @@
-Green Mode
+绿色模式
 -------------
 
-The Green Mode switches between RGB point clouds and green point clouds display.
+绿色模式在RGB点云和绿色点云显示之间切换。
 
 .. figure:: images/cp_gm_rgb.png
     :align: center
 
-    RGB point clouds
+    RGB点云
 
 .. figure:: images/cp_gm_g.png
     :align: center
 
-    Green Mode point clouds
+    绿色模式点云

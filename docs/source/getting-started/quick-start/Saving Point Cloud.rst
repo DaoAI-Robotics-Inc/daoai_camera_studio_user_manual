@@ -1,14 +1,14 @@
-Saving Point Clouds
+保存点云
 ======================================
 
-This page will provide simple instructions for saving point clouds in DaoAI Camera Studio.
+本页将提供在DaoAI Camera Studio中保存点云的简单说明。
 
-.. image:: images/tab_point_cloud.png
+.图片:: images/tab_point_cloud.png
 
-1. Capture an image (see :ref:`Capturing Images`).
+1. 捕捉一个图像（见:参考:`捕捉图像`）。
 
-2. Select the "Point Cloud" tab to view the captured point clouds (under the "Histogram" button).
+2. 2. 选择 "点云 "标签，查看捕获的点云（在 "直方图 "按钮下）。
 
-3. Select "Files" (the first button in the upper-left corner).
+3. 选择 "文件"（左上角的第一个按钮）。
 
-4. Select "Save 3D data" from the File dropdown menu to save the point clouds.
+4. 4. 从文件下拉菜单中选择 "保存三维数据"，以保存点云。

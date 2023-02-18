@@ -1,19 +1,18 @@
-Service and Maintenance
+服务和维护
 ========================
 
-All of the DaoAI Cameras contain no user-serviceable parts inside. The product warranty will be void if opened.
+所有DaoAI摄像机内部都不包含用户可维修的部件。如果打开，产品保修将失效。
 
-Please follow the instructions below to ensure that your DaoAI camera is well maintained:
+请遵循以下说明，以确保您的DaoAI摄像机得到良好的维护。
 
-- Check screw connections and connectors at regular intervals.
+- 定期检查螺丝连接和接头。
 
-- Do not block the air opening on the front and rear sides of the product.
+- 请勿堵塞产品前后两侧的空气开口。
 
-- The cameras use passive cooling, please allow some space around the device for optimal airflow.
+- 摄像机采用被动式冷却，请在设备周围留出一些空间，以获得最佳的空气流通。
 
-- To remove dust or other accumulated particles, it is recommended to use a small vacuum cleaner or a small canister of compressed air. This applies to both the glasses and in between the ribs of the heat sink.
+- 要清除灰尘或其他积累的颗粒，建议使用小型吸尘器或小型压缩空气罐。这适用于玻璃和散热器的肋骨之间。
 
-- Regularly clean optical glass parts of the device.
+- 定期清洁设备的光学玻璃部分。
 
-- Check and update the calibration on a yearly basis by performing :ref:`Infield Correction` (and Hand-Eye Calibration) when necessary.
-
+- 每年检查和更新校准，必要时进行 :ref:`现场校准功能`（和手眼校准）。

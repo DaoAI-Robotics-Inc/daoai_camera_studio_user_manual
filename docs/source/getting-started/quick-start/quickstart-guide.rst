@@ -4,10 +4,13 @@ SDK
 Introduction
 ---------------
 
-This section describes the most basic way to use the DaoAI SDK to capture point clouds.
-For a more detailed tutorial on using the DaoAI Camera Studio, please see :ref:`Camera Studio Guide` section.
+简介
+---------------
 
-Initialize
+本节介绍了使用DaoAI SDK采集点云的最基本方法。
+更详细的DaoAI相机工作室的使用教程，请参见 :ref:`相机工作室指南` 部分。
+
+初始化
 ---------------
 
 .. tabs::
@@ -24,7 +27,7 @@ Initialize
 
       Oranges are orange.
 
-Connect
+链接
 ---------------
 
 .. tabs::
@@ -42,7 +45,7 @@ Connect
       Oranges are orange.
 
 
-Configure
+配置
 ---------------
 
 .. tabs::
@@ -59,7 +62,7 @@ Configure
 
       Oranges are orange.
 
-Capture
+拍照
 ---------------
 
 .. tabs::
@@ -76,7 +79,7 @@ Capture
 
       Oranges are orange.
 
-Save
+保存
 ---------------
 
 .. tabs::

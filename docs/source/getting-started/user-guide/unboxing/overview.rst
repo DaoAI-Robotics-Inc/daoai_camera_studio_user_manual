@@ -1,164 +1,164 @@
-Unboxing
+开箱
 ================
+
 .. tabs::
 
    .. tab:: BP SAMLL
 
       .. video:: ./video/1.mp4
 
-      In the DaoAI Camera Studio Box you will find:
+      在DaoAI相机工作室的盒子里，你会发现。
 
-      - DaoAI BP Small Camera 
+      - DaoAI BP小型摄像机 
 
-      - power supply
+      - 电源
 
-      Optional/as ordered:
+      可选的/订购的。
 
-      - Power extension cables
+      - 电源延长线
 
-         available in 5m, 10m, and 20m
+         有5米、10米和20米三种规格
 
-      - Ethernet (CAT-6A) cables
+      - 以太网（CAT-6A）电缆
 
-         available in 5m, 10m, and 20m
+         有5米、10米和20米三种规格
    
-      Included in Development Kit:
+      包括在开发套件中。
 
-         - 5m Ethernet (CAT-6A) cables
+         - 5米以太网（CAT-6A）电缆
 
-         - Calibration Board
+         - 校准板
 
-         - Mount of choice(Stationary Mount or On-Arm Mount)
+         - 选择的支架（固定式支架或臂架式支架）
 
-         - Tripod Adapter
+         - 三脚架适配器
 
-      Mounting accessories included in development kit or ordered separately.
+      安装附件包括在开发套件中或单独订购。
 
    .. tab:: BP MEDIUM
 
       .. video:: ./video/1.mp4
 
-      In the DaoAI Camera Studio Box you will find:
+      在DaoAI相机工作室的盒子里，你会发现。
 
-      - DaoAI BP Medium Camera 
+      - DaoAI BP小型摄像机 
 
-      - power supply
+      - 电源
 
-      Optional/as ordered:
+      可选的/订购的。
 
-      - Power extension cables
+      - 电源延长线
 
-         available in 5m, 10m, and 20m
+         有5米、10米和20米三种规格
 
-      - Ethernet (CAT-6A) cables
+      - 以太网（CAT-6A）电缆
 
-         available in 5m, 10m, and 20m
+         有5米、10米和20米三种规格
    
-      Included in Development Kit:
+      包括在开发套件中。
 
-         - 5m Ethernet (CAT-6A) cables
+         - 5米以太网（CAT-6A）电缆
 
-         - Calibration Board
+         - 校准板
 
-         - Mount of choice(Stationary Mount or On-Arm Mount)
+         - 选择的支架（固定式支架或臂架式支架）
 
-         - Tripod Adapter
+         - 三脚架适配器
 
-      Mounting accessories included in development kit or ordered separately.
+      安装附件包括在开发套件中或单独订购。
 
    .. tab:: BP LARGE
 
       .. video:: ./video/1.mp4
 
-      In the DaoAI Camera Studio Box you will find:
+      在DaoAI相机工作室的盒子里，你会发现。
 
-      - DaoAI BP Large Camera 
+      - DaoAI BP小型摄像机 
 
-      - power supply
+      - 电源
 
-      Optional/as ordered:
+      可选的/订购的。
 
-      - Power extension cables
+      - 电源延长线
 
-         available in 5m, 10m, and 20m
+         有5米、10米和20米三种规格
 
-      - Ethernet (CAT-6A) cables
+      - 以太网（CAT-6A）电缆
 
-         available in 5m, 10m, and 20m
+         有5米、10米和20米三种规格
    
-      Included in Development Kit:
+      包括在开发套件中。
 
-         - 5m Ethernet (CAT-6A) cables
+         - 5米以太网（CAT-6A）电缆
 
-         - Calibration Board
+         - 校准板
 
-         - Mount of choice(Stationary Mount or On-Arm Mount)
+         - 选择的支架（固定式支架或臂架式支架）
 
-         - Tripod Adapter
+         - 三脚架适配器
 
-      Mounting accessories included in development kit or ordered separately.
+      安装附件包括在开发套件中或单独订购。
 
    .. tab:: BP AMR
 
       .. video:: ./video/1.mp4
 
-      In the DaoAI Camera Studio Box you will find:
+      在DaoAI相机工作室的盒子里，你会发现。
 
-      - DaoAI BP Amr Camera 
+      - DaoAI BP小型摄像机 
 
-      - power supply
+      - 电源
 
-      Optional/as ordered:
+      可选的/订购的。
 
-      - Power extension cables
+      - 电源延长线
 
-         available in 5m, 10m, and 20m
+         有5米、10米和20米三种规格
 
-      - Ethernet (CAT-6A) cables
+      - 以太网（CAT-6A）电缆
 
-         available in 5m, 10m, and 20m
+         有5米、10米和20米三种规格
    
-      Included in Development Kit:
+      包括在开发套件中。
 
-         - 5m Ethernet (CAT-6A) cables
+         - 5米以太网（CAT-6A）电缆
 
-         - Calibration Board
+         - 校准板
 
-         - Mount of choice(Stationary Mount or On-Arm Mount)
+         - 选择的支架（固定式支架或臂架式支架）
 
-         - Tripod Adapter
+         - 三脚架适配器
 
-      Mounting accessories included in development kit or ordered separately.
+      安装附件包括在开发套件中或单独订购。
       
    .. tab:: BP AMR-GPU
 
       .. video:: ./video/1.mp4
 
-      In the DaoAI Camera Studio Box you will find:
+      在DaoAI相机工作室的盒子里，你会发现。
 
-      - DaoAI BP Amr-gpu Camera 
+      - DaoAI BP小型摄像机 
 
-      - power supply
+      - 电源
 
-      Optional/as ordered:
+      可选的/订购的。
 
-      - Power extension cables
+      - 电源延长线
 
-         available in 5m, 10m, and 20m
+         有5米、10米和20米三种规格
 
-      - Ethernet (CAT-6A) cables
+      - 以太网（CAT-6A）电缆
 
-         available in 5m, 10m, and 20m
+         有5米、10米和20米三种规格
    
-      Included in Development Kit:
+      包括在开发套件中。
 
-         - 5m Ethernet (CAT-6A) cables
+         - 5米以太网（CAT-6A）电缆
 
-         - Calibration Board
+         - 校准板
 
-         - Mount of choice(Stationary Mount or On-Arm Mount)
+         - 选择的支架（固定式支架或臂架式支架）
 
-         - Tripod Adapter
+         - 三脚架适配器
 
-      Mounting accessories included in development kit or ordered separately.
-
+      安装附件包括在开发套件中或单独订购。

@@ -1,7 +1,7 @@
-Mechanical interface
+机械接口
 ======================================
 
-Dimensions
+尺寸
 ---------------------------------
 
 .. tabs::
@@ -47,21 +47,21 @@ Dimensions
          :align: center
 
 
-Mounting Specifications
+安装规格
 --------------------------------------
 
 .. tabs::
 
    .. group-tab:: BP SAMLL
 
-        The DaoAI BP SAMLL camera has four M5 mounting holes, one Ø5 positioning hole, and one obround alignment hole. To ensure not to damage the threads, we recommend not exceeding the specified maximum torque value when fastening the screws.
+        DaoAI BP SAMLL摄像机有四个M5安装孔，一个Ø5定位锥孔和一个定位锥孔。为确保不损坏螺纹，我们建议在紧固螺丝时不要超过规定的最大扭矩值。
 
        .. image:: images/amr_3.png
          :align: center
 
    .. group-tab:: BP MEDIUM
 
-      The DaoAI BP MEDIUM camera has four M5 mounting holes, one Ø5 positioning hole, and one obround alignment hole. To ensure not to damage the threads, we recommend not exceeding the specified maximum torque value when fastening the screws.
+      DaoAI BP MEDIUM 摄像机有四个M5安装孔，一个Ø5定位锥孔和一个定位锥孔。为确保不损坏螺纹，我们建议在紧固螺丝时不要超过规定的最大扭矩值。
 
        .. image:: images/medium.png
          :align: center
@@ -72,14 +72,14 @@ Mounting Specifications
    
    .. group-tab:: BP AMR
 
-      The DaoAI BP AMR camera has four M5 mounting holes, one Ø5 positioning hole, and one obround alignment hole. To ensure not to damage the threads, we recommend not exceeding the specified maximum torque value when fastening the screws.
+      DaoAI BP AMR摄像机有四个M5安装孔，一个Ø5定位锥孔和一个定位锥孔。为确保不损坏螺纹，我们建议在紧固螺丝时不要超过规定的最大扭矩值。
 
        .. image:: images/amr_3.png
          :align: center   
 
    .. group-tab:: BP AMR-GPU
 
-      The DaoAI BP AMR-GPU camera has four M5 mounting holes, one Ø5 positioning hole, and one obround alignment hole. To ensure not to damage the threads, we recommend not exceeding the specified maximum torque value when fastening the screws.
+      DaoAI BP AMR-GPU 摄像机有四个M5安装孔，一个Ø5定位锥孔和一个定位锥孔。为确保不损坏螺纹，我们建议在紧固螺丝时不要超过规定的最大扭矩值。
 
        .. image:: images/amr_gpu.png
          :align: center

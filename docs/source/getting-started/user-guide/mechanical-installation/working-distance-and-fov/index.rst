@@ -1,6 +1,7 @@
-Working Distance and Field-of-View
+工作距离和视场
 ======================================
-This series has five bin-picking camera models for various workspace sizes and applications such as bin picking, palletizing,and part loading.
+
+该系列有五种型号的拣选相机，适用于不同的工作空间和应用，例如：拣选箱、码垛和零件装载。
 
 **BP ARM/AMR-GPU**
 

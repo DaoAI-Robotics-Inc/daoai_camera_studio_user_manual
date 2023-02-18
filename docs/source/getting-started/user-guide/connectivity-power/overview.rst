@@ -1,8 +1,9 @@
-Connectivity and Power Supply
+连接和电源
 ========================================
 
-Connectors
+连接器
 ---------------------------------
+
 .. tabs::
 
    .. group-tab:: BP SAMLL
@@ -10,51 +11,52 @@ Connectors
     .. image:: images/small.png
         :align: center
 
-    A. Power Connector 24V,5A DC
-    B. Ethernet Connector CAT 6 or higher
+    A. 电源连接器 24V,5A DC
+    B. 以太网连接器CAT 6或更高
 
    .. group-tab:: BP MEDIUM
 
     .. image:: images/medium.png
         :align: center
 
-    A. Power Connector 24V,10A DC
-    B. Ethernet Connector CAT 6 or higher
+    A. 电源连接器 24V,10A DC
+    B. 以太网连接器CAT 6或更高
 
    .. group-tab:: BP LARGE
 
     .. image:: images/large.png
         :align: center
 
-    A. Ethernet Connector CAT 6 or higher
-    B. Power Connector 24V,5A DC
+    A. 以太网连接器CAT 6或更高
+    B. 电源连接器 24V,5A DC
    
    .. group-tab:: BP AMR
 
     .. image:: images/amr.png
         :align: center
 
-    A. Power Connector 24V,5A DC
-    B. Ethernet Connector CAT 6 or higher
+    A. 电源连接器 24V,5A DC
+    B. 以太网连接器CAT 6或更高
       
    .. group-tab:: BP AMR-GPU
 
     .. image:: images/amr_gpu.png
         :align: center
 
-    A. Power Connector 24V,5A DC
-    B. Ethernet Connector CAT 6 or higher
+    A. 电源连接器 24V,5A DC
+    B. 以太网连接器CAT 6或更高
 
     
 
 Power supply interface
 ^^^^^^^^^^^^^^^^^^^^^^^
+
 .. tabs::
 
    .. group-tab:: BP SAMLL
 
     +-----------------------+--------+------------------------------+
-    | Pinout                |  Pin   |  Purpose                     | 
+    | 引脚分布               |  引脚  |  用途                         | 
     +=======================+========+==============================+
     |                       |   1    |  DC24V                       |
     |                       +--------+------------------------------+
@@ -66,19 +68,21 @@ Power supply interface
     |                       +--------+------------------------------+
     |                       |   5    |  SGND                        | 
     |                       +--------+------------------------------+
-    |                       |   6    |  Reserved, do not connect    | 
+    |                       |   6    |  保留，请勿连接               | 
     +-----------------------+--------+------------------------------+
 
+
     .. tip::
-        - PGND: represent the "power ground"
-        - AGND: represent the "analog ground"
-        - DGND: represent the "digital ground"
-        - SGND: represent the "signal ground"
+        - PGND是指电源地/机壳地，POWER GND 
+        - AGND是指模拟地，ANALOGUE GND 
+        - DGND是指数字地，DIGITAL GND 
+        - TGND是指特殊芯片参考地 
 
 
    .. group-tab:: BP MEDIUM
 
     +-----------------------+--------+------------------------------+
+    | 引脚分布               |  引脚  |  用途                         | 
     | Pinout                |  Pin   |  Purpose                     | 
     +=======================+========+==============================+
     |                       |   1    |  DC24V                       |
@@ -91,19 +95,19 @@ Power supply interface
     |                       +--------+------------------------------+
     |                       |   5    |  SGND                        | 
     |                       +--------+------------------------------+
-    |                       |   6    |  Reserved, do not connect    | 
+    |                       |   6    |  保留，请勿连接               | 
     +-----------------------+--------+------------------------------+
 
     .. tip::
-        - PGND: represent the "power ground"
-        - AGND: represent the "analog ground"
-        - DGND: represent the "digital ground"
-        - SGND: represent the "signal ground"
+        - PGND是指电源地/机壳地，POWER GND 
+        - AGND是指模拟地，ANALOGUE GND 
+        - DGND是指数字地，DIGITAL GND 
+        - TGND是指特殊芯片参考地 
 
    .. group-tab:: BP LARGE
 
     +-----------------------+--------+------------------------------+
-    | Pinout                |  Pin   |  Purpose                     | 
+    | 引脚分布               |  引脚  |  用途                         | 
     +=======================+========+==============================+
     |                       |   1    |  DC24V                       |
     |                       +--------+------------------------------+
@@ -115,19 +119,19 @@ Power supply interface
     |                       +--------+------------------------------+
     |                       |   5    |  SGND                        | 
     |                       +--------+------------------------------+
-    |                       |   6    |  Reserved, do not connect    | 
+    |                       |   6    |  保留，请勿连接               | 
     +-----------------------+--------+------------------------------+
 
     .. tip::
-        - PGND: represent the "power ground"
-        - AGND: represent the "analog ground"
-        - DGND: represent the "digital ground"
-        - SGND: represent the "signal ground"
+        - PGND是指电源地/机壳地，POWER GND 
+        - AGND是指模拟地，ANALOGUE GND 
+        - DGND是指数字地，DIGITAL GND 
+        - TGND是指特殊芯片参考地 
 
    .. group-tab:: BP AMR
 
     +-----------------------+--------+------------------------------+
-    | Pinout                |  Pin   |  Purpose                     | 
+    | 引脚分布               |  引脚  |  用途                         | 
     +=======================+========+==============================+
     |                       |   1    |  DC24V                       |
     |                       +--------+------------------------------+
@@ -137,16 +141,16 @@ Power supply interface
     +-----------------------+--------+------------------------------+
 
     .. tip::
-        - PGND: represent the "power ground"
-        - AGND: represent the "analog ground"
-        - DGND: represent the "digital ground"
-        - SGND: represent the "signal ground"
+        - PGND是指电源地/机壳地，POWER GND 
+        - AGND是指模拟地，ANALOGUE GND 
+        - DGND是指数字地，DIGITAL GND 
+        - TGND是指特殊芯片参考地 
 
    
    .. group-tab:: BP AMR-GPU
 
     +-----------------------+--------+------------------------------+
-    | Pinout                |  Pin   |  Purpose                     | 
+    | 引脚分布               |  引脚  |  用途                         | 
     +=======================+========+==============================+
     |                       |   1    |  DC24V                       |
     |                       +--------+------------------------------+
@@ -156,24 +160,24 @@ Power supply interface
     +-----------------------+--------+------------------------------+
 
     .. tip::
-        - PGND: represent the "power ground"
-        - AGND: represent the "analog ground"
-        - DGND: represent the "digital ground"
-        - SGND: represent the "signal ground"
+        - PGND是指电源地/机壳地，POWER GND 
+        - AGND是指模拟地，ANALOGUE GND 
+        - DGND是指数字地，DIGITAL GND 
+        - TGND是指特殊芯片参考地 
 
 
 
 
-Data cable
+数据线
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 .. tabs::
 
    .. group-tab:: BP SAMLL
 
-    BP Small use a ethernet cable for data transmission.
+    BP Small 使用以太网电缆进行数据传输。
 
-    The table below provides the ethernet cable pinout.
+    下表提供了以太网电缆的引脚分布。
 
 
     .. image:: images/ethernet.png
@@ -181,9 +185,9 @@ Data cable
 
    .. group-tab:: BP MEDIUM
 
-    BP Medium use a ethernet cable for data transmission.
+    BP Medium 使用以太网电缆进行数据传输。
 
-    The table below provides the ethernet cable pinout.
+    下表提供了以太网电缆的引脚分布。
 
 
     .. image:: images/ethernet.png
@@ -191,9 +195,9 @@ Data cable
 
    .. group-tab:: BP LARGE
 
-    BP Large use a ethernet cable for data transmission.
+    BP Large 使用以太网电缆进行数据传输。
 
-    The table below provides the ethernet cable pinout.
+    下表提供了以太网电缆的引脚分布。
 
 
     .. image:: images/ethernet.png
@@ -201,9 +205,9 @@ Data cable
 
    .. group-tab:: BP AMR
 
-    BP Amr use a ethernet cable for data transmission.
+    BP Amr 使用以太网电缆进行数据传输。
 
-    The table below provides the ethernet cable pinout.
+    下表提供了以太网电缆的引脚分布。
 
 
     .. image:: images/ethernet.png
@@ -211,9 +215,9 @@ Data cable
 
    .. group-tab:: BP AMR-GPU
 
-    BP Amr-gpu use a ethernet cable for data transmission.
+    BP Amr-gpu 使用以太网电缆进行数据传输。
 
-    The table below provides the ethernet cable pinout.
+    下表提供了以太网电缆的引脚分布。
 
 
     .. image:: images/ethernet.png
@@ -221,180 +225,179 @@ Data cable
 
 
 
-Connecting to the computer
+连接到计算机
 -----------------------------------
 
 .. tabs::
 
    .. group-tab:: BP SAMLL
 
-    1. Plug the power supply first into the "24V "
-    2. Plug the ethernet cable into the camera and connect it to your computer
-    3. Plug the power supply into a power outlet.
+    1. 先将电源插头插入 "24V"
+    2. 将以太网线插入摄像机，并将其与电脑连接起来
+    3. 将电源插头插入电源插座。
 
     .. note::
-        On disconnect, follow the procedure in reverse, disconnect mains power first. 
-        |br| Ensure that all connections are screwed in tightly. The coupling nut of the M12 screw connectors can in some cases be hard do screw in. However, when installed correctly they provide a robust and reliable connection.       
-        |br| Check :ref:`System Requirements` for performance considerations
+        在断开连接时，按照相反的程序进行，先断开主电源。
+        |br| 确保所有的连接都拧紧了。M12螺纹接头的连接螺母在某些情况下可能很难拧入。如果安装正确，它们会提供一个坚固和可靠的连接。      
+        |br| 检查 :ref:`系统要求` 以了解性能方面的考虑。
 
-    Use the AC/DC adapter supplied with the unit to ensure compliance with emission and immunity standards.
+    使用随设备提供的AC/DC适配器，以确保符合排放和抗扰度标准。
 
-    The DaoAI BP Small camera is protected against reverse polarity and against overheating by a thermistor that physically removes the power.
+    DaoAI BP Small通过一个热敏电阻来防止极性反转和过热，该热敏电阻可以物理性地切断电源。
 
-    The DaoAI BP Small camera uses Ethernet communication and needs 1 Gbps for  performance. 
+    DaoAI BP Small使用以太网通信，需要1 Gbps的性能。
     
-    Network Topology
-        The DaoAI BP Small camera supports the following network topologies:
+    网络拓扑结构
+        DaoAI BP Small支持以下网络拓扑结构。
+
 
     .. list-table::
         :widths: 25 25 
         :header-rows: 1
 
-        * - Direct connection
-          - Connection via switch
+        * - 直接连接
+          - 通过交换机连接
         * - .. image:: images/amrc.png
                 :scale: 38%
           - .. image:: images/amrswitch.png
                 :scale: 34% 
 
-    Continue to :ref:`Software Installation` where you will also find Network Configuration.
-
+    继续阅读 :ref:`软件安装`，在那里你还可以找到网络配置。
    
    .. group-tab:: BP MEDIUM
 
-    1. Plug the power supply first into the "24V"
-    2. Plug the ethernet cable into the camera and connect it to your computer
-    3. Plug the power supply into a power outlet.
+    1. 先将电源插头插入 "24V"
+    2. 将以太网线插入摄像机，并将其与电脑连接起来
+    3. 将电源插头插入电源插座。
 
     .. note::
-        On disconnect, follow the procedure in reverse, disconnect mains power first. 
-        |br| Ensure that all connections are screwed in tightly. The coupling nut of the M12 screw connectors can in some cases be hard do screw in. However, when installed correctly they provide a robust and reliable connection.       
-        |br| Check :ref:`System Requirements` for performance considerations
+        在断开连接时，按照相反的程序进行，先断开主电源。
+        |br| 确保所有的连接都拧紧了。M12螺纹接头的连接螺母在某些情况下可能很难拧入。如果安装正确，它们会提供一个坚固和可靠的连接。      
+        |br| 检查 :ref:`系统要求` 以了解性能方面的考虑。
 
-    Use the AC/DC adapter supplied with the unit to ensure compliance with emission and immunity standards.
+    使用随设备提供的AC/DC适配器，以确保符合排放和抗扰度标准。
 
-    The DaoAI BP Medium camera is protected against reverse polarity and against overheating by a thermistor that physically removes the power.
+    DaoAI BP Medium通过一个热敏电阻来防止极性反转和过热，该热敏电阻可以物理性地切断电源。
 
-    The DaoAI BP Medium camera uses Ethernet communication and needs 1 Gbps for performance.
+    DaoAI BP Medium使用以太网通信，需要1 Gbps的性能。
     
-    Network Topology
-        The DaoAI BP Medium camera supports the following network topologies:
-
+    网络拓扑结构
+        DaoAI BP Medium支持以下网络拓扑结构。
+        
     .. list-table::
         :widths: 25 25 
         :header-rows: 1
 
-        * - Direct connection
-          - Connection via switch
+        * - 直接连接
+          - 通过交换机连接
         * - .. image:: images/mediumc.png
                 :scale: 38%
           - .. image:: images/mediumswitch.png
                 :scale: 34% 
 
-    Continue to :ref:`Software Installation` where you will also find Network Configuration.
+    继续阅读 :ref:`软件安装`，在那里你还可以找到网络配置。
 
 
    .. group-tab:: BP LARGE
 
-    1. Plug the power supply first into the "24V"
-    2. Plug the ethernet cable into the camera and connect it to your computer
-    3. Plug the power supply into a power outlet.
+    1. 先将电源插头插入 "24V"
+    2. 将以太网线插入摄像机，并将其与电脑连接起来
+    3. 将电源插头插入电源插座。
 
     .. note::
-        On disconnect, follow the procedure in reverse, disconnect mains power first. 
-        |br| Ensure that all connections are screwed in tightly. The coupling nut of the M12 screw connectors can in some cases be hard do screw in. However, when installed correctly they provide a robust and reliable connection.       
-        |br| Check :ref:`System Requirements` for performance considerations
+        在断开连接时，按照相反的程序进行，先断开主电源。
+        |br| 确保所有的连接都拧紧了。M12螺纹接头的连接螺母在某些情况下可能很难拧入。如果安装正确，它们会提供一个坚固和可靠的连接。      
+        |br| 检查 :ref:`系统要求` 以了解性能方面的考虑。
 
-    Use the AC/DC adapter supplied with the unit to ensure compliance with emission and immunity standards.
+    使用随设备提供的AC/DC适配器，以确保符合排放和抗扰度标准。
 
-    The DaoAI BP LARGE camera is protected against reverse polarity and against overheating by a thermistor that physically removes the power.
+    DaoAI BP LARGE通过一个热敏电阻来防止极性反转和过热，该热敏电阻可以物理性地切断电源。
 
-    The DaoAI BP LARGE camera uses Ethernet communication and needs 1 Gbps for performance.
-
-    Network Topology
-        The DaoAI BP large camera supports the following network topologies:
+    DaoAI BP LARGE使用以太网通信，需要1 Gbps的性能。
+    
+    网络拓扑结构
+        DaoAI BP LARGE支持以下网络拓扑结构。
 
     .. list-table::
         :widths: 25 25 
         :header-rows: 1
 
-        * - Direct connection
-          - Connection via switch
+        * - 直接连接
+          - 通过交换机连接
         * - .. image:: images/largec.png
                 :scale: 38%
           - .. image:: images/largeswitch.png
                 :scale: 34% 
 
-    Continue to :ref:`Software Installation` where you will also find Network Configuration.
+    继续阅读 :ref:`软件安装`，在那里你还可以找到网络配置。
 
    
    .. group-tab:: BP AMR
 
-    1. Plug the power supply first into the "24V"
-    2. Plug the ethernet cable into the camera and connect it to your computer
-    3. Plug the power supply into a power outlet.
+    1. 先将电源插头插入 "24V"
+    2. 将以太网线插入摄像机，并将其与电脑连接起来
+    3. 将电源插头插入电源插座。
 
     .. note::
-        On disconnect, follow the procedure in reverse, disconnect mains power first. 
-        |br| Ensure that all connections are screwed in tightly. The coupling nut of the M12 screw connectors can in some cases be hard do screw in. However, when installed correctly they provide a robust and reliable connection.       
-        |br| Check :ref:`System Requirements` for performance considerations
+        在断开连接时，按照相反的程序进行，先断开主电源。
+        |br| 确保所有的连接都拧紧了。M12螺纹接头的连接螺母在某些情况下可能很难拧入。如果安装正确，它们会提供一个坚固和可靠的连接。      
+        |br| 检查 :ref:`系统要求` 以了解性能方面的考虑。
 
-    Use the AC/DC adapter supplied with the unit to ensure compliance with emission and immunity standards.
+    使用随设备提供的AC/DC适配器，以确保符合排放和抗扰度标准。
 
-    The DaoAI BP AMR camera is protected against reverse polarity and against overheating by a thermistor that physically removes the power.
+    DaoAI BP AMR通过一个热敏电阻来防止极性反转和过热，该热敏电阻可以物理性地切断电源。
 
-    The DaoAI BP AMR camera uses Ethernet communication and needs 1 Gbps for performance. 
+    DaoAI BP AMR使用以太网通信，需要1 Gbps的性能。
     
-    Network Topology
-        The DaoAI BP AMR camera supports the following network topologies:
+    网络拓扑结构
+        DaoAI BP AMR支持以下网络拓扑结构。
 
     .. list-table::
         :widths: 25 25 
         :header-rows: 1
 
-        * - Direct connection
-          - Connection via switch
+        * - 直接连接
+          - 通过交换机连接
         * - .. image:: images/amrc.png
                 :scale: 38%
           - .. image:: images/amrswitch.png
                 :scale: 34% 
     
-    Continue to :ref:`Software Installation` where you will also find Network Configuration.
+    继续阅读 :ref:`软件安装`，在那里你还可以找到网络配置。
 
       
    .. group-tab:: BP AMR-GPU
 
-    1. Plug the power supply first into the "24V"
-    2. Plug the ethernet cable into the camera and connect it to your computer
-    3. Plug the power supply into a power outlet.
+    1. 先将电源插头插入 "24V"
+    2. 将以太网线插入摄像机，并将其与电脑连接起来
+    3. 将电源插头插入电源插座。
 
     .. note::
-        On disconnect, follow the procedure in reverse, disconnect mains power first. 
-        |br| Ensure that all connections are screwed in tightly. The coupling nut of the M12 screw connectors can in some cases be hard do screw in. However, when installed correctly they provide a robust and reliable connection.       
-        |br| Check :ref:`System Requirements` for performance considerations
+        在断开连接时，按照相反的程序进行，先断开主电源。
+        |br| 确保所有的连接都拧紧了。M12螺纹接头的连接螺母在某些情况下可能很难拧入。如果安装正确，它们会提供一个坚固和可靠的连接。      
+        |br| 检查 :ref:`系统要求` 以了解性能方面的考虑。
 
-    Use the AC/DC adapter supplied with the unit to ensure compliance with emission and immunity standards.
+    使用随设备提供的AC/DC适配器，以确保符合排放和抗扰度标准。
 
-    The DaoAI BP AMR camera is protected against reverse polarity and against overheating by a thermistor that physically removes the power.
+    DaoAI BP AMR-GPU通过一个热敏电阻来防止极性反转和过热，该热敏电阻可以物理性地切断电源。
 
-    The DaoAI BP AMR camera uses Ethernet communication and needs 1 Gbps for performance. 
-
-    Network Topology
-        The DaoAI BP AMR-GPU camera supports the following network topologies:
+    DaoAI BP AMR-GPU使用以太网通信，需要1 Gbps的性能。
+    
+    网络拓扑结构
+        DaoAI BP AMR-GPU支持以下网络拓扑结构。
 
     .. list-table::
         :widths: 25 25 
         :header-rows: 1
 
-        * - Direct connection
-          - Connection via switch
+        * - 直接连接
+          - 通过交换机连接
         * - .. image:: images/amrc.png
                 :scale: 38%
           - .. image:: images/amrswitch.png
                 :scale: 34% 
 
-    Continue to :ref:`Software Installation` where you will also find Network Configuration.
-
+    继续阅读 :ref:`软件安装`，在那里你还可以找到网络配置。
      
 .. |br| raw:: html
 

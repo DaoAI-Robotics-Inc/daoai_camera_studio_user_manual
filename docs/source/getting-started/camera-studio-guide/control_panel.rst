@@ -1,4 +1,4 @@
-Control Panel
+控制面板
 ===============
 
 .. include:: Connect Camera.rst
