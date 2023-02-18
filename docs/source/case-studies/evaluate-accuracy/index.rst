@@ -1,22 +1,21 @@
-Evaluate Accuracy
+评估准确度
 =====================
 
 .. contents:: 
    :local:
 
-Camera Accuracy
+相机精度
 -------------------
 
 .. image:: ./images/accuracy.PNG
 
-Camera **accuracy** is the comprehesive measure of the camera **trueness** and camera **presision**.
+摄像机 **精度** 是对摄像机 **真实性** 和摄像机 **预视性** 的综合衡量。
 
-High camera accuracy represents that both camera trueness and camera presision is high: captured image/point cloud
-is at a good quality, low in noise, and the reflected object position in camera is the same as the object's acutal position in space.
+高的相机精度代表相机的真实性和相机的预知性都很高：捕获的图像/点云是高质量的，低噪音的，反映在相机中的物体位置与物体在空间的实际位置相同。
 
-In oral communication, the term camera **accuracy** is usually refered to camera **trueness**.
+在口头交流中，摄像机的 **准确度** 通常指的是摄像机的 **真实性**。
 
-Camera Trueness
+相机的真实性
 --------------------
 
 .. image:: ./images/trueness_2.png
@@ -24,71 +23,71 @@ Camera Trueness
 .. image:: ./images/trueness_1.png
     :scale: 45%
 
-Camera trueness reflects the error between the position of the object in space and the position captured in the camera.
-Camera trueness determines whether the picking process can successfully pick objects in all positions and times within the field of view.
+摄像机真实性反映了物体在空间的位置和摄像机捕捉到的位置之间的误差。
+摄像机真实性决定了拣选过程是否能在视场内的所有位置和时间成功地拣选物体。
 
-Camera trueness is highest at the camera's focus point, and gradualy decrease as the object moves farther away from the focus point. 
-The error of an object's position on the edge of the camera's field of view is higher than the error in the camera's focus. 
+摄像机的真实性在摄像机的对焦点处最高，随着物体远离对焦点而逐渐降低。
+物体在摄像机视场边缘的位置的误差高于摄像机焦点的误差。
 
-This increase in error applies to all axis: x, y and z axis, and the x, y axes have a slightly smaller 
-impact relative to the z axis (x and y axis errors <0.1%), while the z axis has a slightly greater impact (z axis errors <0.2%).
+这种误差的增加适用于所有的轴：X、Y和Z轴，而X、Y轴的影响略小于Z轴（X和Y轴的误差<0.1%），而Z轴的影响略大（Z轴的误差<0.2%）。
+相对于z轴的影响稍小（x和y轴误差<0.1%），而z轴的影响稍大（z轴误差<0.2%）。
 
-The accuracy of a camera is affected by:
+相机的精度受以下因素影响：
 
-    - 3D camera hardware and optical quality
-    - Quality of camera calibration
-    - Position of the object in the calibrated field of view
-    - Camera temperature
-    - Camera aging
-    - Physical impacts, vibrations, and pressure
+    - 三维相机的硬件和光学质量
+    - 相机校准的质量
+    - 校准视场中物体的位置
+    - 相机温度
+    - 相机老化
+    - 物理冲击、振动和压力
 
 
-Camera Presision
+摄像机预热
 --------------------
 
-Accuracy reflects the quality of captured image or point cloud. 
-Whether if there are noises in the captured data, point cloud loss due to high reflective surface. 
+准确度反映了捕获的图像或点云的质量。
+如果捕获的数据中存在噪音，点云是否因高反射面而损失。
 
-High-accuracy point clouds usually have the following characteristics:
+高精度的点云通常具有以下特点。
 
-    - Dense point cloud and can capture details
-        - High resolution
-        - Low noise
-        - Environmental light resistance
-        - Low occlusion
-        - High dynamic range
-    - Low point cloud error, which is usually caused by the following factors
-        - Reflection between objects
-        - Surface highlights of objects
-        - High-contrast areas
-        - Edges of objects.
+    - 密集的点云，可以捕捉到细节：
+        - 高分辨率
+        - 低噪音
+        - 耐环境光照
+        - 低遮挡性
+        - 高动态范围
+    - 低的点云误差，通常由以下因素引起：
+        - 物体之间的反射
+        - 物体的表面高光
+        - 高对比度区域
+        - 物体的边缘
 
-DaoAI Camera Accuracy
+DaoAI相机的精确度
 ----------------------
 
-DaoAI camera provides 0.2% accuracy, 
-with x, y-axis accuracy <0.1% and z-axis offset accuracy error <0.2%. 
-This means that, without considering other factors, at a capture distance of 100mm, the camera's accuracy error will be at most 0.2mm. 
-Similarly, at a capture distance of 1000mm, the camera's accuracy error will be at most 2mm.
+DaoAI相机提供0.2%的精度。
+其中X、Y轴精度<0.1%，Z轴偏移精度误差<0.2%。
+这意味着，在不考虑其他因素的情况下，在100毫米的捕捉距离，相机的精度误差最多为0.2毫米。
+同样地，在1000毫米的拍摄距离上，相机的精度误差将最多为2毫米。
 
-How to Validate Camera Trueness
+如何验证相机的真实性
 ---------------------------------
 
-Camera trueness can be effected by physical impacts, tempreature, and time of use. 
-Therefore validating your camera trueness is important in accheiving successful pickings.
-When camera trueness is greater than the acceptable range (< 0.2%) then the camera will need to be calibrated again.
+摄像机的真实性可能会受到物理冲击、温度和使用时间的影响。
+因此，验证你的相机的真实性对于获得成功的采摘是很重要的。
+当相机的真实性大于可接受的范围（< 0.2%），那么相机将需要再次校准。
 
-Recall that camera trueness is the error of the captured object position and the actual object position.
+回顾一下，相机的真实性是指捕获的物体位置和实际物体位置的误差。
 
-To verify this error, we can use a known sized object, the calibration board for example: the distance between the cirlces are known.
-We can compare the distance captured by the camera with the actual disctance which we know. 
+为了验证这个误差，我们可以使用一个已知大小的物体，例如校准板：两个圆圈之间的距离是已知的。
+我们可以将摄像机拍摄的距离与我们知道的实际距离进行比较。
 
 .. image:: ./images/calibration_board.png
 
-For example, the calibration board has 15 cirlces a in a row, and each one is 24mm away from another, that is, the row should have a distance of 336.
-Suppose this distance measured in camera is 335, then the camera trueness can be calculated as (336.5-335)/336 * 100% = 0.15%.
+例如，校准板上有15个圆圈，每一个圆圈与另一个圆圈的距离是24毫米，也就是说，这一行的距离应该是336。
+假设这个距离在相机中测量为335，那么相机的真实性可以计算为（336.5-335）/336 * 100% = 0.15%。
 
 
-If you have DaoAI Vision Studio installed, you can use the calibration node's presision measure mode to validate camera trueness.
+如果你安装了 DaoAI Vision Studio，你可以使用校准节点的预视测量模式来验证摄像机的真实性。
 
 .. image:: ./images/precision_measure.png

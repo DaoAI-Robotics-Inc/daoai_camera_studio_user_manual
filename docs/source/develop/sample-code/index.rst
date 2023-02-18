@@ -1,30 +1,29 @@
-Samples
+示例
 =========
 
 .. contents:: 
    :local:
 
-Dive straight into programming the DaoAI camera with your preferred programming language.
+使用你喜欢的编程语言直接开始DaoAI相机的编程。
 
-
-List of Samples
+示例列表
 ------------------
 
 .. tabs::
 
    .. tab:: C++
 
-        - **Camera**
+        - **相机**
 
-            - Basic 
+            - 基本 
                 - <sample_1>
             
-            - Advanced
+            - 进阶
                 - <sample_1>
 
-        - **Applications**
+        - **应用**
 
-            - Basic
+            - 基本
 
 
    .. tab:: C#
@@ -33,7 +32,7 @@ List of Samples
    .. tab:: Python
 
 
-Installation
+安装
 ---------------
 
 .. tabs::
@@ -47,31 +46,31 @@ Installation
    .. tab:: Python
 
 
-Sample Parity
+示例奇偶性
 ----------------
 
-Camera
+相机
 ~~~~~~~~
 
 .. list-table:: 
    :header-rows: 1
 
-   * - Sample
+   * - **示例**
      - C++
      - C#
      - Python
-   * - **basic**
+   * - **基本**
      -
      - 
      - 
-   * - Capture
+   * - **捕获**
      - ✓
      - ✓
      - ✓
 
-Applications
+应用
 ~~~~~~~~~~~~~~
 
 
-Sample Utils
+示例应用
 ~~~~~~~~~~~~~~

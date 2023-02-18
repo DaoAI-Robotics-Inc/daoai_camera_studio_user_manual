@@ -1,33 +1,38 @@
 .. _Using Multiple DaoAI Cameras:
 
-Using Multiple DaoAI Cameras
-=============================
+使用多个 DaoAI 相机
+===================
 
-**DaoAI Vision** allows you to operate multiple DaoAI Cameras of the BP series simultaneously (e.g. connecting both BP-S and BP-L).
+DaoAI Vision 可以让您同时操作多个 DaoAI BP 系列相机（例如，同时连接 BP-S 和 BP-L）。
 
-However, it comes with some limitations: 
+这种方法有一些限制：
 
-    - Each of the DaoAI Cameras must have a unique IP address.
-    - Each of the DaoAI Cameras have to be connected using separate ethernet ports.
-    - You must not call DaoAI::Application::cameras() simultaneously from multiple threads or processes; they may collide when trying to connect to the cameras to get the serial number, firmware version, etc.
+    - 每个 DaoAI 相机必须拥有独特的 IP 地址。
+    - 每个 DaoAI 相机必须使用单独的以太网端口连接。
+    - 不要同时从多个线程或进程中调用 DaoAI::Application::cameras()；否则在尝试连接到相机获取序列号、固件版本等信息时会发生冲突。
 
 .. warning:: 
-    Cameras can capture images simultaneously, but they must be connected to the computer in sequence.
+    相机可以同时捕捉图像，但它们必须按顺序连接到计算机。
 
 To connect multiple cameras in Vision: 
 
 Select **Platform** → **Platform Configuration** in the tool bar.
 
+在 Vision 中连接多个相机：
+
+在工具栏中选择 **平台**（Platform） → **平台配置**（Platform Configuration）。
+
 .. image:: images/v_platform.png
 
-In the **Camera** tab, click **+** to start adding a new camera, select the appropriate camera model from the dropdown list, then click **Accept** to add the camera.
+在 **相机** （Camera） 选项卡中，单击 **+** 添加新相机，从下拉列表中选择适当的相机型号，然后单击 **接受** （Accept） 添加相机。
 
 .. image:: images/v_platform_accept.png
 
-If it is a remote camera, select the **Enable Remote Camera** checkbox and enter its IP address. Click **Update Camera List**, then select the Camera from the list. Click Connect to connect the camera.
+如果是远程相机，则选中 **启用远程相机** （Enable Remote Camera） 复选框并输入其 IP 地址。
+单击 **更新相机列表** （Update Camera List），然后从列表中选择相机。单击 **连接** （Connect） 连接相机。
 
 .. image:: images/v_platform_added.png
 
 .. note:: 
-    For multiple Remote Cameras, make sure you have configured your cameras' IP addresses (see :ref:`Network Configuration`), otherwise you may have issue finding or connecting the cameras.
+    使用多个远程相机时，请确保您已经配置了相机的 IP 地址（请参见 :ref:`Network Configuration`），否则您可能会在查找或连接相机时遇到问题。
 
