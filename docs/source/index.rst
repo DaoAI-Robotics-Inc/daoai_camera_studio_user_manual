@@ -1,21 +1,20 @@
-DaoAI Camera Overview
+DaoAI 相机概述
 ======================
 
-This page gives an overview of DaoAI's product line. DaoAI offers a wide range of 3D cameras for different working distances and use cases. Compared to our competitors, our cameras 
-provide:
+本页对DaoAI的产品线进行了概述。DaoAI为不同的工作距离和使用情况提供了一系列的3D相机。我们的相机提供：
 
-* Accurate, high resolution captures under a variety of lighting conditions
-* Fast capture and on-cam processing times
-* Powerful filtering and post-processing tools for improving the quality of generated point clouds
-* Stable capture performance under temperatures ranging from 0-40 degrees celsius
-* IP65 rated dust tight and water resistant chassis
-* Easy integration with most major robotics brands
+* 在各种光照条件下准确的、高分辨率的抓拍
+* 快速捕获和现场处理时间
+* 强大的过滤和后处理工具，以提高生成的点云的质量
+* 在0-40摄氏度的温度范围内具有稳定的捕获性能
+* IP65等级的防尘和防水机箱
+* 支持大多数主要机器人品牌
 
-Our DaoAI Camera Studio application is the supporting graphical user interface software that allows users to directly interact with our DaoAI 3D Camera systems.
+我们的DaoAI Camera Studio应用程序是支持图形用户界面的软件，允许用户直接与我们的DaoAI 3D相机系统互动。
 
 .. toctree::
    :maxdepth: 2
-   :caption: GETTING STARTED
+   :caption: 快速入门
 
    getting-started/user-guide/index
    getting-started/quick-start/index
@@ -24,7 +23,7 @@ Our DaoAI Camera Studio application is the supporting graphical user interface s
 
 .. toctree::
    :maxdepth: 2
-   :caption: DEVELOP
+   :caption: 开发功能
 
    develop/index
    develop/connect-camera/index
@@ -32,7 +31,7 @@ Our DaoAI Camera Studio application is the supporting graphical user interface s
 
 .. toctree::
    :maxdepth: 2
-   :caption: CASE STUDIES
+   :caption: 案例分析
 
    case-studies/index
    case-studies/captruing-high-quality-point-clouds/index
@@ -43,7 +42,7 @@ Our DaoAI Camera Studio application is the supporting graphical user interface s
 
 .. toctree::
    :maxdepth: 2
-   :caption: REFERENCE
+   :caption: 参考
 
    reference/camera-settings/index
    reference/calculators/index
@@ -53,7 +52,7 @@ Our DaoAI Camera Studio application is the supporting graphical user interface s
 
 .. toctree::
    :maxdepth: 2
-   :caption: SUPPORT
+   :caption: 支持
 
    support/FAQ/index
    support/trouble-shooting/index
@@ -62,7 +61,7 @@ Our DaoAI Camera Studio application is the supporting graphical user interface s
 
 .. toctree::
    :maxdepth: 2
-   :caption: RESOURCES
+   :caption: 更多资源
 
    resources/release-notes/index
 
