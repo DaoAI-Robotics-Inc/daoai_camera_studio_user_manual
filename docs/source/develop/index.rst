@@ -1,10 +1,5 @@
-<<<<<<< HEAD:docs/source/sdk-usage/index.rst
 软件开发工具包的使用
 ====================
-=======
-Develop - Create a New Project
-==================================
->>>>>>> english_review_version_02:docs/source/develop/index.rst
 
 本页将引导您了解如何使用我们的软件开发包的设置项目。
 

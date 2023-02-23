@@ -1,28 +1,32 @@
-Capturing High Quality Point Clouds
+捕捉高质量的点云
 =========================================
-DaoAI camera studio have three ways to change the exposure:
 
-- Projector Brightness
-- Exposire Time
-- Gain
+DaoAI相机工作室有三种方式来改变曝光。
 
-In this tutorial, we will first explore what the different exposure variables are, how they work, and which considerations should be taken when using them. Then we will apply these principles to establish a simple 3D imaging technique that aims at acquiring high-quality point clouds.
+- 投影仪亮度
+- 曝光时间
+- 增益
 
-**Projector Brightness**
+在本教程中，我们将首先探讨什么是不同的曝光变量，它们是如何工作的，以及在使用它们时应该注意哪些问题。
+然后，我们将应用这些原理建立一个简单的三维成像技术，旨在获取高质量的点云。
 
-Projector brightness controls the output power and thus the amount of light that is emitted by the projector. Using the projector brightness is the most efficient way to maximize signal-to-noise ratio (SNR). Maximizing projector brightness will maximize the amplitude of the signal received by the camera. This minimizes impact from noise, as long as the reflected light from the projector does not over-saturate the pixel. At the same time as improving the peak signal amplitude, increased brightness also affects the mean intensity of the image. This also means that projector brightness can be used to control exposure, measured in stops.
+**投影仪的亮度**
 
-**Exposure Time**
+投影机亮度控制输出功率，从而控制投影机发出的光量。使用投影仪亮度是最大化信噪比（SNR）的最有效方法。最大化投影仪的亮度将最大限度地提高摄像机接收到的信号的振幅。只要来自投影仪的反射光不会使像素过度饱和，这就能最大限度地减少噪音的影响。在提高信号峰值振幅的同时，增加亮度也会影响图像的平均强度。这也意味着，投影机的亮度可以用来控制曝光，以档为单位。
 
-The exposure time also known as shutter speed is the amount of time that a single camera image is exposed to light. In other words, for how long the shutter remains open.
+**曝光时间**
 
-**Gain**
+曝光时间也被称为快门速度，是指单个相机图像暴露在光线下的时间。换句话说，快门保持打开的时间。
 
-Gain is a parameter that lets the user configure the pre-amplification of the read-out circuit in the imaging sensor pixels. In photography, it is commonly referred to as ISO. Increasing the gain increases the pre-amplification of the sensor which will increase its sensitivity to light and thus result in brighter images.
+**增益**
 
-3D imaging technique
+增益是一个参数，让用户配置成像传感器像素中读出电路的预放大。在摄影中，它通常被称为ISO。增加增益可以增加传感器的预放大，这将增加其对光线的敏感性，从而使图像更加明亮。
+
+三维成像技术
 ------------------------------------
-In this part of the tutorial, we will present a 3D imaging technique. This technique utilizes the histogram to evaluate our point cloud in a predictable and step-by-step manner, in order to acquire good 3D point clouds. The procedure can be divided into three steps:
+在本教程的这一部分，我们将介绍一种三维成像技术。
+这种技术利用直方图，以可预测的方式逐步评估我们的点云，以获得良好的三维点云。
+该程序可分为三个步骤。
 
 .. toctree::
     :maxdepth: 1

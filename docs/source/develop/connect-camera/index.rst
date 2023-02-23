@@ -1,26 +1,26 @@
-Connecting Camera
+连接摄像机
 =================================
 
 .. contents:: 
    :local:
 
-Introduction
+简介
 ---------------------
 
 
-This tutorial describes how to use the DaoAI SDK to capture point clouds and 2D images.
+本教程介绍了如何使用DaoAI SDK来采集点云和二维图像。
 
-For MATLAB see DaoAI Capture Tutorial for MATLAB.
+关于MATLAB，请参见DaoAI Capture Tutorial for MATLAB。
 
-Prerequisites
+前提条件
 ~~~~~~~~~~~~~~~~~~~
 
-    - install DaoAI Camera Studio
+    - 安装DaoAI相机工作室
 
-Initialize
+初始化
 ------------------
 
-Calling any of the APIs in the DaoAI Camera SDK requires initializing the DaoAI application and keeping it alive while the program runs.
+调用DaoAI相机SDK中的任何API都需要初始化DaoAI应用程序，并在程序运行时保持其活力。
 
 .. tabs::
 
@@ -42,24 +42,22 @@ Calling any of the APIs in the DaoAI Camera SDK requires initializing the DaoAI 
 
          app = DaoAI.Application()
 
-Connect
+连接
 ------------------
 
-Capture
+捕获
 ------------------
 
-Now we can capture a 3D image. Whether there is a single acquisition or multiple acquisitions (HDR) 
-is given by the number of ``acquisitions`` in ``settings``.
+现在我们可以采集3D图像了。是单次采集还是多次采集（HDR）是由 "设置 "中的 "采集次数 "决定的。
 
-Load
+加载
 ~~~~~~~~~~~~~~~~
 
-Once saved, the frame can be loaded from a ZDF file.
+一旦保存下来，就可以从ZDF文件中加载画面。
 
-Capture 2D
+捕获2D
 ~~~~~~~~~~~~~~~~
 
-If we only want to capture a 2D image, which is faster than 3D, we can do so via the 2D API.
+如果我们只想捕捉一个2D图像，这比3D要快，我们可以通过2D API来实现。
 
-.. Capture point cloud?
-
+.. 捕获点云？
