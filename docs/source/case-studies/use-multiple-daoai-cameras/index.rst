@@ -14,13 +14,13 @@ DaoAI Vision 可以让您同时操作多个 DaoAI BP 系列相机（例如，同
 .. warning:: 
     相机可以同时捕捉图像，但它们必须按顺序连接到计算机。
 
-To connect multiple cameras in Vision: 
+要在Vision中连接多台摄像机。
 
-Select **Platform** → **Platform Configuration** in the tool bar.
+在工具条上选择 **平台** → **平台配置** 。
 
 在 Vision 中连接多个相机：
 
-在工具栏中选择 **平台**（Platform） → **平台配置**（Platform Configuration）。
+在工具栏中选择 **平台** （Platform） →  **平台配置** （Platform Configuration）。
 
 .. image:: images/v_platform.png
 

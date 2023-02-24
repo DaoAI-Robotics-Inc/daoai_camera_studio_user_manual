@@ -1,7 +1,7 @@
 错误报告
 ============
 
-如果你的问题没有在用户手册中解决，也没有在我们的FAQ页面上列出，你可以在我们的 `帮助中心<https://daoai.atlassian.net/servicedesk/customer/portals>`_ 报告你的问题。
+如果你的问题没有在用户手册中解决，也没有在我们的FAQ页面上列出，你可以在我们的 `帮助中心 <https://daoai.atlassian.net/servicedesk/customer/portals>`_ 报告你的问题。
 
 你也可以通过 support@daoai.com 与我们联系，我们的团队会尽快给你答复!
 
@@ -32,7 +32,7 @@ Search for Related Bug Reports
 报告一个错误
 --------------
 
-要报告一个错误，请到 `帮助中心<https://daoai.atlassian.net/servicedesk/customer/portals>`_ 并点击 "报告一个错误"。
+要报告一个错误，请到 `帮助中心 <https://daoai.atlassian.net/servicedesk/customer/portals>`_ 并点击 "报告一个错误"。
 
 .. image:: images/help_center_home_report_a_bug.png
 

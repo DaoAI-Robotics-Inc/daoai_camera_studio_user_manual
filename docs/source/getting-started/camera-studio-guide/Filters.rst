@@ -1,11 +1,12 @@
-滤波器
-=======
+滤镜
+------
 
 本节介绍用于预处理和后处理图像的过滤功能，以提高点云质量。
 
+|
 
 灰度阈值
----------
+~~~~~~~~~~~
 
 .. figure:: images/intensity_threshold.png
     :align: center
@@ -22,7 +23,7 @@
 |
 
 离群阈值
----------
+~~~~~~~~~~~
 
 .. figure:: images/outlier_threshold.png
     :align: center
@@ -46,25 +47,10 @@
 |
 
 相位质量滤波器
-----------------
+~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/phase_quality_filter.png
     :align: center
-
-.. figure:: images/gaussian_before.png
-    :align: center
-
-    Original point cloud
-
-.. figure:: images/gaussian_5x5.png
-    :align: center
-
-    Point cloud with Gaussian filter of kernel size 5x5
-
-.. figure:: images/gaussian_9x9.png
-    :align: center
-
-    Point cloud with Gaussian filter of kernel size 9x9
 
 |
 
@@ -82,7 +68,7 @@
     使用强度为0.3的相位质量滤波后的点云
 
 高斯滤波器
-----------------
+~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/gaussian_filter.png
     :align: center
@@ -109,20 +95,10 @@
 |
 
 中值滤波器
---------------
+~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/median_filter.png
     :align: center
-
-.. figure:: images/median_before.png
-    :align: center
-
-    Original point cloud
-
-.. figure:: images/median_after.png
-    :align: center
-
-    Point cloud with median filter of kernel size 5x5
 
 |
 
@@ -141,42 +117,10 @@
 |
 
 法向量滤波器
--------------
+~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/face_normal_filter.png
     :align: center
-
-.. figure:: images/face_normal_before.png
-    :align: center
-
-    Original point cloud
-
-.. figure:: images/face_normal_after.png
-    :align: center
-
-    Point cloud with Face Normal Filter
-
-|
-
-Remove Small Area
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. figure:: images/remove_small_area.png
-    :align: center
-
-|
-
-This filter removes small chunks of isolated point cloud. Since noise often appear in the form of small dots, they can be removed using this filter.
-
-.. figure:: images/remove_small_area_before.png
-    :align: center
-
-    Original point cloud
-
-.. figure:: images/remove_small_area_after.png
-    :align: center
-
-    Point cloud with Remove Small Area
 
 |
 
@@ -197,44 +141,10 @@ This filter removes small chunks of isolated point cloud. Since noise often appe
 |
 
 移除小型离散区域
------------------
+~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/remove_small_area.png
     :align: center
-
-.. figure:: images/smooth_before.png
-    :align: center
-
-    Original point cloud
-
-.. figure:: images/smooth_after.png
-    :align: center
-
-    Point cloud with Smooth Filter
-
-|
-
-Fill Gaps
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. figure:: images/fill_gaps.png
-    :align: center
-
-|
-
-Interpolation can be used to caltulate the coordinates of points in areas where points are missing from the point cloud. There will be scenarios where your point cloud is missing 
-points in areas due things like reflection, poor lighting, etc. Thresholds can be set for maximum gap area width, depth, and slope, to describe the areas of the point cloud where 
-interpolation will occur to calculate and fill in these missing points.
-
-.. figure:: images/fill_before.png
-    :align: center
-
-    Original point cloud
-
-.. figure:: images/fill_after.png
-    :align: center
-
-    Point cloud with Fill Gaps
 
 |
 
@@ -254,7 +164,7 @@ interpolation will occur to calculate and fill in these missing points.
 
 
 平滑过滤
------------
+~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/smooth_filter.png
     :align: center
@@ -276,7 +186,7 @@ interpolation will occur to calculate and fill in these missing points.
 |
 
 填补空白
-----------
+~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/fill_gaps.png
     :align: center
@@ -310,7 +220,7 @@ fill order指填补的方向:
 |
 
 饱和滤镜
-----------
+~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/saturation_filter.png
     :align: center
@@ -334,7 +244,7 @@ fill order指填补的方向:
 |
 
 对比度失真滤镜
-----------------
+~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/contrast_distortion.png
     :align: center
@@ -373,7 +283,7 @@ fill order指填补的方向:
 |
 
 色彩均衡
-----------
+~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/color_balance.png
     :align: center

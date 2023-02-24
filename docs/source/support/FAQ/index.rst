@@ -38,7 +38,7 @@ DaoAI摄像机通过将结构光投射到环境中来计算场景的深度信息
     - IN-S：3.7千克
     - IN-M：3.7公斤
 
-请参阅我们的 `拣选系列页面<https://www.daoai.com/3d-camera-series/bin-picking-camera-series>`_ 和 `检测系列页面<https://www.daoai.com/3d-camera-series/inspection-camera-series>`_ ，在SPECS部分有更详细的视场对比图和表格。
+请参阅我们的 `拣选系列页面 <https://www.daoai.com/3d-camera-series/bin-picking-camera-series>`_ 和 `检测系列页面 <https://www.daoai.com/3d-camera-series/inspection-camera-series>`_ ，在SPECS部分有更详细的视场对比图和表格。
 
 摄像机的视场角
 --------------------------------------------------------------
@@ -59,7 +59,7 @@ DaoAI摄像机通过将结构光投射到环境中来计算场景的深度信息
     - IN-S: 132 x 106 mm
     - IN-M: 225 x 185 mm
 
-| 请参阅我们的  `拣选系列页面<https://www.daoai.com/3d-camera-series/bin-picking-camera-series>`_ 和 `检测系列页面<https://www.daoai.com/3d-camera-series/inspection-camera-series>`_ ，在SPECS部分有更详细的视场对比图和表格。
+| 请参阅我们的  `拣选系列页面 <https://www.daoai.com/3d-camera-series/bin-picking-camera-series>`_ 和 `检测系列页面 <https://www.daoai.com/3d-camera-series/inspection-camera-series>`_ ，在SPECS部分有更详细的视场对比图和表格。
 | 请注意，这些数值的单位是毫米。
 
 DaoAI相机的精确度如何？

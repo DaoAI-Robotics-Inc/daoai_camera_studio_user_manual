@@ -15,7 +15,7 @@
 - Circle of Confusion (模糊圈 micrometers, μm)
 
 .. note:: 
-    If you have ``acceptable blur radius`` > 1, then you multiply the ``Circle of Confusion`` by ``acceptable blur radius``.
+    如果你有 ``acceptable blur radius`` 参数 > 1, 那么你需要将 ``Circle of Confusion`` 乘以  ``acceptable blur radius``.
 
 - Focal length of lens (镜头焦距 in millimeters, mm)
 

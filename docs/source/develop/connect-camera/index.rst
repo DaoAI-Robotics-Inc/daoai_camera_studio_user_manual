@@ -10,8 +10,6 @@
 
 本教程介绍了如何使用DaoAI SDK来采集点云和二维图像。
 
-关于MATLAB，请参见DaoAI Capture Tutorial for MATLAB。
-
 前提条件
 ~~~~~~~~~~~~~~~~~~~
 
@@ -20,7 +18,7 @@
 初始化
 ------------------
 
-调用DaoAI相机SDK中的任何API都需要初始化DaoAI应用程序，并在程序运行时保持其活力。
+调用DaoAI相机SDK中的任何API都需要初始化DaoAI应用程序，并在程序运行时不要关闭。
 
 .. tabs::
 

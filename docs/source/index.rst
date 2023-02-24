@@ -34,9 +34,9 @@ DaoAI 相机概述
    :caption: 案例分析
 
    case-studies/index
-   case-studies/captruing-high-quality-point-clouds/index
+   case-studies/capturing-high-quality-point-clouds/index
    case-studies/evaluate-accuracy/index
-   case-studies/infiled-calibration/index
+   case-studies/infield-calibration/index
    case-studies/hand-eye-calibration/index
    case-studies/use-multiple-daoai-cameras/index
 

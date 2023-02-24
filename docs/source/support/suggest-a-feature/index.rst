@@ -3,7 +3,7 @@
 建议一个功能
 ==================
 
-如果您希望在DaoAI相机工作室中加入一项新功能，请在我们的 `帮助中心<https://daoai.atlassian.net/servicedesk/customer/portals>`_ 提出建议。
+如果您希望在DaoAI相机工作室中加入一项新功能，请在我们的 `帮助中心 <https://daoai.atlassian.net/servicedesk/customer/portals>`_ 提出建议。
 
 搜索相关建议
 ---------------------
@@ -27,7 +27,7 @@
 
 一旦你发现你有一个新颖的功能建议，你就可以向我们提出请求!
 
-进入 `帮助中心<https://daoai.atlassian.net/servicedesk/customer/portals>`_ 主页。
+进入 `帮助中心 <https://daoai.atlassian.net/servicedesk/customer/portals>`_ 主页。
 
 选择第二个选项，"建议改进"。
 
