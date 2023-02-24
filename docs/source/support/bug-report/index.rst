@@ -18,7 +18,7 @@
 
 |
 
-Search for Related Bug Reports
+搜索相关的错误报告
 -------------------------------------
 
 .. image:: images/help_center_search_bar.png
