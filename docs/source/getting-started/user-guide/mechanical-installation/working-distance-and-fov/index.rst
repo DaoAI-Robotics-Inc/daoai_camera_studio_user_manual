@@ -1,6 +1,6 @@
 Working Distance and Field-of-View
 ======================================
-This series has five bin-picking camera models for various workspace sizes and applications such as bin picking, palletizing,and part loading.
+This series has five bin-picking camera models for various workspace sizes and applications such as bin picking, palletizing, and part loading.
 
 **BP ARM/AMR-GPU**
 
@@ -21,12 +21,4 @@ This series has five bin-picking camera models for various workspace sizes and a
 
 .. image:: images/large.png
    :align: center
-
-
-
-
-
-
-
-
 

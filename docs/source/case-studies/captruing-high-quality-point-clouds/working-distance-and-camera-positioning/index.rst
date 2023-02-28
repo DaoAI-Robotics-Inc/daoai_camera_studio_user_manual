@@ -79,27 +79,27 @@ Although it is perhaps most intuitive to mount the camera perpendicular to a sce
 
    .. group-tab:: BP SAMLL
 
-    .. image:: images/large_1.png
+    .. image:: images/fov.png
         :align: center
 
    .. group-tab:: BP MEDIUM
 
-    .. image:: images/amr_1.png
+    .. image:: images/fov.png
         :align: center
 
    .. group-tab:: BP LARGE
 
-    .. image:: images/large_1.png
+    .. image:: images/fov.png
         :align: center
    
    .. group-tab:: BP AMR
 
-    .. image:: images/amr_1.png
+    .. image:: images/fov.png
         :align: center
       
    .. group-tab:: BP AMR-GPU
 
-    .. image:: images/amr_1.png
+    .. image:: images/fov.png
         :align: center
 
 .. note::

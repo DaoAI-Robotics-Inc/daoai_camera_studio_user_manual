@@ -12,27 +12,17 @@ Unboxing
 
       - power supply
 
+      - Power extension cables (6m)
+
+      - Ethernet(CAT .6) cables (10m)
+
       Optional/as ordered:
 
-      - Power extension cables
+      - Calibration Board
 
-         available in 5m, 10m, and 20m
-
-      - Ethernet (CAT-6A) cables
-
-         available in 5m, 10m, and 20m
+      - On-Arm mount
    
-      Included in Development Kit:
 
-         - 5m Ethernet (CAT-6A) cables
-
-         - Calibration Board
-
-         - Mount of choice(Stationary Mount or On-Arm Mount)
-
-         - Tripod Adapter
-
-      Mounting accessories included in development kit or ordered separately.
 
    .. tab:: BP MEDIUM
 
@@ -44,27 +34,16 @@ Unboxing
 
       - power supply
 
+      - Power extension cables (6m)
+
+      - Ethernet(CAT .6) cables (10m)
+
       Optional/as ordered:
 
-      - Power extension cables
+      - Calibration Board
 
-         available in 5m, 10m, and 20m
+      - On-Arm mount
 
-      - Ethernet (CAT-6A) cables
-
-         available in 5m, 10m, and 20m
-   
-      Included in Development Kit:
-
-         - 5m Ethernet (CAT-6A) cables
-
-         - Calibration Board
-
-         - Mount of choice(Stationary Mount or On-Arm Mount)
-
-         - Tripod Adapter
-
-      Mounting accessories included in development kit or ordered separately.
 
    .. tab:: BP LARGE
 
@@ -76,27 +55,15 @@ Unboxing
 
       - power supply
 
+      - Power extension cables (6m)
+
+      - Ethernet(CAT .6) cables (10m)
+
       Optional/as ordered:
 
-      - Power extension cables
+      - Calibration Board
 
-         available in 5m, 10m, and 20m
-
-      - Ethernet (CAT-6A) cables
-
-         available in 5m, 10m, and 20m
-   
-      Included in Development Kit:
-
-         - 5m Ethernet (CAT-6A) cables
-
-         - Calibration Board
-
-         - Mount of choice(Stationary Mount or On-Arm Mount)
-
-         - Tripod Adapter
-
-      Mounting accessories included in development kit or ordered separately.
+      - On-Arm mount
 
    .. tab:: BP AMR
 
@@ -104,31 +71,19 @@ Unboxing
 
       In the DaoAI Camera Studio Box you will find:
 
-      - DaoAI BP Amr Camera 
+      - DaoAI BP AMR Camera 
 
       - power supply
 
+      - Power extension cables (6m)
+
+      - Ethernet(CAT .6) cables (10m)
+
       Optional/as ordered:
 
-      - Power extension cables
+      - Calibration Board
 
-         available in 5m, 10m, and 20m
-
-      - Ethernet (CAT-6A) cables
-
-         available in 5m, 10m, and 20m
-   
-      Included in Development Kit:
-
-         - 5m Ethernet (CAT-6A) cables
-
-         - Calibration Board
-
-         - Mount of choice(Stationary Mount or On-Arm Mount)
-
-         - Tripod Adapter
-
-      Mounting accessories included in development kit or ordered separately.
+      - On-Arm mount
       
    .. tab:: BP AMR-GPU
 
@@ -136,29 +91,17 @@ Unboxing
 
       In the DaoAI Camera Studio Box you will find:
 
-      - DaoAI BP Amr-gpu Camera 
+      - DaoAI BP AMR-GPU Camera 
 
       - power supply
 
+      - Power extension cables (6m)
+
+      - Ethernet(CAT .6) cables (10m)
+
       Optional/as ordered:
 
-      - Power extension cables
+      - Calibration Board
 
-         available in 5m, 10m, and 20m
-
-      - Ethernet (CAT-6A) cables
-
-         available in 5m, 10m, and 20m
-   
-      Included in Development Kit:
-
-         - 5m Ethernet (CAT-6A) cables
-
-         - Calibration Board
-
-         - Mount of choice(Stationary Mount or On-Arm Mount)
-
-         - Tripod Adapter
-
-      Mounting accessories included in development kit or ordered separately.
+      - On-Arm mount
 

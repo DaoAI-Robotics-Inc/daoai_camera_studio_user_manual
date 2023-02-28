@@ -26,15 +26,4 @@ System Requirements
       - SuperSpeed USB3 port
          
     * - **Ethernet**
-      - Full performance:
-
-        - 10GBASE-T (10G Copper Ethernet) adapter connected via 
-          
-          PCI Express or Thunderbolt 3
-        
-        
-        Reduced performance:
-        
-        - 1000BASE-T and NBASE-T (1G, 2.5G, and 5G over 
-          
-          copper) connections
+      - 1 Gbps adapter connected via PCI Express or Thunderbolt 3
