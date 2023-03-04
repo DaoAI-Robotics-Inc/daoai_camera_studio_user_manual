@@ -121,8 +121,7 @@ Connecting to a Camera
 Capture
 ------------------
 
-Now we can capture a 3D image. Whether there is a single acquisition or multiple acquisitions (HDR) 
-is given by the number of ``acquisitions`` in ``settings``.
+Now we can capture a 3D image.
 
 .. tabs::
 
