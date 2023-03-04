@@ -34,19 +34,19 @@
      - 3
      - 3
      - 3
-   * - Intensity filter
+   * - Intensity Filter
      - Yes
      - Yes
      - Yes
      - Yes
      - Yes
-   * - Intensity filter Threshold 
+   * - Intensity Filter Threshold 
      - 20
      - 20 
      - 20
      - 20
      - 20
-   * - Outlier filter 
+   * - Outlier Filter 
      - Yes
      - Yes
      - Yes
@@ -70,7 +70,7 @@
      - 0.1 
      - 0.1 
      - 0.1 
-   * - Gaussian filter
+   * - Gaussian Filter
      - No
      - No
      - No
@@ -82,7 +82,7 @@
      - Yes
      - Yes
      - Yes
-   * - Median filter size 
+   * - Median Filter Size 
      - 5 
      - 5 
      - 5 
