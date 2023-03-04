@@ -7,17 +7,14 @@ Connecting Camera
 Introduction
 ---------------------
 
-
 This tutorial describes how to use the DaoAI SDK to capture point clouds and 2D images.
-
-For MATLAB see DaoAI Capture Tutorial for MATLAB.
 
 Prerequisites
 ~~~~~~~~~~~~~~~~~~~
 
     - install DaoAI Camera Studio
 
-Initialize
+Setup
 ------------------
 
 Calling any of the APIs in the DaoAI Camera SDK requires initializing the DaoAI application and keeping it alive while the program runs.
@@ -28,7 +25,38 @@ Calling any of the APIs in the DaoAI Camera SDK requires initializing the DaoAI 
 
       .. code-block:: C++
          
-         DaoAI::Application DaoAI;
+         // Setup ==========================================================================================================
+         // Declare an error return object to check for errors throughout the application.
+         SlcSdkError ret;
+
+         // Create a new DaoAI application instance.
+         DaoAI::Application* app = new DaoAI::Application();
+
+         // Specify directory for logging. Logs contain detailed error and process information. 
+         std::string logging_directory = "../Logs/";
+         ret = app->startLogging(logging_directory);
+         if (hasError(ret)) { return -1; } // Check for errors
+
+         // If using remote cameras, specify remote IP address
+         std::string remote_ip = "192.168.1.2";
+
+         // Declare camera map that will be used to fetch all connected DaoAI Cameras.
+         std::map<std::string, DaoAI::Camera*> cameras;
+
+         // Get cameras from application. This step must be completed before attempting to connect to any camera.
+         ret = app->getCameras(cameras, remote_ip);
+         if (hasError(ret)) { return -1; } // Check for errors
+
+         if (cameras.size() == 0) {
+            return -1; // Must detect at least one camera.
+         }
+         std::cout << cameras.size() << " cameras detected." << std::endl;
+         for (std::pair<std::string, DaoAI::Camera*> pair : cameras) {
+            std::cout << "	" << pair.first << std::endl; // Print serial numbers of detected cameras.
+         }
+
+         // Declare pointer to DaoAI Camera object.
+         DaoAI::Camera* cam;
 
    .. tab:: C#
 
@@ -40,10 +68,55 @@ Calling any of the APIs in the DaoAI Camera SDK requires initializing the DaoAI 
 
       .. code-block:: python
 
-         app = DaoAI.Application()
 
-Connect
-------------------
+Connecting to a Camera
+------------------------
+
+.. tabs::
+
+   .. tab:: C++
+
+      .. code-block:: C++
+
+         // Connecting to a camera =========================================================================================
+         // A DaoAI Camera must be connected before it can be used for captures. 
+         // OPTION 1: Connecting to the first detected DaoAI Camera.
+         ret = app->connectCamera(cam);
+         if (hasError(ret)) { return -1; } // Check for errors
+         ret = cam->disConnect();
+         if (hasError(ret)) { return -1; } // Check for errors
+
+         // OPTION 2: Connect to specific camera by serial number.
+         std::string serial_num = cameras.begin()->first; // Grab serial number from first camera in map.
+         // Method A
+         ret = app->connectCamera(serial_num, cam);
+         if (hasError(ret)) { return -1; } // Check for errors
+         ret = app->disconnectCamera(serial_num); // Can also disconnect cam by serial number.
+         if (hasError(ret)) { return -1; } // Check for errors
+         // Method B
+         cam = cameras[serial_num];
+         ret = cam->connect();
+         if (hasError(ret)) { return -1; } // Check for errors
+         ret = app->disconnectCamera(serial_num);
+         if (hasError(ret)) { return -1; } // Check for errors
+
+         // OPTION 3: Connecting any camera found in camera map.
+         if (cameras.size() > 0) {
+            cam = cameras.begin()->second;
+         }
+         ret = cam->connect();
+         if (hasError(ret)) { return -1; } // Check for errors
+
+   .. tab:: C#
+
+      .. code-block:: c#
+
+         var DaoAI = new DaoAI.NET.Application();
+
+   .. tab:: Python
+
+      .. code-block:: python
+
 
 Capture
 ------------------
@@ -51,15 +124,102 @@ Capture
 Now we can capture a 3D image. Whether there is a single acquisition or multiple acquisitions (HDR) 
 is given by the number of ``acquisitions`` in ``settings``.
 
+.. tabs::
+
+   .. tab:: C++
+
+      .. code-block:: C++
+
+         // Camera Captures ================================================================================================
+         // Declare a DaoAI Frame object to which capture data will be written
+         DaoAI::Frame frm;
+         // Capture with default settings (assuming no settings has been set to camera).
+         ret = cam->capture(frm);
+         if (hasError(ret)) { return -1; } // Check for errors
+
+         // Capture with custom settings
+         // OPTION 1: Capture with settings. Settings saved by camera for future captures.
+         ret = cam->capture(new_settings, frm);
+         if (hasError(ret)) { return -1; } // Check for errors
+
+         // OPTION 2: Set settings object to camera to use in capture.
+         ret = cam->setSettings(new_settings);
+         if (hasError(ret)) { return -1; } // Check for errors
+         ret = cam->capture(frm);
+         if (hasError(ret)) { return -1; } // Check for errors
+
+         // OPTION 3: Load settings from file to camera to use in capture.
+         ret = cam->setSettings("../Examples/sample_settings.cfg");
+         if (hasError(ret)) { return -1; } // Check for errors
+         ret = cam->capture(frm);
+         if (hasError(ret)) { return -1; } // Check for errors
+
+   .. tab:: C#
+
+      .. code-block:: c#
+
+         var DaoAI = new DaoAI.NET.Application();
+
+   .. tab:: Python
+
+      .. code-block:: python
+
+
+Save
+~~~~~~~~~~
+
+.. tabs::
+
+   .. tab:: C++
+
+      .. code-block:: C++
+
+         // Frames =========================================================================================================
+         DaoAI::Frame new_frame;
+         // Create new empty frame
+         new_frame = DaoAI::Frame();
+         // Copy constructor
+         new_frame = DaoAI::Frame(frm);
+
+         // Check if frame has data
+         if (!new_frame.isEmpty()) { std::cout << "Success: Frame contains data from 3D capture!" << std::endl; }
+
+         // Save a frame. File extension .dcf is the preferred DaoAI frame format, but saving also supports .pcd and .ply formats.
+         std::string save_frame_path = "../Examples/example_frame_save.dcf";
+         ret = new_frame.save(save_frame_path);
+         if (hasError(ret)) { return -1; } // Check for errors
+
+   .. tab:: C#
+
+      .. code-block:: c#
+
+         var DaoAI = new DaoAI.NET.Application();
+
+   .. tab:: Python
+
+      .. code-block:: python
+
 Load
 ~~~~~~~~~~~~~~~~
 
-Once saved, the frame can be loaded from a ZDF file.
+Once saved, the frame can be loaded from a .dcf file.
 
-Capture 2D
-~~~~~~~~~~~~~~~~
+.. tabs::
 
-If we only want to capture a 2D image, which is faster than 3D, we can do so via the 2D API.
+   .. tab:: C++
 
-.. Capture point cloud?
+      .. code-block:: C++
 
+         // Load a frame from file. Supports .dcf files.
+         ret = new_frame.load("../Examples/sample_frame.dcf");
+         if (hasError(ret)) { return -1; } // Check for errors
+
+   .. tab:: C#
+
+      .. code-block:: c#
+
+         var DaoAI = new DaoAI.NET.Application();
+
+   .. tab:: Python
+
+      .. code-block:: python
