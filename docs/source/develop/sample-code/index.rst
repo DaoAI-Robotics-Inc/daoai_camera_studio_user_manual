@@ -46,32 +46,3 @@ Installation
 
    .. tab:: Python
 
-
-Sample Parity
-----------------
-
-Camera
-~~~~~~~~
-
-.. list-table:: 
-   :header-rows: 1
-
-   * - Sample
-     - C++
-     - C#
-     - Python
-   * - **basic**
-     -
-     - 
-     - 
-   * - Capture
-     - ✓
-     - ✓
-     - ✓
-
-Applications
-~~~~~~~~~~~~~~
-
-
-Sample Utils
-~~~~~~~~~~~~~~
