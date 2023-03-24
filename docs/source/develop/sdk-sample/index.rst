@@ -245,7 +245,7 @@ Get serial number, camera intrinsic parameters, and camera settings information.
 Camera Settings
 -------------------
 
-Create camera
+Create camera settings and load from camera setting file.
 
 .. tabs::
 
@@ -303,6 +303,8 @@ Create camera
 
 Acquisition Frames
 ~~~~~~~~~~~~~~~~~~~~~~~
+
+Configure aAcquisition frames parameters.
 
 .. tabs::
 
@@ -481,6 +483,8 @@ Acquisition Frames
 Capture Assistant
 ~~~~~~~~~~~~~~~~~~~~
 
+Auto compute acquisition frame settings by analyzing scene given a time buget.
+
 .. tabs::
 
    .. group-tab:: C++
@@ -526,6 +530,8 @@ Capture Assistant
 
 Filter Settings
 ~~~~~~~~~~~~~~~~~~~~
+
+Create, read, and modify Filter settings.
 
 .. tabs::
 
@@ -656,6 +662,8 @@ Filter Settings
 
 System Settings
 ~~~~~~~~~~~~~~~~~~~~
+
+Create, read, and export System settings.
 
 .. tabs::
 
@@ -942,6 +950,8 @@ Save and load image.
 Point Cloud
 ------------------
 
+Create, get and read Point Cloud data.
+
 .. tabs::
 
    .. group-tab:: C++
@@ -1025,6 +1035,8 @@ Point Cloud
 
 Point
 ------------------
+
+Get and read Point data.
 
 .. tabs::
 
