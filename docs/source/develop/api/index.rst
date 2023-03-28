@@ -7,6 +7,28 @@ DaoAI Camera Studio API reference.
    :local:
 
 
+Namespace
+-----------
+
+   .. tabs::
+
+      .. group-tab:: C++
+
+         .. code-block:: C++
+            
+            namespace DaoAI
+
+      .. group-tab:: C#
+
+         .. code-block:: c#
+            
+            namespace DaoAI_NET
+
+
+      .. group-tab:: Python
+
+         .. code-block:: python
+
 Classes
 ---------
 
@@ -24,6 +46,8 @@ Classes
       .. group-tab:: C#
 
          .. code-block:: c#
+            
+            #include "application.h"
 
 
       .. group-tab:: Python
@@ -46,11 +70,32 @@ Public Member Functions
          .. group-tab:: C#
 
             .. code-block:: c#
-
+               
+               Application();
 
          .. group-tab:: Python
 
             .. code-block:: python
+
+   Destructor:
+      .. tabs::
+
+         .. group-tab:: C++
+
+            .. code-block:: C++
+               
+               DAOAI_API ~Application();
+
+         .. group-tab:: C#
+
+            .. code-block:: c#
+               
+               ~Application();
+
+         .. group-tab:: Python
+
+            .. code-block:: python
+
 
    getCameras:
       Get a list of all USB cameras
@@ -71,8 +116,18 @@ Public Member Functions
                
          .. group-tab:: C#
 
+            Parameters: 
+               - [out] cameras: A map of all connected DaoAI-supported cameras keyed by serial number.
+               - [in] [OPTIONAL] remote_address: A map of all connected DaoAI-supported cameras keyed by serial number.
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+
             .. code-block:: c#
 
+               DaoAINETError^ getCameras(Dictionary<System::String^, Camera^>^% cameras, System::String^ remote_address);
+
+               DaoAINETError^ getCameras(Dictionary<System::String^, Camera^>^% cameras);
+               
          .. group-tab:: Python
 
             .. code-block:: python
@@ -96,7 +151,18 @@ Public Member Functions
 
          .. group-tab:: C#
 
+            Parameters: 
+               - [in] camera: Camera to connect.
+               - [in] [OPTIONAL] settings: Connect to the camera with this settings. Must contain at least one frame.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+               
             .. code-block:: c#
+
+               DaoAINETError^ connectCamera(Camera^% camera, Settings^ settings);
+
+               DaoAINETError^ connectCamera(Camera^% camera);
 
          .. group-tab:: Python
 
@@ -122,7 +188,19 @@ Public Member Functions
 
          .. group-tab:: C#
 
+            Parameters: 
+               - [in] serial_number: Connect to the camera with this serial number.
+               - [out] camera: Pointer to the connected camera.
+               - [in] [OPTIONAL] settings: Connect to the camera with this settings. Must contain at least one frame.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+
             .. code-block:: c#
+
+               DaoAINETError^ connectCamera(System::String^ serial_number, Camera^% camera, Settings^ settings);
+		         
+               DaoAINETError^ connectCamera(System::String^ serial_number, Camera^% camera);
 
          .. group-tab:: Python
 
@@ -148,6 +226,8 @@ Public Member Functions
 
             .. code-block:: c#
 
+
+
          .. group-tab:: Python
 
             .. code-block:: python
@@ -170,7 +250,16 @@ Public Member Functions
 
          .. group-tab:: C#
 
+            Parameters: 
+               - [in] [OPTIONAL] log_path: Specify directory to write logs
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+
             .. code-block:: c#
+
+               DaoAINETError^ startLogging(System::String^ log_path);
+
+               DaoAINETError^ startLogging();
 
          .. group-tab:: Python
 
@@ -192,7 +281,12 @@ Public Member Functions
 
          .. group-tab:: C#
 
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+            
             .. code-block:: c#
+
+               DaoAINETError^ stopLogging();
 
          .. group-tab:: Python
 
@@ -261,12 +355,11 @@ Public Member Functions
             
             #include "camera.h"
 
-            class CameraImpl;
-
       .. group-tab:: C#
 
          .. code-block:: c#
 
+            #include "camera.h"
 
       .. group-tab:: Python
 
@@ -289,6 +382,7 @@ Public Member Functions
 
             .. code-block:: c#
 
+               Camera();
 
          .. group-tab:: Python
 
@@ -342,7 +436,8 @@ Public Member Functions
          .. group-tab:: C#
 
             .. code-block:: c#
-
+               
+               ~Camera();
 
          .. group-tab:: Python
 
@@ -364,7 +459,12 @@ Public Member Functions
                
          .. group-tab:: C#
 
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+
             .. code-block:: c#
+
+               DaoAINETError^ connect();
 
          .. group-tab:: Python
 
@@ -386,7 +486,12 @@ Public Member Functions
                
          .. group-tab:: C#
 
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+
             .. code-block:: c#
+
+               DaoAINETError^ disConnect();
 
          .. group-tab:: Python
 
@@ -408,7 +513,12 @@ Public Member Functions
                
          .. group-tab:: C#
 
+            Return:
+               - bool: returns True if camera is connected, false otherwise.
+
             .. code-block:: c#
+
+               System::Boolean isConnected();
 
          .. group-tab:: Python
 
@@ -432,7 +542,15 @@ Public Member Functions
                
          .. group-tab:: C#
 
+            Parameters: 
+               - [out] Frame: Capture results will be written to this DaoAI Frame object.
+            
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+
             .. code-block:: c#
+
+               DaoAINETError^ capture(Frame^% frame);
 
          .. group-tab:: Python
 
@@ -457,7 +575,15 @@ Public Member Functions
                
          .. group-tab:: C#
 
+            Parameters: 
+               - [in] settings: DaoAI Settings to use for the capture. Must contain at least one frame.
+               - [out] Frame: Capture results will be written to this DaoAI Frame object.
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+
             .. code-block:: c#
+
+               DaoAINETError^ capture(Settings^ settings, Frame^% frame);
 
          .. group-tab:: Python
 
@@ -482,7 +608,15 @@ Public Member Functions
                
          .. group-tab:: C#
 
+            Parameters: 
+               - [in] time_budget: Time budget for acquisition frames, in range of (0.0, 5.0]
+               - [in,out] mofaf: A map of AcquisitionFrame settings
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+            
             .. code-block:: c#
+
+               DaoAINETError^ captureAssistant(System::Double time_budget, System::Collections::Generic::Dictionary<System::Int32, AcquisitionFrame^>^% mofaf);
 
          .. group-tab:: Python
 
@@ -506,7 +640,14 @@ Public Member Functions
                
          .. group-tab:: C#
 
+            Parameters: 
+               - [in] file_path: Path to load settings file.
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+
             .. code-block:: c#
+
+               DaoAINETError^ setSettings(System::String^ file_path);
 
          .. group-tab:: Python
 
@@ -530,7 +671,14 @@ Public Member Functions
                
          .. group-tab:: C#
 
+            Parameters: 
+               - [in] settings: Settings object for this camera.
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+
             .. code-block:: c#
+
+	            DaoAINETError^ setSettings(Settings^ settings);
 
          .. group-tab:: Python
 
@@ -552,7 +700,12 @@ Public Member Functions
                
          .. group-tab:: C#
 
+            Return:
+               - Settings: Current settings structure used by this camera.
+
             .. code-block:: c#
+
+               Settings^ getSettings();
 
          .. group-tab:: Python
 
@@ -574,7 +727,12 @@ Public Member Functions
                
          .. group-tab:: C#
 
+            Return:
+               - System::String: Serial number of this camera.
+
             .. code-block:: c#
+
+               System::String^ getSerialNumber();
 
          .. group-tab:: Python
 
@@ -598,7 +756,14 @@ Public Member Functions
                
          .. group-tab:: C#
 
+            Parameters:
+               - [out] params: A vector of float containing camera intrinsic parameters.
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+
             .. code-block:: c#
+
+               DaoAINETError^ getIntrinsicParam(array<System::Single>^% params);
 
          .. group-tab:: Python
 
@@ -623,7 +788,14 @@ Public Member Functions
                
          .. group-tab:: C#
 
+            Parameters:
+               - toggle[in]: Enable or disable.
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+
             .. code-block:: c#
+
+               DaoAINETError^ enableGPU(System::Boolean toggle);
 
          .. group-tab:: Python
 
@@ -647,7 +819,14 @@ Public Member Functions
                
          .. group-tab:: C#
 
+            Parameters:
+               - toggle[in]: Enable or disable.
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+
             .. code-block:: c#
+
+               DaoAINETError^ enableTempRegulation(System::Boolean toggle);
 
          .. group-tab:: Python
 
@@ -692,6 +871,7 @@ Public Member Functions
 
          .. code-block:: c#
 
+            #include "settings.h"
 
       .. group-tab:: Python
 
@@ -722,6 +902,12 @@ Public Members & Functions
 
             .. code-block:: c#
 
+               enum AcquisitionFrameSetting {
+                        Brightness, // Int {0, 3}.
+                        Gain, // Double {0, 3}.
+                        ExposureStop // Int {-1, 4}.
+                     };
+
          .. group-tab:: Python
 
             .. code-block:: python
@@ -744,8 +930,15 @@ Public Members & Functions
                
          .. group-tab:: C#
 
+            Parameters:
+               - brightness[in]: brightness for the setting.
+               - gain[in]: gain for the setting.
+               - exposure_stop[in]: exposure stop for the setting.
+
             .. code-block:: c#
 
+               AcquisitionFrame(System::Int32 brightness, System::Double gain, System::Int32 exposure_stop);
+         
          .. group-tab:: Python
 
             .. code-block:: python
@@ -764,6 +957,8 @@ Public Members & Functions
          .. group-tab:: C#
 
             .. code-block:: c#
+               
+               AcquisitionFrame();
 
          .. group-tab:: Python
 
@@ -776,12 +971,14 @@ Public Members & Functions
 
          .. group-tab:: C++
 
-
             Parameters:
                - AcquisitionFrameSetting[in]: acquisition frame setting to inquire [brightness, gain, exposure_stop].
                - curr[out]: the current value for the field.
                - min[out]: the min value for the field.
                - max[out]: the max value for the field.
+
+            Return:
+               - SlcSdkError: struct containing status codes and any error messages.
 
             .. code-block:: C++
                
@@ -789,7 +986,18 @@ Public Members & Functions
                
          .. group-tab:: C#
 
+            Parameters:
+               - AcquisitionFrameSetting[in]: acquisition frame setting to inquire [brightness, gain, exposure_stop].
+               - curr[out]: the current value for the field.
+               - min[out]: the min value for the field.
+               - max[out]: the max value for the field.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+
             .. code-block:: c#
+
+               DaoAINETError^ inquireSetting(AcquisitionFrameSetting setting, System::Int32% curr, System::Int32% min, System::Int32% max);
 
          .. group-tab:: Python
 
@@ -802,19 +1010,29 @@ Public Members & Functions
 
          .. group-tab:: C++
 
-
             Parameters:
                - AcquisitionFrameSetting[in]: acquisition frame setting to inquire [brightness, gain, exposure_stop].
                - curr[out]: current value for the field.
+
+            Return:
+               - SlcSdkError: struct containing status codes and any error messages.
 
             .. code-block:: C++
                
 		         DAOAI_API SlcSdkError inquireSetting(AcquisitionFrameSetting setting, int& curr);
 
-               
          .. group-tab:: C#
 
+            Parameters:
+               - AcquisitionFrameSetting[in]: acquisition frame setting to inquire [brightness, gain, exposure_stop].
+               - curr[out]: current value for the field.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+
             .. code-block:: c#
+
+               DaoAINETError^ inquireSetting(AcquisitionFrameSetting setting, System::Int32% curr);
 
          .. group-tab:: Python
 
@@ -833,13 +1051,27 @@ Public Members & Functions
                - min[out]: the min value for the field.
                - max[out]: the max value for the field.
 
+            Return:
+               - SlcSdkError: struct containing status codes and any error messages.
+
             .. code-block:: C++
                
                DAOAI_API SlcSdkError inquireSetting(AcquisitionFrameSetting setting, double& curr, double& min, double& max);
                
          .. group-tab:: C#
 
+            Parameters:
+               - AcquisitionFrameSetting[in]: acquisition frame setting to inquire [brightness, gain, exposure_stop].
+               - curr[out]: the current value for the field, type double (for field gain).
+               - min[out]: the min value for the field.
+               - max[out]: the max value for the field.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+
             .. code-block:: c#
+
+               DaoAINETError^ inquireSetting(AcquisitionFrameSetting setting, System::Double% curr, System::Double% min, System::Double% max);
 
          .. group-tab:: Python
 
@@ -852,11 +1084,12 @@ Public Members & Functions
 
          .. group-tab:: C++
 
-
             Parameters:
                - AcquisitionFrameSetting[in]: acquisition frame setting to inquire [brightness, gain, exposure_stop].
                - curr[out]: the current value for the field, type double (for field gain).
 
+            Return:
+               - SlcSdkError: struct containing status codes and any error messages.
 
             .. code-block:: C++
                
@@ -864,7 +1097,16 @@ Public Members & Functions
                
          .. group-tab:: C#
 
+            Parameters:
+               - AcquisitionFrameSetting[in]: acquisition frame setting to inquire [brightness, gain, exposure_stop].
+               - curr[out]: the current value for the field, type double (for field gain).
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+
             .. code-block:: c#
+
+               DaoAINETError^ inquireSetting(AcquisitionFrameSetting setting, System::Double% curr);
 
          .. group-tab:: Python
 
@@ -880,6 +1122,9 @@ Public Members & Functions
                - AcquisitionFrameSetting[in]: acquisition frame setting to inquire [brightness, gain, exposure_stop].
                - new_val[in]: the new value to assign to.
 
+            Return:
+               - SlcSdkError: struct containing status codes and any error messages.
+
             .. code-block:: C++
                
 		         DAOAI_API SlcSdkError configureSetting(AcquisitionFrameSetting setting, int new_val);
@@ -887,7 +1132,16 @@ Public Members & Functions
                
          .. group-tab:: C#
 
+            Parameters:
+               - AcquisitionFrameSetting[in]: acquisition frame setting to inquire [brightness, gain, exposure_stop].
+               - new_val[in]: the new value to assign to.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+
             .. code-block:: c#
+
+               DaoAINETError^ configureSetting(AcquisitionFrameSetting setting, System::Int32 new_val);
 
          .. group-tab:: Python
 
@@ -904,13 +1158,25 @@ Public Members & Functions
                - AcquisitionFrameSetting[in]: acquisition frame setting to inquire [brightness, gain, exposure_stop].
                - new_val[in]: the new value (double for gain) to assign to.
 
+            Return:
+               - SlcSdkError: struct containing status codes and any error messages.
+
             .. code-block:: C++
                
 		         DAOAI_API SlcSdkError configureSetting(AcquisitionFrameSetting setting, double new_val);
                
          .. group-tab:: C#
 
+            Parameters:
+               - AcquisitionFrameSetting[in]: acquisition frame setting to inquire [brightness, gain, exposure_stop].
+               - new_val[in]: the new value (double for gain) to assign to.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+
             .. code-block:: c#
+
+               DaoAINETError^ configureSetting(AcquisitionFrameSetting setting, System::Double new_val);
 
          .. group-tab:: Python
 
@@ -956,6 +1222,27 @@ Public Members & Functions
 
             .. code-block:: c#
 
+               enum class FilterSetting {
+                        IntensityThreshold, // Double {0, 3}. Enable/Disable. Get/Set.
+                        OutlierThreshold, // Double {0, inf}. Enable/Disable. Get/Set.
+                        SaturationFilter, // Bool. Enable/Disable. Get/Set.
+                        ContrastDistortionMode, // Int {0, 2}.	 0: Off, 1: Remove Distortion, 2: Correct Distortion. Get/Set.
+                        ContrastDistortionStrength, // Int {0, 15000}. Get/Set.
+                        GaussianFilter, // Int {0, 5}. Enable/Disable. Get/Set.
+                        MedianFilter, // Int {0, 1}. Enable/Disable. Get/Set.
+                        FaceNormalFilter, // Double {0, 40}. Enable/Disable. Get/Set.
+                        SmoothFilter, // Int {0, 6}. Enable/Disable. Get/Set.
+                        FillGaps, // Bool. Enable/Disable. Get/Set.
+                        WidthThreshold, // Double {0, 500}. Get/Set.
+                        SlopeThreshold, // Double {0, inf}. Get/Set.
+                        DepthThreshold, // Double {0, 500}. Get/Set.
+                        FillXFirst, // Bool. Get/Set.
+                        FillBidirectional, // Bool. Get/Set.
+                        PhaseQualityThreshold, // Double {0, 50}. Enable/Disable. Get/Set.
+                        ConnectedAreaFilter, // Double {0, 10}. Enable/Disable. Get/Set.
+                        ShowHDR // Bool. Enable/Disable. Get/Set.
+                     };
+
          .. group-tab:: Python
 
             .. code-block:: python
@@ -983,6 +1270,16 @@ Public Members & Functions
 
             .. code-block:: c#
 
+               enum class SystemSetting {
+                  CameraModel, // String. Get only.
+                  TemperatureSensorAvailable, // Bool. Get only.
+                  TemperatureRegulationEnable, // Bool. Get only.
+                  GPUAvailable, // Bool. Get only.
+                  GPUEnable, // Bool. Get only.
+                  Version, // String. Get only.
+                  ExtraWhitePatternEnable // Bool. Enable/Disable. Get/Set.
+               };
+
          .. group-tab:: Python
 
             .. code-block:: python
@@ -999,6 +1296,8 @@ Public Members & Functions
          .. group-tab:: C#
 
             .. code-block:: c#
+               
+               Settings();
 
          .. group-tab:: Python
 
@@ -1018,7 +1317,12 @@ Public Members & Functions
                
          .. group-tab:: C#
 
+            Parameters:
+               - other[out]: another setting object to copy to.
+
             .. code-block:: c#
+
+               Settings(Settings^ other);
 
          .. group-tab:: Python
 
@@ -1032,11 +1336,12 @@ Public Members & Functions
             .. code-block:: C++
                
 		         DAOAI_API ~Settings();
-
                
          .. group-tab:: C#
 
             .. code-block:: c#
+
+               ~Settings();
 
          .. group-tab:: Python
 
@@ -1059,7 +1364,12 @@ Public Members & Functions
                
          .. group-tab:: C#
 
+            Parameters:
+               - file_path[in]: The path to the workspace
+
             .. code-block:: c#
+
+               Settings(System::String^ file_path);
 
          .. group-tab:: Python
 
@@ -1083,8 +1393,16 @@ Public Members & Functions
 		         DAOAI_API SlcSdkError exportSettings(const std::string& file_path);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - file_name[in]: The path to save the camera settings.
+               
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ exportSettings(System::String^ file_path);
 
          .. group-tab:: Python
 
@@ -1109,8 +1427,17 @@ Public Members & Functions
 		         DAOAI_API SlcSdkError addAcquisitionFrame(AcquisitionFrame af, int& index);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - af[in]: AcquisitionFrame object to write.
+               - index[out]: Index where this frame is written.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ addAcquisitionFrame(AcquisitionFrame^ af, System::Int32% index);
 
          .. group-tab:: Python
 
@@ -1134,8 +1461,16 @@ Public Members & Functions
 	         	DAOAI_API SlcSdkError addAcquisitionFrame(AcquisitionFrame af);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - af[in]: AcquisitionFrame object to write.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ addAcquisitionFrame(AcquisitionFrame^ af);
 
          .. group-tab:: Python
 
@@ -1147,7 +1482,7 @@ Public Members & Functions
       .. tabs::
 
          .. group-tab:: C++
-            
+
             Parameters: 
                - af[out]: AcquisitionFrame object to which data will be written.
                - index[in]: Index to retrieve frame.
@@ -1161,7 +1496,16 @@ Public Members & Functions
 
          .. group-tab:: C#
 
+            Parameters: 
+               - af[out]: AcquisitionFrame object to which data will be written.
+               - index[in]: Index to retrieve frame.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+
             .. code-block:: c#
+
+               DaoAINETError^ getAcquisitionFrame(AcquisitionFrame^% af, System::Int32 index);
 
          .. group-tab:: Python
 
@@ -1173,7 +1517,7 @@ Public Members & Functions
       .. tabs::
 
          .. group-tab:: C++
-            
+
             Parameters: 
                - af[in]: AcquisitionFrame object to write.
                - index[in]: Index of AcquisitionFrame to modify data.
@@ -1187,7 +1531,16 @@ Public Members & Functions
 
          .. group-tab:: C#
 
+            Parameters: 
+               - af[in]: AcquisitionFrame object to write.
+               - index[in]: Index of AcquisitionFrame to modify data.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+
             .. code-block:: c#
+
+               DaoAINETError^ modifyAcquisitionFrame(AcquisitionFrame^ af, System::Int32 index);
 
          .. group-tab:: Python
 
@@ -1211,8 +1564,16 @@ Public Members & Functions
 		         DAOAI_API SlcSdkError deleteAcquisitionFrame(int index);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - index[in]: Index of AcquisitionFrame to delete.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ deleteAcquisitionFrame(System::Int32 index);
 
          .. group-tab:: Python
 
@@ -1224,7 +1585,7 @@ Public Members & Functions
       .. tabs::
 
          .. group-tab:: C++
-            
+
             Parameters: 
                - mofaf[in]: Map of int to AcquisitionFrame objects to write.
 
@@ -1237,7 +1598,15 @@ Public Members & Functions
 
          .. group-tab:: C#
 
+            Parameters: 
+               - mofaf[in]: Map of int to AcquisitionFrame objects to write.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+
             .. code-block:: c#
+               
+               DaoAINETError^ setAcquisitionFrames(System::Collections::Generic::Dictionary<System::Int32, AcquisitionFrame^>^ mofaf);
 
          .. group-tab:: Python
 
@@ -1261,8 +1630,16 @@ Public Members & Functions
 		         DAOAI_API SlcSdkError getAcquisitionFrames(std::map<int, AcquisitionFrame>& mofaf);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - mofaf[out]: Current acquisition frame map is written to this map.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ getAcquisitionFrames(System::Collections::Generic::Dictionary<System::Int32, AcquisitionFrame^>^% mofaf);
 
          .. group-tab:: Python
 
@@ -1287,8 +1664,17 @@ Public Members & Functions
 		         DAOAI_API SlcSdkError enableFilterSetting(FilterSetting setting, bool toggle);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - setting[in]: The filter to toggle.
+               - toggle[in]: Enable or disable.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ enableFilterSetting(FilterSetting setting, System::Boolean toggle);
 
          .. group-tab:: Python
 
@@ -1313,8 +1699,17 @@ Public Members & Functions
                DAOAI_API SlcSdkError checkEnableFilterSetting(FilterSetting setting, bool& is_enabled);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - setting[in]: The filter to check.
+               - is_enabled[out]: Enable status written to this.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ checkEnableFilterSetting(FilterSetting setting, System::Boolean% is_enabled);
 
          .. group-tab:: Python
 
@@ -1341,8 +1736,19 @@ Public Members & Functions
                DAOAI_API SlcSdkError inquireFilterSetting(FilterSetting setting, int& curr, int& min, int& max);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - setting[in]: The filter to check.
+               - curr[out]: The current value of this setting.
+               - min[out]: The minimum valid value that this setting can be configured with.
+               - max[out]: The maximum valid value that this setting can be configured with.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ inquireFilterSetting(FilterSetting setting, System::Int32% curr, System::Int32% min, System::Int32% max);
 
          .. group-tab:: Python
 
@@ -1369,8 +1775,19 @@ Public Members & Functions
                DAOAI_API SlcSdkError inquireFilterSetting(FilterSetting setting, double& curr, double& min, double& max);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - setting[in]: The filter to check.
+               - curr[out]: The current value of this setting.
+               - min[out]: The minimum valid value that this setting can be configured with.
+               - max[out]: The maximum valid value that this setting can be configured with.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ inquireFilterSetting(FilterSetting setting, System::Double% curr, System::Double% min, System::Double% max);
 
          .. group-tab:: Python
 
@@ -1395,8 +1812,17 @@ Public Members & Functions
 		         DAOAI_API SlcSdkError inquireFilterSetting(FilterSetting setting, int& curr);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - setting[in]: The filter to check.
+               - curr[out]: The current value of this setting.
 
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+               
             .. code-block:: c#
+
+               DaoAINETError^ inquireFilterSetting(FilterSetting setting, System::Int32% curr);
 
          .. group-tab:: Python
 
@@ -1421,8 +1847,17 @@ Public Members & Functions
 		         DAOAI_API SlcSdkError inquireFilterSetting(FilterSetting setting, double& curr);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - setting[in]: The filter to check.
+               - curr[out]: The current value of this setting.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ inquireFilterSetting(FilterSetting setting, System::Double% curr);
 
          .. group-tab:: Python
 
@@ -1447,8 +1882,17 @@ Public Members & Functions
 		         DAOAI_API SlcSdkError inquireFilterSetting(FilterSetting setting, bool& curr);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - setting[in]: The filter to check.
+               - curr[out]: The current value of this setting.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ inquireFilterSetting(FilterSetting setting, System::Boolean% curr);
 
          .. group-tab:: Python
 
@@ -1474,8 +1918,17 @@ Public Members & Functions
 		         DAOAI_API SlcSdkError configureFilterSetting(FilterSetting setting, int new_val);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - setting[in]: The filter to configure.
+               - new_val[in]: The value to write to this setting.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ configureFilterSetting(FilterSetting setting, System::Int32 new_val);
 
          .. group-tab:: Python
 
@@ -1500,8 +1953,17 @@ Public Members & Functions
 		         DAOAI_API SlcSdkError configureFilterSetting(FilterSetting setting, double new_val);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - setting[in]: The filter to configure.
+               - new_val[in]: The value to write to this setting.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ configureFilterSetting(FilterSetting setting, System::Double new_val);
 
          .. group-tab:: Python
 
@@ -1526,8 +1988,17 @@ Public Members & Functions
 		         DAOAI_API SlcSdkError configureFilterSetting(FilterSetting setting, bool new_val);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - setting[in]: The filter to configure.
+               - new_val[in]: The value to write to this setting.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ configureFilterSetting(FilterSetting setting, System::Boolean new_val);
 
          .. group-tab:: Python
 
@@ -1552,8 +2023,17 @@ Public Members & Functions
 		         DAOAI_API SlcSdkError enableSystemSetting(SystemSetting setting, bool toggle);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - setting[in]: The system setting to toggle.
+               - toggle[in]: Enable or disable.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ enableSystemSetting(SystemSetting setting, System::Boolean toggle);
 
          .. group-tab:: Python
 
@@ -1578,8 +2058,17 @@ Public Members & Functions
 		         DAOAI_API SlcSdkError checkEnableSystemSetting(SystemSetting setting, bool& is_enabled);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - setting[in]: The system setting to check.
+               - is_enabled[out]: Enable status written to this.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ checkEnableSystemSetting(SystemSetting setting, System::Boolean% is_enabled);
 
          .. group-tab:: Python
 
@@ -1606,8 +2095,19 @@ Public Members & Functions
 		         DAOAI_API SlcSdkError inquireSystemSetting(SystemSetting setting, int& curr, int& min, int& max);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - setting[in]: The system setting to check.
+               - curr[out]: Current value of system setting.
+               - min[out]: Minimum configurable value of system setting.
+               - max[out]: Maximum configurable value of system setting.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ inquireSystemSetting(SystemSetting setting, System::Int32% curr, System::Int32% min, System::Int32% max);
 
          .. group-tab:: Python
 
@@ -1632,8 +2132,17 @@ Public Members & Functions
 		         DAOAI_API SlcSdkError inquireSystemSetting(SystemSetting setting, int& curr);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - setting[in]: The system setting to check.
+               - curr[out]: Current value of system setting.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ inquireSystemSetting(SystemSetting setting, System::Int32% curr);
 
          .. group-tab:: Python
 
@@ -1658,8 +2167,17 @@ Public Members & Functions
 		         DAOAI_API SlcSdkError inquireSystemSetting(SystemSetting setting, bool& curr);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - setting[in]: The system setting to check.
+               - curr[out]: Current value of system setting.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ inquireSystemSetting(SystemSetting setting, System::Boolean% curr);
 
          .. group-tab:: Python
 
@@ -1685,8 +2203,17 @@ Public Members & Functions
 		         DAOAI_API SlcSdkError inquireSystemSetting(SystemSetting setting, std::string& curr);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - setting[in]: The system setting to check.
+               - curr[out]: Current value of system setting.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ inquireSystemSetting(SystemSetting setting, System::String^% val);
 
          .. group-tab:: Python
 
@@ -1711,8 +2238,17 @@ Public Members & Functions
 		         DAOAI_API SlcSdkError configureSystemSetting(SystemSetting setting, int new_val);
 
          .. group-tab:: C#
+            
+            Parameters: 
+               - setting[in]: The system setting to configure.
+               - new_val[in]: Value to write to system setting.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ configureSystemSetting(SystemSetting setting, System::Int32 new_val);
 
          .. group-tab:: Python
 
@@ -1737,8 +2273,17 @@ Public Members & Functions
 		         DAOAI_API SlcSdkError configureSystemSetting(SystemSetting setting, bool new_val);
 
          .. group-tab:: C#
+                        
+            Parameters: 
+               - setting[in]: The system setting to configure.
+               - new_val[in]: Value to write to system setting.
+
+            Return:
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
 
             .. code-block:: c#
+
+               DaoAINETError^ configureSystemSetting(SystemSetting setting, System::Boolean new_val);
 
          .. group-tab:: Python
 
@@ -1778,6 +2323,7 @@ Public Members & Functions
 
          .. code-block:: c#
 
+            #include "error.h"
 
       .. group-tab:: Python
 
@@ -1816,6 +2362,21 @@ Public Members & Functions
 
          .. code-block:: c#
 
+            public enum class DaoAINETStatus : int {
+               SlcSdkSuccess,
+               SlcSdkErrorInvalidValue,
+               SlcSdkErrorGPUMemoryAllocation,
+               SlcSdkErrorVirtualFunctionCalled,
+               SlcSdkErrorImageAcquisition,
+               SlcSdkErrorFileOperation,
+               SlcSdkErrorDeviceConnection,
+               SlcSdkErrorDeviceOperation,
+               SlcSdkErrorTemperatureRegulation,
+               SlcSdkErrorWorkspaceVersion,
+               SlcSdkErrorRemoteConnection,
+               SlcSdkErrorRemoteVersion
+            };
+
 
       .. group-tab:: Python
 
@@ -1836,6 +2397,7 @@ Public Members & Functions
 
          .. code-block:: c#
 
+            DaoAINETError(DaoAINETStatus status, System::String^ detail_text);
 
       .. group-tab:: Python
 
@@ -1856,6 +2418,7 @@ Public Members & Functions
 
          .. code-block:: c#
 
+            DaoAINETError();
 
       .. group-tab:: Python
 
@@ -1878,8 +2441,12 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+         Return:
+            - DaoAINETStatus: status code of the error.
+
          .. code-block:: c#
 
+            DaoAINETStatus status();
 
       .. group-tab:: Python
 
@@ -1902,8 +2469,12 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+         Return:
+            - System::String: detailed description of the error.
+
          .. code-block:: c#
 
+            System::String^ details();
 
       .. group-tab:: Python
 
@@ -1926,6 +2497,7 @@ Public Members & Functions
 
          .. code-block:: c#
 
+            #include "frame.h"
 
       .. group-tab:: Python
 
@@ -1949,6 +2521,7 @@ Public Members & Functions
 
          .. code-block:: c#
 
+            Frame();
 
       .. group-tab:: Python
 
@@ -1969,6 +2542,7 @@ Public Members & Functions
 
          .. code-block:: c#
 
+            Frame(Frame^ a);
 
       .. group-tab:: Python
 
@@ -1994,8 +2568,15 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+            Parameters: 
+               - [in] pc: PointCloud object to write contained point cloud data to.
+
+            Return:
+               - DaoAINETError^: DaoAINETError class handle containing status codes and any error messages.
+
          .. code-block:: c#
 
+            DaoAINETError^ getPointCloud(PointCloud^% pc);
 
       .. group-tab:: Python
 
@@ -2020,8 +2601,15 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+            Parameters: 
+               - file_name[in]: The path to save the frame. Supports .dcf (DaoAI data format), .ply, .pcd and .daf file suffixes.
+
+            Return:
+               - DaoAINETError^: DaoAINETError class handle containing status codes and any error messages.
+
          .. code-block:: c#
 
+            DaoAINETError^ save(System::String^ file_name);
 
       .. group-tab:: Python
 
@@ -2046,8 +2634,15 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+            Parameters: 
+               - file_name[in]: The path to load the frame.
+
+            Return:
+               - DaoAINETError^: DaoAINETError class handle containing status codes and any error messages.
+
          .. code-block:: c#
 
+            DaoAINETError^ load(System::String^ file_name);
 
       .. group-tab:: Python
 
@@ -2069,8 +2664,12 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+            Return:
+               - System::Boolean: True if frame is empty, false otherwise.
+
          .. code-block:: c#
 
+            System::Boolean isEmpty();
 
       .. group-tab:: Python
 
@@ -2094,7 +2693,6 @@ Public Members & Functions
 
          .. code-block:: c#
 
-
       .. group-tab:: Python
 
          .. code-block:: python
@@ -2115,6 +2713,7 @@ Public Members & Functions
 
          .. code-block:: c#
 
+            #include "point_cloud.h"
 
       .. group-tab:: Python
 
@@ -2137,6 +2736,7 @@ Public Members & Functions
 
          .. code-block:: c#
 
+            PointCloud();
 
       .. group-tab:: Python
 
@@ -2175,6 +2775,7 @@ Public Members & Functions
 
          .. code-block:: c#
 
+            ~PointCloud();
 
       .. group-tab:: Python
 
@@ -2197,9 +2798,14 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+         Parameters:
+            - rows[in]: the height of the point cloud.
+            - cols[in]: the width of the point cloud.
+
          .. code-block:: c#
 
-
+            PointCloud(System::UInt64 rows, System::UInt64 cols);
+            
       .. group-tab:: Python
 
          .. code-block:: python
@@ -2220,8 +2826,12 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+            return:
+               - System::Boolean: whether point cloud is empty.
+
          .. code-block:: c#
 
+            System::Boolean isEmpty();
 
       .. group-tab:: Python
 
@@ -2243,8 +2853,12 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+            return:
+               - System::UInt64: width (number of columns) of point cloud.
+
          .. code-block:: c#
 
+            System::UInt64 getWidth();
 
       .. group-tab:: Python
 
@@ -2266,7 +2880,12 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+            return:
+               - System::UInt64: height (number of rows) of point cloud.
+
          .. code-block:: c#
+
+            System::UInt64 getHeight();
 
 
       .. group-tab:: Python
@@ -2280,8 +2899,8 @@ Public Members & Functions
 
       .. group-tab:: C++
 
-            return:
-               - int: size (number of points) of point cloud.
+         return:
+            - int: size (number of points) of point cloud.
 
          .. code-block:: C++
                
@@ -2289,24 +2908,28 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+         return:
+            - int: size (number of points) of point cloud.
+               
          .. code-block:: c#
 
+            System::UInt64 getSize();
 
       .. group-tab:: Python
 
          .. code-block:: python
 
-   Operator ():
+   getPoint:
       Obtain a reference to a point given by a 1D linear index (from 0 to number of points).
 
    .. tabs::
 
       .. group-tab:: C++
 
-            Parameters:
-               - idx[in]: index value
-            return:
-               - Point: reference to a point
+         Parameters:
+            - idx[in]: index value
+         return:
+            - Point: reference to a point
 
          .. code-block:: C++
                
@@ -2314,25 +2937,31 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+         Parameters:
+            - idx[in]: index value
+         return:
+            - Point: reference to a point
+
          .. code-block:: c#
 
+            Point^ getPoint(System::UInt64 idx);
 
       .. group-tab:: Python
 
          .. code-block:: python
 
-   Operator ():
+   getPoint:
       Obtain a constant reference to a point given by a 1D linear index (from 0 to number of points).
 
    .. tabs::
 
       .. group-tab:: C++
 
-            Parameters:
-               - idx[in]: index value
-               
-            return:
-               - Point: reference to a point
+         Parameters:
+            - idx[in]: index value
+            
+         return:
+            - Point: reference to a point
 
          .. code-block:: C++
                
@@ -2342,12 +2971,11 @@ Public Members & Functions
 
          .. code-block:: c#
 
-
       .. group-tab:: Python
 
          .. code-block:: python
 
-   Operator ():
+   getPoint:
       Obtain a reference to a point given by row and column, i is Row & j is Column
 
    .. tabs::
@@ -2367,13 +2995,22 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+            Parameters:
+               - i: row
+               - j: col
+
+            return:
+               - Point: reference to a point
+
          .. code-block:: c#
+
+            Point^ getPoint(System::UInt64 i, System::UInt64 j);
 
       .. group-tab:: Python
 
          .. code-block:: python
 
-   Operator ():
+   getPoint:
       Obtain a constant reference to a point given by row and column, i is Row & j is Column
 
    .. tabs::
@@ -2419,7 +3056,16 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+            Parameters:
+               - rows: new row number
+               - cols: new col number
+
+            return:
+               - DaoAINETError^: DaoAINETError class handle containing status codes and any error messages.
+
          .. code-block:: c#
+
+            DaoAINETError^ resize(System::UInt64 rows, System::UInt64 cols);
 
       .. group-tab:: Python
 
@@ -2432,14 +3078,17 @@ Public Members & Functions
 
       .. group-tab:: C++
 
-            return:
-               - Point*: a pointer to the first point in the point cloud.
+         return:
+            - Point*: a pointer to the first point in the point cloud.
 
          .. code-block:: C++
 
       		DAOAI_API Point* getDataPtr() const;
             
       .. group-tab:: C#
+         
+         return:
+            - Point*: a pointer to the first point in the point cloud.
 
          .. code-block:: c#
 
@@ -2454,8 +3103,8 @@ Public Members & Functions
 
       .. group-tab:: C++
 
-            return:
-               - std::vector<float>: a vector of all x coordinate data
+         return:
+            - std::vector<float>: a vector of all x coordinate data
 
          .. code-block:: C++
 
@@ -2463,7 +3112,12 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+         return:
+            - List<System::Single>: a vector of all x coordinate data
+
          .. code-block:: c#
+
+            List<System::Single>^ getVecX();
 
       .. group-tab:: Python
 
@@ -2485,7 +3139,12 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+         return:
+            - List<System::Single>: a vector of all y coordinate data
+
          .. code-block:: c#
+
+            List<System::Single>^ getVecY();
 
       .. group-tab:: Python
 
@@ -2507,7 +3166,12 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+         return:
+            - List<System::Single>: a vector of all z coordinate data
+
          .. code-block:: c#
+
+            List<System::Single>^ getVecZ();
 
       .. group-tab:: Python
 
@@ -2520,8 +3184,8 @@ Public Members & Functions
 
       .. group-tab:: C++
 
-            return:
-               - std::vector<uint32_t>: a vector of all rgba color data.
+         return:
+            - std::vector<uint32_t>: a vector of all rgba color data.
 
          .. code-block:: C++
 
@@ -2529,7 +3193,12 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+         return:
+            - List<System::UInt32>: a vector of all rgba color data.
+
          .. code-block:: c#
+
+            List<System::UInt32>^ getVecRgba();
 
       .. group-tab:: Python
 
@@ -2542,8 +3211,8 @@ Public Members & Functions
 
       .. group-tab:: C++
 
-            return:
-               - std::vector<float>: a vector of all confident data
+         return:
+            - std::vector<float>: a vector of all confident data
 
          .. code-block:: C++
 
@@ -2551,7 +3220,12 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+         return:
+            - List<System::Single>: a vector of all confident data;
+
          .. code-block:: c#
+
+            List<System::Single>^ getVecConfident();
 
       .. group-tab:: Python
 
@@ -2564,8 +3238,8 @@ Public Members & Functions
 
       .. group-tab:: C++
 
-            return:
-               - std::vector<uint8_t>: a vector of all r data
+         return:
+            - std::vector<uint8_t>: a vector of all r data
 
          .. code-block:: C++
 
@@ -2573,7 +3247,12 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+         return:
+            - List<System::Byte>: a vector of all r data
+
          .. code-block:: c#
+
+            List<System::Byte>^ getVecR();
 
       .. group-tab:: Python
 
@@ -2595,7 +3274,12 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+         return:
+            - List<System::Byte>: a vector of all g data
+
          .. code-block:: c#
+
+            List<System::Byte>^ getVecG();
 
       .. group-tab:: Python
 
@@ -2617,7 +3301,12 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+         return:
+            - List<System::Byte>: a vector of all b data
+
          .. code-block:: c#
+
+            List<System::Byte>^ getVecB();
 
       .. group-tab:: Python
 
@@ -2639,7 +3328,12 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+         return:
+            - List<System::Byte>: a vector of all a data
+
          .. code-block:: c#
+
+            List<System::Byte>^ getVecA();
 
       .. group-tab:: Python
 
@@ -2652,8 +3346,8 @@ Public Members & Functions
 
       .. group-tab:: C++
 
-            return:
-               - PointCloud: Copied point cloud.
+         return:
+            - PointCloud: Copied point cloud.
 
          .. code-block:: C++
 
@@ -2661,7 +3355,12 @@ Public Members & Functions
             
       .. group-tab:: C#
 
+         return:
+            - PointCloud: Copied point cloud.
+
          .. code-block:: c#
+
+            PointCloud^ clone();
 
       .. group-tab:: Python
 
@@ -2705,6 +3404,7 @@ Public Members & Functions
 
          .. code-block:: c#
 
+            #include "point.h"
 
       .. group-tab:: Python
 
@@ -2728,6 +3428,7 @@ Public Member Functions
 
          .. code-block:: c#
 
+            DAOAI_API Point();
 
       .. group-tab:: Python
 
@@ -2748,6 +3449,7 @@ Public Member Functions
 
          .. code-block:: c#
 
+            DAOAI_API ~Point();
 
       .. group-tab:: Python
 
@@ -2760,8 +3462,8 @@ Public Member Functions
 
       .. group-tab:: C++
 
-            return:
-               - bool: bool if the point is NaN
+         return:
+            - bool: bool if the point is NaN
 
          .. code-block:: C++
 
@@ -2769,7 +3471,12 @@ Public Member Functions
             
       .. group-tab:: C#
 
+         return:
+            - System::Boolean: bool if the point is NaN
+
          .. code-block:: c#
+
+            System::Boolean isNaN();
 
       .. group-tab:: Python
 
@@ -2782,8 +3489,8 @@ Public Member Functions
 
       .. group-tab:: C++
 
-            return:
-               - float: x value from the point. 
+         return:
+            - float: x value from the point. 
 
          .. code-block:: C++
 
@@ -2793,7 +3500,12 @@ Public Member Functions
             
       .. group-tab:: C#
 
+         return:
+            - System::Single: x value from the point. 
+
          .. code-block:: c#
+
+            System::Single getX();
 
       .. group-tab:: Python
 
@@ -2806,8 +3518,8 @@ Public Member Functions
 
       .. group-tab:: C++
 
-            return:
-               - float: y value from the point. 
+         return:
+            - float: y value from the point. 
 
          .. code-block:: C++
 
@@ -2817,7 +3529,12 @@ Public Member Functions
             
       .. group-tab:: C#
 
+         return:
+            - System::Single: y value from the point. 
+
          .. code-block:: c#
+
+            System::Single getY();
 
       .. group-tab:: Python
 
@@ -2841,7 +3558,12 @@ Public Member Functions
             
       .. group-tab:: C#
 
+         return:
+            - System::Single: z value from the point. 
+
          .. code-block:: c#
+
+            System::Single getZ();
 
       .. group-tab:: Python
 
@@ -2865,7 +3587,12 @@ Public Member Functions
             
       .. group-tab:: C#
 
+         return:
+            - System::Byte: r value from the point. 
+
          .. code-block:: c#
+
+            System::Byte getR();
 
       .. group-tab:: Python
 
@@ -2889,7 +3616,12 @@ Public Member Functions
             
       .. group-tab:: C#
 
+         return:
+            - System::Byte: g value from the point. 
+
          .. code-block:: c#
+
+            System::Byte getG();
 
       .. group-tab:: Python
 
@@ -2913,7 +3645,12 @@ Public Member Functions
             
       .. group-tab:: C#
 
+         return:
+            - System::Byte: b value from the point. 
+
          .. code-block:: c#
+
+            System::Byte getB();
 
       .. group-tab:: Python
 
@@ -2937,7 +3674,12 @@ Public Member Functions
             
       .. group-tab:: C#
 
+         return:
+            - System::Byte: a value from the point. 
+
          .. code-block:: c#
+
+            System::Byte getA();
 
       .. group-tab:: Python
 
@@ -2961,8 +3703,13 @@ Public Member Functions
             }
             
       .. group-tab:: C#
+         
+            return:
+               - System::UInt32: rgba value from the point.
 
          .. code-block:: c#
+
+            System::UInt32 getRgba();
 
       .. group-tab:: Python
 
@@ -2986,7 +3733,12 @@ Public Member Functions
             
       .. group-tab:: C#
 
+            return:
+               - System::Single: confident value from the point.
+
          .. code-block:: c#
+
+            System::Single getConfident();
 
       .. group-tab:: Python
 
@@ -3013,7 +3765,14 @@ Public Member Functions
             
       .. group-tab:: C#
 
+            parameters:
+               - x[in]: value to assign
+            return:
+               - DaoAINETError^: DaoAINETError class handle containing status codes and any error messages.
+
          .. code-block:: c#
+
+            DaoAINETError^ setX(System::Single x)
 
       .. group-tab:: Python
 
@@ -3040,7 +3799,14 @@ Public Member Functions
             
       .. group-tab:: C#
 
+            parameters:
+               - y[in]: value to assign
+            return:
+               - DaoAINETError^: DaoAINETError class handle containing status codes and any error messages.
+
          .. code-block:: c#
+
+            DaoAINETError^ setY(System::Single y)
 
       .. group-tab:: Python
 
@@ -3067,7 +3833,14 @@ Public Member Functions
             
       .. group-tab:: C#
 
+            parameters:
+               - z[in]: value to assign
+            return:
+               - DaoAINETError^: DaoAINETError class handle containing status codes and any error messages.
+
          .. code-block:: c#
+
+            DaoAINETError^ setZ(System::Single z)
 
       .. group-tab:: Python
 
@@ -3098,7 +3871,17 @@ Public Member Functions
             
       .. group-tab:: C#
 
+            parameters:
+               - r[in]: red value to assign
+               - g[in]: green value to assign
+               - b[in]: blue value to assign
+               - a[in]: alpha value to assign
+            return:
+               - DaoAINETError^: DaoAINETError class handle containing status codes and any error messages.
+
          .. code-block:: c#
+
+            DaoAINETError^ setRgba(System::Byte r, System::Byte g, System::Byte b, System::Byte a);
 
       .. group-tab:: Python
 
@@ -3127,7 +3910,15 @@ Public Member Functions
             
       .. group-tab:: C#
 
+            parameters:
+               - rgba[in]:value to assign
+            return:
+               - DaoAINETError^: DaoAINETError class handle containing status codes and any error messages.
+
          .. code-block:: c#
+
+            DaoAINETError^ (System::UInt32 rgba);
+
 
       .. group-tab:: Python
 
@@ -3157,7 +3948,17 @@ Public Member Functions
             
       .. group-tab:: C#
 
+            parameters:
+               - r[in]: red value to assign
+               - g[in]: green value to assign
+               - b[in]: blue value to assign
+
+            return:
+               - DaoAINETError^: DaoAINETError class handle containing status codes and any error messages.
+
          .. code-block:: c#
+
+            DaoAINETError^ setRgb(System::Byte r, System::Byte g, System::Byte b);
 
       .. group-tab:: Python
 
@@ -3185,7 +3986,15 @@ Public Member Functions
             
       .. group-tab:: C#
 
+            parameters:
+               - confident[in]: confident value to assign
+
+            return:
+               - DaoAINETError^: DaoAINETError class handle containing status codes and any error messages.
+
          .. code-block:: c#
+
+            DaoAINETError^ setConfident(System::Single confident);
 
       .. group-tab:: Python
 
