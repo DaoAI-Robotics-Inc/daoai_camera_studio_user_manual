@@ -1114,6 +1114,7 @@ Public Members & Functions
 
    configureSetting:
       Set the acquisition setting value.
+      
       .. tabs::
 
          .. group-tab:: C++
