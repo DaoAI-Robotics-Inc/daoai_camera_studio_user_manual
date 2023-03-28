@@ -199,7 +199,7 @@ Public Member Functions
             .. code-block:: c#
 
                DaoAINETError^ connectCamera(System::String^ serial_number, Camera^% camera, Settings^ settings);
-		         
+               
                DaoAINETError^ connectCamera(System::String^ serial_number, Camera^% camera);
 
          .. group-tab:: Python
@@ -678,7 +678,7 @@ Public Member Functions
 
             .. code-block:: c#
 
-	            DaoAINETError^ setSettings(Settings^ settings);
+               DaoAINETError^ setSettings(Settings^ settings);
 
          .. group-tab:: Python
 
@@ -952,7 +952,7 @@ Public Members & Functions
 
             .. code-block:: C++
                
-		         DAOAI_API AcquisitionFrame();
+               DAOAI_API AcquisitionFrame();
                
          .. group-tab:: C#
 
@@ -982,7 +982,7 @@ Public Members & Functions
 
             .. code-block:: C++
                
-		         DAOAI_API SlcSdkError inquireSetting(AcquisitionFrameSetting setting, int& curr, int& min, int& max);
+               DAOAI_API SlcSdkError inquireSetting(AcquisitionFrameSetting setting, int& curr, int& min, int& max);
                
          .. group-tab:: C#
 
@@ -1019,7 +1019,7 @@ Public Members & Functions
 
             .. code-block:: C++
                
-		         DAOAI_API SlcSdkError inquireSetting(AcquisitionFrameSetting setting, int& curr);
+               DAOAI_API SlcSdkError inquireSetting(AcquisitionFrameSetting setting, int& curr);
 
          .. group-tab:: C#
 
@@ -1128,7 +1128,7 @@ Public Members & Functions
 
             .. code-block:: C++
                
-		         DAOAI_API SlcSdkError configureSetting(AcquisitionFrameSetting setting, int new_val);
+               DAOAI_API SlcSdkError configureSetting(AcquisitionFrameSetting setting, int new_val);
 
                
          .. group-tab:: C#
@@ -1164,7 +1164,7 @@ Public Members & Functions
 
             .. code-block:: C++
                
-		         DAOAI_API SlcSdkError configureSetting(AcquisitionFrameSetting setting, double new_val);
+               DAOAI_API SlcSdkError configureSetting(AcquisitionFrameSetting setting, double new_val);
                
          .. group-tab:: C#
 
@@ -1336,7 +1336,7 @@ Public Members & Functions
 
             .. code-block:: C++
                
-		         DAOAI_API ~Settings();
+               DAOAI_API ~Settings();
                
          .. group-tab:: C#
 
@@ -1361,7 +1361,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         DAOAI_API Settings(const std::string& file_path);
+               DAOAI_API Settings(const std::string& file_path);
                
          .. group-tab:: C#
 
@@ -1391,7 +1391,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         DAOAI_API SlcSdkError exportSettings(const std::string& file_path);
+               DAOAI_API SlcSdkError exportSettings(const std::string& file_path);
 
          .. group-tab:: C#
             
@@ -1425,7 +1425,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         DAOAI_API SlcSdkError addAcquisitionFrame(AcquisitionFrame af, int& index);
+               DAOAI_API SlcSdkError addAcquisitionFrame(AcquisitionFrame af, int& index);
 
          .. group-tab:: C#
             
@@ -1459,7 +1459,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-	         	DAOAI_API SlcSdkError addAcquisitionFrame(AcquisitionFrame af);
+               DAOAI_API SlcSdkError addAcquisitionFrame(AcquisitionFrame af);
 
          .. group-tab:: C#
             
@@ -1493,7 +1493,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-	         	DAOAI_API SlcSdkError getAcquisitionFrame(AcquisitionFrame& af, int index);
+               DAOAI_API SlcSdkError getAcquisitionFrame(AcquisitionFrame& af, int index);
 
          .. group-tab:: C#
 
@@ -1528,7 +1528,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         DAOAI_API SlcSdkError modifyAcquisitionFrame(AcquisitionFrame af, int index);
+               DAOAI_API SlcSdkError modifyAcquisitionFrame(AcquisitionFrame af, int index);
 
          .. group-tab:: C#
 
@@ -1562,7 +1562,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         DAOAI_API SlcSdkError deleteAcquisitionFrame(int index);
+               DAOAI_API SlcSdkError deleteAcquisitionFrame(int index);
 
          .. group-tab:: C#
             
@@ -1595,7 +1595,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-         		DAOAI_API SlcSdkError setAcquisitionFrames(std::map<int, AcquisitionFrame> mofaf);
+               DAOAI_API SlcSdkError setAcquisitionFrames(std::map<int, AcquisitionFrame> mofaf);
 
          .. group-tab:: C#
 
@@ -1628,7 +1628,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         DAOAI_API SlcSdkError getAcquisitionFrames(std::map<int, AcquisitionFrame>& mofaf);
+               DAOAI_API SlcSdkError getAcquisitionFrames(std::map<int, AcquisitionFrame>& mofaf);
 
          .. group-tab:: C#
             
@@ -1662,7 +1662,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         DAOAI_API SlcSdkError enableFilterSetting(FilterSetting setting, bool toggle);
+               DAOAI_API SlcSdkError enableFilterSetting(FilterSetting setting, bool toggle);
 
          .. group-tab:: C#
             
@@ -1810,7 +1810,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         DAOAI_API SlcSdkError inquireFilterSetting(FilterSetting setting, int& curr);
+               DAOAI_API SlcSdkError inquireFilterSetting(FilterSetting setting, int& curr);
 
          .. group-tab:: C#
             
@@ -1845,7 +1845,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         DAOAI_API SlcSdkError inquireFilterSetting(FilterSetting setting, double& curr);
+               DAOAI_API SlcSdkError inquireFilterSetting(FilterSetting setting, double& curr);
 
          .. group-tab:: C#
             
@@ -1880,7 +1880,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         DAOAI_API SlcSdkError inquireFilterSetting(FilterSetting setting, bool& curr);
+               DAOAI_API SlcSdkError inquireFilterSetting(FilterSetting setting, bool& curr);
 
          .. group-tab:: C#
             
@@ -1916,7 +1916,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         DAOAI_API SlcSdkError configureFilterSetting(FilterSetting setting, int new_val);
+               DAOAI_API SlcSdkError configureFilterSetting(FilterSetting setting, int new_val);
 
          .. group-tab:: C#
             
@@ -1951,7 +1951,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         DAOAI_API SlcSdkError configureFilterSetting(FilterSetting setting, double new_val);
+               DAOAI_API SlcSdkError configureFilterSetting(FilterSetting setting, double new_val);
 
          .. group-tab:: C#
             
@@ -1986,7 +1986,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         DAOAI_API SlcSdkError configureFilterSetting(FilterSetting setting, bool new_val);
+               DAOAI_API SlcSdkError configureFilterSetting(FilterSetting setting, bool new_val);
 
          .. group-tab:: C#
             
@@ -2021,7 +2021,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         DAOAI_API SlcSdkError enableSystemSetting(SystemSetting setting, bool toggle);
+               DAOAI_API SlcSdkError enableSystemSetting(SystemSetting setting, bool toggle);
 
          .. group-tab:: C#
             
@@ -2056,7 +2056,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         DAOAI_API SlcSdkError checkEnableSystemSetting(SystemSetting setting, bool& is_enabled);
+               DAOAI_API SlcSdkError checkEnableSystemSetting(SystemSetting setting, bool& is_enabled);
 
          .. group-tab:: C#
             
@@ -2093,7 +2093,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         DAOAI_API SlcSdkError inquireSystemSetting(SystemSetting setting, int& curr, int& min, int& max);
+               DAOAI_API SlcSdkError inquireSystemSetting(SystemSetting setting, int& curr, int& min, int& max);
 
          .. group-tab:: C#
             
@@ -2130,7 +2130,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         DAOAI_API SlcSdkError inquireSystemSetting(SystemSetting setting, int& curr);
+               DAOAI_API SlcSdkError inquireSystemSetting(SystemSetting setting, int& curr);
 
          .. group-tab:: C#
             
@@ -2165,7 +2165,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         DAOAI_API SlcSdkError inquireSystemSetting(SystemSetting setting, bool& curr);
+               DAOAI_API SlcSdkError inquireSystemSetting(SystemSetting setting, bool& curr);
 
          .. group-tab:: C#
             
@@ -2201,7 +2201,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         DAOAI_API SlcSdkError inquireSystemSetting(SystemSetting setting, std::string& curr);
+               DAOAI_API SlcSdkError inquireSystemSetting(SystemSetting setting, std::string& curr);
 
          .. group-tab:: C#
             
@@ -2236,7 +2236,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         DAOAI_API SlcSdkError configureSystemSetting(SystemSetting setting, int new_val);
+               DAOAI_API SlcSdkError configureSystemSetting(SystemSetting setting, int new_val);
 
          .. group-tab:: C#
             
@@ -2271,7 +2271,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         DAOAI_API SlcSdkError configureSystemSetting(SystemSetting setting, bool new_val);
+               DAOAI_API SlcSdkError configureSystemSetting(SystemSetting setting, bool new_val);
 
          .. group-tab:: C#
                         
@@ -2299,7 +2299,7 @@ Public Members & Functions
 
             .. code-block:: C++
 
-		         std::shared_ptr<SettingsImpl> getSettingsImpl();
+               std::shared_ptr<SettingsImpl> getSettingsImpl();
 
          .. group-tab:: C#
 
@@ -2516,7 +2516,7 @@ Public Members & Functions
 
          .. code-block:: C++
                
-		      DAOAI_API Frame();
+            DAOAI_API Frame();
             
       .. group-tab:: C#
 
@@ -2537,7 +2537,7 @@ Public Members & Functions
 
          .. code-block:: C++
                
-		      DAOAI_API explicit Frame(const std::shared_ptr<Frame>& other);
+            DAOAI_API explicit Frame(const std::shared_ptr<Frame>& other);
             
       .. group-tab:: C#
 
@@ -2565,7 +2565,7 @@ Public Members & Functions
 
          .. code-block:: C++
                
-		      DAOAI_API SlcSdkError getPointCloud(PointCloud& pc);
+            DAOAI_API SlcSdkError getPointCloud(PointCloud& pc);
             
       .. group-tab:: C#
 
@@ -2598,7 +2598,7 @@ Public Members & Functions
 
          .. code-block:: C++
                
-				DAOAI_API SlcSdkError save(const std::string &file_name);
+            DAOAI_API SlcSdkError save(const std::string &file_name);
             
       .. group-tab:: C#
 
@@ -2631,7 +2631,7 @@ Public Members & Functions
 
          .. code-block:: C++
                
-				DAOAI_API SlcSdkError load(const std::string &file_name);
+            DAOAI_API SlcSdkError load(const std::string &file_name);
             
       .. group-tab:: C#
 
@@ -2661,7 +2661,7 @@ Public Members & Functions
 
          .. code-block:: C++
                
-				DAOAI_API bool isEmpty();
+            DAOAI_API bool isEmpty();
             
       .. group-tab:: C#
 
@@ -2688,7 +2688,7 @@ Public Members & Functions
 
          .. code-block:: C++
                
-				std::shared_ptr<FrameImpl> getFrameImpl();
+            std::shared_ptr<FrameImpl> getFrameImpl();
             
       .. group-tab:: C#
 
@@ -2731,7 +2731,7 @@ Public Members & Functions
 
          .. code-block:: C++
                
-				DAOAI_API PointCloud();
+            DAOAI_API PointCloud();
             
       .. group-tab:: C#
 
@@ -2751,7 +2751,7 @@ Public Members & Functions
 
          .. code-block:: C++
                
-				DAOAI_API explicit PointCloud(const std::shared_ptr<PointCloud>& other);
+            DAOAI_API explicit PointCloud(const std::shared_ptr<PointCloud>& other);
             
       .. group-tab:: C#
 
@@ -2770,7 +2770,7 @@ Public Members & Functions
 
          .. code-block:: C++
                
-	      	DAOAI_API ~PointCloud();
+            DAOAI_API ~PointCloud();
             
       .. group-tab:: C#
 
@@ -2795,7 +2795,7 @@ Public Members & Functions
 
          .. code-block:: C++
                
-		      DAOAI_API PointCloud(size_t rows, size_t cols);
+            DAOAI_API PointCloud(size_t rows, size_t cols);
             
       .. group-tab:: C#
 
@@ -2823,7 +2823,7 @@ Public Members & Functions
 
          .. code-block:: C++
                
-		     DAOAI_API bool isEmpty() const;
+         DAOAI_API bool isEmpty() const;
             
       .. group-tab:: C#
 
@@ -2850,7 +2850,7 @@ Public Members & Functions
 
          .. code-block:: C++
                
-		     DAOAI_API int getWidth() const;
+         DAOAI_API int getWidth() const;
             
       .. group-tab:: C#
 
@@ -2877,7 +2877,7 @@ Public Members & Functions
 
          .. code-block:: C++
                
-		     DAOAI_API int getHeight() const;
+         DAOAI_API int getHeight() const;
             
       .. group-tab:: C#
 
@@ -2905,7 +2905,7 @@ Public Members & Functions
 
          .. code-block:: C++
                
-		     DAOAI_API int getSize() const;
+         DAOAI_API int getSize() const;
             
       .. group-tab:: C#
 
@@ -2934,7 +2934,7 @@ Public Members & Functions
 
          .. code-block:: C++
                
-		     DAOAI_API Point &operator()(size_t idx);
+         DAOAI_API Point &operator()(size_t idx);
             
       .. group-tab:: C#
 
@@ -2966,7 +2966,7 @@ Public Members & Functions
 
          .. code-block:: C++
                
-		     DAOAI_API const Point &operator()(size_t idx) const;
+         DAOAI_API const Point &operator()(size_t idx) const;
             
       .. group-tab:: C#
 
@@ -3027,7 +3027,7 @@ Public Members & Functions
 
          .. code-block:: C++
 
-      		DAOAI_API const Point &operator()(size_t i, size_t j) const;
+            DAOAI_API const Point &operator()(size_t i, size_t j) const;
             
       .. group-tab:: C#
 
@@ -3053,7 +3053,7 @@ Public Members & Functions
 
          .. code-block:: C++
 
-      		DAOAI_API SlcSdkError resize(size_t rows, size_t cols);
+            DAOAI_API SlcSdkError resize(size_t rows, size_t cols);
             
       .. group-tab:: C#
 
@@ -3084,7 +3084,7 @@ Public Members & Functions
 
          .. code-block:: C++
 
-      		DAOAI_API Point* getDataPtr() const;
+            DAOAI_API Point* getDataPtr() const;
             
       .. group-tab:: C#
          
@@ -3109,7 +3109,7 @@ Public Members & Functions
 
          .. code-block:: C++
 
-		      DAOAI_API std::vector<float> getVecX() const;
+            DAOAI_API std::vector<float> getVecX() const;
             
       .. group-tab:: C#
 
@@ -3136,7 +3136,7 @@ Public Members & Functions
 
          .. code-block:: C++
 
-		      DAOAI_API std::vector<float> getVecY() const;
+            DAOAI_API std::vector<float> getVecY() const;
             
       .. group-tab:: C#
 
@@ -3163,7 +3163,7 @@ Public Members & Functions
 
          .. code-block:: C++
 
-		      DAOAI_API std::vector<float> getVecZ() const;
+            DAOAI_API std::vector<float> getVecZ() const;
             
       .. group-tab:: C#
 
@@ -3190,7 +3190,7 @@ Public Members & Functions
 
          .. code-block:: C++
 
-		      DAOAI_API std::vector<uint32_t> getVecRgba() const;
+            DAOAI_API std::vector<uint32_t> getVecRgba() const;
             
       .. group-tab:: C#
 
@@ -3217,7 +3217,7 @@ Public Members & Functions
 
          .. code-block:: C++
 
-		      DAOAI_API std::vector<float> getVecConfident() const;
+            DAOAI_API std::vector<float> getVecConfident() const;
             
       .. group-tab:: C#
 
@@ -3244,7 +3244,7 @@ Public Members & Functions
 
          .. code-block:: C++
 
-		      DAOAI_API std::vector<uint8_t> getVecR() const;
+            DAOAI_API std::vector<uint8_t> getVecR() const;
             
       .. group-tab:: C#
 
@@ -3271,7 +3271,7 @@ Public Members & Functions
 
          .. code-block:: C++
 
-		      DAOAI_API std::vector<uint8_t> getVecG() const;
+            DAOAI_API std::vector<uint8_t> getVecG() const;
             
       .. group-tab:: C#
 
@@ -3298,7 +3298,7 @@ Public Members & Functions
 
          .. code-block:: C++
 
-		      DAOAI_API std::vector<uint8_t> getVecB() const;
+            DAOAI_API std::vector<uint8_t> getVecB() const;
             
       .. group-tab:: C#
 
@@ -3325,7 +3325,7 @@ Public Members & Functions
 
          .. code-block:: C++
 
-		      DAOAI_API std::vector<uint8_t> getVecA() const;
+            DAOAI_API std::vector<uint8_t> getVecA() const;
             
       .. group-tab:: C#
 
@@ -3352,7 +3352,7 @@ Public Members & Functions
 
          .. code-block:: C++
 
-		      DAOAI_API PointCloud clone();
+            DAOAI_API PointCloud clone();
             
       .. group-tab:: C#
 
@@ -3379,7 +3379,7 @@ Public Members & Functions
 
          .. code-block:: C++
 
-		      DAOAI_API PointCloud getPointCloudImpl();
+            DAOAI_API PointCloud getPointCloudImpl();
             
       .. group-tab:: C#
 
@@ -3468,7 +3468,7 @@ Public Member Functions
 
          .. code-block:: C++
 
-		      DAOAI_API bool isNaN();
+            DAOAI_API bool isNaN();
             
       .. group-tab:: C#
 
@@ -3688,7 +3688,7 @@ Public Member Functions
 
    getRgba:
       Get rgba value from the point.
-		NOTE: RGBA value is stored in the form 0xAARRGGBB (ARGB format)
+      NOTE: RGBA value is stored in the form 0xAARRGGBB (ARGB format)
 
    .. tabs::
 
