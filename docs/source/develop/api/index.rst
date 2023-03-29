@@ -310,6 +310,7 @@ Public Member Functions
 
          .. code-block:: c#
 
+            #include "application.h"
 
       .. group-tab:: Python
 
@@ -334,8 +335,12 @@ Public Member Functions
 
          .. group-tab:: C#
 
+            Return:
+               - System::String: String containing DaoAI SDK version.
+
             .. code-block:: c#
 
+               System::String^ getSDKVersion();
 
          .. group-tab:: Python
 
@@ -401,6 +406,7 @@ Public Member Functions
 
             .. code-block:: c#
 
+               Camera(Camera^ other);
 
          .. group-tab:: Python
 
@@ -414,11 +420,6 @@ Public Member Functions
             .. code-block:: C++
                
                DAOAI_API explicit Camera(class CameraImpl &&other);
-
-         .. group-tab:: C#
-
-            .. code-block:: c#
-
 
          .. group-tab:: Python
 
@@ -491,7 +492,7 @@ Public Member Functions
 
             .. code-block:: c#
 
-               DaoAINETError^ disConnect();
+               DaoAINETError^ disconnectCamera(System::String^ serial_number);
 
          .. group-tab:: Python
 
@@ -827,28 +828,6 @@ Public Member Functions
             .. code-block:: c#
 
                DaoAINETError^ enableTempRegulation(System::Boolean toggle);
-
-         .. group-tab:: Python
-
-            .. code-block:: python
-
-   getCameraImpl:
-      Get the shared ptr for the camera.
-
-      .. tabs::
-
-         .. group-tab:: C++
-
-            Return:
-               - std::shared_ptr: the shared ptr for the camera.
-
-            .. code-block:: C++
-               
-               std::shared_ptr<class CameraImpl> getCameraImpl();
-               
-         .. group-tab:: C#
-
-            .. code-block:: c#
 
          .. group-tab:: Python
 
@@ -2290,24 +2269,7 @@ Public Members & Functions
 
             .. code-block:: python
 
-   getSettingsImpl:
-      get shared pointer for settings object.
-
-      .. tabs::
-
-         .. group-tab:: C++
-
-            .. code-block:: C++
-
-               std::shared_ptr<SettingsImpl> getSettingsImpl();
-
-         .. group-tab:: C#
-
-            .. code-block:: c#
-
-         .. group-tab:: Python
-
-            .. code-block:: python
+|
 
 *Class* SlcSdkError
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -2676,28 +2638,7 @@ Public Members & Functions
 
          .. code-block:: python
 
-   getFrameImpl:
-      Get the shared pointer for frame object.
-
-   .. tabs::
-
-      .. group-tab:: C++
-
-            Return:
-               - std::shared_ptr: the shared pointer for frame object.
-
-         .. code-block:: C++
-               
-            std::shared_ptr<FrameImpl> getFrameImpl();
-            
-      .. group-tab:: C#
-
-         .. code-block:: c#
-
-      .. group-tab:: Python
-
-         .. code-block:: python
-
+|
 
 *Class* Point Cloud
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -2757,6 +2698,7 @@ Public Members & Functions
 
          .. code-block:: c#
 
+            PointCloud(PointCloud^ other);
 
       .. group-tab:: Python
 
@@ -2968,10 +2910,6 @@ Public Members & Functions
                
          DAOAI_API const Point &operator()(size_t idx) const;
             
-      .. group-tab:: C#
-
-         .. code-block:: c#
-
       .. group-tab:: Python
 
          .. code-block:: python
@@ -3029,10 +2967,6 @@ Public Members & Functions
 
             DAOAI_API const Point &operator()(size_t i, size_t j) const;
             
-      .. group-tab:: C#
-
-         .. code-block:: c#
-
       .. group-tab:: Python
 
          .. code-block:: python
@@ -3367,28 +3301,7 @@ Public Members & Functions
 
          .. code-block:: python
 
-   getPointCloudImpl:
-      get the shared pointer of point cloud object.
-
-   .. tabs::
-
-      .. group-tab:: C++
-
-            return:
-               - std::shared_ptr: shared pointer on point cloud
-
-         .. code-block:: C++
-
-            DAOAI_API PointCloud getPointCloudImpl();
-            
-      .. group-tab:: C#
-
-         .. code-block:: c#
-
-      .. group-tab:: Python
-
-         .. code-block:: python
-
+|
 
 *Class* Point
 ~~~~~~~~~~~~~~~~
@@ -4017,10 +3930,6 @@ Public Member Functions
 
             DAOAI_API Point &operator=(const Point& point);
             
-      .. group-tab:: C#
-
-         .. code-block:: c#
-
       .. group-tab:: Python
 
          .. code-block:: python
