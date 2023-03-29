@@ -27,6 +27,8 @@ DaoAI 相机概述
 
    develop/index
    develop/connect-camera/index
+   develop/sdk-sample/index
+   develop/api/index
 
 .. toctree::
    :maxdepth: 2

@@ -30,7 +30,7 @@
 **步骤 3. 在 Visual Studio 中更新Linker设置**
 
 
-Linker -> General 一栏，单击字段的下拉箭头并单击编辑，并将路径添加到 SDK lib 目录，其中包含需要链接的 .lib 库对象文件。
+Linker → General 一栏，单击字段的下拉箭头并单击编辑，并将路径添加到 SDK lib 目录，其中包含需要链接的 .lib 库对象文件。
 
 .. image:: images/sdk_guide_4.png
     :align: center
