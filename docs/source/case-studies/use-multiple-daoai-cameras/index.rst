@@ -8,6 +8,7 @@ However, it comes with some limitations:
     - Each of the DaoAI Cameras must have a unique IP address.
     - Each of the DaoAI Cameras have to be connected using separate ethernet ports.
     - You must not call DaoAI::Application::cameras() simultaneously from multiple threads or processes; they may collide when trying to connect to the cameras to get the serial number, firmware version, etc.
+    - The same holds for any combination of these API calls (connect, update firmware, list cameras) at the same time from multiple threads or processes.
 
 .. warning:: 
     Cameras can capture images simultaneously, but they must be connected to the computer in sequence.

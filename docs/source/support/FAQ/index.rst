@@ -81,13 +81,14 @@ We currently support Windows operating system.
 Supported APIs?
 --------------------------------------------------------------
 
+- C++
+- C#
+- Python
+
 What formats can files be saved?
 --------------------------------------------------------------
 
 The camera configuration can be saved and exported as a ``.cfg`` file; Point clouds can be saved as ``.pcd`` files.
-
-Expected service life of cameras?
---------------------------------------------------------------
 
 What temperatures can I safely run the cameras in?
 --------------------------------------------------------------
