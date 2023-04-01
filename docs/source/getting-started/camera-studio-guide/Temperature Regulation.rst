@@ -15,7 +15,8 @@ temperature icon in the main window will appear green.
 
     Temperature icon is green
 
-**Regulating**: In this mode, the temperature of the system is abnormal and the main capture features (Auto, Live, Capture, Preview) are disabled in order for the system to 
+**Regulating**:  By default, temperature regulation will be triggered if system temperature is above 70 degree Celsius.
+In this mode, the temperature of the system is abnormal and the main capture features (Auto, Live, Capture, Preview) are disabled in order for the system to 
 regulate the temperature. When in this mode, a temperature control algorithm will be run in order to normalize the system again. While the temperature control status is 
 regulating, the temperature icon in the main window will appear red.
 

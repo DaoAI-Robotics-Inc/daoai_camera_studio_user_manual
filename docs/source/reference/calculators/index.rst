@@ -14,9 +14,6 @@ Inputs
 
 - Circle of Confusion (in micrometers, μm)
 
-.. note:: 
-    If you have ``acceptable blur radius`` > 1, then you multiply the ``Circle of Confusion`` by ``acceptable blur radius``.
-
 - Focal length of lens (in millimeters, mm)
 
 - aperture of the lens
@@ -44,23 +41,23 @@ You may refer to camera defualt settings for your inputs.
      - BP-M
      - BP-L
    * - Circle of Confusion
-     - 
-     - 
-     - 
-     - 
-     -
+     - 3.45
+     - 3.45
+     - 5.86
+     - 5.86
+     - 5.86
    * - Focal Length of Lens
-     - 
-     - 
-     - 
-     - 
-     -
+     - 6
+     - 6
+     - 12.5
+     - 16
+     - 12.5
    * - Aperture of the Lens
-     - 
-     - 
-     - 
-     - 
-     -
+     - f/5.6
+     - f/5.6
+     - f/5.6
+     - f/5.6
+     - f/5.6
    * - Working Distance (mm)
      - 500-1000
      - 500-1000

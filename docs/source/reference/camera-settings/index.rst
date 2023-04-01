@@ -159,12 +159,12 @@ The table below shows the default settings for different DaoAI camera models.
 
 |
 
-It is possible to read various settings info from the SDK.
+.. It is possible to read various settings info from the SDK.
 
-Default camera settings:
+.. Default camera settings:
 
-.. tabs::
+.. .. tabs::
 
-    .. tab:: C++
-        .. code-block::
-            abc 
+..     .. tab:: C++
+..         .. code-block::
+..             abc 

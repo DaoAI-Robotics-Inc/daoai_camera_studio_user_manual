@@ -12,5 +12,5 @@ There are three capture modes to choose from in Camera Studio:
 |
 
 1. **Capture** performs a single capture using the current frames.
-2. **Auto** Use the "Maximum capture time" to allocate number of frames and exposure stop time
+2. **Auto** Analyze the scene and automatically generate frame settings based off "Maximum capture time", then perform a single capture.
 3. **Live** performs continuous captures using the current frames.

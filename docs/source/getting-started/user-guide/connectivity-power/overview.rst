@@ -10,7 +10,7 @@ Connectors
     .. image:: images/small.png
         :align: center
 
-    A. Power Connector 24V,10A DC
+    A. Power Connector 24V, 10A DC
     B. Ethernet Connector CAT 6 or higher
 
    .. group-tab:: BP MEDIUM
@@ -18,7 +18,7 @@ Connectors
     .. image:: images/medium.png
         :align: center
 
-    A. Power Connector 24V,10A DC
+    A. Power Connector 24V, 10A DC
     B. Ethernet Connector CAT 6 or higher
 
    .. group-tab:: BP LARGE
@@ -27,14 +27,14 @@ Connectors
         :align: center
 
     A. Ethernet Connector CAT 6 or higher
-    B. Power Connector 24V,15A DC
+    B. Power Connector 24V, 15A DC
    
    .. group-tab:: BP AMR
 
     .. image:: images/amr.png
         :align: center
 
-    A. Power Connector 24V,10A DC
+    A. Power Connector 24V, 10A DC
     B. Ethernet Connector CAT 6 or higher
       
    .. group-tab:: BP AMR-GPU
@@ -42,7 +42,7 @@ Connectors
     .. image:: images/amr_gpu.png
         :align: center
 
-    A. Power Connector 24V,10A DC
+    A. Power Connector 24V, 10A DC
     B. Ethernet Connector CAT 6 or higher
 
     

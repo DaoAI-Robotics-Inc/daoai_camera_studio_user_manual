@@ -16,15 +16,16 @@ Default Configuration
    * - BP Series
      - 192.168.1.2
      - 255.255.255.0
-
+   * - BP-AMR Series
+     - 192.168.1.12
+     - 255.255.255.0
+     
 | Any IP address in the subnet range is valid (e.g. For BP series camera: 192.168.1.0 - 192.168.1.255).
 | If you have not configured the camera IP address before, the camera's IP address will be the default IP address as in the above table.
 
 
 Static IP Network Configuration - PC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This step is necessary for using :ref:`multiple cameras <Using Multiple DaoAI Cameras>`. 
 
 Navigate to: 
 
@@ -74,15 +75,3 @@ After scanning, it will list all discoverable IP addresses in the local network.
 .. image:: images/x_results.png
 
 |
-
-Version History
-~~~~~~~~~~~~~~~~~~~
-
-.. list-table::
-  :widths: 25 150
-  :header-rows: 1
-
-  * - SDK
-    - 
-  * - Changes
-    - 

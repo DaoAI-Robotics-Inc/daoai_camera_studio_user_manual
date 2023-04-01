@@ -1,2 +1,2 @@
-Trouble Shotting
+Trouble Shooting
 ==================

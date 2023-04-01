@@ -18,8 +18,6 @@ Prerequisites
 Setup
 ------------------
 
-Calling any of the APIs in the DaoAI Camera SDK requires initializing the DaoAI application and keeping it alive while the program runs.
-
 .. tabs::
 
    .. group-tab:: C++
@@ -100,9 +98,9 @@ Calling any of the APIs in the DaoAI Camera SDK requires initializing the DaoAI 
                Console.WriteLine("   " + pair.Key);  // Print serial numbers of detected cameras.
          }
          
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
-      .. code-block:: python
+      .. ..    code-block:: python
 
 
 Connecting to a Camera
@@ -179,9 +177,9 @@ Connecting to camera can have 3 Options.
          err = cam.connect();
          if (HasError(err)) { return; } // Check for errors
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
-      .. code-block:: python
+      .. ..    code-block:: python
 
 
 Camera Actions
@@ -238,9 +236,9 @@ Get serial number, camera intrinsic parameters, and camera settings information.
          // Get current settings used by this camera.
          Settings settings = cam.getSettings();
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
-      .. code-block:: python
+      .. ..    code-block:: python
 
 Camera Settings
 -------------------
@@ -296,9 +294,9 @@ Create camera settings and load from camera setting file.
          // Cloning settings
          new_settings = new Settings(settings);
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
-      .. code-block:: python
+      .. ..    code-block:: python
 
 
 Acquisition Frames
@@ -476,9 +474,9 @@ Configure aAcquisition frames parameters.
          err = new_settings.setAcquisitionFrames(mofaf);
          if (HasError(err)) { return; } // Check for errors
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
-      .. code-block:: python
+      .. ..    code-block:: python
 
 Capture Assistant
 ~~~~~~~~~~~~~~~~~~~~
@@ -523,9 +521,9 @@ Auto compute acquisition frame settings by analyzing scene given a time buget.
          err = cam.capture(ref ca_frm);  // Capture point cloud
          if (HasError(err)) { return; }
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
-      .. code-block:: python
+      .. ..    code-block:: python
 
 
 Filter Settings
@@ -656,9 +654,9 @@ Create, read, and modify Filter settings.
          if (HasError(err)) { return; } // Expect no error (status = SlcSdkSuccess)
          Console.WriteLine(err.details()); // Print warning message for using double value to set an integer parameter.
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
-      .. code-block:: python
+      .. ..    code-block:: python
 
 System Settings
 ~~~~~~~~~~~~~~~~~~~~
@@ -737,9 +735,9 @@ Create, read, and export System settings.
         err = new_settings.exportSettings(save_settings_path);
         if (HasError(err)) { return; } // Check for errors
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
-      .. code-block:: python
+      .. ..    code-block:: python
 
 Capture
 ------------------
@@ -875,9 +873,9 @@ Capture image.
          err = cam.enableTempRegulation(false);
          if (HasError(err)) { return; }
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
-      .. code-block:: python
+      .. ..    code-block:: python
 
 Frames
 --------------
@@ -942,9 +940,9 @@ Save and load image.
          err = frm.getPointCloud(ref pcl);
          if (HasError(err)) { return; } // Check for errors
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
-      .. code-block:: python
+      .. ..    code-block:: python
 
 
 Point Cloud
@@ -1029,9 +1027,9 @@ Create, get and read Point Cloud data.
          int row = rnd.Next(0, height); int col = rnd.Next(0, width);
          pt = new_pcl.getPoint((uint) row, (uint) col); // Get any point using a 2D index pair (row, column).
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
-      .. code-block:: python
+      .. ..    code-block:: python
 
 Point
 ------------------
@@ -1092,9 +1090,58 @@ Get and read Point data.
          new_point.setRgb(0x00, 0xFF, 0x00); // Set to green.
          new_point.setRgba(0x00, 0x00, 0xFF, 0x00); // Set to blue.
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
-      .. code-block:: python
+      .. ..    code-block:: python
+
+Helper Functions
+-------------------
+
+.. tabs::
+
+   .. group-tab:: C++
+
+      .. code-block:: C++
+
+         // Helper for checking error information from a returned SlcSdkError object.
+         bool hasError(DaoAI::SlcSdkError error_info) {
+             if (error_info.status() == DaoAI::SlcSdkSuccess) { // A status code of SlcSdkSuccess indicates that no error is detected.
+                 return false;
+             }
+             else {
+                 // Consult documentation or header error.h for the meaning of different error status codes.
+                 // Most errors will come with a detailed description, helpful for debugging. See SlcSdkError.details().
+                 //      NOTE: The details section may still include warnings even when the status code is SlcSdkSuccess.
+                 std::cout << "ERROR " << error_info.status() << ": " << error_info.details() << std::endl;
+                 return true;
+             }
+         }
+
+   .. group-tab:: C#
+
+      .. code-block:: c#
+
+         static bool HasError(DaoAINETError err)
+         {
+            if (err.status() == DaoAINETStatus.SlcSdkSuccess)
+            {
+                  return false;  // A status code of SlcSdkSuccess indicates that no error is detected.
+            }
+            else
+            {
+                  // Consult documentation for the meaning of different error status codes.
+                  // Most errors will come with a detailed description, helpful for debugging. See DaoAINETError.details().
+                  //      NOTE: The details section may still include warnings even when the status code is SlcSdkSuccess.
+                  Console.WriteLine("ERROR: " + err.status() + ": " + err.details());
+                  System.Threading.Thread.Sleep(20000);
+                  return true;
+            }
+         }
+
+   .. .. group-tab:: Python
+
+      .. ..    code-block:: python
+
 
 Clean Up
 -----------
@@ -1131,6 +1178,6 @@ Clean Up
          
          System.Threading.Thread.Sleep(20000);
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
-      .. code-block:: python
+      .. ..    code-block:: python

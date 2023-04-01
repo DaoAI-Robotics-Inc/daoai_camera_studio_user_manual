@@ -10,11 +10,11 @@ Unboxing
 
       - DaoAI BP Small Camera 
 
-      - power supply
+      - Power supply
 
       - Power extension cables (6m)
 
-      - Ethernet(CAT .6) cables (10m)
+      - Ethernet(CAT 6) cables (10m)
 
       Optional/as ordered:
 
@@ -32,11 +32,11 @@ Unboxing
 
       - DaoAI BP Medium Camera 
 
-      - power supply
+      - Power supply
 
       - Power extension cables (6m)
 
-      - Ethernet(CAT .6) cables (10m)
+      - Ethernet(CAT 6) cables (10m)
 
       Optional/as ordered:
 
@@ -53,11 +53,11 @@ Unboxing
 
       - DaoAI BP Large Camera 
 
-      - power supply
+      - Power supply
 
       - Power extension cables (6m)
 
-      - Ethernet(CAT .6) cables (10m)
+      - Ethernet(CAT 6) cables (10m)
 
       Optional/as ordered:
 
@@ -73,11 +73,11 @@ Unboxing
 
       - DaoAI BP AMR Camera 
 
-      - power supply
+      - Power supply
 
       - Power extension cables (6m)
 
-      - Ethernet(CAT .6) cables (10m)
+      - Ethernet(CAT 6) cables (10m)
 
       Optional/as ordered:
 
@@ -93,11 +93,11 @@ Unboxing
 
       - DaoAI BP AMR-GPU Camera 
 
-      - power supply
+      - Power supply
 
       - Power extension cables (6m)
 
-      - Ethernet(CAT .6) cables (10m)
+      - Ethernet(CAT 6) cables (10m)
 
       Optional/as ordered:
 

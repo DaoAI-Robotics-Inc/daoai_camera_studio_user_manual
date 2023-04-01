@@ -19,8 +19,6 @@ Installation Steps:
 
 2. Run the full installer that starts with DaoAI_Studio. (e.g. DaoAI_Studio_2.22.10.0_103_full.exe)
 
-.. image:: images/software_installation_1.png
-
 3. Follow the steps. You can customize the settings as you see fit.
 
 .. image:: images/software_installation_2.png

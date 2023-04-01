@@ -224,9 +224,12 @@ Public Member Functions
 
          .. group-tab:: C#
 
+            Return:        
+               - DaoAINETError^: DaoAINETError object handle containing status codes and any error messages.
+               
             .. code-block:: c#
 
-
+               DaoAINETError^ disConnect();
 
          .. group-tab:: Python
 
@@ -2765,7 +2768,7 @@ Public Members & Functions
 
          .. code-block:: C++
                
-         DAOAI_API bool isEmpty() const;
+            DAOAI_API bool isEmpty() const;
             
       .. group-tab:: C#
 
@@ -2792,7 +2795,7 @@ Public Members & Functions
 
          .. code-block:: C++
                
-         DAOAI_API int getWidth() const;
+            DAOAI_API int getWidth() const;
             
       .. group-tab:: C#
 
@@ -3020,12 +3023,12 @@ Public Members & Functions
 
             DAOAI_API Point* getDataPtr() const;
             
-      .. group-tab:: C#
-         
-         return:
-            - Point*: a pointer to the first point in the point cloud.
+      .. .. group-tab:: C# 
+      ..    not supported
+      ..    return:
+      ..       - Point*: a pointer to the first point in the point cloud.
 
-         .. code-block:: c#
+      ..    .. code-block:: c#
 
       .. group-tab:: Python
 

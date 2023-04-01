@@ -6,5 +6,5 @@ Mechanical Installation
 
    working-distance-and-fov/index
    mechanical-interface/index
-   mounting/index
+   .. mounting/index
    positioning-correctly/index

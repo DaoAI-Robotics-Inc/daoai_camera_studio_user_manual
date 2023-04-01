@@ -1,7 +1,8 @@
 Infield Calibration
 ===============================
 
-Infield calibration is a maintenance tool designed to verify and correct for the dimension trueness of DaoAI cameras. The user can check the dimension trueness of the point cloud at different points in the field of view (FOV) and determine if it is acceptable for their application. If the verification shows the camera is not sufficiently accurate for the application, then a correction can be performed to increase the dimension trueness of the point cloud. The average dimension trueness error from multiple measurements is expected to be close to zero (<0.1%).
+Infield calibration is a maintenance tool designed to verify and correct for the dimension trueness of DaoAI cameras. The user can check the dimension trueness of the point cloud at different points in the field of view (FOV) and determine if it is acceptable for their application. If the verification shows the camera is not sufficiently accurate for the application, then a correction can be performed to increase the dimension trueness of the point cloud. 
+The average dimension trueness error from multiple measurements is expected to be <0.1%.
 
 **Why is this necessary**
 

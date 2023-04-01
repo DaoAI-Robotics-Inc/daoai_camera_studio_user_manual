@@ -14,9 +14,10 @@ Intensity Threshold
 
 |
 
-Our intensity metric is based off of the average pixel intensity value from the four fringe projections from capture. The threshold helps filter out outliers that are caused by 
-low quality pixels within dark areas in an image. Generally we see that for objects with low reflectivity, the algorithm is not able conduct 3D reconstruction and thus computes 
-incorrect points there. The value of the intensity threshold corresponds to the averaged RGB value we want to filter at.
+Our intensity metric is based on the average pixel intensity value from the four fringe projections from capture. 
+The threshold helps filter out outliers that are caused by low-quality pixels within dark areas in an image. 
+Generally, we see that for objects with low reflectivity, the algorithm is not able to conduct 3D reconstruction and thus computes incorrect points there. 
+The value of the intensity threshold corresponds to the averaged RGB value we want to filter at.
 
 e.g. When the intensity threshold is 20, all the pixels in the final image with values <= 20 will be filtered out.
 
@@ -33,9 +34,10 @@ Outlier Threshold
 
 |
 
-Used to filter out points that are more than a certain distance from their nearest neighboring point. For example, if set to 3mm, it is determined whether the straight-line 
-distance between two adjacent point is greater than 3mm. If it is greater than 3mm, the point is filtered out. However, if there are multiple outliers close to each other, this 
-filter will not be able to filter out those points.
+Filter out points which are more than a certain distance from their nearest neighboring point. 
+For example, if set to 3mm, it is determined whether the straightline distance between two adjacent points is greater than 3mm. 
+If it is greater than 3mm, the point is filtered out. 
+However, if there are multiple outliers close to each other, this filter will not be able to filter out those points.
 
 .. figure:: images/outlier_before.png
     :align: center
@@ -228,8 +230,7 @@ Saturation Filter
 |
 
 This filter removes areas that are overexposed. When one of the three RGB channels exceeds 255, it deletes the pixel. Usually G (green) is the first overexposed channel. When 
-using the filter, HDR mode is automatically selected and can be manually cancelled if it is not necessary. One of the drawbacks of the filter is that some smooth edges may be 
-distorted.
+using the filter, HDR mode is automatically selected and can be manually cancelled if it is not necessary. 
 
 .. figure:: images/saturation_before.png
     :align: center

@@ -184,13 +184,14 @@ All DaoAI cameras come with a power supply of 3.2 m in length in total. The DaoA
 DaoAI Power Extension Cables
 --------------------------------
 
-We also offer power extension cables in 5 m, 10 m, and 20 m options. Cables of all lengths come with a female M12 connector on one end and either a straight M12 connector on the other end (camera side). 
+We also offer power extension cables in 5 m, 10 m, and 20 m options. 
 
 .. image:: images/pin.png
     :align: center
     :width: 60%
 
-DaoAI strongly recommends that the cables are carefully checked before use or if run time errors occur. We also strongly recommended to tighten the M12 Jack screw all the way in on the camera side when setting up the camera. The Power connector needs to be screwed in completely to ensure the watertight IP rating of the camera.
+DaoAI strongly recommends that the cables are carefully checked before use or if run time errors occur. 
+The Power connector needs to be screwed in completely to ensure the watertight IP rating of the camera.
 
 .. note::
     When using DC power extension cables For DaoAI cameras, ensure both the PC and the camera AC/DC adapter are supplied from the same power outlet.
@@ -198,159 +199,117 @@ DaoAI strongly recommends that the cables are carefully checked before use or if
 .. tip::
     DaoAI Power Extension Cables are specifically designed high-quality cables suitable for robot applications.
 
-.. list-table:: 
+.. .. tabs::
 
-        * - Wires
-          - 21 AWG x 4
-        * - Cable resistance
-          - < 40 Ohm/Km for each of the 4 conductors
-        * - Outer diameter (OD)
-          - 5.6 ± 0.3 mm
-        * - Minimum dynamic bend radius
-          - ≥ 3 x OD = 17 mm
-        * - Minimum static bend radius
-          - ≥ 5 x OD = 28 mm
-        * - Bending performance
-          - Bend radius: 10 x OD = 56 mm
+..    .. group-tab:: BP SAMLL
 
-            Bend angle: ± 90°
+..     +-----------------------+--------+------------------------------+
+..     | Pinout                |  Pin   |  Purpose                     | 
+..     +=======================+========+==============================+
+..     |                       |   1    |  DC24V                       |
+..     |                       +--------+------------------------------+
+..     |.. image:: images/1.png|   2    |  RGND                        | 
+..     |  :align: center       +--------+------------------------------+
+..     |                       |   3    |  TRGE                        | 
+..     |                       +--------+------------------------------+
+..     |                       |   4    |  TGND                        | 
+..     |                       +--------+------------------------------+
+..     |                       |   5    |  SGND                        | 
+..     |                       +--------+------------------------------+
+..     |                       |   6    |  Reserved, do not connect    | 
+..     +-----------------------+--------+------------------------------+
 
-            Test speed: 30 cycles per minute
-
-            Cycles: ≥ 5 million
-
-            Cycles: ≥ 3 million (counter weight = 500g)
-
-        * - Twisting performance 
-          - Twist distance: 50 mm
-          
-            Twist angle: ± 270°
-
-            Test speed: 40 cycles per minute
-
-            Cycles: ≥ 14 million
-        * - Reverse performance
-          - Fixed spot spacing: 50 mm
-
-            Bend angle: ± 270°
-
-            Test speed: 40 cycles per minute
-
-            Cycles: ≥ 10 million
-        * - Tensile strength
-          - ≥ 1200 N
-
-.. tabs::
-
-   .. group-tab:: BP SAMLL
-
-    +-----------------------+--------+------------------------------+
-    | Pinout                |  Pin   |  Purpose                     | 
-    +=======================+========+==============================+
-    |                       |   1    |  DC24V                       |
-    |                       +--------+------------------------------+
-    |.. image:: images/1.png|   2    |  RGND                        | 
-    |  :align: center       +--------+------------------------------+
-    |                       |   3    |  TRGE                        | 
-    |                       +--------+------------------------------+
-    |                       |   4    |  TGND                        | 
-    |                       +--------+------------------------------+
-    |                       |   5    |  SGND                        | 
-    |                       +--------+------------------------------+
-    |                       |   6    |  Reserved, do not connect    | 
-    +-----------------------+--------+------------------------------+
-
-    .. tip::
-        - PGND: represent the "power ground"
-        - AGND: represent the "analog ground"
-        - DGND: represent the "digital ground"
-        - SGND: represent the "signal ground"
+..     .. tip::
+..         - PGND: represent the "power ground"
+..         - AGND: represent the "analog ground"
+..         - DGND: represent the "digital ground"
+..         - SGND: represent the "signal ground"
 
 
-   .. group-tab:: BP MEDIUM
+..    .. group-tab:: BP MEDIUM
 
-    +-----------------------+--------+------------------------------+
-    | Pinout                |  Pin   |  Purpose                     | 
-    +=======================+========+==============================+
-    |                       |   1    |  DC24V                       |
-    |                       +--------+------------------------------+
-    |.. image:: images/1.png|   2    |  RGND                        | 
-    |  :align: center       +--------+------------------------------+
-    |                       |   3    |  TRGE                        | 
-    |                       +--------+------------------------------+
-    |                       |   4    |  TGND                        | 
-    |                       +--------+------------------------------+
-    |                       |   5    |  SGND                        | 
-    |                       +--------+------------------------------+
-    |                       |   6    |  Reserved, do not connect    | 
-    +-----------------------+--------+------------------------------+
+..     +-----------------------+--------+------------------------------+
+..     | Pinout                |  Pin   |  Purpose                     | 
+..     +=======================+========+==============================+
+..     |                       |   1    |  DC24V                       |
+..     |                       +--------+------------------------------+
+..     |.. image:: images/1.png|   2    |  RGND                        | 
+..     |  :align: center       +--------+------------------------------+
+..     |                       |   3    |  TRGE                        | 
+..     |                       +--------+------------------------------+
+..     |                       |   4    |  TGND                        | 
+..     |                       +--------+------------------------------+
+..     |                       |   5    |  SGND                        | 
+..     |                       +--------+------------------------------+
+..     |                       |   6    |  Reserved, do not connect    | 
+..     +-----------------------+--------+------------------------------+
 
-    .. tip::
-        - PGND: represent the "power ground"
-        - AGND: represent the "analog ground"
-        - DGND: represent the "digital ground"
-        - SGND: represent the "signal ground"
+..     .. tip::
+..         - PGND: represent the "power ground"
+..         - AGND: represent the "analog ground"
+..         - DGND: represent the "digital ground"
+..         - SGND: represent the "signal ground"
 
-   .. group-tab:: BP LARGE
+..    .. group-tab:: BP LARGE
 
-    +-----------------------+--------+------------------------------+
-    | Pinout                |  Pin   |  Purpose                     | 
-    +=======================+========+==============================+
-    |                       |   1    |  DC24V                       |
-    |                       +--------+------------------------------+
-    |.. image:: images/1.png|   2    |  RGND                        | 
-    |  :align: center       +--------+------------------------------+
-    |                       |   3    |  TRGE                        | 
-    |                       +--------+------------------------------+
-    |                       |   4    |  TGND                        | 
-    |                       +--------+------------------------------+
-    |                       |   5    |  SGND                        | 
-    |                       +--------+------------------------------+
-    |                       |   6    |  Reserved, do not connect    | 
-    +-----------------------+--------+------------------------------+
+..     +-----------------------+--------+------------------------------+
+..     | Pinout                |  Pin   |  Purpose                     | 
+..     +=======================+========+==============================+
+..     |                       |   1    |  DC24V                       |
+..     |                       +--------+------------------------------+
+..     |.. image:: images/1.png|   2    |  RGND                        | 
+..     |  :align: center       +--------+------------------------------+
+..     |                       |   3    |  TRGE                        | 
+..     |                       +--------+------------------------------+
+..     |                       |   4    |  TGND                        | 
+..     |                       +--------+------------------------------+
+..     |                       |   5    |  SGND                        | 
+..     |                       +--------+------------------------------+
+..     |                       |   6    |  Reserved, do not connect    | 
+..     +-----------------------+--------+------------------------------+
 
-    .. tip::
-        - PGND: represent the "power ground"
-        - AGND: represent the "analog ground"
-        - DGND: represent the "digital ground"
-        - SGND: represent the "signal ground"
+..     .. tip::
+..         - PGND: represent the "power ground"
+..         - AGND: represent the "analog ground"
+..         - DGND: represent the "digital ground"
+..         - SGND: represent the "signal ground"
 
-   .. group-tab:: BP AMR
+..    .. group-tab:: BP AMR
 
-    +-----------------------+--------+------------------------------+
-    | Pinout                |  Pin   |  Purpose                     | 
-    +=======================+========+==============================+
-    |                       |   1    |  DC24V                       |
-    |                       +--------+------------------------------+
-    |.. image:: images/2.png|   2    |  RGND                        | 
-    |  :align: center       +--------+------------------------------+
-    |                       |   3    |  SGND                        | 
-    +-----------------------+--------+------------------------------+
+..     +-----------------------+--------+------------------------------+
+..     | Pinout                |  Pin   |  Purpose                     | 
+..     +=======================+========+==============================+
+..     |                       |   1    |  DC24V                       |
+..     |                       +--------+------------------------------+
+..     |.. image:: images/2.png|   2    |  RGND                        | 
+..     |  :align: center       +--------+------------------------------+
+..     |                       |   3    |  SGND                        | 
+..     +-----------------------+--------+------------------------------+
 
-    .. tip::
-        - PGND: represent the "power ground"
-        - AGND: represent the "analog ground"
-        - DGND: represent the "digital ground"
-        - SGND: represent the "signal ground"
+..     .. tip::
+..         - PGND: represent the "power ground"
+..         - AGND: represent the "analog ground"
+..         - DGND: represent the "digital ground"
+..         - SGND: represent the "signal ground"
 
    
-   .. group-tab:: BP AMR-GPU
+..    .. group-tab:: BP AMR-GPU
 
-    +-----------------------+--------+------------------------------+
-    | Pinout                |  Pin   |  Purpose                     | 
-    +=======================+========+==============================+
-    |                       |   1    |  DC24V                       |
-    |                       +--------+------------------------------+
-    |.. image:: images/2.png|   2    |  RGND                        | 
-    |  :align: center       +--------+------------------------------+
-    |                       |   3    |  SGND                        | 
-    +-----------------------+--------+------------------------------+
+..     +-----------------------+--------+------------------------------+
+..     | Pinout                |  Pin   |  Purpose                     | 
+..     +=======================+========+==============================+
+..     |                       |   1    |  DC24V                       |
+..     |                       +--------+------------------------------+
+..     |.. image:: images/2.png|   2    |  RGND                        | 
+..     |  :align: center       +--------+------------------------------+
+..     |                       |   3    |  SGND                        | 
+..     +-----------------------+--------+------------------------------+
 
-    .. tip::
-        - PGND: represent the "power ground"
-        - AGND: represent the "analog ground"
-        - DGND: represent the "digital ground"
-        - SGND: represent the "signal ground"
+..     .. tip::
+..         - PGND: represent the "power ground"
+..         - AGND: represent the "analog ground"
+..         - DGND: represent the "digital ground"
+..         - SGND: represent the "signal ground"
 
 
 
