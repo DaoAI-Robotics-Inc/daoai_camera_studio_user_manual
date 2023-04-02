@@ -27,8 +27,9 @@ Dimensions
        .. image:: images/large.png
          :align: center
    
-      .. image:: images/large_1.png
+      .. image:: images/bp-l.png
          :align: center
+         :scale: 40%
    
    .. group-tab:: BP AMR
 
@@ -61,15 +62,18 @@ Mounting Specifications
 
    .. group-tab:: BP MEDIUM
 
-      The DaoAI BP MEDIUM camera has four M5 mounting holes, one Ø5 positioning hole, and one obround alignment hole. To ensure not to damage the threads, we recommend not exceeding the specified maximum torque value when fastening the screws.
+      The DaoAI BP MEDIUM camera has eight M5 mounting holes, one Ø5 positioning hole, and one obround alignment hole. To ensure not to damage the threads, we recommend not exceeding the specified maximum torque value when fastening the screws.
 
        .. image:: images/medium.png
          :align: center
 
    .. group-tab:: BP LARGE
 
-      Windows tab content - tab set 1
-   
+      The DaoAI BP LARGE camera has eight M5 mounting holes, one Ø5 positioning hole, and one obround alignment hole. To ensure not to damage the threads, we recommend not exceeding the specified maximum torque value when fastening the screws.
+
+       .. image:: images/bp-l_mounting.png
+         :align: center
+
    .. group-tab:: BP AMR
 
       The DaoAI BP AMR camera has four M5 mounting holes, one Ø5 positioning hole, and one obround alignment hole. To ensure not to damage the threads, we recommend not exceeding the specified maximum torque value when fastening the screws.

@@ -36,32 +36,8 @@ If possible, mount the camera at a slight tilt angle to avoid reflections and in
 
 Ambient light might reduce performance. Consider blocking direct light affecting the scene.
 
-.. tabs::
-
-   .. group-tab:: BP SAMLL
-
-    .. image:: images/fov.png
-        :align: center
-
-   .. group-tab:: BP MEDIUM
-
-    .. image:: images/fov.png
-        :align: center
-
-   .. group-tab:: BP LARGE
-
-    .. image:: images/fov.png
-        :align: center
-   
-   .. group-tab:: BP AMR
-
-    .. image:: images/fov.png
-        :align: center
-      
-   .. group-tab:: BP AMR-GPU
-
-    .. image:: images/fov.png
-        :align: center
+.. image:: images/fov.png
+    :align: center
 
 .. note::
     Camera tilting is more important if the scene contains specular surfaces.
