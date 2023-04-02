@@ -25,9 +25,9 @@ Namespace
             namespace DaoAI_NET
 
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
 Classes
 ---------
@@ -50,9 +50,9 @@ Classes
             #include "application.h"
 
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
 
 Public Member Functions
@@ -73,9 +73,9 @@ Public Member Functions
                
                Application();
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    Destructor:
       .. tabs::
@@ -92,9 +92,9 @@ Public Member Functions
                
                ~Application();
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
 
    getCameras:
@@ -128,9 +128,9 @@ Public Member Functions
 
                DaoAINETError^ getCameras(Dictionary<System::String^, Camera^>^% cameras);
                
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    connectCamera:
       Connect to the next available DaoAI camera.
@@ -164,9 +164,9 @@ Public Member Functions
 
                DaoAINETError^ connectCamera(Camera^% camera);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    connectCamera:
       Connect to the DaoAI camera with serial number.
@@ -202,9 +202,9 @@ Public Member Functions
                
                DaoAINETError^ connectCamera(System::String^ serial_number, Camera^% camera);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    disconnectCamera:
       Disconnect the DaoAI camera with serial number.
@@ -231,9 +231,9 @@ Public Member Functions
 
                DaoAINETError^ disConnect();
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    startLogging:
       Enable writing camera log to a  file
@@ -264,9 +264,9 @@ Public Member Functions
 
                DaoAINETError^ startLogging();
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    stopLogging:
       Disable writing camera log to a file
@@ -291,9 +291,9 @@ Public Member Functions
 
                DaoAINETError^ stopLogging();
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
 |
 
@@ -315,9 +315,9 @@ Public Member Functions
 
             #include "application.h"
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
 Public Member Functions
 `````````````````````````
@@ -345,9 +345,9 @@ Public Member Functions
 
                System::String^ getSDKVersion();
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
 |
 
@@ -369,9 +369,9 @@ Public Member Functions
 
             #include "camera.h"
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
 
 Public Member Functions
@@ -392,9 +392,9 @@ Public Member Functions
 
                Camera();
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    Copy Constructor:
       .. tabs::
@@ -411,9 +411,9 @@ Public Member Functions
 
                Camera(Camera^ other);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
       
    Move Constructor:
       .. tabs::
@@ -424,9 +424,9 @@ Public Member Functions
                
                DAOAI_API explicit Camera(class CameraImpl &&other);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    Destructor:
       .. tabs::
@@ -443,9 +443,9 @@ Public Member Functions
                
                ~Camera();
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    connect:
       Connect the camera.
@@ -470,9 +470,9 @@ Public Member Functions
 
                DaoAINETError^ connect();
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    disConnect:
       Disconnect the camera.
@@ -497,9 +497,9 @@ Public Member Functions
 
                DaoAINETError^ disconnectCamera(System::String^ serial_number);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    isConnected:
       Check if the camera is connected.
@@ -524,9 +524,9 @@ Public Member Functions
 
                System::Boolean isConnected();
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    capture:
       Capture a single frame.
@@ -556,9 +556,9 @@ Public Member Functions
 
                DaoAINETError^ capture(Frame^% frame);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    capture:
       Capture a single frame with settings.
@@ -589,9 +589,9 @@ Public Member Functions
 
                DaoAINETError^ capture(Settings^ settings, Frame^% frame);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    captureAssistant:
       Analyze scene and generate acquisition frame settings, the total time for all acquisition frames will be less than the time budget. The higher time budget is, the more acquisition frames will be generated.
@@ -622,9 +622,9 @@ Public Member Functions
 
                DaoAINETError^ captureAssistant(System::Double time_budget, System::Collections::Generic::Dictionary<System::Int32, AcquisitionFrame^>^% mofaf);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    setSettings:
       Set Settings for camera with file path.
@@ -653,9 +653,9 @@ Public Member Functions
 
                DaoAINETError^ setSettings(System::String^ file_path);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    setSettings:
       Set Settings for camera with settings object.
@@ -684,9 +684,9 @@ Public Member Functions
 
                DaoAINETError^ setSettings(Settings^ settings);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    getSettings:
       Get Settings for camera.
@@ -711,9 +711,9 @@ Public Member Functions
 
                Settings^ getSettings();
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    getSerialNumber:
       Get serialNumber of the camera.
@@ -738,9 +738,9 @@ Public Member Functions
 
                System::String^ getSerialNumber();
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    getIntrinsicParam:
       brief Get IntrinsicParameter of the camera.
@@ -769,9 +769,9 @@ Public Member Functions
 
                DaoAINETError^ getIntrinsicParam(array<System::Single>^% params);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
 
    enableGPU:
@@ -801,9 +801,9 @@ Public Member Functions
 
                DaoAINETError^ enableGPU(System::Boolean toggle);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    enableTempRegulation:
       Enable or disable temperature regulation.
@@ -832,9 +832,9 @@ Public Member Functions
 
                DaoAINETError^ enableTempRegulation(System::Boolean toggle);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
 |
 
@@ -855,9 +855,9 @@ Public Member Functions
 
             #include "settings.h"
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
 AcquisitionFrame Class
 ```````````````````````````
@@ -890,9 +890,9 @@ Public Members & Functions
                         ExposureStop // Int {-1, 4}.
                      };
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    Constructor:
       Constructor with initial inputs for acquisition frame setting.
@@ -921,9 +921,9 @@ Public Members & Functions
 
                AcquisitionFrame(System::Int32 brightness, System::Double gain, System::Int32 exposure_stop);
          
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    Constructor:
       Constructor with default values for acquisition frame setting.
@@ -942,9 +942,9 @@ Public Members & Functions
                
                AcquisitionFrame();
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    inquireSetting:
       Get the current acquisition setting value and range.
@@ -981,9 +981,9 @@ Public Members & Functions
 
                DaoAINETError^ inquireSetting(AcquisitionFrameSetting setting, System::Int32% curr, System::Int32% min, System::Int32% max);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    inquireSetting:
       Get the current acquisition setting value.
@@ -1016,9 +1016,9 @@ Public Members & Functions
 
                DaoAINETError^ inquireSetting(AcquisitionFrameSetting setting, System::Int32% curr);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    inquireSetting:
       Get the current acquisition setting value and range in double (gain).
@@ -1055,9 +1055,9 @@ Public Members & Functions
 
                DaoAINETError^ inquireSetting(AcquisitionFrameSetting setting, System::Double% curr, System::Double% min, System::Double% max);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    inquireSetting:
       Get the current acquisition setting value in double (gain).
@@ -1090,9 +1090,9 @@ Public Members & Functions
 
                DaoAINETError^ inquireSetting(AcquisitionFrameSetting setting, System::Double% curr);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    configureSetting:
       Set the acquisition setting value.
@@ -1126,9 +1126,9 @@ Public Members & Functions
 
                DaoAINETError^ configureSetting(AcquisitionFrameSetting setting, System::Int32 new_val);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    configureSetting:
       Set the acquisition setting value in double (gain).
@@ -1161,9 +1161,9 @@ Public Members & Functions
 
                DaoAINETError^ configureSetting(AcquisitionFrameSetting setting, System::Double new_val);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
 Settings Class
 ``````````````````
@@ -1226,9 +1226,9 @@ Public Members & Functions
                         ShowHDR // Bool. Enable/Disable. Get/Set.
                      };
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    SystemSetting:
       The system settings data structure.
@@ -1263,9 +1263,9 @@ Public Members & Functions
                   ExtraWhitePatternEnable // Bool. Enable/Disable. Get/Set.
                };
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    Constructor:
       .. tabs::
@@ -1282,9 +1282,9 @@ Public Members & Functions
                
                Settings();
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    Copy Constructor:
       .. tabs::
@@ -1307,9 +1307,9 @@ Public Members & Functions
 
                Settings(Settings^ other);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    Destructor:
       .. tabs::
@@ -1326,9 +1326,9 @@ Public Members & Functions
 
                ~Settings();
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
 
    Constructor:
@@ -1354,9 +1354,9 @@ Public Members & Functions
 
                Settings(System::String^ file_path);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    exportSettings:
       Export current camera settings.
@@ -1387,9 +1387,9 @@ Public Members & Functions
 
                DaoAINETError^ exportSettings(System::String^ file_path);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    addAcquisitionFrame:
       Add an aquisition frame to settings to use in 3D capture with index.
@@ -1422,9 +1422,9 @@ Public Members & Functions
 
                DaoAINETError^ addAcquisitionFrame(AcquisitionFrame^ af, System::Int32% index);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    addAcquisitionFrame:
       Add an aquisition frame to settings to use in 3D capture.
@@ -1455,9 +1455,9 @@ Public Members & Functions
 
                DaoAINETError^ addAcquisitionFrame(AcquisitionFrame^ af);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    getAcquisitionFrame:
       Retreive the aquisition frame object from the given index.
@@ -1490,9 +1490,9 @@ Public Members & Functions
 
                DaoAINETError^ getAcquisitionFrame(AcquisitionFrame^% af, System::Int32 index);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    modifyAcquisitionFrame:
       Modify an aquisition frame to settings at a given index.
@@ -1525,9 +1525,9 @@ Public Members & Functions
 
                DaoAINETError^ modifyAcquisitionFrame(AcquisitionFrame^ af, System::Int32 index);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    deleteAcquisitionFrame:
       Delete an aquisition frame at a given index.
@@ -1558,9 +1558,9 @@ Public Members & Functions
 
                DaoAINETError^ deleteAcquisitionFrame(System::Int32 index);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    setAcquisitionFrames:
       Write a map of AcquisitionFrames to settings to be used in D3 Capture.
@@ -1591,9 +1591,9 @@ Public Members & Functions
                
                DaoAINETError^ setAcquisitionFrames(System::Collections::Generic::Dictionary<System::Int32, AcquisitionFrame^>^ mofaf);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    getAcquisitionFrames:
       Retrieve the current map of AcquisitionFrames from settings.
@@ -1624,9 +1624,9 @@ Public Members & Functions
 
                DaoAINETError^ getAcquisitionFrames(System::Collections::Generic::Dictionary<System::Int32, AcquisitionFrame^>^% mofaf);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    enableFilterSetting:
       Enable or disable a filter setting.
@@ -1659,9 +1659,9 @@ Public Members & Functions
 
                DaoAINETError^ enableFilterSetting(FilterSetting setting, System::Boolean toggle);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    checkEnableFilterSetting:
       Check if a filter setting is enabled.
@@ -1694,9 +1694,9 @@ Public Members & Functions
 
                DaoAINETError^ checkEnableFilterSetting(FilterSetting setting, System::Boolean% is_enabled);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    inquireFilterSetting:
       Get the current value and valid range of a filter setting.
@@ -1733,9 +1733,9 @@ Public Members & Functions
 
                DaoAINETError^ inquireFilterSetting(FilterSetting setting, System::Int32% curr, System::Int32% min, System::Int32% max);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    inquireFilterSetting:
       Get the current value and valid range (double) of a filter setting.
@@ -1772,9 +1772,9 @@ Public Members & Functions
 
                DaoAINETError^ inquireFilterSetting(FilterSetting setting, System::Double% curr, System::Double% min, System::Double% max);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    inquireFilterSetting:
       Get the current value of a filter setting.
@@ -1807,9 +1807,9 @@ Public Members & Functions
 
                DaoAINETError^ inquireFilterSetting(FilterSetting setting, System::Int32% curr);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    inquireFilterSetting:
       Get the current value(double) of a filter setting.
@@ -1842,9 +1842,9 @@ Public Members & Functions
 
                DaoAINETError^ inquireFilterSetting(FilterSetting setting, System::Double% curr);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    inquireFilterSetting:
       Get the current value(bool) of a filter setting.
@@ -1877,9 +1877,9 @@ Public Members & Functions
 
                DaoAINETError^ inquireFilterSetting(FilterSetting setting, System::Boolean% curr);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
 
    configureFilterSetting:
@@ -1913,9 +1913,9 @@ Public Members & Functions
 
                DaoAINETError^ configureFilterSetting(FilterSetting setting, System::Int32 new_val);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    configureFilterSetting:
       Configure a filter setting with the given value (double).
@@ -1948,9 +1948,9 @@ Public Members & Functions
 
                DaoAINETError^ configureFilterSetting(FilterSetting setting, System::Double new_val);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    configureFilterSetting:
       Configure a filter setting with the given value (bool).
@@ -1983,9 +1983,9 @@ Public Members & Functions
 
                DaoAINETError^ configureFilterSetting(FilterSetting setting, System::Boolean new_val);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    configureFilterSetting:
       Enable or disable a system setting.
@@ -2018,9 +2018,9 @@ Public Members & Functions
 
                DaoAINETError^ enableSystemSetting(SystemSetting setting, System::Boolean toggle);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    checkEnableSystemSetting:
       Check if a system setting is enabled or disabled.
@@ -2053,9 +2053,9 @@ Public Members & Functions
 
                DaoAINETError^ checkEnableSystemSetting(SystemSetting setting, System::Boolean% is_enabled);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    inquireSystemSetting:
       Check the current value and valid range of a system setting.
@@ -2092,9 +2092,9 @@ Public Members & Functions
 
                DaoAINETError^ inquireSystemSetting(SystemSetting setting, System::Int32% curr, System::Int32% min, System::Int32% max);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    inquireSystemSetting:
       Check the current value of a system setting.
@@ -2127,9 +2127,9 @@ Public Members & Functions
 
                DaoAINETError^ inquireSystemSetting(SystemSetting setting, System::Int32% curr);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    inquireSystemSetting:
       Check the current value (bool) of a system setting.
@@ -2162,9 +2162,9 @@ Public Members & Functions
 
                DaoAINETError^ inquireSystemSetting(SystemSetting setting, System::Boolean% curr);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
 
    inquireSystemSetting:
@@ -2198,9 +2198,9 @@ Public Members & Functions
 
                DaoAINETError^ inquireSystemSetting(SystemSetting setting, System::String^% val);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    configureSystemSetting:
       Configure a system setting with given value.
@@ -2233,9 +2233,9 @@ Public Members & Functions
 
                DaoAINETError^ configureSystemSetting(SystemSetting setting, System::Int32 new_val);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
    configureSystemSetting:
       Configure a system setting with given value (bool).
@@ -2268,9 +2268,9 @@ Public Members & Functions
 
                DaoAINETError^ configureSystemSetting(SystemSetting setting, System::Boolean new_val);
 
-         .. group-tab:: Python
+         .. .. group-tab:: Python
 
-            .. code-block:: python
+            .. .. code-block:: python
 
 |
 
@@ -2291,9 +2291,9 @@ Public Members & Functions
 
             #include "error.h"
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
 
 Public Members & Functions
@@ -2344,9 +2344,9 @@ Public Members & Functions
             };
 
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    Constructor:
       Construct the error class with inital value.
@@ -2365,9 +2365,9 @@ Public Members & Functions
 
             DaoAINETError(DaoAINETStatus status, System::String^ detail_text);
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    Constructor:
       Construct the error class with default (invalid error) value.
@@ -2386,9 +2386,9 @@ Public Members & Functions
 
             DaoAINETError();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
 
    status:
@@ -2414,9 +2414,9 @@ Public Members & Functions
 
             DaoAINETStatus status();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
 
    details:
@@ -2442,9 +2442,9 @@ Public Members & Functions
 
             System::String^ details();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
 
 
@@ -2465,9 +2465,9 @@ Public Members & Functions
 
             #include "frame.h"
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
 Public Members & Functions
 `````````````````````````````
@@ -2489,9 +2489,9 @@ Public Members & Functions
 
             Frame();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
 
    **Copy Constructor**:
@@ -2510,9 +2510,9 @@ Public Members & Functions
 
             Frame(Frame^ a);
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
 
    getPointCloud:
@@ -2544,9 +2544,9 @@ Public Members & Functions
 
             DaoAINETError^ getPointCloud(PointCloud^% pc);
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    save:
       Save the frame.
@@ -2577,9 +2577,9 @@ Public Members & Functions
 
             DaoAINETError^ save(System::String^ file_name);
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    load:
       Save the frame.
@@ -2610,9 +2610,9 @@ Public Members & Functions
 
             DaoAINETError^ load(System::String^ file_name);
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    isEmpty:
       Check whether the frame is empty.
@@ -2637,9 +2637,9 @@ Public Members & Functions
 
             System::Boolean isEmpty();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
 |
 
@@ -2660,9 +2660,9 @@ Public Members & Functions
 
             #include "point_cloud.h"
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
 Public Members & Functions
 `````````````````````````````
@@ -2683,9 +2683,9 @@ Public Members & Functions
 
             PointCloud();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    **Copy Constructor**:
 
@@ -2703,9 +2703,9 @@ Public Members & Functions
 
             PointCloud(PointCloud^ other);
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    Destructor:
 
@@ -2723,9 +2723,9 @@ Public Members & Functions
 
             ~PointCloud();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    PointCloud:
       Allocate an organized point cloud with a given number of rows and columns
@@ -2752,9 +2752,9 @@ Public Members & Functions
 
             PointCloud(System::UInt64 rows, System::UInt64 cols);
             
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    isEmpty:
       Return whether point cloud is empty
@@ -2779,9 +2779,9 @@ Public Members & Functions
 
             System::Boolean isEmpty();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getWidth:
       Return width (number of columns) of point cloud
@@ -2806,9 +2806,9 @@ Public Members & Functions
 
             System::UInt64 getWidth();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getHeight:
       Return height (number of rows) of point cloud
@@ -2834,9 +2834,9 @@ Public Members & Functions
             System::UInt64 getHeight();
 
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getSize:
       Return number of points in point cloud
@@ -2861,9 +2861,9 @@ Public Members & Functions
 
             System::UInt64 getSize();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getPoint:
       Obtain a reference to a point given by a 1D linear index (from 0 to number of points).
@@ -2892,9 +2892,9 @@ Public Members & Functions
 
             Point^ getPoint(System::UInt64 idx);
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getPoint:
       Obtain a constant reference to a point given by a 1D linear index (from 0 to number of points).
@@ -2913,9 +2913,9 @@ Public Members & Functions
                
          DAOAI_API const Point &operator()(size_t idx) const;
             
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getPoint:
       Obtain a reference to a point given by row and column, i is Row & j is Column
@@ -2948,9 +2948,9 @@ Public Members & Functions
 
             Point^ getPoint(System::UInt64 i, System::UInt64 j);
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getPoint:
       Obtain a constant reference to a point given by row and column, i is Row & j is Column
@@ -2970,9 +2970,9 @@ Public Members & Functions
 
             DAOAI_API const Point &operator()(size_t i, size_t j) const;
             
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    resize:
       Resize the point cloud to the given number of rows and columns
@@ -3005,9 +3005,9 @@ Public Members & Functions
 
             DaoAINETError^ resize(System::UInt64 rows, System::UInt64 cols);
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getDataPtr:
       Obtain a pointer to the first point in the point cloud
@@ -3030,9 +3030,9 @@ Public Members & Functions
 
       ..    .. code-block:: c#
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getVecX:
       Return a vector of all x coordinate data
@@ -3057,9 +3057,9 @@ Public Members & Functions
 
             List<System::Single>^ getVecX();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getVecY:
       Return a vector of all y coordinate data
@@ -3084,9 +3084,9 @@ Public Members & Functions
 
             List<System::Single>^ getVecY();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getVecZ:
       Return a vector of all z coordinate data
@@ -3111,9 +3111,9 @@ Public Members & Functions
 
             List<System::Single>^ getVecZ();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getVecRgba:
       Return a vector of all rgba color data
@@ -3138,9 +3138,9 @@ Public Members & Functions
 
             List<System::UInt32>^ getVecRgba();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getVecConfident:
       Return a vector of all confident data
@@ -3165,9 +3165,9 @@ Public Members & Functions
 
             List<System::Single>^ getVecConfident();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getVecR:
       Return a vector of all red channel data
@@ -3192,9 +3192,9 @@ Public Members & Functions
 
             List<System::Byte>^ getVecR();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getVecG:
       Return a vector of all green channel data
@@ -3219,9 +3219,9 @@ Public Members & Functions
 
             List<System::Byte>^ getVecG();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getVecB:
       Return a vector of all blue channel data
@@ -3246,9 +3246,9 @@ Public Members & Functions
 
             List<System::Byte>^ getVecB();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getVecA:
       Return a vector of all Alpha-channel data
@@ -3273,9 +3273,9 @@ Public Members & Functions
 
             List<System::Byte>^ getVecA();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    clone:
       Make a deep copy of the point cloud
@@ -3300,9 +3300,9 @@ Public Members & Functions
 
             PointCloud^ clone();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
 |
 
@@ -3323,9 +3323,9 @@ Public Members & Functions
 
             #include "point.h"
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
 
 Public Member Functions
@@ -3347,9 +3347,9 @@ Public Member Functions
 
             DAOAI_API Point();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
 
    **Destructor**:
@@ -3368,9 +3368,9 @@ Public Member Functions
 
             DAOAI_API ~Point();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    isNaN:
       Return bool if the point is NaN
@@ -3395,9 +3395,9 @@ Public Member Functions
 
             System::Boolean isNaN();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getX:
       Get x value from the point. 
@@ -3424,9 +3424,9 @@ Public Member Functions
 
             System::Single getX();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getY:
       Get y value from the point. 
@@ -3453,9 +3453,9 @@ Public Member Functions
 
             System::Single getY();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getZ:
       Get z value from the point. 
@@ -3482,9 +3482,9 @@ Public Member Functions
 
             System::Single getZ();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getR:
       Get r value from the point. 
@@ -3511,9 +3511,9 @@ Public Member Functions
 
             System::Byte getR();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getG:
       Get g value from the point. 
@@ -3540,9 +3540,9 @@ Public Member Functions
 
             System::Byte getG();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getB:
       Get b value from the point. 
@@ -3569,9 +3569,9 @@ Public Member Functions
 
             System::Byte getB();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getA:
       Get a value from the point. 
@@ -3598,9 +3598,9 @@ Public Member Functions
 
             System::Byte getA();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getRgba:
       Get rgba value from the point.
@@ -3628,9 +3628,9 @@ Public Member Functions
 
             System::UInt32 getRgba();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    getConfident:
       Get confident value from the point.
@@ -3657,9 +3657,9 @@ Public Member Functions
 
             System::Single getConfident();
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    setX:
       Assign x value to the point.
@@ -3691,9 +3691,9 @@ Public Member Functions
 
             DaoAINETError^ setX(System::Single x)
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    setY:
       Assign y value to the point.
@@ -3725,9 +3725,9 @@ Public Member Functions
 
             DaoAINETError^ setY(System::Single y)
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    setZ:
       Assign z value to the point.
@@ -3759,9 +3759,9 @@ Public Member Functions
 
             DaoAINETError^ setZ(System::Single z)
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    setRgba:
       Assign rgba value to the point.
@@ -3800,9 +3800,9 @@ Public Member Functions
 
             DaoAINETError^ setRgba(System::Byte r, System::Byte g, System::Byte b, System::Byte a);
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    setRgba:
       Assign rgba value to the point.
@@ -3837,9 +3837,9 @@ Public Member Functions
             DaoAINETError^ (System::UInt32 rgba);
 
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    setRgb:
       Assign rgb value to the point, and alpha channel will be set to 255.
@@ -3877,9 +3877,9 @@ Public Member Functions
 
             DaoAINETError^ setRgb(System::Byte r, System::Byte g, System::Byte b);
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    setConfident:
       Assign confident value to the point.
@@ -3913,9 +3913,9 @@ Public Member Functions
 
             DaoAINETError^ setConfident(System::Single confident);
 
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
    **operator =**:
 
@@ -3933,8 +3933,8 @@ Public Member Functions
 
             DAOAI_API Point &operator=(const Point& point);
             
-      .. group-tab:: Python
+      .. .. group-tab:: Python
 
-         .. code-block:: python
+         .. .. code-block:: python
 
 

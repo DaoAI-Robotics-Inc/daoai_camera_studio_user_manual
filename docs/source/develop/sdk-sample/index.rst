@@ -15,6 +15,56 @@ Prerequisites
 
     - install DaoAI Camera Studio
 
+
+Helper Functions
+-------------------
+
+.. tabs::
+
+   .. group-tab:: C++
+
+      .. code-block:: C++
+
+         // Helper for checking error information from a returned SlcSdkError object.
+         bool hasError(DaoAI::SlcSdkError error_info) {
+             if (error_info.status() == DaoAI::SlcSdkSuccess) { // A status code of SlcSdkSuccess indicates that no error is detected.
+                 return false;
+             }
+             else {
+                 // Consult documentation or header error.h for the meaning of different error status codes.
+                 // Most errors will come with a detailed description, helpful for debugging. See SlcSdkError.details().
+                 //      NOTE: The details section may still include warnings even when the status code is SlcSdkSuccess.
+                 std::cout << "ERROR " << error_info.status() << ": " << error_info.details() << std::endl;
+                 return true;
+             }
+         }
+
+   .. group-tab:: C#
+
+      .. code-block:: c#
+
+         static bool HasError(DaoAINETError err)
+         {
+            if (err.status() == DaoAINETStatus.SlcSdkSuccess)
+            {
+                  return false;  // A status code of SlcSdkSuccess indicates that no error is detected.
+            }
+            else
+            {
+                  // Consult documentation for the meaning of different error status codes.
+                  // Most errors will come with a detailed description, helpful for debugging. See DaoAINETError.details().
+                  //      NOTE: The details section may still include warnings even when the status code is SlcSdkSuccess.
+                  Console.WriteLine("ERROR: " + err.status() + ": " + err.details());
+                  System.Threading.Thread.Sleep(20000);
+                  return true;
+            }
+         }
+
+   .. .. group-tab:: Python
+
+      .. ..    code-block:: python
+
+
 Setup
 ------------------
 
@@ -1089,54 +1139,6 @@ Get and read Point data.
          new_point.setRgba(0x00FF0000); // Set to red.
          new_point.setRgb(0x00, 0xFF, 0x00); // Set to green.
          new_point.setRgba(0x00, 0x00, 0xFF, 0x00); // Set to blue.
-
-   .. .. group-tab:: Python
-
-      .. ..    code-block:: python
-
-Helper Functions
--------------------
-
-.. tabs::
-
-   .. group-tab:: C++
-
-      .. code-block:: C++
-
-         // Helper for checking error information from a returned SlcSdkError object.
-         bool hasError(DaoAI::SlcSdkError error_info) {
-             if (error_info.status() == DaoAI::SlcSdkSuccess) { // A status code of SlcSdkSuccess indicates that no error is detected.
-                 return false;
-             }
-             else {
-                 // Consult documentation or header error.h for the meaning of different error status codes.
-                 // Most errors will come with a detailed description, helpful for debugging. See SlcSdkError.details().
-                 //      NOTE: The details section may still include warnings even when the status code is SlcSdkSuccess.
-                 std::cout << "ERROR " << error_info.status() << ": " << error_info.details() << std::endl;
-                 return true;
-             }
-         }
-
-   .. group-tab:: C#
-
-      .. code-block:: c#
-
-         static bool HasError(DaoAINETError err)
-         {
-            if (err.status() == DaoAINETStatus.SlcSdkSuccess)
-            {
-                  return false;  // A status code of SlcSdkSuccess indicates that no error is detected.
-            }
-            else
-            {
-                  // Consult documentation for the meaning of different error status codes.
-                  // Most errors will come with a detailed description, helpful for debugging. See DaoAINETError.details().
-                  //      NOTE: The details section may still include warnings even when the status code is SlcSdkSuccess.
-                  Console.WriteLine("ERROR: " + err.status() + ": " + err.details());
-                  System.Threading.Thread.Sleep(20000);
-                  return true;
-            }
-         }
 
    .. .. group-tab:: Python
 
