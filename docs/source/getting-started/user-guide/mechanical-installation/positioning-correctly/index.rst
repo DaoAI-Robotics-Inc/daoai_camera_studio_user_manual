@@ -2,34 +2,34 @@ Positioning Correctly
 =================================
 The camera and the projector have an angle with respect to the center axis. This should be considered if it is desired to have the camera perpendicular to the scene.
 
-.. tabs::
+.. .. tabs::
 
-   .. group-tab:: BP SAMLL
+..    .. group-tab:: BP SAMLL
 
-    .. image:: images/small.png
-        :align: center
+..     .. image:: images/small.png
+..         :align: center
 
-   .. group-tab:: BP MEDIUM
+..    .. group-tab:: BP MEDIUM
 
-    .. image:: images/medium.png
-        :align: center
+..     .. image:: images/medium.png
+..         :align: center
 
-   .. group-tab:: BP LARGE
+..    .. group-tab:: BP LARGE
 
-    .. image:: images/large.png
-        :align: center
+..     .. image:: images/large.png
+..         :align: center
 
    
-   .. group-tab:: BP AMR
+..    .. group-tab:: BP AMR
 
-    .. image:: images/amr.png
-        :align: center
+..     .. image:: images/amr.png
+..         :align: center
    
 
-   .. group-tab:: BP AMR-GPU
+..    .. group-tab:: BP AMR-GPU
 
-    .. image:: images/amr.png
-        :align: center
+..     .. image:: images/amr.png
+..         :align: center
    
 
 If possible, mount the camera at a slight tilt angle to avoid reflections and interference from the background. This also frees up space above the scene for easier access for tools and robots. Check out available DaoAI mounts.
