@@ -302,7 +302,7 @@ Create camera settings and load from camera setting file.
 Acquisition Frames
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Configure aAcquisition frames parameters.
+Configure Acquisition frames parameters.
 
 .. tabs::
 
