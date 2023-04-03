@@ -13,11 +13,11 @@ Default Configuration
    * -  
      - IP
      - Subnet mask
-   * - BP Series
-     - 192.168.1.2
-     - 255.255.255.0
-   * - BP-AMR Series
+   * - BP-AMR
      - 192.168.1.12
+     - 255.255.255.0
+   * - Other BP Series
+     - 192.168.1.2
      - 255.255.255.0
      
 | Any IP address in the subnet range is valid (e.g. For BP series camera: 192.168.1.0 - 192.168.1.255).
