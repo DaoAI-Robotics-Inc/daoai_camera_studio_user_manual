@@ -1,19 +1,17 @@
 Frames
-=======
+-------
 
 Frames are used to adjust exposure stop, brightness, and gain levels that are applied when doing captures. Camera Studio allows you to add multiple frames with different settings 
 to capture multiple image groups and fine tune the quality of your resulting images.
 
-|
-
 Adding Frames
---------------
+~~~~~~~~~~~~~~~~~~~~
 
-When an image does not meet the expected requirements, you can achieve more precise exposure levels by frames by adding more frames and with different exposure file settings. 
-For example, two frames set 2 different exposure values as -1 and 0 respectively to make up for the situation that a single frame -1 is too dark or a single frame 0 is too bright.
+When an image does not meet the expected requirements, you can achieve more precise exposure levels by adding more frames and with different exposure file settings. 
+For example, using two frames set at 2 different exposure values, -1 and 0, to make up for the situation where a single frame -1 is too dark or a single frame 0 is too bright.
 
-Click the “+" button on the right frame settings menu in order to add more frames. Similarly, you can click on the trash can icon to delete a corresponding frame. The minimum 
-number of frames is 1. 
+Click the "+" button on the right frame settings menu in order to add more frames. Similarly, you can click on the trash can icon to delete a corresponding frame. 
+The minimum number of frames is 1. 
 
 .. figure:: images/frames_add_remove.png
     :align: center
@@ -28,7 +26,7 @@ number of frames is 1.
 |
 
 Frame Parameters
------------------
+~~~~~~~~~~~~~~~~~~~~
 
 All three parameters serves the purpose of adjusting final image brightness and each increase of one in any field will double the final image brightness.
 
@@ -57,7 +55,7 @@ formula is: 20 x log (gain multiple) = + /-gain dB value. Increasing "Gain" will
 
 
 Point Cloud Color
--------------------
+~~~~~~~~~~~~~~~~~~~~
 
 Independently capture the color for Point Cloud.
 

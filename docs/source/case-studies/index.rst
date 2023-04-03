@@ -1,6 +1,9 @@
 Case Studies
 ==============
 
+.. contents:: 
+   :local:
+   
 
 Using ROI to Allow Auto Capture Better Generate Frame Parameters 
 --------------------------------------------------------------------
@@ -38,10 +41,10 @@ Hence, we need to contrain an Region of Interest so that Auto Capture will only 
 
 |
 
-Delete a Frame in a Least Impactful Way
-----------------------------------------
+Delete a Frame in the Least Impactful Way
+-------------------------------------------
 
-"When using multiple frames, which frame should I delete?"
+"When using multiple frames and the image acquisition time is too long, which frame should I delete?""
 
 .. figure:: images/del_frame_1.png
     :align: center

@@ -1,9 +1,7 @@
 Histograms
-===========
+-------------
 
 The histogram window provides a visualization of the distribution of the RGB values (0-255) of all the pixels in the image.
-
-|
 
 **Goal:** To have the highest column in the logarithmic histogram to around 128 to avoid 255 overexposures. This can be achieved by adding frames and adjusting exposure levels. 
 

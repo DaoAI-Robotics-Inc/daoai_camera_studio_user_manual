@@ -1,10 +1,8 @@
 Temperature Regulation
-========================
+-------------------------
 
 If a temperature sensor is available in your 3D system, the system will display the corresponding temperature in the top right corner of the main menu. By default, if the 
 temperature sensor is available, a temperature control system will be enabled. 
-
-|
 
 **Modes**
 There are two modes for temperature control: normal and regulating
@@ -17,7 +15,8 @@ temperature icon in the main window will appear green.
 
     Temperature icon is green
 
-**Regulating**: In this mode, the temperature of the system is abnormal and the main capture features (Auto, Live, Capture, Preview) are disabled in order for the system to 
+**Regulating**:  By default, temperature regulation will be triggered if system temperature is above 70 degree Celsius.
+In this mode, the temperature of the system is abnormal and the main capture features (Auto, Live, Capture, Preview) are disabled in order for the system to 
 regulate the temperature. When in this mode, a temperature control algorithm will be run in order to normalize the system again. While the temperature control status is 
 regulating, the temperature icon in the main window will appear red.
 
@@ -35,7 +34,7 @@ While Camera Studio is regulating temperature, some functionality is disabled in
 temperature to be regulated to a suitable level, or disable the temperature regulation feature before you can use these functionalities are re-enabled.
 
 Disable Temperature Control
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When camera's temperature sensor is malfunctioning, you can disable the temperature control to allow normal usage of Camera Studio.
 

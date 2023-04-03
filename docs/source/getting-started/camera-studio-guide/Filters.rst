@@ -1,23 +1,25 @@
+.. _Filters_full:
+
 Filters
-========
+--------
 
 This section describes the filters used for pre and post processing images in order to improve the point cloud quality.
 
-|
 
 Intensity Threshold
---------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/intensity_threshold.png
     :align: center
 
 |
 
-Our intensity metric is based off of the average pixel intensity value from the four fringe projections from capture. The threshold helps filter out outliers that are caused by 
-low quality pixels within dark areas in an image. Generally we see that for objects with low reflectivity, the algorithm is not able conduct 3D reconstruction and thus computes 
-incorrect points there. The value of the intensity threshold corresponds to the averaged RGB value we want to filter at.
+Our intensity metric is based on the average pixel intensity value from the four fringe projections from capture. 
+The threshold helps filter out outliers that are caused by low-quality pixels within dark areas in an image. 
+Generally, we see that for objects with low reflectivity, the algorithm is not able to conduct 3D reconstruction and thus computes incorrect points there. 
+The value of the intensity threshold corresponds to the averaged RGB value we want to filter at.
 
-E.G. When the intensity threshold is 20, all the pixels in the final image with values <= 20 will be filtered out.
+e.g. When the intensity threshold is 20, all the pixels in the final image with values <= 20 will be filtered out.
 
 .. figure:: images/intensity.png
     :align: center
@@ -25,16 +27,17 @@ E.G. When the intensity threshold is 20, all the pixels in the final image with 
 |
 
 Outlier Threshold
-------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/outlier_threshold.png
     :align: center
 
 |
 
-Used to filter out points that are more than a certain distance from their nearest neighboring point. For example, if set to 3mm, it is determined whether the straight-line 
-distance between two adjacent point is greater than 3mm. If it is greater than 3mm, the point is filtered out. However, if there are multiple outliers close to each other, this 
-filter will not be able to filter out those points.
+Filter out points which are more than a certain distance from their nearest neighboring point. 
+For example, if set to 3mm, it is determined whether the straightline distance between two adjacent points is greater than 3mm. 
+If it is greater than 3mm, the point is filtered out. 
+However, if there are multiple outliers close to each other, this filter will not be able to filter out those points.
 
 .. figure:: images/outlier_before.png
     :align: center
@@ -49,7 +52,7 @@ filter will not be able to filter out those points.
 |
 
 Phase Quality Filter
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/phase_quality.png
     :align: center
@@ -72,7 +75,7 @@ using a phase quality filter of 0.3, some area of the floor is filtered out in t
 |
 
 Gaussian Filter
-----------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/gaussian.png
     :align: center
@@ -100,7 +103,7 @@ smoothing effect on the point cloud and also helps to remove outlier points.
 |
 
 Median Filter
---------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/median.png
     :align: center
@@ -123,7 +126,7 @@ remove outlier points.
 |
 
 Face Normal Filter
--------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/face_noraml.png
     :align: center
@@ -149,14 +152,14 @@ Without this filter, the incorrect points show up on the edges of holes, sharp d
 |
 
 Remove Small Area
-------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/remove_small_area.png
     :align: center
 
 |
 
-This filter removes small chucks of isolated point cloud. Since noise often appear in the form of small dots, they can be removed using this filter.
+This filter removes small chunks of isolated point cloud. Since noise often appear in the form of small dots, they can be removed using this filter.
 
 .. figure:: images/remove_small_area_before.png
     :align: center
@@ -171,7 +174,7 @@ This filter removes small chucks of isolated point cloud. Since noise often appe
 |
 
 Smooth Filter
---------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/smooth_filter.png
     :align: center
@@ -195,7 +198,7 @@ is flat and you see small oscillations in the point cloud, you can use this filt
 |
 
 Fill Gaps
-----------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/fill_gaps.png
     :align: center
@@ -219,7 +222,7 @@ interpolation will occur to calculate and fill in these missing points.
 |
 
 Saturation Filter
-------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/saturation.png
     :align: center
@@ -227,8 +230,7 @@ Saturation Filter
 |
 
 This filter removes areas that are overexposed. When one of the three RGB channels exceeds 255, it deletes the pixel. Usually G (green) is the first overexposed channel. When 
-using the filter, HDR mode is automatically selected and can be manually cancelled if it is not necessary. One of the drawbacks of the filter is that some smooth edges may be 
-distorted.
+using the filter, HDR mode is automatically selected and can be manually cancelled if it is not necessary. 
 
 .. figure:: images/saturation_before.png
     :align: center
@@ -243,7 +245,7 @@ distorted.
 |
 
 Contrast Distortion Filter
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/constrast_distortion.png
     :align: center
@@ -283,7 +285,7 @@ from a highly absorptive to a reflective surface (e.g. in a black to white trans
 |
 
 Color Balance
---------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: images/color_balance.png
     :align: center

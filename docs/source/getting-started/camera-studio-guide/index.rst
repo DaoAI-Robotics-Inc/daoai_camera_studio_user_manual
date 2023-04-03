@@ -1,17 +1,21 @@
 Camera Studio Guide
-=====================
-
-This section will provide detailed information on the different functionalities of our Camera Studio software.
+=======================
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    
-   Frames
-   Filters
-   2DPreview
-   Captures
-   Display Tabs
-   Histograms
-   Saving And Loading
-   Temperature Regulation
-   Console
+   control_panel
+   available_views
+   toolbar
+   quick_reference_index
+
+This section will provide a detailed walkthrough on using the DaoAI Camera Studio.
+
+DaoAI Camera Studio is the graphical user interface for the DaoAI Software Development Kit.
+This allows the user to explore the functionality of the DaoAI Cameras, configure the camera settings in any environment conditions, and capture high defiinition 3D point clouds with high accuracy.
+
+
+
+.. Note::
+   You can `download <https://daoai-robotics-inc-daoai-camera-studio-user-manul.readthedocs-hosted.com/_/downloads/en/english/pdf/>`_ the DaoAI Camera Studio User Manual as a PDF.
+
