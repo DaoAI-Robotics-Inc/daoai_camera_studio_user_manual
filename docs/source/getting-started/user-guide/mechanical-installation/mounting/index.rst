@@ -15,7 +15,7 @@ Mounting accessories
 -----------------------------
 .. tabs::
 
-   .. tab:: BP SAMLL
+   .. tab:: BP SMALL
 
    
    .. tab:: BP MEDIUM

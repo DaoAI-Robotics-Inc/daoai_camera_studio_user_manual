@@ -45,7 +45,7 @@ The imaging sensor inside DaoAI cameras is offset at a slight pan angle in the a
 
 .. tabs::
 
-   .. group-tab:: BP SAMLL
+   .. group-tab:: BP SMALL
 
     .. image:: images/small.png
         :align: center
@@ -77,7 +77,7 @@ Although it is perhaps most intuitive to mount the camera perpendicular to a sce
 
 .. tabs::
 
-   .. group-tab:: BP SAMLL
+   .. group-tab:: BP SMALL
 
     .. image:: images/fov.png
         :align: center

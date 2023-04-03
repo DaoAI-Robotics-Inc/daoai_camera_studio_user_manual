@@ -6,7 +6,7 @@ Dimensions
 
 .. tabs::
 
-   .. group-tab:: BP SAMLL
+   .. group-tab:: BP SMALL
 
       .. image:: images/amr_1.png
          :align: center
@@ -53,9 +53,9 @@ Mounting Specifications
 
 .. tabs::
 
-   .. group-tab:: BP SAMLL
+   .. group-tab:: BP SMALL
 
-        The DaoAI BP SAMLL camera has four M5 mounting holes, one Ø5 positioning hole, and one obround alignment hole. To ensure not to damage the threads, we recommend not exceeding the specified maximum torque value when fastening the screws.
+        The DaoAI BP SMALL camera has four M5 mounting holes, one Ø5 positioning hole, and one obround alignment hole. To ensure not to damage the threads, we recommend not exceeding the specified maximum torque value when fastening the screws.
 
        .. image:: images/amr_3.png
          :align: center

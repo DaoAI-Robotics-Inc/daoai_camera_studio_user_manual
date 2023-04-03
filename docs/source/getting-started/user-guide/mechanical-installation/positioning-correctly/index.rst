@@ -4,7 +4,7 @@ The camera and the projector have an angle with respect to the center axis. This
 
 .. .. tabs::
 
-..    .. group-tab:: BP SAMLL
+..    .. group-tab:: BP SMALL
 
 ..     .. image:: images/small.png
 ..         :align: center

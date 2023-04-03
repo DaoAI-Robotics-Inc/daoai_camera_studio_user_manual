@@ -5,7 +5,7 @@ Connectors
 ---------------------------------
 .. tabs::
 
-   .. group-tab:: BP SAMLL
+   .. group-tab:: BP SMALL
 
     .. image:: images/small.png
         :align: center
@@ -51,7 +51,7 @@ Power supply interface
 ^^^^^^^^^^^^^^^^^^^^^^^
 .. tabs::
 
-   .. group-tab:: BP SAMLL
+   .. group-tab:: BP SMALL
 
     +-----------------------+--------+------------------------------+
     | Pinout                |  Pin   |  Purpose                     | 
@@ -144,7 +144,7 @@ Data cable
 
 .. tabs::
 
-   .. group-tab:: BP SAMLL
+   .. group-tab:: BP SMALL
 
     BP Small use a ethernet cable for data transmission.
 
@@ -201,7 +201,7 @@ Connecting to the computer
 
 .. tabs::
 
-   .. group-tab:: BP SAMLL
+   .. group-tab:: BP SMALL
 
     1. Plug the power supply first into the "24V "
     2. Plug the ethernet cable into the camera and connect it to your computer

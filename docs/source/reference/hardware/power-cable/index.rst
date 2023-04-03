@@ -15,7 +15,7 @@ All DaoAI cameras come with a power supply of 3.2 m in length in total. The DaoA
 
 .. tabs::
 
-   .. group-tab:: BP SAMLL
+   .. group-tab:: BP SMALL
 
     .. list-table:: 
 
@@ -201,7 +201,7 @@ The Power connector needs to be screwed in completely to ensure the watertight I
 
 .. .. tabs::
 
-..    .. group-tab:: BP SAMLL
+..    .. group-tab:: BP SMALL
 
 ..     +-----------------------+--------+------------------------------+
 ..     | Pinout                |  Pin   |  Purpose                     | 

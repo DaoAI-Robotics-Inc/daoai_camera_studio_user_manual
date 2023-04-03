@@ -2,7 +2,7 @@ Unboxing
 ================
 .. tabs::
 
-   .. tab:: BP SAMLL
+   .. tab:: BP SMALL
 
      .. .. video:: ./video/1.mp4
 
