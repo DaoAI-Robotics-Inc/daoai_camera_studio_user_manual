@@ -4,7 +4,7 @@ Unboxing
 
    .. tab:: BP SAMLL
 
-      .. video:: ./video/1.mp4
+     .. .. video:: ./video/1.mp4
 
       In the DaoAI Camera Studio Box you will find:
 
@@ -26,7 +26,7 @@ Unboxing
 
    .. tab:: BP MEDIUM
 
-      .. video:: ./video/1.mp4
+     .. .. video:: ./video/1.mp4
 
       In the DaoAI Camera Studio Box you will find:
 
@@ -47,7 +47,7 @@ Unboxing
 
    .. tab:: BP LARGE
 
-      .. video:: ./video/1.mp4
+     .. .. video:: ./video/1.mp4
 
       In the DaoAI Camera Studio Box you will find:
 
@@ -67,7 +67,7 @@ Unboxing
 
    .. tab:: BP AMR
 
-      .. video:: ./video/1.mp4
+     .. .. video:: ./video/1.mp4
 
       In the DaoAI Camera Studio Box you will find:
 
@@ -87,7 +87,7 @@ Unboxing
       
    .. tab:: BP AMR-GPU
 
-      .. video:: ./video/1.mp4
+     .. .. video:: ./video/1.mp4
 
       In the DaoAI Camera Studio Box you will find:
 
