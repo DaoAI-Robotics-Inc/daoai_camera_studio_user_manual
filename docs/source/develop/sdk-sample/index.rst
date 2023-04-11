@@ -14,10 +14,57 @@ SDK 示例
 
     - 安装DaoAI相机工作室软件
 
+帮助函数
+-------------------
+
+.. tabs::
+
+   .. group-tab:: C++
+
+      .. code-block:: C++
+
+         // 用于检查返回的SlcSdkError对象的错误信息的辅助工具。
+         bool hasError(DaoAI::SlcSdkError error_info) {
+             if (error_info.status() == DaoAI::SlcSdkSuccess) { // 状态代码SlcSdkSuccess表示没有发现错误。
+                 return false;
+             }
+             else {
+                 // 请查阅文档或头文件error.h了解不同错误状态代码的含义。
+                 // 大多数错误会有一个详细的描述，有助于调试。参见SlcSdkError.details()。
+                 //     注意：即使状态码是SlcSdkSuccess，细节部分仍然可能包括警告。
+                 std::cout << "ERROR " << error_info.status() << ": " << error_info.details() << std::endl;
+                 return true;
+             }
+         }
+
+   .. group-tab:: C#
+
+      .. code-block:: c#
+
+         static bool HasError(DaoAINETError err)
+         {
+            if (err.status() == DaoAINETStatus.SlcSdkSuccess)
+            {
+                  return false;  // 状态代码SlcSdkSuccess表示没有发现错误。
+            }
+            else
+            {
+                  // 请查阅文档了解不同错误状态代码的含义。
+                  // 大多数错误会有详细的描述，对调试有帮助。参见DaoAINETError.details()。
+                  // 注意：即使状态码是SlcSdkSuccess，细节部分仍然可能包括警告。
+                  Console.WriteLine("ERROR: " + err.status() + ": " + err.details());
+                  System.Threading.Thread.Sleep(20000);
+                  return true;
+            }
+         }
+
+   .. .. group-tab:: Python
+
+      .. ..    code-block:: python
+
+
 设置
 ------------------
-
-调用DaoAI相机SDK中的任何API都需要初始化DaoAI应用程序，并在程序运行时保持其活力。
 
 .. tabs::
 
@@ -99,7 +146,7 @@ SDK 示例
                Console.WriteLine("   " + pair.Key);  // 打印检测到的相机的序列号。
          }
          
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
       .. code-block:: python
 
@@ -178,7 +225,7 @@ SDK 示例
          err = cam.connect();
          if (HasError(err)) { return; } // Check for errors
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
       .. code-block:: python
 
@@ -237,7 +284,7 @@ SDK 示例
          // 获取此相机当前的使用设置。
          Settings settings = cam.getSettings();
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
       .. code-block:: python
 
@@ -295,7 +342,7 @@ SDK 示例
          // Clone 设置
          new_settings = new Settings(settings);
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
       .. code-block:: python
 
@@ -475,7 +522,7 @@ SDK 示例
          err = new_settings.setAcquisitionFrames(mofaf);
          if (HasError(err)) { return; } // Check for errors
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
       .. code-block:: python
 
@@ -522,7 +569,7 @@ SDK 示例
          err = cam.capture(ref ca_frm);  // Capture point cloud
          if (HasError(err)) { return; }
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
       .. code-block:: python
 
@@ -655,7 +702,7 @@ SDK 示例
          if (HasError(err)) { return; } // Expect no error (status = SlcSdkSuccess)
          Console.WriteLine(err.details()); // Print warning message for using double value to set an integer parameter.
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
       .. code-block:: python
 
@@ -736,7 +783,7 @@ SDK 示例
         err = new_settings.exportSettings(save_settings_path);
         if (HasError(err)) { return; } // Check for errors
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
       .. code-block:: python
 
@@ -874,7 +921,7 @@ SDK 示例
          err = cam.enableTempRegulation(false);
          if (HasError(err)) { return; }
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
       .. code-block:: python
 
@@ -941,7 +988,7 @@ SDK 示例
          err = frm.getPointCloud(ref pcl);
          if (HasError(err)) { return; } // Check for errors
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
       .. code-block:: python
 
@@ -1028,7 +1075,7 @@ SDK 示例
          int row = rnd.Next(0, height); int col = rnd.Next(0, width);
          pt = new_pcl.getPoint((uint) row, (uint) col); // Get any point using a 2D index pair (row, column).
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
       .. code-block:: python
 
@@ -1091,7 +1138,7 @@ SDK 示例
          new_point.setRgb(0x00, 0xFF, 0x00); // Set to green.
          new_point.setRgba(0x00, 0x00, 0xFF, 0x00); // Set to blue.
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
       .. code-block:: python
 
@@ -1130,6 +1177,6 @@ SDK 示例
          
          System.Threading.Thread.Sleep(20000);
 
-   .. group-tab:: Python
+   .. .. group-tab:: Python
 
       .. code-block:: python

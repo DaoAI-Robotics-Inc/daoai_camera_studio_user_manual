@@ -6,6 +6,7 @@
 .. toctree::
    :maxdepth: 3
    
+   Connect Camera
    Hardware Setup
    Add Frames
    Capturing

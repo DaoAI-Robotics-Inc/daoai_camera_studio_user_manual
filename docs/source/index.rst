@@ -37,8 +37,8 @@ DaoAI 相机概述
    case-studies/index
    case-studies/capturing-high-quality-point-clouds/index
    case-studies/evaluate-accuracy/index
-   case-studies/infield-calibration/index
-   case-studies/hand-eye-calibration/index
+   .. case-studies/infield-calibration/index
+   .. case-studies/hand-eye-calibration/index
    case-studies/use-multiple-daoai-cameras/index
 
 .. toctree::
@@ -48,7 +48,7 @@ DaoAI 相机概述
    reference/camera-settings/index
    reference/calculators/index
    reference/hardware/index
-   reference/datasheet/index
+   .. reference/datasheet/index
    
 
 .. toctree::
@@ -56,7 +56,7 @@ DaoAI 相机概述
    :caption: 支持
 
    support/FAQ/index
-   support/trouble-shooting/index
+   .. support/trouble-shooting/index
    support/bug-report/index
    support/suggest-a-feature/index
 
@@ -66,3 +66,4 @@ DaoAI 相机概述
 
    resources/release-notes/index
 
+ q 

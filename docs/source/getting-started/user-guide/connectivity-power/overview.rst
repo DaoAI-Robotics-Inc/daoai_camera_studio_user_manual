@@ -11,7 +11,7 @@
     .. image:: images/small.png
         :align: center
 
-    A. 电源连接器 24V,5A DC
+    A. 电源连接器 24V, 5A DC
     B. 以太网连接器CAT 6或更高
 
    .. group-tab:: BP MEDIUM
@@ -19,7 +19,7 @@
     .. image:: images/medium.png
         :align: center
 
-    A. 电源连接器 24V,10A DC
+    A. 电源连接器 24V, 10A DC
     B. 以太网连接器CAT 6或更高
 
    .. group-tab:: BP LARGE
@@ -28,14 +28,14 @@
         :align: center
 
     A. 以太网连接器CAT 6或更高
-    B. 电源连接器 24V,5A DC
+    B. 电源连接器 24V, 5A DC
    
    .. group-tab:: BP AMR
 
     .. image:: images/amr.png
         :align: center
 
-    A. 电源连接器 24V,5A DC
+    A. 电源连接器 24V, 5A DC
     B. 以太网连接器CAT 6或更高
       
    .. group-tab:: BP AMR-GPU
@@ -43,7 +43,7 @@
     .. image:: images/amr_gpu.png
         :align: center
 
-    A. 电源连接器 24V,5A DC
+    A. 电源连接器 24V, 5A DC
     B. 以太网连接器CAT 6或更高
 
     

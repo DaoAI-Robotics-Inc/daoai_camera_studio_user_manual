@@ -3,66 +3,42 @@
 
 摄像机和投影仪相对于中心轴有一个角度。如果希望摄像机垂直于场景，就应该考虑这一点。
 
-.. tabs::
+.. .. tabs::
 
-   .. group-tab:: BP SAMLL
+..    .. group-tab:: BP SAMLL
 
-    .. image:: images/small.png
-        :align: center
+..     .. image:: images/small.png
+..         :align: center
 
-   .. group-tab:: BP MEDIUM
+..    .. group-tab:: BP MEDIUM
 
-    .. image:: images/medium.png
-        :align: center
+..     .. image:: images/medium.png
+..         :align: center
 
-   .. group-tab:: BP LARGE
+..    .. group-tab:: BP LARGE
 
-    .. image:: images/large.png
-        :align: center
+..     .. image:: images/large.png
+..         :align: center
 
    
-   .. group-tab:: BP AMR
+..    .. group-tab:: BP AMR
 
-    .. image:: images/amr.png
-        :align: center
+..     .. image:: images/amr.png
+..         :align: center
    
 
-   .. group-tab:: BP AMR-GPU
+..    .. group-tab:: BP AMR-GPU
 
-    .. image:: images/amr.png
-        :align: center
+..     .. image:: images/amr.png
+..         :align: center
    
 
 如果可能的话，将摄像机安装在一个轻微的倾斜角度，以避免背景的反射和干扰。这也为场景上方腾出了空间，方便工具和机器人的使用。请查看可用的DaoAI支架。
 
 周围的光线可能会降低性能，考虑阻挡影响场景的直接光线。
 
-.. tabs::
-
-   .. group-tab:: BP SAMLL
-
-    .. image:: images/fov.png
-        :align: center
-
-   .. group-tab:: BP MEDIUM
-
-    .. image:: images/fov.png
-        :align: center
-
-   .. group-tab:: BP LARGE
-
-    .. image:: images/fov.png
-        :align: center
-   
-   .. group-tab:: BP AMR
-
-    .. image:: images/fov.png
-        :align: center
-      
-   .. group-tab:: BP AMR-GPU
-
-    .. image:: images/fov.png
-        :align: center
+.. image:: images/fov.png
+    :align: center
 
 .. note::
     如果场景包含高反光的物体，相机的倾斜就更加重要。

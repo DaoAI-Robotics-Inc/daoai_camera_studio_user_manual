@@ -14,9 +14,6 @@
 
 - Circle of Confusion (模糊圈 micrometers, μm)
 
-.. note:: 
-    如果你有 ``acceptable blur radius`` 参数 > 1, 那么你需要将 ``Circle of Confusion`` 乘以  ``acceptable blur radius``.
-
 - Focal length of lens (镜头焦距 in millimeters, mm)
 
 - aperture of the lens (镜头的孔径大小)
@@ -37,31 +34,31 @@
 .. list-table:: 
    :header-rows: 1
 
-   * - Models
+   * - 型号
      - BP AMR
      - BP AMR-GPU
      - BP-S
      - BP-M
      - BP-L
-   * - Circle of Confusion
-     - 
-     - 
-     - 
-     - 
-     -
-   * - Focal Length of Lens
-     - 
-     - 
-     - 
-     - 
-     -
-   * - Aperture of the Lens
-     - 
-     - 
-     - 
-     - 
-     -
-   * - Working Distance (mm)
+   * - 模糊圈
+     - 3.45
+     - 3.45
+     - 5.86
+     - 5.86
+     - 5.86
+   * - 镜头焦距
+     - 6
+     - 6
+     - 12.5
+     - 16
+     - 12.5
+   * - 镜头孔径大小
+     - f/5.6
+     - f/5.6
+     - f/5.6
+     - f/5.6
+     - f/5.6
+   * - 工作距离（毫米）
      - 500-1000
      - 500-1000
      - 500-1000

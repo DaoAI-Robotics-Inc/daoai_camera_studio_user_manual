@@ -27,8 +27,9 @@
        .. image:: images/large.png
          :align: center
    
-      .. image:: images/large_1.png
+       .. image:: images/bp-l.png
          :align: center
+         :scale: 42%
    
    .. group-tab:: BP AMR
 
@@ -68,7 +69,10 @@
 
    .. group-tab:: BP LARGE
 
-      Windows tab content - tab set 1
+      DaoAI BP LARGE 摄像机有四个M5安装孔，一个Ø5定位锥孔和一个定位锥孔。为确保不损坏螺纹，我们建议在紧固螺丝时不要超过规定的最大扭矩值。
+
+       .. image:: images/bp-l_mounting.png
+         :align: center
    
    .. group-tab:: BP AMR
 

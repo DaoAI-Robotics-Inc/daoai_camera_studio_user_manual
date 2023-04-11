@@ -28,8 +28,5 @@ DaoAI相机工作室有三种方式来改变曝光。
 这种技术利用直方图，以可预测的方式逐步评估我们的点云，以获得良好的三维点云。
 该程序可分为三个步骤。
 
-.. toctree::
-    :maxdepth: 1
-
-    working-distance-and-camera-positioning/index
-    ../../getting-started/camera-studio-guide/Filters.rst
+    - :ref:`工作距离和摄像机的定位`
+    - :ref:`滤镜_0`

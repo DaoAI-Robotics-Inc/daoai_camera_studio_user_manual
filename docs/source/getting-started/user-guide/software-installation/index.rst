@@ -19,7 +19,7 @@
 
 2. 运行以DaoAI_Studio开头的完整安装程序。(e.g. DaoAI_Studio_2.22.10.0_103_full.exe)
 
-.. image:: images/software_installation_1.png
+.. .. image:: images/software_installation_1.png
 
 3. 按照步骤进行。你可以根据自己的需要定制设置。
 
