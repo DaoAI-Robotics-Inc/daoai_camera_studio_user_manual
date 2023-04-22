@@ -19,7 +19,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx_tabs.tabs',
     'sphinxcontrib.video',
-    'sphinx.ext.autosectionlabel'
+    'sphinx.ext.autosectionlabel',
 
 ]
 
@@ -39,7 +39,7 @@ templates_path = ['_templates']
 html_static_path = ['_static']
 
 # -- Options for HTML output
-language = 'zh'
+language = 'zh_CN'
 
 html_theme = 'sphinx_rtd_theme'
 
