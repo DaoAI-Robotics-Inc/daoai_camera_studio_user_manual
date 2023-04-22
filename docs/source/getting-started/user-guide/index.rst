@@ -3,7 +3,7 @@
 
 本指南将帮助您开始使用DaoAI Camera Studio。DaoAI Camera Studio的详细数据手册可在以下链接中找到。
 
-- `BPLV2 datasheet <http://www.google.com>`_ 
+.. - `BPLV2 datasheet <http://www.google.com>`_ 
 
 
 .. toctree::

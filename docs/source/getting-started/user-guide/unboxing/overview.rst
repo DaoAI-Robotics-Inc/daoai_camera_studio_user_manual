@@ -5,7 +5,7 @@
 
    .. tab:: BP SAMLL
 
-      .. video:: ./video/1.mp4
+      .. .. video:: ./video/1.mp4
 
       在DaoAI相机工作室的盒子里，你会发现：
 
@@ -37,7 +37,7 @@
 
    .. tab:: BP MEDIUM
 
-      .. video:: ./video/1.mp4
+      .. .. video:: ./video/1.mp4
 
       在DaoAI相机工作室的盒子里，你会发现：
 
@@ -69,7 +69,7 @@
 
    .. tab:: BP LARGE
 
-      .. video:: ./video/1.mp4
+      .. .. video:: ./video/1.mp4
 
       在DaoAI相机工作室的盒子里，你会发现：
 
@@ -101,7 +101,7 @@
 
    .. tab:: BP AMR
 
-      .. video:: ./video/1.mp4
+      .. .. video:: ./video/1.mp4
 
       在DaoAI相机工作室的盒子里，你会发现：
 
@@ -133,7 +133,7 @@
       
    .. tab:: BP AMR-GPU
 
-      .. video:: ./video/1.mp4
+      .. .. video:: ./video/1.mp4
 
       在DaoAI相机工作室的盒子里，你会发现。
 
