@@ -12,7 +12,56 @@ SDK 示例
 前提条件
 ~~~~~~~~~~~~~~~~~~~
 
-    - 安装DaoAI相机工作室软件
+.. tabs::
+
+   .. group-tab:: C++
+
+      - 安装DaoAI相机工作室软件
+
+   .. group-tab:: C#
+
+      - 安装DaoAI相机工作室软件
+
+   .. group-tab:: Python
+
+      - 安装 Python
+
+      - 通过在你的命令行中输入follow命令来检查你的python版本，然后选择一个SDK包：
+         
+         ..  code-block:: python
+            
+            python --version
+
+         - Python version 3.8: DaoAI_SDK-xx-cp38-xx-xx.whl
+         - Python version 3.9: DaoAI_SDK-xx-cp39-xx-xx.whl
+         - Python version 3.10: DaoAI_SDK-xx-cp310-xx-xx.whl
+         - Python version 3.11: DaoAI_SDK-xx-cp311-xx-xx.whl
+
+      - 安装 DaoAI_SDK
+
+      ..  code-block:: python
+
+         py -m pip install path/to/DaoAI_SDK-xx-xx.xx.xx.whl 
+
+      - 如果所需的依赖项在发布时没有被捆绑到软件包中：
+
+         - 在你的Python程序的顶部添加以下几行代码，告诉Python在哪里找到所需的依赖（只需要一次）。
+      
+         ..  code-block:: python
+
+            import os
+            daoai_slc_path = os.getenv('DAOAI_SLC_PATH') # System enviornment variable should point to DaoAI Studio Release path.
+            os.add_dll_directory(daoai_slc_path + '') # Various dependencies
+            os.add_dll_directory(daoai_slc_path + '/bin') # Various dependencies
+            os.add_dll_directory(daoai_slc_path + '/SDK/bin') # Directory including slc_dll.dll
+
+      - 要使用API函数，请将SDK导入到python中。
+
+      ..  code-block:: python
+
+         from DaoAI_SDK import *
+
+      - All set to use the Python API! 
 
 帮助函数
 -------------------
@@ -58,9 +107,20 @@ SDK 示例
             }
          }
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. ..    code-block:: python
+      ..  code-block:: python
+
+         # 用于检查返回的SlcSdkError对象的错误信息的辅助工具。
+         def hasError(err):
+            if (err.status() == SlcSdkSuccess): # A status code of SlcSdkSuccess indicates that no error is detected.
+                  return False
+            else:
+                  # 请查阅文档了解不同错误状态代码的含义。
+                  # 大多数错误会有详细的描述，对调试有帮助。参见DaoAINETError.details()。
+                  # 注意：即使状态码是SlcSdkSuccess，细节部分仍然可能包括警告。
+                  print("ERROR: ", err.status(), ": ", err.details())
+                  return True
 
 
 设置
@@ -146,9 +206,31 @@ SDK 示例
                Console.WriteLine("   " + pair.Key);  // 打印检测到的相机的序列号。
          }
          
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. code-block:: python
+      ..  code-block:: python
+         
+         # 设置 ==========================================================================================================
+         # 创建一个新的DaoAI应用程序实例。
+         app = Application()
+
+         # 指定用于记录的目录。日志包含详细的错误和进程信息。
+         logging_directory = "../../Logs/"
+         err = app.startLogging(logging_directory)
+         if (hasError(err)): return
+
+         # 如果使用远程相机，请指定远程IP地址。
+         remote_ip = "192.168.1.2"
+
+         # 从应用程序中获取相机。这一步必须在尝试连接任何相机之前完成。
+         cams, err = app.getCameras(remote_ip) # remote_ip is optional if using a USB camera.
+         if (hasError(err)): return
+
+         if (len(cams) == 0):
+            return # At least one camera must be detected.
+         print(len(cams), " cameras detected: ")
+         for serial, cam in cams.items(): # Cams is a dictionary of serial number -> camera object.
+            print("    ", serial) # Print all serial numbers of detected cameras.
 
 
 连接相机
@@ -225,9 +307,36 @@ SDK 示例
          err = cam.connect();
          if (HasError(err)) { return; } // Check for errors
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. code-block:: python
+      ..  code-block:: python
+
+         # 连接相机 =========================================================================================
+         # 必须先连接一个DaoAI相机，然后才能使用它进行采集。
+         # 选项 1：连接到第一个检测到的DaoAI相机。
+         cam, err = app.connectCamera()
+         if (hasError(err)): return
+         cam.disConnect()
+         if (hasError(err)): return
+
+         # 选项 2：通过序列号连接到特定的相机。
+         serial_number = list(cams.keys())[0] # Grab serial number from first camera in dictionary.
+         # 方法 A
+         cam, err = app.connectCamera(serial_number)
+         if (hasError(err)): return
+         cam.disConnect()
+         if (hasError(err)): return
+         # 方法 B
+         cam = cams[serial_number]
+         err = cam.connect()
+         if (hasError(err)): return
+         cam.disConnect()
+         if (hasError(err)): return
+
+         # 选项 3：连接在相机地图中发现的任何相机。
+         cam = list(cams.values())[0] # Grab first camera object in dictionary.
+         err = cam.connect()
+         if (hasError(err)): return
 
 
 相机动作
@@ -284,9 +393,26 @@ SDK 示例
          // 获取此相机当前的使用设置。
          Settings settings = cam.getSettings();
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. code-block:: python
+      ..  code-block:: python
+
+         # 相机动作 =================================================================================================
+         # 有些相机操作需要相机已连接，请务必查看文档和错误信息。
+         # 检查相机是否已连接。
+         if not cam.isConnected():
+            return
+
+         # 获取此相机的序列号。
+         serial_num = cam.getSerialNumber()
+         print("Serial number of connected camera is ", serial_num)
+
+         # 获取相机内参。
+         params, err = cam.getIntrinsicParam()
+         if (hasError(err)): return
+
+         # 获取此相机当前的使用设置。
+         settings = cam.getSettings()
 
 相机设置
 -------------------
@@ -342,9 +468,19 @@ SDK 示例
          // Clone 设置
          new_settings = new Settings(settings);
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. code-block:: python
+      ..  code-block:: python
+
+         # 相机设置 ================================================================================================
+         # DaoAI Settings 可以与相机一起使用，在拍摄和重建过程中调整参数。 Create a new empty settings object.
+         # 创建新的空相机设置。
+         new_settings = Settings()
+         # 从文件中加载现有的相机设置。
+         path_to_settings = "../../Examples/sample_settings.cfg"
+         new_settings = Settings(path_to_settings)
+         # Clone 设置
+         new_settings = Settings(settings)
 
 
 采集帧
@@ -522,9 +658,71 @@ SDK 示例
          err = new_settings.setAcquisitionFrames(mofaf);
          if (HasError(err)) { return; } // Check for errors
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. code-block:: python
+      ..  code-block:: python
+
+         # 采集帧
+         # 采集帧指定在图像采集过程中使用的参数。一个设置对象最多可以支持10个。
+         # 每个采集框都有三个可修改的参数： 亮度、增益和曝光档。
+         # 创建默认的 AcquisitionFrame
+         af = AcquisitionFrame()
+
+         # 用初始值创建 AcquisitionFrame 
+         brightness = 3
+         gain = 2.0
+         exposure_stop = -1
+         af = AcquisitionFrame(brightness, gain, exposure_stop)
+
+         # 查看任何 AcquisitionFrame 参数的当前值和可接受范围。
+         curr, min, max, err = af.inquireSetting(ExposureStop)
+         if (hasError(err)): return
+         print("Current exposure stop: ", curr, ". Exposure stop can be configured to any value between ", min, " - ", max)
+
+         # 将任何AcquisitionFrame参数配置为一个自定义值。
+         err = af.configureSetting(ExposureStop, 2)
+         if (hasError(err)): return
+
+         # 浮点参数也可以用浮点值进行检索和修改。
+         curr, min, max, err = af.inquireSetting(Gain)
+         if (hasError(err)): return
+         print("Current gain: ", curr, ". Gain can be configured to any value between ", min, " - ", max)
+
+         err = af.configureSetting(Gain, 2.1)
+         if (hasError(err)): return
+
+         # 使用不正确的类型来配置或查询一个参数会成功，但会返回一个警告。
+         err = af.configureSetting(ExposureStop, 1.5) # ExposureStop does not support decimal values, and will configure to 1.0
+         if (hasError(err)): return
+         print(err.details()) # No error is returned, but details will include a warning.
+
+         # 在设置中添加采集帧。
+         idx, err = new_settings.addAcquisitionFrame(af) # Returns the index of the newly added acquisition frame.
+         if (hasError(err)): return
+
+         # 获取采集帧。
+         returned_af, err = new_settings.getAcquisitionFrame(1) # Get frame at index 1
+         if (hasError(err)): return
+
+         # 删除索引值的采集帧。
+         err = new_settings.deleteAcquisitionFrame(idx)
+         if (hasError(err)): return
+         
+         # 修改并替换索引1处的采集帧。
+         err = af.configureSetting(Brightness, 2)
+         if (hasError(err)): return
+         err = new_settings.modifyAcquisitionFrame(af, 1)
+         if (hasError(err)): return
+
+         # 获取当前保存在设置中的整个采集帧字典的副本。
+         mofaf, err = new_settings.getAcquisitionFrames()
+         if (hasError(err)): return
+
+         # 将采集帧的地图设置为设置。请记住，采集帧的字典是单索引的。
+         mofaf[1] = AcquisitionFrame(1, 0, 1)
+         mofaf[2] = AcquisitionFrame(2, 2, 2)
+         err = new_settings.setAcquisitionFrames(mofaf)
+         if (hasError(err)): return
 
 采集助手
 ~~~~~~~~~~~~~~~~~~~~
@@ -569,9 +767,21 @@ SDK 示例
          err = cam.capture(ref ca_frm);  // Capture point cloud
          if (HasError(err)) { return; }
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. code-block:: python
+      ..  code-block:: python
+
+         # 采集助手
+         # 分析场景并生成采集帧设置，所有采集帧的总时间将小于时间预算。
+         # 时间预算越高，生成的采集帧就越多。
+         ca_mofaf, err = cam.captureAssistant(1.0) # Generate a set of acquisition frames with time budget of 1 sec.
+         if (hasError(err)): return
+         err = new_settings.setAcquisitionFrames(ca_mofaf)  # Set the generated acquisition frames to camera settings
+         if (hasError(err)): return  
+         err = cam.setSettings(new_settings)  # Apply the camera settings to camera
+         if (hasError(err)): return
+         ca_frame, err = cam.capture()  # Capture point cloud using generated settings
+         if (hasError(err)): return
 
 
 过滤器设置
@@ -702,9 +912,56 @@ SDK 示例
          if (HasError(err)) { return; } // Expect no error (status = SlcSdkSuccess)
          Console.WriteLine(err.details()); // Print warning message for using double value to set an integer parameter.
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. code-block:: python
+      ..  code-block:: python
+            
+         # 滤镜设置
+         # 滤镜设置指定在三维重建过程中使用的参数。关于过滤器设置的完整列表 
+         # 和它们的描述，请查阅settings.h和文档。
+         # 启用或禁用过滤器设置。
+         err = new_settings.enableFilterSetting(OutlierThreshold, True) # Enable outlier filter
+         if (hasError(err)): return
+         err = new_settings.enableFilterSetting(GaussianFilter, False) # Disable gaussian filter
+         if (hasError(err)): return
+         err = new_settings.enableFilterSetting(FillGaps, True) # Enable Fill Gaps
+         if (hasError(err)): return
+
+         # 检查是否启用了过滤器设置。
+         is_enabled, err = new_settings.checkEnableFilterSetting(OutlierThreshold) # Check if outlier filter is enabled.
+         if (hasError(err)): return
+         if is_enabled : print("Outlier filter is enabled!")
+         is_enabled, err = new_settings.checkEnableFilterSetting(GaussianFilter) # Check if gaussian filter is enabled.
+         if (hasError(err)): return
+         if is_enabled : print("Gaussian filter is enabled!")
+         is_enabled, err = new_settings.checkEnableFilterSetting(FillGaps) # Enable Fill Gaps
+         if (hasError(err)): return
+         if is_enabled : print("Fill gaps is enabled!")
+
+         # 获取一个过滤器设置的当前值和有效范围。
+         curr, min, max, err = new_settings.inquireFilterSetting(OutlierThreshold)
+         if (hasError(err)): return
+         print("Outlier threshold filter has a current value of ", curr, ", with a valid range of ", min, " - ", max)
+         curr, min, max, err = new_settings.inquireFilterSetting(GaussianFilter)
+         if (hasError(err)): return
+         print("Gaussian filter has a current value of ", curr, ", with a valid range of ", min, " - ", max)
+         fillgaps, err = new_settings.inquireFilterSetting(FillGaps)
+         if (hasError(err)): return
+         if(fillgaps): print("Fill Gaps is turned on!")
+
+         # 配置一个过滤器设置。
+         err = new_settings.configureFilterSetting(OutlierThreshold, 3.4)
+         if (hasError(err)): return
+         err = new_settings.configureFilterSetting(GaussianFilter, 2)
+         if (hasError(err)): return
+         err = new_settings.configureFilterSetting(FillXFirst, True)
+         if (hasError(err)): return
+
+         # 对于数字过滤器的设置，使用类型不匹配的getter或setter会成功，但会发出警告。
+         err = new_settings.configureFilterSetting(GaussianFilter, 1.6)
+         if (hasError(err)): return # Expect no error (status = SlcSdkSuccess)
+         print(err.details()) # Print warning message for using double value to set an integer parameter.
+
 
 系统设置
 ~~~~~~~~~~~~~~~~~~~~
@@ -759,33 +1016,64 @@ SDK 示例
          // 注意：这些系统设置中有许多是只读的，对于当前的摄像机系统来说可能并不准确。
          // 除非直接从摄像机中获取更新的设置对象[DaoAI::Camera.getSettings()]。
          // 启用或停用系统设置
-        err = new_settings.configureSystemSetting(Settings.SystemSetting.ExtraWhitePatternEnable, false);
-        if (HasError(err)) { return; } // Check for errors
+         err = new_settings.configureSystemSetting(Settings.SystemSetting.ExtraWhitePatternEnable, false);
+         if (HasError(err)) { return; } // Check for errors
 
-        // 检查一个系统设置是否被启用。
-        err = new_settings.checkEnableSystemSetting(Settings.SystemSetting.ExtraWhitePatternEnable, ref is_enabled);
-        if (HasError(err)) { return; } // Check for errors
-        if (is_enabled) { Console.WriteLine("Extra white pattern is enabled!"); }
-        err = new_settings.checkEnableSystemSetting(Settings.SystemSetting.TemperatureRegulationEnable, ref is_enabled);
-        if (HasError(err)) { return; } // Check for errors
-        if (is_enabled) { Console.WriteLine("Temperature regulation is enabled!"); }
+         // 检查一个系统设置是否被启用。
+         err = new_settings.checkEnableSystemSetting(Settings.SystemSetting.ExtraWhitePatternEnable, ref is_enabled);
+         if (HasError(err)) { return; } // Check for errors
+         if (is_enabled) { Console.WriteLine("Extra white pattern is enabled!"); }
+         err = new_settings.checkEnableSystemSetting(Settings.SystemSetting.TemperatureRegulationEnable, ref is_enabled);
+         if (HasError(err)) { return; } // Check for errors
+         if (is_enabled) { Console.WriteLine("Temperature regulation is enabled!"); }
 
-        // 获取一个系统设置的当前值。
-        err = new_settings.inquireSystemSetting(Settings.SystemSetting.GPUAvailable, ref bcurr);
-        if (HasError(err)) { return; } // Check for errors
-        if (bcurr) { Console.WriteLine("GPU is Available on your system!"); }
-        err = new_settings.inquireSystemSetting(Settings.SystemSetting.CameraModel, ref scurr);
-        if (HasError(err)) { return; } // Check for errors
-        Console.WriteLine("This camera has model " + scurr);
+         // 获取一个系统设置的当前值。
+         err = new_settings.inquireSystemSetting(Settings.SystemSetting.GPUAvailable, ref bcurr);
+         if (HasError(err)) { return; } // Check for errors
+         if (bcurr) { Console.WriteLine("GPU is Available on your system!"); }
+         err = new_settings.inquireSystemSetting(Settings.SystemSetting.CameraModel, ref scurr);
+         if (HasError(err)) { return; } // Check for errors
+         Console.WriteLine("This camera has model " + scurr);
 
-        // 保存和导出设置。
-        string save_settings_path = "../../../../../Examples/example_setting_save.cfg";
-        err = new_settings.exportSettings(save_settings_path);
-        if (HasError(err)) { return; } // Check for errors
+         // 保存和导出设置。
+         string save_settings_path = "../../../../../Examples/example_setting_save.cfg";
+         err = new_settings.exportSettings(save_settings_path);
+         if (HasError(err)) { return; } // Check for errors
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. code-block:: python
+      ..  code-block:: python
+
+         # 系统设置
+         # 系统设置是描述和影响DaoAI系统的各种参数。关于系统设置的完整列表，
+         # 请参考settings.h和文档中的描述。
+         # 注意：这些系统设置中有许多是只读的，对于当前的摄像机系统来说可能并不准确。
+         # 除非直接从摄像机中获取更新的设置对象[DaoAI::Camera.getSettings()]。
+         # 启用或停用系统设置
+         err = new_settings.configureSystemSetting(ExtraWhitePatternEnable, False)
+         if (hasError(err)): return # Expect no error (status = SlcSdkSuccess)
+
+
+         # 检查一个系统设置是否被启用。
+         is_enabled, err = new_settings.checkEnableSystemSetting(ExtraWhitePatternEnable)
+         if (hasError(err)): return
+         if (is_enabled) : print("Extra white pattern is enabled!")
+         is_enabled, err = new_settings.checkEnableSystemSetting(TemperatureRegulationEnable)
+         if (hasError(err)): return
+         if (is_enabled) : print("Temperature regulation is enabled!")
+
+         # 获取一个系统设置的当前值。
+         available, err = new_settings.inquireSystemSetting(GPUAvailable)
+         if (hasError(err)): return
+         if (available): print("GPU is Available on your system!")
+         model, err = new_settings.inquireSystemSetting(CameraModel)
+         if (hasError(err)): return
+         print("This camera has model " + model)
+
+         # 保存和导出设置。
+         save_settings_path = "../../Examples/example_setting_save.cfg"
+         err = new_settings.exportSettings(save_settings_path)
+         if (hasError(err)): return
 
 采集
 ------------------
@@ -921,9 +1209,67 @@ SDK 示例
          err = cam.enableTempRegulation(false);
          if (HasError(err)) { return; }
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. code-block:: python
+      ..  code-block:: python
+
+         # 相机采集  ================================================================================================
+         # 声明一个DaoAI帧对象，采集的数据将被写入其中
+         # 用默认设置进行拍摄（假设没有对相机进行设置）。
+         frame, err = cam.capture()
+         if (hasError(err)): return
+
+         # 使用自定义设置进行采集
+         # 方案1：使用设置进行拍摄。相机保存的设置用于今后的采集。
+         frame, err = cam.capture(new_settings)
+         if (hasError(err)): return
+         # 方案2：将设置对象设定为相机，以便在采集时使用。
+         err = cam.setSettings(new_settings)
+         if (hasError(err)): return
+         frame, err = cam.capture()
+         if (hasError(err)): return
+         # 方案3：将设置从文件加载到相机，以便在采集中使用。
+         err = cam.setSettings("../../Examples/sample_settings.cfg")
+         if (hasError(err)): return
+         frame, err = cam.capture()
+         if (hasError(err)): return
+
+         # 使用HDR图像作为拍摄画面的颜色
+         err = new_settings.enableFilterSetting(ShowHDR, True)
+         if (hasError(err)): return
+         err = cam.setSettings(new_settings)
+         if (hasError(err)): return
+         frame, err = cam.capture()
+         if (hasError(err)): return
+         # 使用第一个采集帧的图像作为采集帧的颜色
+         err = new_settings.enableFilterSetting(ShowHDR, False)
+         if (hasError(err)): return
+         err = cam.setSettings(new_settings)
+         if (hasError(err)): return
+         frame, err = cam.capture()
+         if (hasError(err)): return
+         # 检查本地GPU是否可用
+         temp_settings = cam.getSettings()
+         is_available, err = temp_settings.inquireSystemSetting(GPUAvailable)
+         if (hasError(err)): return
+         # 启用使用本地GPU进行计算（仅适用于BP-AMR和USB接口的3D相机）。
+         if (is_available):
+            err = cam.enableGPU(True)
+            if (hasError(err)): return
+            frame, err = cam.capture()
+            if (hasError(err)): return
+         # 禁止使用本地GPU进行计算，使用CPU代替（仅适用于BP-AMR和USB接口的3D相机）。
+         if (is_available):
+            err = cam.enableGPU(False)
+            if (hasError(err)): return
+            frame, err = cam.capture()
+            if (hasError(err)): return
+         # 启用温度调节功能
+         err = cam.enableTempRegulation(True)
+         if (hasError(err)): return
+         # 禁用温度调节功能
+         err = cam.enableTempRegulation(False)
+         if (hasError(err)): return
 
 帧
 --------------
@@ -964,7 +1310,7 @@ SDK 示例
 
       .. code-block:: c#
 
-         // Frames =========================================================================================================
+         // 帧 =========================================================================================================
          Frame new_frame;
          // Create new empty frame
          new_frame = new Frame();
@@ -988,9 +1334,31 @@ SDK 示例
          err = frm.getPointCloud(ref pcl);
          if (HasError(err)) { return; } // Check for errors
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. code-block:: python
+      ..  code-block:: python
+
+         # Frames ======================================================================================
+         # Create new empty frame
+         new_frame = Frame()
+         # Copy constructor
+         new_frame = Frame(frame)
+
+         # 检查帧是否有数据
+         if (not new_frame.isEmpty()) : print("Success: Frame contains data from 3D capture!")
+
+         # 保存一个框架。文件扩展名.dcf是首选的DaoAI框架格式，但保存也支持.pcd和.ply格式。
+         save_frame_path = "../../Examples/example_frame_save.dcf"
+         err = new_frame.save(save_frame_path)
+         if (hasError(err)): return
+
+         # 从文件中加载一个框架。支持.dcf文件。
+         err = new_frame.load("../../Examples/sample_frame.dcf")
+         if (hasError(err)): return
+
+         # 获取点云数据。
+         pcl, err = frame.getPointCloud()
+         if (hasError(err)): return
 
 
 点云
@@ -1075,9 +1443,43 @@ SDK 示例
          int row = rnd.Next(0, height); int col = rnd.Next(0, width);
          pt = new_pcl.getPoint((uint) row, (uint) col); // Get any point using a 2D index pair (row, column).
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. code-block:: python
+      ..  code-block:: python
+
+         # 点云 ====================================================================================================
+         # 点云包含来自3D采集帧的坐标和颜色信息。
+         # Create new point cloud.
+         new_pcl = PointCloud() # Empty point cloud.
+         # Create point cloud with specific dimensions
+         new_pcl = PointCloud(100, 100) # Specify dimensions of created point cloud.
+
+         # Clone a point cloud.
+         new_pcl = pcl.clone()
+
+         # 获取点云结构信息。
+         size = new_pcl.getSize()
+         height = new_pcl.getHeight() # Number of rows.
+         width = new_pcl.getWidth() # Number of columns.
+         if (not new_pcl.isEmpty()): print("Point cloud contains capture data!")
+         # Get point cloud data information.
+         x_values = new_pcl.getVecX() # 2D vector of all the x-coordinates in the point cloud.
+         y_values = new_pcl.getVecX() # 2D vector of all the y-coordinates in the point cloud.
+         z_values = new_pcl.getVecX() # 2D vector of all the z-coordinates in the point cloud.
+         confident_values = new_pcl.getVecConfident() # 2D vector of point cloud confidence values.
+         rgba_values = new_pcl.getVecRgba() # 2D vector of all the RGBA values in the point cloud. 0xAARRGGBB format.
+         r_values = new_pcl.getVecR() # 2D vector of all the r-values in the point cloud.
+         g_values = new_pcl.getVecG() # 2D vector of all the g-values in the point cloud.
+         b_values = new_pcl.getVecB() # 2D vector of all the b-values in the point cloud.
+         a_values = new_pcl.getVecA() # 2D vector of all the a-values in the point cloud.
+         
+         # Get individual point from point cloud. 
+         idx = random.randint(0, size)
+         pt = new_pcl(idx) # Get any point using a 1D index between [0, size).
+         row = random.randint(0, height)
+         col = random.randint(0, width)
+         pt = new_pcl(row, col) # Get any point using a 2D index pair (row, column).
+
 
 点
 ------------------
@@ -1138,9 +1540,32 @@ SDK 示例
          new_point.setRgb(0x00, 0xFF, 0x00); // Set to green.
          new_point.setRgba(0x00, 0x00, 0xFF, 0x00); // Set to blue.
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. code-block:: python
+      ..  code-block:: python
+ 
+         # 点 ==========================================================================================================
+         # 点包含单个点的坐标和颜色信息。
+         # 获取点的数据。
+         x = pt.getX()
+         y = pt.getY()
+         z = pt.getZ()
+         confident = pt.getConfident()
+         r = pt.getR()
+         g = pt.getG()
+         b = pt.getB()
+         a = pt.getA()
+         rgba = pt.getRgba() # rgba is in 0xAARRGGBB format (ARGB)
+         # 设定点数据。
+         new_point = Point()
+         err = new_point.setX(1)
+         err = new_point.setY(2)
+         err = new_point.setZ(3)
+         err = new_point.setConfident(0.4)
+         err = new_point.setRgba(0x00FF0000)  # Set to red.
+         err = new_point.setRgb(0x00, 0xFF, 0x00) # Set to green.
+         err = new_point.setRgba(0x00, 0x00, 0xFF, 0x00) # Set to blue.
+
 
 清理
 -----------
@@ -1177,6 +1602,15 @@ SDK 示例
          
          System.Threading.Thread.Sleep(20000);
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. code-block:: python
+      ..  code-block:: python
+
+         # 清理 =======================================================================================================
+         err = cam.disConnect()
+         if (hasError(err)): return
+
+         err = app.stopLogging()
+         if (hasError(err)): return
+
+         print("End of sample program!")
