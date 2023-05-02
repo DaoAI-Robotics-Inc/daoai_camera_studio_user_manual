@@ -37,7 +37,7 @@ Our DaoAI Camera Studio application is the supporting graphical user interface s
    case-studies/index
    case-studies/captruing-high-quality-point-clouds/index
    case-studies/evaluate-accuracy/index
-   .. case-studies/infield-calibration/index
+   case-studies/infield-calibration/index
    .. case-studies/hand-eye-calibration/index
    case-studies/use-multiple-daoai-cameras/index
 
