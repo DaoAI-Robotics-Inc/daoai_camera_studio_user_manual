@@ -13,8 +13,57 @@ This tutorial describes how to use the DaoAI SDK to capture point clouds and 2D 
 Prerequisites
 ~~~~~~~~~~~~~~~~~~~
 
-    - install DaoAI Camera Studio
 
+.. tabs::
+
+   .. group-tab:: C++
+
+      - install DaoAI Camera Studio
+
+   .. group-tab:: C#
+
+      - install DaoAI Camera Studio
+
+   .. group-tab:: Python
+
+      - install Python
+
+      - Check your python version by entering the follow command into your command line then choose a SDK package:
+         
+         ..  code-block:: python
+            
+            python --version
+
+         - Python version 3.8: DaoAI_SDK-xx-cp38-xx-xx.whl
+         - Python version 3.9: DaoAI_SDK-xx-cp39-xx-xx.whl
+         - Python version 3.10: DaoAI_SDK-xx-cp310-xx-xx.whl
+         - Python version 3.11: DaoAI_SDK-xx-cp311-xx-xx.whl
+
+      - install the DaoAI_SDK
+
+      ..  code-block:: python
+
+         py -m pip install path/to/DaoAI_SDK-xx-xx.xx.xx.whl 
+
+      - If required dependencies were not bundled into the package on release:
+
+         - Add the following lines of code to the top of your python program to tell python where to find required dependencies (only required once).
+      
+         ..  code-block:: python
+
+            import os
+            daoai_slc_path = os.getenv('DAOAI_SLC_PATH') # System enviornment variable should point to DaoAI Studio Release path.
+            os.add_dll_directory(daoai_slc_path + '') # Various dependencies
+            os.add_dll_directory(daoai_slc_path + '/bin') # Various dependencies
+            os.add_dll_directory(daoai_slc_path + '/SDK/bin') # Directory including slc_dll.dll
+
+      - To use the API functions, import the SDK to python.
+
+      ..  code-block:: python
+
+         from DaoAI_SDK import *
+
+      - All set to use the Python API! 
 
 Helper Functions
 -------------------
@@ -43,6 +92,7 @@ Helper Functions
 
       .. code-block:: c#
 
+         // Helper for checking error information from a returned SlcSdkError object.
          static bool HasError(DaoAINETError err)
          {
             if (err.status() == DaoAINETStatus.SlcSdkSuccess)
@@ -53,17 +103,27 @@ Helper Functions
             {
                   // Consult documentation for the meaning of different error status codes.
                   // Most errors will come with a detailed description, helpful for debugging. See DaoAINETError.details().
-                  //      NOTE: The details section may still include warnings even when the status code is SlcSdkSuccess.
+                  //      NOTE: The details section may still include warnings even when the status code is SlcSdkSuccess.
                   Console.WriteLine("ERROR: " + err.status() + ": " + err.details());
                   System.Threading.Thread.Sleep(20000);
                   return true;
             }
          }
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. ..    code-block:: python
+      ..  code-block:: python
 
+         # Helper for checking error information from a returned SlcSdkError object.
+         def hasError(err):
+            if (err.status() == SlcSdkSuccess): # A status code of SlcSdkSuccess indicates that no error is detected.
+                  return False
+            else:
+                  # Consult documentation for the meaning of different error status codes.
+                  # Most errors will come with a detailed description, helpful for debugging. See DaoAINETError.details().
+                  #      NOTE: The details section may still include warnings even when the status code is SlcSdkSuccess.
+                  print("ERROR: ", err.status(), ": ", err.details())
+                  return True
 
 Setup
 ------------------
@@ -148,9 +208,33 @@ Setup
                Console.WriteLine("   " + pair.Key);  // Print serial numbers of detected cameras.
          }
          
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. ..    code-block:: python
+      ..  code-block:: python
+
+         # Setup =======================================================================================
+         # Create a new DaoAI application instance
+         app = Application()
+
+         #Specify directory for logging. Logs contain detailed error and process information. 
+         logging_directory = "../../Logs/"
+
+         # Most functions return an error objet that contains.
+         err = app.startLogging(logging_directory)
+         if (hasError(err)): return
+
+         # If using remote cameras, specify remote IP address.
+         remote_ip = "192.168.1.2"
+
+         # Get cameras from application. This step must be completed before attempting to connect to any camera.
+         cams, err = app.getCameras(remote_ip) # remote_ip is optional if using a USB camera.
+         if (hasError(err)): return
+
+         if (len(cams) == 0):
+            return # At least one camera must be detected.
+         print(len(cams), " cameras detected: ")
+         for serial, cam in cams.items(): # Cams is a dictionary of serial number -> camera object.
+            print("    ", serial) # Print all serial numbers of detected cameras.
 
 
 Connecting to a Camera
@@ -227,10 +311,36 @@ Connecting to camera can have 3 Options.
          err = cam.connect();
          if (HasError(err)) { return; } // Check for errors
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. ..    code-block:: python
+      ..  code-block:: python
 
+         # Connecting to a camera ======================================================================
+         # A DaoAI Camera must be connected before it can be used for captures. 
+         # OPTION 1: Connecting to the first detected DaoAI Camera.
+         cam, err = app.connectCamera()
+         if (hasError(err)): return
+         cam.disConnect()
+         if (hasError(err)): return
+
+         # OPTION 2: Connect to specific camera by serial number.
+         serial_number = list(cams.keys())[0] # Grab serial number from first camera in dictionary.
+         # Method A
+         cam, err = app.connectCamera(serial_number)
+         if (hasError(err)): return
+         cam.disConnect()
+         if (hasError(err)): return
+         # Method B
+         cam = cams[serial_number]
+         err = cam.connect()
+         if (hasError(err)): return
+         cam.disConnect()
+         if (hasError(err)): return
+
+         # Option 3: Connecting any camera found in camera map
+         cam = list(cams.values())[0] # Grab first camera object in dictionary.
+         err = cam.connect()
+         if (hasError(err)): return
 
 Camera Actions
 -----------------
@@ -286,9 +396,27 @@ Get serial number, camera intrinsic parameters, and camera settings information.
          // Get current settings used by this camera.
          Settings settings = cam.getSettings();
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. ..    code-block:: python
+      ..  code-block:: python
+
+         # Canera Actions ==============================================================================
+         # Some camera actions will require the camera to be connected, be sure to check documentation and error messages.
+         # Check if a camera is connected.
+         if not cam.isConnected():
+            return
+
+         # Get serial number of this camera.
+         serial_num = cam.getSerialNumber()
+         print("Serial number of connected camera is ", serial_num)
+
+         # Get camera intrinsic parameters.
+         params, err = cam.getIntrinsicParam()
+         if (hasError(err)): return
+
+         # Get current settings used by this camera.
+         settings = cam.getSettings()
+
 
 Camera Settings
 -------------------
@@ -344,10 +472,20 @@ Create camera settings and load from camera setting file.
          // Cloning settings
          new_settings = new Settings(settings);
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. ..    code-block:: python
+      ..  code-block:: python
 
+         # Camera Settings =============================================================================
+         # DaoAI Settings can be used with a camera to tweak parameters during capture and the reconstruction process.
+         # Create a new empty settings object.
+         new_settings = Settings()
+         # Load existing camera settings from file.
+         path_to_settings = "../../Examples/sample_settings.cfg"
+         new_settings = Settings(path_to_settings)
+         # Clone settings
+         new_settings = Settings(settings)
+    
 
 Acquisition Frames
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -524,9 +662,72 @@ Configure Acquisition frames parameters.
          err = new_settings.setAcquisitionFrames(mofaf);
          if (HasError(err)) { return; } // Check for errors
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. ..    code-block:: python
+      ..  code-block:: python
+
+            # Acquisition Frames.
+            # Acquisition frames specify parameters to be used during image capture. A settings object can support up to 10.
+            #     Each acquisition frame has three modififiable parameters: Brightness, Gain and ExposureStop.
+            #     See documentation for details.
+            # Create a new default AcquisitionFrame
+            af = AcquisitionFrame()
+
+            # Create AcquisitionFrame with initial values
+            brightness = 3
+            gain = 2.0
+            exposure_stop = -1
+            af = AcquisitionFrame(brightness, gain, exposure_stop)
+
+            # View the current value and acceptable bounds for any AcquisitionFrame parameter.
+            curr, min, max, err = af.inquireSetting(ExposureStop)
+            if (hasError(err)): return
+            print("Current exposure stop: ", curr, ". Exposure stop can be configured to any value between ", min, " - ", max)
+
+            # Configure any AcquisitionFrame parameter to a custom value.
+            err = af.configureSetting(ExposureStop, 2)
+            if (hasError(err)): return
+
+            # Some parameters can be configured/retrieved with decimal values. See documentation for details.
+            curr, min, max, err = af.inquireSetting(Gain)
+            if (hasError(err)): return
+            print("Current gain: ", curr, ". Gain can be configured to any value between ", min, " - ", max)
+
+            err = af.configureSetting(Gain, 2.1)
+            if (hasError(err)): return
+
+            # Using a decimal value to configure an integer-only setting will generate an error.
+            err = af.configureSetting(ExposureStop, 1.5) # ExposureStop does not support decimal values, and will configure to 1.0
+            if (hasError(err)): return
+            print(err.details()) # No error is returned, but details will include a warning.
+
+            # Add acquisition frame to settings.
+            idx, err = new_settings.addAcquisitionFrame(af) # Returns the index of the newly added acquisition frame.
+            if (hasError(err)): return
+
+            # Get acquisition frame.
+            returned_af, err = new_settings.getAcquisitionFrame(1) # Get frame at index 1
+            if (hasError(err)): return
+
+            # Delete acquisition frame.
+            err = new_settings.deleteAcquisitionFrame(idx)
+            if (hasError(err)): return
+            
+            # Modify and replace the acquisition frame at index 1.
+            err = af.configureSetting(Brightness, 2)
+            if (hasError(err)): return
+            err = new_settings.modifyAcquisitionFrame(af, 1)
+            if (hasError(err)): return
+
+            # Get copy of entire dictionary of acquisition frames currently saved in settings.
+            mofaf, err = new_settings.getAcquisitionFrames()
+            if (hasError(err)): return
+
+            # Set map of acquisition frames to settings. Remember that the acquisition frame dictionary is one-indexed.
+            mofaf[1] = AcquisitionFrame(1, 0, 1)
+            mofaf[2] = AcquisitionFrame(2, 2, 2)
+            err = new_settings.setAcquisitionFrames(mofaf)
+            if (hasError(err)): return
 
 Capture Assistant
 ~~~~~~~~~~~~~~~~~~~~
@@ -571,9 +772,21 @@ Auto compute acquisition frame settings by analyzing scene given a time buget.
          err = cam.capture(ref ca_frm);  // Capture point cloud
          if (HasError(err)) { return; }
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. ..    code-block:: python
+      ..  code-block:: python
+
+            # Capture Assistant
+            # Analyze scene and generate acquisition frame settings, the total time for all acquisition frames will be less than the time budget. 
+            #		The higher time budget is, the more acquisition frames will be generated.
+            ca_mofaf, err = cam.captureAssistant(1.0) # Generate a set of acquisition frames with time budget of 1 sec.
+            if (hasError(err)): return
+            err = new_settings.setAcquisitionFrames(ca_mofaf)  # Set the generated acquisition frames to camera settings
+            if (hasError(err)): return  
+            err = cam.setSettings(new_settings)  # Apply the camera settings to camera
+            if (hasError(err)): return
+            ca_frame, err = cam.capture()  # Capture point cloud using generated settings
+            if (hasError(err)): return
 
 
 Filter Settings
@@ -704,9 +917,56 @@ Create, read, and modify Filter settings.
          if (HasError(err)) { return; } // Expect no error (status = SlcSdkSuccess)
          Console.WriteLine(err.details()); // Print warning message for using double value to set an integer parameter.
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. ..    code-block:: python
+      ..  code-block:: python
+            
+         # Filter Settings
+         # Filter settings specify parameters that are used during 3D reconstruction. For a full list of filter settings 
+         #      and their descriptions consult settings.h and the documentation.
+         # Enable or Disable filter settings. 
+         err = new_settings.enableFilterSetting(OutlierThreshold, True) # Enable outlier filter
+         if (hasError(err)): return
+         err = new_settings.enableFilterSetting(GaussianFilter, False) # Disable gaussian filter
+         if (hasError(err)): return
+         err = new_settings.enableFilterSetting(FillGaps, True) # Enable Fill Gaps
+         if (hasError(err)): return
+
+         # Check if a filter sitting is enabled.
+         is_enabled, err = new_settings.checkEnableFilterSetting(OutlierThreshold) # Check if outlier filter is enabled.
+         if (hasError(err)): return
+         if is_enabled : print("Outlier filter is enabled!")
+         is_enabled, err = new_settings.checkEnableFilterSetting(GaussianFilter) # Check if gaussian filter is enabled.
+         if (hasError(err)): return
+         if is_enabled : print("Gaussian filter is enabled!")
+         is_enabled, err = new_settings.checkEnableFilterSetting(FillGaps) # Enable Fill Gaps
+         if (hasError(err)): return
+         if is_enabled : print("Fill gaps is enabled!")
+
+         # Get the current value and valid range of a filter setting.
+         curr, min, max, err = new_settings.inquireFilterSetting(OutlierThreshold)
+         if (hasError(err)): return
+         print("Outlier threshold filter has a current value of ", curr, ", with a valid range of ", min, " - ", max)
+         curr, min, max, err = new_settings.inquireFilterSetting(GaussianFilter)
+         if (hasError(err)): return
+         print("Gaussian filter has a current value of ", curr, ", with a valid range of ", min, " - ", max)
+         fillgaps, err = new_settings.inquireFilterSetting(FillGaps)
+         if (hasError(err)): return
+         if(fillgaps): print("Fill Gaps is turned on!")
+
+         # Configure a filter setting
+         err = new_settings.configureFilterSetting(OutlierThreshold, 3.4)
+         if (hasError(err)): return
+         err = new_settings.configureFilterSetting(GaussianFilter, 2)
+         if (hasError(err)): return
+         err = new_settings.configureFilterSetting(FillXFirst, True)
+         if (hasError(err)): return
+
+         # For numeric filter settings, using a type mismatch setter will work successfully but issue a warning.
+         # Check documentation for which settings support decimal values.
+         err = new_settings.configureFilterSetting(GaussianFilter, 1.6)
+         if (hasError(err)): return # Expect no error (status = SlcSdkSuccess)
+         print(err.details()) # Print warning message for using double value to set an integer parameter.
 
 System Settings
 ~~~~~~~~~~~~~~~~~~~~
@@ -755,39 +1015,70 @@ Create, read, and export System settings.
 
       .. code-block:: c#
 
-        // System Settings
-        // System settings are miscellaneous parameters that describe and affect the DaoAI System. For a full list of system  
-        //      settings and their descriptions consult settings.h and the documentation.
-        //      NOTE: Many of these system settings are read-only, and may not be accurate for current camera system 
-        //            unless getting the updated settings object directly from a camera [Camera.getSettings()].
-        // Enable or Disable System Setting
-        err = new_settings.configureSystemSetting(Settings.SystemSetting.ExtraWhitePatternEnable, false);
-        if (HasError(err)) { return; } // Check for errors
+         // System Settings
+         // System settings are miscellaneous parameters that describe and affect the DaoAI System. For a full list of system  
+         //      settings and their descriptions consult settings.h and the documentation.
+         //      NOTE: Many of these system settings are read-only, and may not be accurate for current camera system 
+         //            unless getting the updated settings object directly from a camera [Camera.getSettings()].
+         // Enable or Disable System Setting
+         err = new_settings.configureSystemSetting(Settings.SystemSetting.ExtraWhitePatternEnable, false);
+         if (HasError(err)) { return; } // Check for errors
 
-        // Check if a system setting is enabled.
-        err = new_settings.checkEnableSystemSetting(Settings.SystemSetting.ExtraWhitePatternEnable, ref is_enabled);
-        if (HasError(err)) { return; } // Check for errors
-        if (is_enabled) { Console.WriteLine("Extra white pattern is enabled!"); }
-        err = new_settings.checkEnableSystemSetting(Settings.SystemSetting.TemperatureRegulationEnable, ref is_enabled);
-        if (HasError(err)) { return; } // Check for errors
-        if (is_enabled) { Console.WriteLine("Temperature regulation is enabled!"); }
+         // Check if a system setting is enabled.
+         err = new_settings.checkEnableSystemSetting(Settings.SystemSetting.ExtraWhitePatternEnable, ref is_enabled);
+         if (HasError(err)) { return; } // Check for errors
+         if (is_enabled) { Console.WriteLine("Extra white pattern is enabled!"); }
+         err = new_settings.checkEnableSystemSetting(Settings.SystemSetting.TemperatureRegulationEnable, ref is_enabled);
+         if (HasError(err)) { return; } // Check for errors
+         if (is_enabled) { Console.WriteLine("Temperature regulation is enabled!"); }
 
-        // Get the current value of a system setting.
-        err = new_settings.inquireSystemSetting(Settings.SystemSetting.GPUAvailable, ref bcurr);
-        if (HasError(err)) { return; } // Check for errors
-        if (bcurr) { Console.WriteLine("GPU is Available on your system!"); }
-        err = new_settings.inquireSystemSetting(Settings.SystemSetting.CameraModel, ref scurr);
-        if (HasError(err)) { return; } // Check for errors
-        Console.WriteLine("This camera has model " + scurr);
+         // Get the current value of a system setting.
+         err = new_settings.inquireSystemSetting(Settings.SystemSetting.GPUAvailable, ref bcurr);
+         if (HasError(err)) { return; } // Check for errors
+         if (bcurr) { Console.WriteLine("GPU is Available on your system!"); }
+         err = new_settings.inquireSystemSetting(Settings.SystemSetting.CameraModel, ref scurr);
+         if (HasError(err)) { return; } // Check for errors
+         Console.WriteLine("This camera has model " + scurr);
 
-        // Save and export settings.
-        string save_settings_path = "../../../../../Examples/example_setting_save.cfg";
-        err = new_settings.exportSettings(save_settings_path);
-        if (HasError(err)) { return; } // Check for errors
+         // Save and export settings.
+         string save_settings_path = "../../../../../Examples/example_setting_save.cfg";
+         err = new_settings.exportSettings(save_settings_path);
+         if (HasError(err)) { return; } // Check for errors
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. ..    code-block:: python
+      ..  code-block:: python
+
+         # System Settings
+         # System settings are miscellaneous parameters that describe and affect the DaoAI System. For a full list of system  
+         #      settings and their descriptions consult settings.h and the documentation.
+         #      NOTE: Many of these system settings are read-only, and may not be accurate for current camera system 
+         #            unless getting the updated settings object directly from a camera [Camera.getSettings()].
+         # Enable or Disable System Setting
+         err = new_settings.configureSystemSetting(ExtraWhitePatternEnable, False)
+         if (hasError(err)): return # Expect no error (status = SlcSdkSuccess)
+
+
+         # Check if a system setting is enabled.
+         is_enabled, err = new_settings.checkEnableSystemSetting(ExtraWhitePatternEnable)
+         if (hasError(err)): return
+         if (is_enabled) : print("Extra white pattern is enabled!")
+         is_enabled, err = new_settings.checkEnableSystemSetting(TemperatureRegulationEnable)
+         if (hasError(err)): return
+         if (is_enabled) : print("Temperature regulation is enabled!")
+
+         # Get the current value of a system setting.
+         available, err = new_settings.inquireSystemSetting(GPUAvailable)
+         if (hasError(err)): return
+         if (available): print("GPU is Available on your system!")
+         model, err = new_settings.inquireSystemSetting(CameraModel)
+         if (hasError(err)): return
+         print("This camera has model " + model)
+
+         # Save and export settings.
+         save_settings_path = "../../Examples/example_setting_save.cfg"
+         err = new_settings.exportSettings(save_settings_path)
+         if (hasError(err)): return
 
 Capture
 ------------------
@@ -923,9 +1214,68 @@ Capture image.
          err = cam.enableTempRegulation(false);
          if (HasError(err)) { return; }
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. ..    code-block:: python
+      ..  code-block:: python
+
+         # Camera Captures =============================================================================
+         # Captures are returned as a DaoAI Frame object.
+         # Capture with default settings (assuming no settings has been set to camera).
+         frame, err = cam.capture()
+         if (hasError(err)): return
+
+         # Capture with custom settings
+         # OPTION 1: Capture with settings. Settings saved by camera for future captures.
+         frame, err = cam.capture(new_settings)
+         if (hasError(err)): return
+         # OPTION 2: Set settings object to camera to use in capture.
+         err = cam.setSettings(new_settings)
+         if (hasError(err)): return
+         frame, err = cam.capture()
+         if (hasError(err)): return
+         # OPTION 3: Load settings from file to camera to use in capture.
+         err = cam.setSettings("../../Examples/sample_settings.cfg")
+         if (hasError(err)): return
+         frame, err = cam.capture()
+         if (hasError(err)): return
+
+         # Use HDR image as captured frame's color
+         err = new_settings.enableFilterSetting(ShowHDR, True)
+         if (hasError(err)): return
+         err = cam.setSettings(new_settings)
+         if (hasError(err)): return
+         frame, err = cam.capture()
+         if (hasError(err)): return
+         # Use the first acquisition frame image as captured frame's color
+         err = new_settings.enableFilterSetting(ShowHDR, False)
+         if (hasError(err)): return
+         err = cam.setSettings(new_settings)
+         if (hasError(err)): return
+         frame, err = cam.capture()
+         if (hasError(err)): return
+         # Check if local GPU is available
+         temp_settings = cam.getSettings()
+         is_available, err = temp_settings.inquireSystemSetting(GPUAvailable)
+         if (hasError(err)): return
+         # Enable computation using local GPU (for BP-AMR and USB interface 3D cameras only)
+         if (is_available):
+            err = cam.enableGPU(True)
+            if (hasError(err)): return
+            frame, err = cam.capture()
+            if (hasError(err)): return
+         # Disable computation using local GPU, use CPU instead (for BP-AMR and USB interface 3D cameras only)
+         if (is_available):
+            err = cam.enableGPU(False)
+            if (hasError(err)): return
+            frame, err = cam.capture()
+            if (hasError(err)): return
+         # Enable temperature regulation
+         err = cam.enableTempRegulation(True)
+         if (hasError(err)): return
+         # Disable temperature regulation
+         err = cam.enableTempRegulation(False)
+         if (hasError(err)): return
+
 
 Frames
 --------------
@@ -990,9 +1340,31 @@ Save and load image.
          err = frm.getPointCloud(ref pcl);
          if (HasError(err)) { return; } // Check for errors
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. ..    code-block:: python
+      ..  code-block:: python
+
+         # Frames ======================================================================================
+         # Create new empty frame
+         new_frame = Frame()
+         # Copy constructor
+         new_frame = Frame(frame)
+
+         # Check if frame has data
+         if (not new_frame.isEmpty()) : print("Success: Frame contains data from 3D capture!")
+
+         # Save a frame. File extension .dcf is the preferred DaoAI frame format, but saving also supports .pcd and .ply formats.
+         save_frame_path = "../../Examples/example_frame_save.dcf"
+         err = new_frame.save(save_frame_path)
+         if (hasError(err)): return
+
+         # Load a frame from file. Supports .dcf files.
+         err = new_frame.load("../../Examples/sample_frame.dcf")
+         if (hasError(err)): return
+
+         # Get point cloud data from frame.
+         pcl, err = frame.getPointCloud()
+         if (hasError(err)): return
 
 
 Point Cloud
@@ -1077,9 +1449,42 @@ Create, get and read Point Cloud data.
          int row = rnd.Next(0, height); int col = rnd.Next(0, width);
          pt = new_pcl.getPoint((uint) row, (uint) col); // Get any point using a 2D index pair (row, column).
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. ..    code-block:: python
+      ..  code-block:: python
+
+         # Point Cloud =================================================================================
+         # Point cloud contains the coordinate and color information from the 3D Capture Frame.
+         # Create new point cloud.
+         new_pcl = PointCloud() # Empty point cloud.
+         # Create point cloud with specific dimensions
+         new_pcl = PointCloud(100, 100) # Specify dimensions of created point cloud.
+
+         # Clone a point cloud.
+         new_pcl = pcl.clone()
+
+         # Get point cloud structure information.
+         size = new_pcl.getSize()
+         height = new_pcl.getHeight() # Number of rows.
+         width = new_pcl.getWidth() # Number of columns.
+         if (not new_pcl.isEmpty()): print("Point cloud contains capture data!")
+         # Get point cloud data information.
+         x_values = new_pcl.getVecX() # 2D vector of all the x-coordinates in the point cloud.
+         y_values = new_pcl.getVecX() # 2D vector of all the y-coordinates in the point cloud.
+         z_values = new_pcl.getVecX() # 2D vector of all the z-coordinates in the point cloud.
+         confident_values = new_pcl.getVecConfident() # 2D vector of point cloud confidence values.
+         rgba_values = new_pcl.getVecRgba() # 2D vector of all the RGBA values in the point cloud. 0xAARRGGBB format.
+         r_values = new_pcl.getVecR() # 2D vector of all the r-values in the point cloud.
+         g_values = new_pcl.getVecG() # 2D vector of all the g-values in the point cloud.
+         b_values = new_pcl.getVecB() # 2D vector of all the b-values in the point cloud.
+         a_values = new_pcl.getVecA() # 2D vector of all the a-values in the point cloud.
+         
+         # Get individual point from point cloud. 
+         idx = random.randint(0, size)
+         pt = new_pcl(idx) # Get any point using a 1D index between [0, size).
+         row = random.randint(0, height)
+         col = random.randint(0, width)
+         pt = new_pcl(row, col) # Get any point using a 2D index pair (row, column).
 
 Point
 ------------------
@@ -1140,10 +1545,31 @@ Get and read Point data.
          new_point.setRgb(0x00, 0xFF, 0x00); // Set to green.
          new_point.setRgba(0x00, 0x00, 0xFF, 0x00); // Set to blue.
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. ..    code-block:: python
-
+      ..  code-block:: python
+ 
+         # Point =======================================================================================
+         # Point contains the coordinate and color information of an individual point.
+         # Get point data.
+         x = pt.getX()
+         y = pt.getY()
+         z = pt.getZ()
+         confident = pt.getConfident()
+         r = pt.getR()
+         g = pt.getG()
+         b = pt.getB()
+         a = pt.getA()
+         rgba = pt.getRgba() # rgba is in 0xAARRGGBB format (ARGB)
+         # Set point data.
+         new_point = Point()
+         err = new_point.setX(1)
+         err = new_point.setY(2)
+         err = new_point.setZ(3)
+         err = new_point.setConfident(0.4)
+         err = new_point.setRgba(0x00FF0000)  # Set to red.
+         err = new_point.setRgb(0x00, 0xFF, 0x00) # Set to green.
+         err = new_point.setRgba(0x00, 0x00, 0xFF, 0x00) # Set to blue.
 
 Clean Up
 -----------
@@ -1180,6 +1606,15 @@ Clean Up
          
          System.Threading.Thread.Sleep(20000);
 
-   .. .. group-tab:: Python
+   .. group-tab:: Python
 
-      .. ..    code-block:: python
+      ..  code-block:: python
+
+         # Clean Up ====================================================================================
+         err = cam.disConnect()
+         if (hasError(err)): return
+
+         err = app.stopLogging()
+         if (hasError(err)): return
+
+         print("End of sample program!")
