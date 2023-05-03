@@ -24,6 +24,10 @@ This a quick start guide for the fully user manual, we recommend that you follow
 
          .. tab:: Install
 
+            .. image:: images/1.gif
+               :align: right
+               :scale: 19%
+
             - Windows 10 or Ubuntu 20.04
 
             - Compatible GPU
@@ -107,6 +111,10 @@ This a quick start guide for the fully user manual, we recommend that you follow
             
 
          .. tab:: Install
+
+            .. image:: images/1.gif
+               :align: right
+               :scale: 19%
 
             - Windows 10 or Ubuntu 20.04
 
@@ -192,6 +200,10 @@ This a quick start guide for the fully user manual, we recommend that you follow
 
          .. tab:: Install
 
+            .. image:: images/1.gif
+               :align: right
+               :scale: 19%
+
             - Windows 10 or Ubuntu 20.04
 
             - Compatible GPU
@@ -276,6 +288,10 @@ This a quick start guide for the fully user manual, we recommend that you follow
 
          .. tab:: Install
 
+            .. image:: images/1.gif
+               :align: right
+               :scale: 19%
+
             - Windows 10 or Ubuntu 20.04
 
             - Compatible GPU
@@ -359,6 +375,10 @@ This a quick start guide for the fully user manual, we recommend that you follow
             
 
          .. tab:: Install
+
+            .. image:: images/1.gif
+               :align: right
+               :scale: 19%
 
             - Windows 10 or Ubuntu 20.04
 
