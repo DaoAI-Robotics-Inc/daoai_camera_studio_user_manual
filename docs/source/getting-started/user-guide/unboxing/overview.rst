@@ -1,10 +1,9 @@
 Unboxing
 ================
+
 .. tabs::
 
    .. tab:: BP SMALL
-
-     .. .. video:: ./video/1.mp4
 
       In the DaoAI Camera Studio Box you will find:
 
@@ -26,7 +25,6 @@ Unboxing
 
    .. tab:: BP MEDIUM
 
-     .. .. video:: ./video/1.mp4
 
       In the DaoAI Camera Studio Box you will find:
 
@@ -47,8 +45,6 @@ Unboxing
 
    .. tab:: BP LARGE
 
-     .. .. video:: ./video/1.mp4
-
       In the DaoAI Camera Studio Box you will find:
 
       - DaoAI BP Large Camera 
@@ -67,8 +63,6 @@ Unboxing
 
    .. tab:: BP AMR
 
-     .. .. video:: ./video/1.mp4
-
       In the DaoAI Camera Studio Box you will find:
 
       - DaoAI BP AMR Camera 
@@ -86,8 +80,6 @@ Unboxing
       - On-Arm mount
       
    .. tab:: BP AMR-GPU
-
-     .. .. video:: ./video/1.mp4
 
       In the DaoAI Camera Studio Box you will find:
 
