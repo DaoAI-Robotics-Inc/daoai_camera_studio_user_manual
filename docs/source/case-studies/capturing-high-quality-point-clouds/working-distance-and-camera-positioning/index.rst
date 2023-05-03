@@ -26,7 +26,7 @@
 一旦我们知道了我们要成像的区域，我们就可以通过以下方式检查它是否满足相机的推荐工作距离和我们算法的要求。
 
 - 使用我们的 :ref:`计算器`. 
-- 检查页面 :ref:`工作距离和视场`. The page will estimate the relationship between camera distance to the scene, FOV, spatial resolution and precision.
+- 检查页面 :ref:`工作距离和视场`. 该页面将估计相机与场景的距离、FOV、空间分辨率和精度之间的关系。
 - 使用数据表。
 - 通过使用DaoAI Camera Studio等捕捉和检查点云进行手动验证。
 
