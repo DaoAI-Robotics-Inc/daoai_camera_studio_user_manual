@@ -95,6 +95,8 @@ Then gradually increase the brightness until the highlight area of the object is
 .. image:: images/highlight_frame_2.png
         :align: center
 
+|
+
 .. image:: images/highlight_frame_3.png
         :align: center
 
