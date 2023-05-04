@@ -26,18 +26,26 @@ This a quick start guide for the fully user manual, we recommend that you follow
 
             .. image:: images/1.gif
                :align: right
-               :scale: 19%
+               :scale: 75%
+
+            
+            Requirements PCs:
 
             - Windows 10 or Ubuntu 20.04
-
+            
             - Compatible GPU
 
             - 16 GB RAM or more
 
+            |br|
+            |br|
             Follow the steps outlined in :ref:`Software Installation`
 
+            |br|
+            |br|
             Download  `DaoAI Camera Studio <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/xchen_daoai_com/EgrH6-eGjpxFqtEij30nF5kBsF3jmIBQOHBPA5MGErPYuQ?e=KvHVrT>`_
-         
+            |br|
+
          .. tab:: Mount
 
             .. image:: images/amr_1.png
@@ -114,18 +122,26 @@ This a quick start guide for the fully user manual, we recommend that you follow
 
             .. image:: images/1.gif
                :align: right
-               :scale: 19%
+               :scale: 75%
+
+            
+            Requirements PCs:
 
             - Windows 10 or Ubuntu 20.04
-
+            
             - Compatible GPU
 
             - 16 GB RAM or more
 
+            |br|
+            |br|
             Follow the steps outlined in :ref:`Software Installation`
 
+            |br|
+            |br|
             Download  `DaoAI Camera Studio <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/xchen_daoai_com/EgrH6-eGjpxFqtEij30nF5kBsF3jmIBQOHBPA5MGErPYuQ?e=KvHVrT>`_
-         
+            |br|
+
          .. tab:: Mount
 
             .. image:: images/amr_1.png
@@ -202,18 +218,26 @@ This a quick start guide for the fully user manual, we recommend that you follow
 
             .. image:: images/1.gif
                :align: right
-               :scale: 19%
+               :scale: 75%
+
+            
+            Requirements PCs:
 
             - Windows 10 or Ubuntu 20.04
-
+            
             - Compatible GPU
 
             - 16 GB RAM or more
 
+            |br|
+            |br|
             Follow the steps outlined in :ref:`Software Installation`
 
+            |br|
+            |br|
             Download  `DaoAI Camera Studio <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/xchen_daoai_com/EgrH6-eGjpxFqtEij30nF5kBsF3jmIBQOHBPA5MGErPYuQ?e=KvHVrT>`_
-         
+            |br|
+
          .. tab:: Mount
 
             .. image:: images/amr_1.png
@@ -290,18 +314,26 @@ This a quick start guide for the fully user manual, we recommend that you follow
 
             .. image:: images/1.gif
                :align: right
-               :scale: 19%
+               :scale: 75%
+
+            
+            Requirements PCs:
 
             - Windows 10 or Ubuntu 20.04
-
+            
             - Compatible GPU
 
             - 16 GB RAM or more
 
+            |br|
+            |br|
             Follow the steps outlined in :ref:`Software Installation`
 
+            |br|
+            |br|
             Download  `DaoAI Camera Studio <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/xchen_daoai_com/EgrH6-eGjpxFqtEij30nF5kBsF3jmIBQOHBPA5MGErPYuQ?e=KvHVrT>`_
-         
+            |br|
+
          .. tab:: Mount
 
             .. image:: images/amr_1.png
@@ -378,18 +410,26 @@ This a quick start guide for the fully user manual, we recommend that you follow
 
             .. image:: images/1.gif
                :align: right
-               :scale: 19%
+               :scale: 75%
+
+            
+            Requirements PCs:
 
             - Windows 10 or Ubuntu 20.04
-
+            
             - Compatible GPU
 
             - 16 GB RAM or more
 
+            |br|
+            |br|
             Follow the steps outlined in :ref:`Software Installation`
 
+            |br|
+            |br|
             Download  `DaoAI Camera Studio <https://daoairoboticsinc-my.sharepoint.com/:f:/g/personal/xchen_daoai_com/EgrH6-eGjpxFqtEij30nF5kBsF3jmIBQOHBPA5MGErPYuQ?e=KvHVrT>`_
-         
+            |br|
+            
          .. tab:: Mount
 
             .. image:: images/amr_1.png

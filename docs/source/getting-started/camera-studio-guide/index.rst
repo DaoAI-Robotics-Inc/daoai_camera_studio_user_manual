@@ -4,6 +4,10 @@ Camera Studio Guide
 .. toctree::
    :maxdepth: 1
    
+   Connecting Camera
+   Add Frames
+   Capturing
+   Saving Point Cloud
    control_panel
    available_views
    toolbar
