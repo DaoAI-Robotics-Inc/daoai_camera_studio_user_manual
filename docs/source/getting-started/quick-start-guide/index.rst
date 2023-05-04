@@ -96,7 +96,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
             |br|  you will be greeted with the DaoAI Camera Studio startup window.
             |br|
 
-            See the :ref:`Connecting Camera` tutorials. Check out the connect camera Configuration page to lean how to connect your camera.
+            See the :ref:`Connecting & Disconnecting Camera` tutorials. Check out the connect camera Configuration page to lean how to connect your camera.
             |br|
             |br|
             For more inforation see :ref:`Quickstart Guide`. 
@@ -192,7 +192,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
             |br|  you will be greeted with the DaoAI Camera Studio startup window.
             |br|
 
-            See the :ref:`Connecting Camera` tutorials. Check out the connect camera Configuration page to lean how to connect your camera.
+            See the :ref:`Connecting & Disconnecting Camera` tutorials. Check out the connect camera Configuration page to lean how to connect your camera.
             |br|
             |br|
             For more inforation see :ref:`Quickstart Guide`. 
@@ -288,7 +288,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
             |br|  you will be greeted with the DaoAI Camera Studio startup window.
             |br|
 
-            See the :ref:`Connecting Camera` tutorials. Check out the connect camera Configuration page to lean how to connect your camera.
+            See the :ref:`Connecting & Disconnecting Camera` tutorials. Check out the connect camera Configuration page to lean how to connect your camera.
             |br|
             |br|
             For more inforation see :ref:`Quickstart Guide`. 
@@ -384,7 +384,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
             |br|  you will be greeted with the DaoAI Camera Studio startup window.
             |br|
 
-            See the :ref:`Connecting Camera` tutorials. Check out the connect camera Configuration page to lean how to connect your camera.
+            See the :ref:`Connecting & Disconnecting Camera` tutorials. Check out the connect camera Configuration page to lean how to connect your camera.
             |br|
             |br|
             For more inforation see :ref:`Quickstart Guide`. 
@@ -480,7 +480,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
             |br|  you will be greeted with the DaoAI Camera Studio startup window.
             |br|
 
-            See the :ref:`Connecting Camera` tutorials. Check out the connect camera Configuration page to lean how to connect your camera.
+            See the :ref:`Connecting & Disconnecting Camera` tutorials. Check out the connect camera Configuration page to lean how to connect your camera.
             |br|
             |br|
             For more inforation see :ref:`Quickstart Guide`. 
