@@ -24,6 +24,14 @@ Gain is a parameter that lets the user configure the pre-amplification of the re
 ------------------------------------
 In this part of the tutorial, we will present a 3D imaging technique. This technique utilizes the histogram to evaluate our point cloud in a predictable and step-by-step manner, in order to acquire good 3D point clouds. The procedure can be divided into these steps:
 
-    - :ref:`Working Distance and Camera Positioning`
-    - :ref:`Filters`
-    - :ref:`Dealing With HightLights and Shiny Objects`
+
+.. toctree::
+    :hidden:
+    :maxdepth: 2
+
+    ./working-distance-and-camera-positioning/index
+    ./dealing-with-highlights-and-shiny-objects/index
+
+- :ref:`Working Distance and Camera Positioning`
+- :ref:`Filters`
+- :ref:`Dealing With HightLights and Shiny Objects`
