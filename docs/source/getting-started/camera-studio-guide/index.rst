@@ -4,6 +4,11 @@
 .. toctree::
    :maxdepth: 1
    
+   Connect Camera
+   Hardware Setup
+   Add Frames
+   Capturing
+   Saving Point Cloud
    control_panel
    available_views
    toolbar

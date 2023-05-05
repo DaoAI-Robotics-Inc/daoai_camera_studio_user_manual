@@ -16,8 +16,8 @@ DaoAI 相机概述
    :maxdepth: 2
    :caption: 快速入门
 
+   getting-started/quick-start-guide/index
    getting-started/user-guide/index
-   getting-started/quick-start/index
    getting-started/camera-studio-guide/index
    
 
