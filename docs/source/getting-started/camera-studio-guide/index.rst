@@ -4,7 +4,7 @@ Camera Studio Guide
 .. toctree::
    :maxdepth: 1
    
-   Connecting Camera
+   Connect Camera
    Add Frames
    Capturing
    Saving Point Cloud
