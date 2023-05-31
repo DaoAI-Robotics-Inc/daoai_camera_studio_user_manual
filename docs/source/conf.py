@@ -39,7 +39,7 @@ templates_path = ['_templates']
 html_static_path = ['_static']
 
 # -- Options for HTML output
-language = 'zh_CN'
+language = 'en'
 
 html_theme = 'sphinx_rtd_theme'
 
