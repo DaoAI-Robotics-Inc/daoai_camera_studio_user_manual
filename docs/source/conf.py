@@ -43,10 +43,6 @@ language = 'zh_CN'
 
 html_theme = 'sphinx_rtd_theme'
 
-
-source_encoding = 'utf-8'
-source_suffix = ['.rst', '.md']
-
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
 
