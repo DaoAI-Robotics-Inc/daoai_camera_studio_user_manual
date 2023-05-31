@@ -47,8 +47,8 @@ html_theme = 'sphinx_rtd_theme'
 epub_show_urls = 'footnote'
 
 # -- Options to Support pdf build in chinese
-latex_engine = 'xelatex'
-latex_use_xindy = False
-latex_elements = {
-    'preamble': '\\usepackage{xeCJK}'
-}
+latex_engine = 'lualatex'
+# latex_use_xindy = False
+# latex_elements = {
+#     'preamble': '\\usepackage{xeCJK}'
+# }
