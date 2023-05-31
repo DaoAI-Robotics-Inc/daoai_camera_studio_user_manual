@@ -50,11 +50,5 @@ epub_show_urls = 'footnote'
 latex_engine = 'xelatex'
 latex_use_xindy = False
 latex_elements = {
-    'pointsize': '12pt',
-    'preamble': r'''
-        \usepackage{xeCJK}
-        \setCJKmainfont{Source Han Serif SC}
-        \setCJKsansfont{Source Han Sans SC}
-        \setCJKmonofont{Source Han Sans SC}
-    ''',
+    'preamble': '\\usepackage{xeCJK}'
 }
