@@ -52,7 +52,6 @@ epub_show_urls = 'footnote'
 
 # -- Options to Support pdf build in chinese
 latex_engine = 'lualatex'
-# latex_use_xindy = False
-# latex_elements = {
-#     'preamble': '\\usepackage{xeCJK}'
-# }
+latex_elements = {
+    'preamble': '\\usepackage{xeCJK}\n\\setCJKmainfont{SimSun}',
+}
