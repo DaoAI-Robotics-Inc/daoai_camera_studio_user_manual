@@ -10,7 +10,9 @@ sphinx:
   configuration: docs/source/conf.py
 
 formats:
-  - pdf
+   - htmlzip
+   - pdf
+   - epub
 
 
 # Explicitly set the version of Python and its requirements
