@@ -26,7 +26,7 @@ DaoAI 相机概述
    :caption: 开发功能
 
    develop/index
-   develop/connect-camera/index
+   develop/slc-to-matrox/index
    develop/sdk-sample/index
    develop/api/index
 
