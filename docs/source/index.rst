@@ -28,6 +28,7 @@ Our DaoAI Camera Studio application is the supporting graphical user interface s
    :caption: DEVELOP
 
    develop/index
+   develop/slc-to-matrox/index
    develop/sdk-sample/index
    develop/api/index
 
