@@ -12,7 +12,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
          .. tab:: Unbox
 
             In the DaoAI Box you will find:
-               - DaoAI BP AMR-GPU camera
+               - DaoAI BP SMALL camera
                - 24V power supply
                - Power extension cables (6m)
                - Ethernet (CAT 6) cables (10m)
@@ -108,7 +108,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
          .. tab:: Unbox
 
             In the DaoAI Box you will find:
-               - DaoAI BP AMR-GPU camera
+               - DaoAI BP MEDIUM camera
                - 24V power supply
                - Power extension cables (6m)
                - Ethernet (CAT 6) cables (10m)
@@ -204,7 +204,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
          .. tab:: Unbox
 
             In the DaoAI Box you will find:
-               - DaoAI BP AMR-GPU camera
+               - DaoAI BP LARGE camera
                - 24V power supply
                - Power extension cables (6m)
                - Ethernet (CAT 6) cables (10m)
@@ -300,7 +300,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
          .. tab:: Unbox
 
             In the DaoAI Box you will find:
-               - DaoAI BP AMR-GPU camera
+               - DaoAI BP AMR camera
                - 24V power supply
                - Power extension cables (6m)
                - Ethernet (CAT 6) cables (10m)

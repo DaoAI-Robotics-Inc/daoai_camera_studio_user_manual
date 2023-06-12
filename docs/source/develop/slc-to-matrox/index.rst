@@ -1,5 +1,5 @@
 *********
-User Manual -  DaoAI SLC Camera with Matrox Design Assistant
+DaoAI SLC Camera with Matrox Design Assistant
 *********
 
 .. contents:: 
@@ -19,12 +19,14 @@ Install the Matrox Design Assistant 2109(8.0)
 
 .. Note::
     Before you start, go to Control Panel and uninstall “Matrox Imaging” and DaoAI's Vision software first if you already have it installed.
+
 |
 
 1. When you run the exe above, go with default settings. It will unzip a fodler called “DAXV2109_8_0_291“.
 
 .. image:: images/slc-to-matrox1.png
     :align: center
+
 |
 
 2. Open this folder and run “DesignAssistantSetup.exe“
@@ -35,6 +37,7 @@ Install the Matrox Design Assistant 2109(8.0)
 
 .. image:: images/slc-to-matrox2.png
     :align: center
+
 |
 
 .. WARNING::
@@ -57,6 +60,7 @@ Install the Matrox Design Assistant 2109(8.0)
 
 .. image:: images/slc-to-matrox4.png
     :align: center
+
 |
 
 7. Restart PC.
@@ -66,12 +70,14 @@ Install the Matrox Design Assistant 2109(8.0)
 
     .. image:: images/slc-to-matrox5.png
         :align: center
+    
     |
 
     If you see this error box, it means you don’t have .NET runtime 5.0 installed correctly on your PC.
 
     .. image:: images/slc-to-matrox6.png
         :align: center
+    
     |
 
 Configure the Matrox Design Assistant 2109(8.0)
@@ -132,6 +138,7 @@ Connect to the DaoAI SLC Camera
 
 .. WARNING::
     DaoAI Studio and MIL Design Assistant cannot be connected to the same camera at the same time.
+
 |
 
 In Matrox Design Assistant, you can choose, connect and disconnect cameras on Platform Configuration dialog.
@@ -179,6 +186,7 @@ Use “Save Camera Settings” function in DaoAI 3D Camera to save a “.cfg” 
 
 .. image:: images/slc-to-matrox17.png
     :align: center
+
 |
 
 .. danger::

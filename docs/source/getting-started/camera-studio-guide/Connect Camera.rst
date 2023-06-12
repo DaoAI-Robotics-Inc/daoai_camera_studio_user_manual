@@ -20,13 +20,16 @@ The refresh button updates the list of connected cameras.
 
 |
 
-If you are using a remote controlled camera, you will have check the *Enable Remote Cameras* checkbox and specify the 
-camera's IP address first before clicking refresh.
+.. Note::
+    If you are using a remote controlled camera, you will have check the *Enable Remote Cameras* checkbox and specify the 
+    camera's IP address first before clicking refresh.
 
-**Default IP for Remote Camera**
- - **192.168.1.2**: BP-L camera, BP-M camera, BP-S camera, BP-AMR-GPU camera, and IN cameras
- - **192.168.1.12**: BP-AMR camera
+    **Default IP for Remote Camera**
+     - **192.168.1.2**: BP-L camera, BP-M camera, BP-S camera, BP-AMR-GPU camera, and IN cameras
+     - **192.168.1.12**: BP-AMR camera
 
+    If you still can't find your camera, check out 
+|
 
 Once you detect the camera you wish to connect to, click the **Connect** button. 
 If there are multiple cameras connected, you can choose which camera to connect to from the dropdown list.

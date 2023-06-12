@@ -17,8 +17,8 @@ In Visual Studio, navigate to Debug → SDK Example Properties. You'll need to s
 |
 
 When making changes to the project properties, make sure the Configuration and Platform are set correctly (Release, x64). To update the include directories, first navigate to 
-Additional Include Directories under C/C++ → General, click on the field's dropdown arrow and click Edit, and add the path to the SDK include directory, which contains the 
-library header files.
+**Additional Include Directories** under C/C++ → General, click on the field's dropdown arrow and click Edit, and add the path to the SDK include directory, which contains the 
+library header files. Usually is <path to SLC>/SDK/include.
 
 .. image:: images/sdk_guide_2.png
     :align: center
@@ -28,10 +28,12 @@ library header files.
 
 |
 
-**3. Update linker settings in Visual Studio**
+**Step 3. Update linker settings in Visual Studio**
 
-Navigate to Linker → General, click on the field's dropdown arrow and click Edit, and add the path to the SDK lib directory, which contains the .lib library object files that 
-need to be linked.
+Navigate to Linker → General, click on **Additional Library Directories** dropdown arrow and click Edit, and add the path to the SDK lib directory, which contains the .lib library object files that 
+need to be linked. Usually is <path to SLC>/SDK/lib.
+
+
 
 .. image:: images/sdk_guide_4.png
     :align: center
@@ -41,7 +43,9 @@ need to be linked.
 
 |
 
-Finally, navigate to Linker → Input, click on the field's dropdown arrow and click Edit, and add slc_dll.lib as an entry.
+**Step 4. Add Dependency**
+
+Navigate to Linker → Input, click on **Additional Dependencies** dropdown arrow and click Edit, and add slc_dll.lib as an entry.
 
 .. image:: images/sdk_guide_6.png
     :align: center

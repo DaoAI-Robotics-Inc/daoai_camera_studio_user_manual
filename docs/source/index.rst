@@ -19,7 +19,6 @@ Our DaoAI Camera Studio application is the supporting graphical user interface s
 
    getting-started/quick-start-guide/index
    getting-started/user-guide/index
-   getting-started/quick-start/index
    getting-started/camera-studio-guide/index
    
 
@@ -40,7 +39,7 @@ Our DaoAI Camera Studio application is the supporting graphical user interface s
    case-studies/captruing-high-quality-point-clouds/index
    case-studies/evaluate-accuracy/index
    case-studies/infield-calibration/index
-   .. case-studies/hand-eye-calibration/index
+   case-studies/hand-eye-calibration/index
    case-studies/use-multiple-daoai-cameras/index
 
 .. toctree::
