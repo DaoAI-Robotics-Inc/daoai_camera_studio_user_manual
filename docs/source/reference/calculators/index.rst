@@ -71,3 +71,94 @@
 下面的html页面将帮助你找出适合你需求的相机。
 
 `Camera Selection Tool <../../_static/cameraSelect.html>`_
+
+
+FOV 计算工具
+---------------
+
+使用我们的计算器，您可以确定哪款DaoAI相机在FOV和成像距离方面最适合您的应用。
+
+FOV计算器可以输出给定DaoAI相机型号和成像工作距离的FOV尺寸（宽度和高度）和空间分辨率。
+
+.. raw:: html
+
+  <!DOCTYPE html>
+  <link rel="stylesheet" href="../../_static/fovCalc.css">
+
+  <html>
+  <body>
+      <h1></h1>
+
+      <div id="fov-calculator">
+          <div id = "fov-calculator-panel">
+              <div id="input-bar">
+                  <h2>输入</h2>
+                  <ul id = "camera-models">
+                      <li>
+                          <div class = "camera-model-container">
+                              <input id="camera1" onclick="onSelectCamera()" class="camera-model-checkbox" type="radio" name="camera-model-radio" value="">
+                              <label for="camera1" onclick="onSelectCamera()" class="camera-model"></label>
+                          </div>
+                      </li>
+                      <li>
+                          <div class = "camera-model-container">
+                              <input id="camera2" onclick="onSelectCamera()" class="camera-model-checkbox" type="radio" name="camera-model-radio" value="123">
+                              <label for="camera2" class="camera-model"></label>
+                          </div>
+                      </li>
+                      <li>
+                          <div class = "camera-model-container">
+                              <input id="camera3"  onclick="onSelectCamera()" class="camera-model-checkbox" type="radio" name="camera-model-radio" value="">
+                              <label for="camera3" class="camera-model"></label>
+                          </div>
+                      </li>
+                      <li>
+                          <div class = "camera-model-container">
+                              <input id="camera4" onclick="onSelectCamera()" class="camera-model-checkbox" type="radio" name="camera-model-radio" value="">
+                              <label for="camera4"  class="camera-model"></label>
+                          </div>
+                      </li>
+                      <li>
+                          <div class = "camera-model-container">
+                              <input id="camera5" onclick="onSelectCamera()" class="camera-model-checkbox" type="radio" name="camera-model-radio" value="">
+                              <label for="camera5" class="camera-model"></label>
+                          </div>
+                      </li>
+                  </ul>
+                  <label for="working-distance">工作距离:</label>
+                  <span id="working-distance"></span><br>
+                  <input type="range" id="trackbar" min="" max="" value="" step = "100">
+                  <button id = "fov-calculator-button" onclick="onSetToDefaultDistance()">设为对焦距离</button>
+              </div>
+              <div id="output-bar">
+                  <h2>输出</h2>
+                  <div class="output-container">
+                    <label for="width">视野-宽 [mm]:</label>
+                    <span id="width"></span>
+                  </div>
+                  <div class="output-container">
+                    <label for="height">视野-高 [mm]:</label>
+                    <span id="height"></span>
+                  </div>
+                  <div class="output-container">
+                    <label for="spatial-resolution">空间分辨率 [mm]:</label>
+                    <span id="spatial-resolution"></span>
+                  </div>
+              </div>
+          </div>
+          <div id="output-graph">
+              <div>
+                  <h3>侧面视角-宽:</h3>
+                  <canvas id="canvas-length" width="300" height="300"></canvas>
+              </div>
+              <div>
+                  <h3>侧面视角-高:</h3>
+                  <canvas id="canvas-width" width="300" height="300"></canvas>
+              </div>
+          <script src="../../_static/fovCalc.js"></script>
+          </div>
+
+      </div>
+  </body>
+  </html>
+

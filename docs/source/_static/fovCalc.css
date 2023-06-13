@@ -1,0 +1,93 @@
+
+#canvas {
+    width: 300px; 
+    height: 300px;
+    border: 1px solid rgb(119, 119, 119);
+}
+
+#result {
+    margin-top: 20px;
+}
+
+
+#camera-models {
+    list-style-type: none; /* Remove bullet points */ 
+}
+
+body {
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style:none !important;
+    margin: 0 !important;
+}
+
+h1 {
+    margin: 0;
+}
+
+#fov-calculator {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    display: inline-block;
+}
+#fov-calculator-panel{
+    display: flex;
+    justify-content: space-evenly;
+}
+#input-bar {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin: 0 0 10px;
+}
+
+#trackbar {
+    width: 100%;
+}
+
+#input-bar {
+    display: f;
+}
+#output-bar {
+    margin-bottom: 20px;
+    width: 250px;
+}
+
+#output-graph {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+canvas {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+#fov-calculator-button {
+    padding: 8px 16px;
+    background-color: #91d2c8;
+    color: black;
+    border-color: #4a8fa4;
+    cursor: pointer;
+    border-radius: 0.25em;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.camera-model-container {
+    display: flex;
+}
+
+.output-container {
+    display: flex;
+    margin-top: 1.5em;
+}
