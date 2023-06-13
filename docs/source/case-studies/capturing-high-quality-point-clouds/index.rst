@@ -35,6 +35,6 @@ DaoAI相机工作室有三种方式来改变曝光。
     ./working-distance-and-camera-positioning/index
     ./dealing-with-highlights-and-shiny-objects/index
 
-- :ref:`工作距离和摄像机的定位`
+- :ref:`工作距离和相机的定位`
 - :ref:`如何处理高光和闪亮物体`
 - :ref:`滤镜`

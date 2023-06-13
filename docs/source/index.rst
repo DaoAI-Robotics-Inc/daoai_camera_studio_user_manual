@@ -65,5 +65,3 @@ DaoAI 相机概述
    :caption: 更多资源
 
    resources/release-notes/index
-
- q 

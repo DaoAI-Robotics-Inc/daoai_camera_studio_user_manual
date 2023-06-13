@@ -6,7 +6,6 @@
 在三维视觉感知系统中有三种捕捉模式可供选择：
 
 .. image:: images/main_window_capture_modes.png
-    :scale: 50%	
     :align: center
 
 |
