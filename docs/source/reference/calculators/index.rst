@@ -124,6 +124,12 @@ FOV计算器可以输出给定DaoAI相机型号和成像工作距离的FOV尺寸
                               <label for="camera5" class="camera-model"></label>
                           </div>
                       </li>
+                      <li>
+                          <div class = "camera-model-container">
+                              <input id="camera6" onclick="onSelectCamera()" class="camera-model-checkbox" type="radio" name="camera-model-radio" value="">
+                              <label for="camera6" class="camera-model"></label>
+                          </div>
+                      </li>                      
                   </ul>
                   <label for="working-distance">工作距离:</label>
                   <span id="working-distance"></span><br>
