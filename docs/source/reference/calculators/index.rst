@@ -124,6 +124,12 @@ The FOV calculator outputs the size of the FOV (width and height) and spatial re
                               <label for="camera5" class="camera-model"></label>
                           </div>
                       </li>
+                      <li>
+                          <div class = "camera-model-container">
+                              <input id="camera6" onclick="onSelectCamera()" class="camera-model-checkbox" type="radio" name="camera-model-radio" value="">
+                              <label for="camera6" class="camera-model"></label>
+                          </div>
+                      </li>
                   </ul>
                   <label for="working-distance">Working distance:</label>
                   <span id="working-distance"></span><br>
