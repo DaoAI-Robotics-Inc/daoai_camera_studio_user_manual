@@ -53,6 +53,14 @@ Dimensions
       .. image:: images/mechanical_interface/amr_gpu_2.png
          :align: center
 
+   .. group-tab:: BP LASER
+
+       .. image:: images/mechanical_interface/large.png
+         :align: center
+   
+      .. image:: images/mechanical_interface/bp-l.png
+         :align: center
+         :scale: 40%
 
 Mounting Specifications
 --------------------------------------
@@ -92,6 +100,13 @@ Mounting Specifications
       The DaoAI BP AMR-GPU camera has four M5 mounting holes, one Ø5 positioning hole, and one obround alignment hole. To ensure not to damage the threads, we recommend not exceeding the specified maximum torque value when fastening the screws.
 
        .. image:: images/mechanical_interface/amr_gpu.png
+         :align: center
+
+   .. group-tab:: BP LASER
+
+      The DaoAI BP LASER camera has eight M5 mounting holes, one Ø5 positioning hole, and one obround alignment hole. To ensure not to damage the threads, we recommend not exceeding the specified maximum torque value when fastening the screws.
+
+       .. image:: images/mechanical_interface/bp-l_mounting.png
          :align: center
 
 |
@@ -185,5 +200,10 @@ This series has five bin-picking camera models for various workspace sizes and a
 
 .. image:: images/wd_and_fov/large_distance.png
    :align: center
+
+**BP LASER**
+
+.. image:: images/wd_and_fov/laser_distance.png
+   :align: center   
 
 |

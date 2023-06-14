@@ -9,3 +9,4 @@ This section provides articles releated to the DaoAI hardware.
   ethernet-cable/index
   power-cable/index
   recommended-industrial-pc/index
+  laser/index

@@ -56,6 +56,14 @@ Connectors
     B. Ethernet Connector CAT 6 or higher
 
     
+   .. group-tab:: BP LASER
+
+    .. image:: images/laser.png
+        :align: center
+
+    A. Power Connector 24V, 15A DC
+    B. Ethernet Connector CAT 6 or higher
+    
 
 Power supply interface
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -143,6 +151,17 @@ Power supply interface
     +-----------------------+--------+------------------------------+
 
     
+   .. group-tab:: BP LASER
+
+    +-----------------------+--------+------------------------------+
+    | Pinout                |  Pin   |  Purpose                     | 
+    +=======================+========+==============================+
+    |                       |   1    |  DC24V                       |
+    |                       +--------+------------------------------+
+    |.. image:: images/2.png|   2    |  GND                         | 
+    |  :align: center       +--------+------------------------------+
+    |                       |   3    |  Reserved, do not connect    | 
+    +-----------------------+--------+------------------------------+
         
         
 
@@ -197,6 +216,17 @@ Data cable
    .. group-tab:: BP AMR-GPU
 
     BP AMR-GPU use a ethernet cable for data transmission.
+
+    The table below provides the ethernet cable pinout.
+
+
+    .. image:: images/ethernet.png
+        :align: center
+
+    
+   .. group-tab:: BP LASER
+
+    BP Laser use a ethernet cable for data transmission.
 
     The table below provides the ethernet cable pinout.
 
@@ -347,6 +377,34 @@ Connecting to the computer
 
         * - Direct connection
         * - .. image:: images/amrc.png
+
+    Continue to :ref:`Software Installation` where you will also find Network Configuration.
+
+
+   .. group-tab:: BP LASER
+
+    1. Plug the power supply first into the "24V"
+    2. Plug the ethernet cable into the camera and connect it to your computer
+    3. Plug the power supply into a power outlet.
+
+    .. note::
+        On disconnect, follow the procedure in reverse, disconnect mains power first. 
+        |br| Ensure that all connections are screwed in tightly.
+        |br| Check :ref:`System Requirements` for performance considerations
+
+    Use the AC/DC adapter supplied with the unit to ensure compliance with emission and immunity standards.
+
+    The DaoAI BP LASER camera uses Ethernet communication and needs 1 Gbps for performance.
+
+    Network Topology
+        The DaoAI BP laser camera supports the following network topologies:
+
+    .. list-table::
+        :widths: 25
+        :header-rows: 1
+
+        * - Direct connection
+        * - .. image:: images/largec.png
 
     Continue to :ref:`Software Installation` where you will also find Network Configuration.
 

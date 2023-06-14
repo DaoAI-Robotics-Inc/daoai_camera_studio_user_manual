@@ -97,3 +97,20 @@ Unboxing
 
       - On-Arm mount
 
+   .. tab:: BP LASER
+
+      In the DaoAI Camera Studio Box you will find:
+
+      - DaoAI BP LASER Camera 
+
+      - Power supply
+
+      - Power extension cables (6m)
+
+      - Ethernet(CAT 6) cables (10m)
+
+      Optional/as ordered:
+
+      - Calibration Board
+
+      - On-Arm mount
