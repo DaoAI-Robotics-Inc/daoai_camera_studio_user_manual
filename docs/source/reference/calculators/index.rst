@@ -71,3 +71,100 @@ Camera Selection Tool
 The following html page will help you figure out which camera is suitable for your need.
 
 `Camera Selection Tool <../../_static/cameraSelect.html>`_
+
+
+FOV Calculator
+------------------
+
+Using our online calculators you can determine which DaoAI camera best fits your application in terms of the FOV and distance of imaging. 
+
+The FOV calculator outputs the size of the FOV (width and height) and spatial resolution for a given DaoAI camera model and the imaging working distance.
+
+.. raw:: html
+
+  <!DOCTYPE html>
+  <link rel="stylesheet" href="../../_static/fovCalc.css">
+
+  <html>
+  <body>
+      <h1></h1>
+
+      <div id="fov-calculator">
+          <div id = "fov-calculator-panel">
+              <div id="input-bar">
+                  <h2>Inputs</h2>
+                  <ul id = "camera-models">
+                      <li>
+                          <div class = "camera-model-container">
+                              <input id="camera1" onclick="onSelectCamera()" class="camera-model-checkbox" type="radio" name="camera-model-radio" value="">
+                              <label for="camera1" onclick="onSelectCamera()" class="camera-model"></label>
+                          </div>
+                      </li>
+                      <li>
+                          <div class = "camera-model-container">
+                              <input id="camera2" onclick="onSelectCamera()" class="camera-model-checkbox" type="radio" name="camera-model-radio" value="123">
+                              <label for="camera2" class="camera-model"></label>
+                          </div>
+                      </li>
+                      <li>
+                          <div class = "camera-model-container">
+                              <input id="camera3"  onclick="onSelectCamera()" class="camera-model-checkbox" type="radio" name="camera-model-radio" value="">
+                              <label for="camera3" class="camera-model"></label>
+                          </div>
+                      </li>
+                      <li>
+                          <div class = "camera-model-container">
+                              <input id="camera4" onclick="onSelectCamera()" class="camera-model-checkbox" type="radio" name="camera-model-radio" value="">
+                              <label for="camera4"  class="camera-model"></label>
+                          </div>
+                      </li>
+                      <li>
+                          <div class = "camera-model-container">
+                              <input id="camera5" onclick="onSelectCamera()" class="camera-model-checkbox" type="radio" name="camera-model-radio" value="">
+                              <label for="camera5" class="camera-model"></label>
+                          </div>
+                      </li>
+                      <li>
+                          <div class = "camera-model-container">
+                              <input id="camera6" onclick="onSelectCamera()" class="camera-model-checkbox" type="radio" name="camera-model-radio" value="">
+                              <label for="camera6" class="camera-model"></label>
+                          </div>
+                      </li>
+                  </ul>
+                  <label for="working-distance">Working distance:</label>
+                  <span id="working-distance"></span><br>
+                  <input type="range" id="trackbar" min="" max="" value="" step = "100">
+                  <button id = "fov-calculator-button" onclick="onSetToDefaultDistance()">Set to focal distance</button>
+              </div>
+              <div id="output-bar">
+                  <h2>Outputs</h2>
+                  <div class="output-container">
+                    <label for="width">Width [mm]:</label>
+                    <span id="width"></span>
+                  </div>
+                  <div class="output-container">
+                    <label for="height">Height [mm]:</label>
+                    <span id="height"></span>
+                  </div>
+                  <div class="output-container">
+                    <label for="spatial-resolution">Spatial Resolution [mm]:</label>
+                    <span id="spatial-resolution"></span>
+                  </div>
+              </div>
+          </div>
+          <div id="output-graph">
+              <div>
+                  <h3>Side view of width:</h3>
+                  <canvas id="canvas-length" width="300" height="300"></canvas>
+              </div>
+              <div>
+                  <h3>Side view of height:</h3>
+                  <canvas id="canvas-width" width="300" height="300"></canvas>
+              </div>
+          <script src="../../_static/fovCalc.js"></script>
+          </div>
+
+      </div>
+  </body>
+  </html>
+
