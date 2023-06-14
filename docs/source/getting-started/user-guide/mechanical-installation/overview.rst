@@ -54,6 +54,14 @@
       .. image:: images/mechanical-interface/amr_gpu_2.png
          :align: center
 
+   .. group-tab:: BP LASER
+
+      .. image:: images/mechanical-interface/large.png
+         :align: center
+   
+      .. image:: images/mechanical-interface/bp-l.png
+         :align: center
+         :scale: 42%
 
 安装规格
 --------------------------------------
@@ -93,6 +101,13 @@
       DaoAI BP AMR-GPU 摄像机有四个M5安装孔，一个Ø5定位锥孔和一个定位锥孔。为确保不损坏螺纹，我们建议在紧固螺丝时不要超过规定的最大扭矩值。
 
        .. image:: images/mechanical-interface/amr_gpu.png
+         :align: center
+
+   .. group-tab:: BP LASER
+
+      DaoAI BP LASER 摄像机有四个M5安装孔，一个Ø5定位锥孔和一个定位锥孔。为确保不损坏螺纹，我们建议在紧固螺丝时不要超过规定的最大扭矩值。
+
+       .. image:: images/mechanical-interface/bp-l_mounting.png
          :align: center
 
 |
@@ -190,3 +205,7 @@ DaoAI BP LARGE相机使用主动和被动冷却，其他BP相机使用被动冷�
 .. image:: images/working-distance-and-fov/large.png
    :align: center
 
+**BP LASER**
+
+.. image:: images/working-distance-and-fov/laser_distance.png
+   :align: center

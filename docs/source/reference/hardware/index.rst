@@ -9,3 +9,4 @@
   ethernet-cable/index
   power-cable/index
   recommended-industrial-pc/index
+  laser/index
