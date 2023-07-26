@@ -150,7 +150,8 @@ If possible, mount the camera at a slight tilt angle to avoid reflections and in
 Ambient light might reduce performance. Consider blocking direct light affecting the scene.
 
 .. image:: images/positioning_correctly/fov.png
-    :align: center
+      :scale: 35%
+      :align: center
 
 .. note::
     Camera tilting is more important if the scene contains specular surfaces.
@@ -163,7 +164,7 @@ In bin-picking applications
 For bin-picking applications, place the DaoAI BP camera projector above the back edge or above the rear corner of the bin (see images below). Pan and tilt it so that the 2D camera is looking at the center of the bin. The projector rays should not fall on the inner surfaces of the two walls closest to the projector; they should almost be parallel to those two walls. Mounting the camera this way minimizes inter reflections from the bin walls.
 
 .. image:: images/positioning_correctly/position.png
-        :align: center
+   :align: center
 
 Cooling clearance
 ----------------------------------

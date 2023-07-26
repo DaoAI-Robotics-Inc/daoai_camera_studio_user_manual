@@ -50,7 +50,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
 
             .. image:: images/amr_1.png
                :align: right
-               :scale: 80%
+               :scale: 15%
             
             3D cameras use active lighting to detect your target objects. 
             |br| To minimize direct reflections from the background and reduce
@@ -69,7 +69,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
 
             .. image:: images/small.png
                :align: right
-               :scale: 70%
+               :scale: 10%
             
             A. Power Connector 24V, 10A DC
             
@@ -99,7 +99,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
             See the :ref:`Connecting & Disconnecting Camera` tutorials. Check out the connect camera Configuration page to lean how to connect your camera.
             |br|
             |br|
-            For more inforation see :ref:`Quickstart Guide`. 
+            For more inforation see :ref:`User Guide`. 
 
    .. tab:: BP MEDIUM
 
@@ -146,7 +146,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
 
             .. image:: images/amr_1.png
                :align: right
-               :scale: 80%
+               :scale: 15%
             
             3D cameras use active lighting to detect your target objects. 
             |br| To minimize direct reflections from the background and reduce
@@ -195,7 +195,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
             See the :ref:`Connecting & Disconnecting Camera` tutorials. Check out the connect camera Configuration page to lean how to connect your camera.
             |br|
             |br|
-            For more inforation see :ref:`Quickstart Guide`. 
+            For more inforation see :ref:`User Guide`. 
 
    .. tab:: BP LARGE
 
@@ -242,7 +242,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
 
             .. image:: images/amr_1.png
                :align: right
-               :scale: 80%
+               :scale: 15%
             
             3D cameras use active lighting to detect your target objects. 
             |br| To minimize direct reflections from the background and reduce
@@ -261,7 +261,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
 
             .. image:: images/large.png
                :align: right
-               :scale: 50%
+               :scale: 40%
             
             A. Ethernet Connector CAT 6 or higher
             
@@ -291,7 +291,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
             See the :ref:`Connecting & Disconnecting Camera` tutorials. Check out the connect camera Configuration page to lean how to connect your camera.
             |br|
             |br|
-            For more inforation see :ref:`Quickstart Guide`. 
+            For more inforation see :ref:`User Guide`. 
 
    .. tab:: BP AMR
 
@@ -338,7 +338,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
 
             .. image:: images/amr_1.png
                :align: right
-               :scale: 80%
+               :scale: 15%
             
             3D cameras use active lighting to detect your target objects. 
             |br| To minimize direct reflections from the background and reduce
@@ -357,7 +357,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
 
             .. image:: images/amr.png
                :align: right
-               :scale: 18%
+               :scale: 10%
             
             A. Power Connector 24V, 10A DC
             
@@ -387,7 +387,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
             See the :ref:`Connecting & Disconnecting Camera` tutorials. Check out the connect camera Configuration page to lean how to connect your camera.
             |br|
             |br|
-            For more inforation see :ref:`Quickstart Guide`. 
+            For more inforation see :ref:`User Guide`. 
    
    .. tab:: BP AMR-GPU
 
@@ -434,7 +434,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
 
             .. image:: images/amr_1.png
                :align: right
-               :scale: 80%
+               :scale: 15%
             
             3D cameras use active lighting to detect your target objects. 
             |br| To minimize direct reflections from the background and reduce
@@ -453,7 +453,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
 
             .. image:: images/amr_gpu.png
                :align: right
-               :scale: 18%
+               :scale: 20%
             
             A. Power Connector 24V, 10A DC
             
@@ -483,7 +483,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
             See the :ref:`Connecting & Disconnecting Camera` tutorials. Check out the connect camera Configuration page to lean how to connect your camera.
             |br|
             |br|
-            For more inforation see :ref:`Quickstart Guide`. 
+            For more inforation see :ref:`User Guide`. 
    
    .. tab:: BP LASER  
 
@@ -530,7 +530,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
 
             .. image:: images/amr_1.png
                :align: right
-               :scale: 80%
+               :scale: 15%
             
             3D cameras use active lighting to detect your target objects. 
             |br| To minimize direct reflections from the background and reduce
@@ -549,7 +549,7 @@ This a quick start guide for the fully user manual, we recommend that you follow
 
             .. image:: images/laser.png
                :align: right
-               :scale: 18%
+               :scale: 10%
             
             A. Power Connector 24V, 10A DC
             
@@ -579,10 +579,10 @@ This a quick start guide for the fully user manual, we recommend that you follow
             See the :ref:`Connecting & Disconnecting Camera` tutorials. Check out the connect camera Configuration page to lean how to connect your camera.
             |br|
             |br|
-            For more inforation see :ref:`Quickstart Guide`. 
+            For more inforation see :ref:`User Guide`. 
       
       .. Warning::
-         Do NOT deliberately look into or stare into the beam -- this can cause injury to the retina in the back of the eye. For more information see :ref:`Quickstart Guide`. 
+         Do NOT deliberately look into or stare into the beam -- this can cause serious injury to your eye. 
 
 
 

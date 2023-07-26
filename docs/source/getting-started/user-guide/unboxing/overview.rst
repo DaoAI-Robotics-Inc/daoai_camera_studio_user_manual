@@ -114,3 +114,6 @@ Unboxing
       - Calibration Board
 
       - On-Arm mount
+      
+      .. Warning::
+         Do NOT deliberately look into or stare into the beam -- this can cause serious injury to your eye. 
