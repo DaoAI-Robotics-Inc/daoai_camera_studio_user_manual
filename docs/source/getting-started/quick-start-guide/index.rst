@@ -51,7 +51,7 @@
 
             .. image:: images/amr_1.png
                :align: right
-               :scale: 80%
+               :scale: 15%
             
             3D相机使用主动照明来检测你的目标对象。
             |br| 为了尽量减少来自背景的直接反射，并减少
@@ -70,7 +70,7 @@
 
             .. image:: images/small.png
                :align: right
-               :scale: 70%
+               :scale: 10%
             
             A. 电源连接器 24V, 10A DC
             
@@ -148,7 +148,7 @@
 
             .. image:: images/amr_1.png
                :align: right
-               :scale: 80%
+               :scale: 15%
             
             3D相机使用主动照明来检测你的目标对象。
             |br| 为了尽量减少来自背景的直接反射，并减少
@@ -245,7 +245,7 @@
 
             .. image:: images/amr_1.png
                :align: right
-               :scale: 80%
+               :scale: 15%
             
             3D相机使用主动照明来检测你的目标对象。
             |br| 为了尽量减少来自背景的直接反射，并减少
@@ -344,7 +344,7 @@
 
             .. image:: images/amr_1.png
                :align: right
-               :scale: 80%
+               :scale: 15%
             
             3D相机使用主动照明来检测你的目标对象。
             |br| 为了尽量减少来自背景的直接反射，并减少
@@ -362,7 +362,7 @@
 
             .. image:: images/amr.png
                :align: right
-               :scale: 18%
+               :scale: 10%
             
             
             A. 以太网连接器 CAT 6 or 更高
@@ -441,7 +441,7 @@
 
             .. image:: images/amr_1.png
                :align: right
-               :scale: 80%
+               :scale: 15%
             
             3D相机使用主动照明来检测你的目标对象。
             |br| 为了尽量减少来自背景的直接反射，并减少
@@ -538,7 +538,7 @@
 
             .. image:: images/amr_1.png
                :align: right
-               :scale: 80%
+               :scale: 15%
             
             3D相机使用主动照明来检测你的目标对象。
             |br| 为了尽量减少来自背景的直接反射，并减少
@@ -558,7 +558,7 @@
 
             .. image:: images/laser.png
                :align: right
-               :scale: 20%
+               :scale: 10%
             
             A. 电源连接器 24V, 10A DC
             
@@ -589,6 +589,9 @@
             |br|
             |br|
             更多信息见 :ref:`相机工作室指南`. 
+
+      .. Warning::
+         **请勿直视激光**。激光光束可能会损伤你的眼睛。
 .. |br| raw:: html
 
       <br>

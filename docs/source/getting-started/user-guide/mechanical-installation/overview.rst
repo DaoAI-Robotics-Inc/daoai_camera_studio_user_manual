@@ -152,7 +152,8 @@
 周围的光线可能会降低性能，考虑阻挡影响场景的直接光线。
 
 .. image:: images/positioning-correctly/fov.png
-    :align: center
+      :scale: 35%
+      :align: center
 
 .. note::
     如果场景包含高反光的物体，相机的倾斜就更加重要。
@@ -166,7 +167,8 @@
 投影仪的光线不应落在离投影仪最近的两面箱壁上的内表面；它们应几乎与这两面箱壁平行。这样安装摄像机可以最大限度地减少箱壁的相互反射。
 
 .. image:: images/positioning-correctly/position.png
-        :align: center
+   :scale: 35%
+   :align: center
 
 冷却间隙
 ----------------------------------
