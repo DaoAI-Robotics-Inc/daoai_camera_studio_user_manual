@@ -150,8 +150,25 @@ FOV计算器可以输出给定DaoAI相机型号和成像工作距离的FOV尺寸
                     <label for="spatial-resolution">空间分辨率 [mm]:</label>
                     <span id="spatial-resolution"></span>
                   </div>
+                  <div class="output-container">
+                    <label for="precision">VDI/VDE精度 [mm]:</label>
+                    <span id="precision"></span>
+                  </div>
+                  <div class="output-container">
+                    <label for="rel-precision">相对精度 [%]:</label>
+                    <span id="rel-precision"></span>
+                  </div>
+                  <div class="output-container">
+                    <label for="precision-off20"> 室温±20℃ VDI/VDE精度 [mm]:</label>
+                    <span id="precision-off20"></span>
+                  </div>
+                  <div class="output-container">
+                    <label for="rel-precision-off20"> 室温±20℃ 相对精度 [%]:</label>
+                    <span id="rel-precision-off20"></span>
+                  </div>
               </div>
           </div>
+          
           <div id="output-graph">
               <div>
                   <h3>侧面视角-宽:</h3>
