@@ -150,6 +150,22 @@ The FOV calculator outputs the size of the FOV (width and height) and spatial re
                     <label for="spatial-resolution">Spatial Resolution [mm]:</label>
                     <span id="spatial-resolution"></span>
                   </div>
+                  <div class="output-container">
+                    <label for="precision">VDI/VDE precision [mm]:</label>
+                    <span id="precision"></span>
+                  </div>
+                  <div class="output-container">
+                    <label for="rel-precision">relative precision [%]:</label>
+                    <span id="rel-precision"></span>
+                  </div>
+                  <div class="output-container">
+                    <label for="precision-off20"> VDI/VDE precision @ room tempreture ±20℃  [mm]:</label>
+                    <span id="precision-off20"></span>
+                  </div>
+                  <div class="output-container">
+                    <label for="rel-precision-off20"> relative precision @ room tempreture ±20℃ [%]:</label>
+                    <span id="rel-precision-off20"></span>
+                  </div>
               </div>
           </div>
           <div id="output-graph">
