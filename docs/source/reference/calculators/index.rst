@@ -131,10 +131,10 @@ FOV计算器可以输出给定DaoAI相机型号和成像工作距离的FOV尺寸
                           </div>
                       </li>                      
                   </ul>
-                  <label for="working-distance">工作距离:</label>
+                  <label for="working-distance">工作距离[mm]:</label>
                   <span id="working-distance"></span><br>
                   <input type="range" id="trackbar" min="" max="" value="" step = "100">
-                  <button id = "fov-calculator-button" onclick="onSetToDefaultDistance()">设为对焦距离[mm]</button>
+                  <button id = "fov-calculator-button" onclick="onSetToDefaultDistance()">设为对焦距离</button>
               </div>
               <div id="output-bar">
                   <h2>输出</h2>
