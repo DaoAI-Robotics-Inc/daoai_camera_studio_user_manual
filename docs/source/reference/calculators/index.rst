@@ -134,7 +134,7 @@ FOV计算器可以输出给定DaoAI相机型号和成像工作距离的FOV尺寸
                   <label for="working-distance">工作距离:</label>
                   <span id="working-distance"></span><br>
                   <input type="range" id="trackbar" min="" max="" value="" step = "100">
-                  <button id = "fov-calculator-button" onclick="onSetToDefaultDistance()">设为对焦距离</button>
+                  <button id = "fov-calculator-button" onclick="onSetToDefaultDistance()">设为对焦距离[mm]</button>
               </div>
               <div id="output-bar">
                   <h2>输出</h2>
@@ -151,19 +151,19 @@ FOV计算器可以输出给定DaoAI相机型号和成像工作距离的FOV尺寸
                     <span id="spatial-resolution"></span>
                   </div>
                   <div class="output-container">
-                    <label for="precision">VDI/VDE精度 [mm]:</label>
+                    <label for="precision">室温20℃ VDI/VDE精度 [mm]:</label>
                     <span id="precision"></span>
                   </div>
                   <div class="output-container">
-                    <label for="rel-precision">相对精度 [%]:</label>
+                    <label for="rel-precision">室温20℃ 相对精度 [%]:</label>
                     <span id="rel-precision"></span>
                   </div>
                   <div class="output-container">
-                    <label for="precision-off20"> 室温±20℃ VDI/VDE精度 [mm]:</label>
+                    <label for="precision-off20"> 0-40℃ VDI/VDE精度 [mm]:</label>
                     <span id="precision-off20"></span>
                   </div>
                   <div class="output-container">
-                    <label for="rel-precision-off20"> 室温±20℃ 相对精度 [%]:</label>
+                    <label for="rel-precision-off20"> 0-40℃ 相对精度 [%]:</label>
                     <span id="rel-precision-off20"></span>
                   </div>
               </div>
