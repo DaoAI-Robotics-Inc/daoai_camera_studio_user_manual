@@ -131,10 +131,10 @@ The FOV calculator outputs the size of the FOV (width and height) and spatial re
                           </div>
                       </li>
                   </ul>
-                  <label for="working-distance">Working distance:</label>
+                  <label for="working-distance">Working distance [mm]:</label>
                   <span id="working-distance"></span><br>
                   <input type="range" id="trackbar" min="" max="" value="" step = "100">
-                  <button id = "fov-calculator-button" onclick="onSetToDefaultDistance()">Set to focal distance [mm]</button>
+                  <button id = "fov-calculator-button" onclick="onSetToDefaultDistance()">Set to focal distance </button>
               </div>
               <div id="output-bar">
                   <h2>Outputs</h2>
