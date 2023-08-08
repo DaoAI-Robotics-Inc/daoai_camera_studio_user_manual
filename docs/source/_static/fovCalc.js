@@ -124,8 +124,8 @@ function updateOutputBar(distance) {
     var min = Number(trackbar.min);
     index = (trackbar.value - min) / 100;
 
-    var width = CAMERA_FOV_WIDTH[CAMERA_MAP[camera]][index];
-    var height = CAMERA_FOV_LENGTH[CAMERA_MAP[camera]][index];
+    var width = CAMERA_FOV_LENGTH[CAMERA_MAP[camera]][index];
+    var height = CAMERA_FOV_WIDTH[CAMERA_MAP[camera]][index];
     var spatialResolution = CAMERA_SPATIAL_RESOLUTION[CAMERA_MAP[camera]][index];
     var camera_precision = CAMERA_PRECISION[CAMERA_MAP[camera]][index];
     var camera_precision_percent = CAMERA_PRECISION_PERCENT[CAMERA_MAP[camera]][index];
