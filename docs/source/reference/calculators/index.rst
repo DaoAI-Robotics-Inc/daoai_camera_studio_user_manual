@@ -134,7 +134,7 @@ The FOV calculator outputs the size of the FOV (width and height) and spatial re
                   <label for="working-distance">Working distance:</label>
                   <span id="working-distance"></span><br>
                   <input type="range" id="trackbar" min="" max="" value="" step = "100">
-                  <button id = "fov-calculator-button" onclick="onSetToDefaultDistance()">Set to focal distance</button>
+                  <button id = "fov-calculator-button" onclick="onSetToDefaultDistance()">Set to focal distance [mm]</button>
               </div>
               <div id="output-bar">
                   <h2>Outputs</h2>
@@ -151,19 +151,19 @@ The FOV calculator outputs the size of the FOV (width and height) and spatial re
                     <span id="spatial-resolution"></span>
                   </div>
                   <div class="output-container">
-                    <label for="precision">VDI/VDE precision [mm]:</label>
+                    <label for="precision">20℃ VDI/VDE precision [mm]:</label>
                     <span id="precision"></span>
                   </div>
                   <div class="output-container">
-                    <label for="rel-precision">relative precision [%]:</label>
+                    <label for="rel-precision">20℃ relative precision [%]:</label>
                     <span id="rel-precision"></span>
                   </div>
                   <div class="output-container">
-                    <label for="precision-off20"> VDI/VDE precision @ room tempreture ±20℃  [mm]:</label>
+                    <label for="precision-off20"> 0-40℃ VDI/VDE precision [mm]:</label>
                     <span id="precision-off20"></span>
                   </div>
                   <div class="output-container">
-                    <label for="rel-precision-off20"> relative precision @ room tempreture ±20℃ [%]:</label>
+                    <label for="rel-precision-off20"> 0-40℃ relative precision [%]:</label>
                     <span id="rel-precision-off20"></span>
                   </div>
               </div>
