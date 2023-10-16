@@ -2,6 +2,10 @@ System Configuration
 ================================
 When it comes to the location of the camera in a vision-guided robotic system, there are two distinct standard configurations, “eye-to-hand” and “eye-in-hand”.
 
+.. image:: images/inhand.png
+    
+
+
 Eye-to-hand
 ------------------------
 Systems with this configuration have a stationary camera located in the robot’s environment, oriented for observing the workspace of the robot arm.
