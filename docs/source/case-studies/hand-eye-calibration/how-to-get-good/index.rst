@@ -12,15 +12,15 @@ It is assumed that you have already specified the robot poses at which you want 
 
 We will talk about two specific poses, the ‘near’ pose, and the ‘far’ pose. The ‘near’ pose is the robot pose where the imaging distance between the camera and the checkerboard is the least. For eye-in hand systems, that is the pose where the robot mounted camera approaches closest to the checkerboard. For eye-to-hand systems, it is the one where the robot positions the checkerboard closest to the stationary camera.
 
-.. image:: images/1.png
-          :scale: 90%
+.. .. image:: images/1.png
+..         :scale: 90%
 
 
 The ‘far’ pose is the robot pose where the imaging distance between the camera and the checkerboard is the largest. For eye-in hand systems, that is the pose where the robot mounted camera pulls furthest away from the checkerboard. For eye-to-hand systems, it is the one where the robot positions the checkerboard furthest away from the stationary camera.
 
-.. image:: images/2.png
-          :scale: 90%
-
+.. .. image:: images/2.png
+..          :scale: 90%
+ 
 The expected result is illustrated below:
 
 .. image:: images/3.png
