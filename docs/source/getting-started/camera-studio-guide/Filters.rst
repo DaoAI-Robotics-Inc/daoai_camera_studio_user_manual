@@ -3,24 +3,7 @@
 滤镜
 ------
 
-本节介绍用于预处理和后处理图像的过滤功能，以提高点云质量。
-
-|
-
-灰度阈值
-~~~~~~~~~~~
-
-.. figure:: images/intensity_threshold.png
-    :align: center
-
-|
-
-设置灰度阈值, 灰度阈值对应着我们要过滤的平均RGB值。我们的灰度阈值是基于从捕获的四个边缘投影的平均像素强度值。小于灰度阈值的像素点会被去掉, 因为比较暗的地方信噪比低。
-
-例如. 当灰度阈值为 20 时，最终图像中所有值 <= 20 的像素都将被过滤掉。
-
-.. figure:: images/intensity_before_and_after.png
-    :align: center
+本节介绍用于预处理和后处理图像的过滤功能，以提高点云质量。分别分为四个类别：离群值、平滑度、对比度和补偿。
 
 |
 
@@ -48,26 +31,57 @@
 
 |
 
-相位质量滤波器
+法向量滤波器
 ~~~~~~~~~~~~~~~~~~~~
 
-.. figure:: images/phase_quality_filter.png
+.. figure:: images/face_normal_filter.png
     :align: center
 
 |
 
-用于过滤掉低对比度质量的区域。可设置过滤强度, 强度越高, 去除的点云越多。
-如下图, 使用强度为0.3的相位质量滤波器后, 地板处低信噪比的区域就被过滤掉了。
+此过滤器分析点云多边形网格以找到任何多边形的表面法向量。 如果表面法向量相对于视线的角度大于面法向量，则过滤掉这些点。 在具有尖角和表面法向量垂直于视线的大面积物体上，会出现许多异常值。 一个例子是一个盒子：由于噪声、低对比度或过度饱和的图像，墙壁有时会在点云中创建异常点。
 
-.. figure:: images/phase_quality_before.png
+如果没有这个过滤器，错误的点会出现在孔的边缘、锐化下降、垂直面等。
+
+.. figure:: images/face_normal_before.png
     :align: center
 
-    未设置相位质量滤波的点云
+    未设置法向量过滤的点云
 
-.. figure:: images/phase_quality_after.png
+.. figure:: images/face_normal_after.png
     :align: center
 
-    使用强度为0.3的相位质量滤波后的点云
+    使用法向量过滤后的点云
+    
+|
+
+聚类过滤器
+~~~~~~~~~~~~
+
+聚类滤镜可以识别不属于场景中任何物体的异常点群。这些不需要的点是拍摄由高反射材料制成的物体时经常出现的副产品，例如闪亮的镀铬圆柱体，或包裹在新物品上的塑料薄膜。提高对象匹配分数。更好的路径规划。以更高的匹配精度检测更多的物体。
+
+.. figure:: images/close_cluster.png
+    :align: center
+
+    未设置聚类过滤器的点云
+
+.. figure:: images/turn_on_cluster.png
+    :align: center
+
+    打开聚类过滤器的点云
+
+.. figure:: images/turn_on_cluster_50.png
+    :align: center
+
+    打开聚类过滤器调节到50强度的点云
+
+.. figure:: images/turn_on_cluster_100.png
+    :align: center
+
+    打开聚类过滤器最大相邻距离调节到100的点云
+
+|
+
 
 高斯滤波器
 ~~~~~~~~~~~~~~~~~~~~
@@ -118,53 +132,6 @@
     
 |
 
-法向量滤波器
-~~~~~~~~~~~~~~~~~~~~
-
-.. figure:: images/face_normal_filter.png
-    :align: center
-
-|
-
-此过滤器分析点云多边形网格以找到任何多边形的表面法向量。 如果表面法向量相对于视线的角度大于面法向量，则过滤掉这些点。 在具有尖角和表面法向量垂直于视线的大面积物体上，会出现许多异常值。 一个例子是一个盒子：由于噪声、低对比度或过度饱和的图像，墙壁有时会在点云中创建异常点。
-
-如果没有这个过滤器，错误的点会出现在孔的边缘、锐化下降、垂直面等。
-
-.. figure:: images/face_normal_before.png
-    :align: center
-
-    未设置法向量过滤的点云
-
-.. figure:: images/face_normal_after.png
-    :align: center
-
-    使用法向量过滤后的点云
-    
-|
-
-移除小型离散区域
-~~~~~~~~~~~~~~~~~~~~
-
-.. figure:: images/remove_small_area.png
-    :align: center
-
-|
-
-此过滤器用于过滤掉小块的点云。点云中的噪点多是以小区域的形式呈现, 就可以通过小区域滤波器去除掉。
-
-.. figure:: images/remove_small_area_before.png
-    :align: center
-
-    未设置小区域滤波器的点云
-
-.. figure:: images/remove_small_area_after.png
-    :align: center
-
-    使用小区域滤波器后的点云
-
-|
-
-
 平滑过滤
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -186,6 +153,70 @@
     使用平滑过滤后的点云
 
 |
+
+移除曝光过度区域
+~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: images/saturation_filter.png
+    :align: center
+
+|
+
+此滤镜可去除曝光过度的区域。当三个 RGB 通道之一超过 255 时, 它会删除该像素。
+通常, G(绿色)是第一个曝光过度的通道。使用滤镜时, 会自动选择 HDR 模式, 如果不需要, 可以手动取消。
+
+.. figure:: images/saturation_before.png
+    :align: center
+
+    红色区域为过曝区域
+
+.. figure:: images/saturation_after.png
+    :align: center
+
+    带饱和过滤器的点云
+
+|
+
+强度阈值
+~~~~~~~~~~~
+
+.. figure:: images/intensity_threshold.png
+    :align: center
+
+|
+
+设置强度阈值, 强度阈值对应着我们要过滤的平均RGB值。我们的强度阈值是基于从捕获的四个边缘投影的平均像素强度值。小于强度阈值的像素点会被去掉, 因为比较暗的地方信噪比低。
+
+例如. 当强度阈值为 20 时，最终图像中所有值 <= 20 的像素都将被过滤掉。
+
+.. figure:: images/intensity_before_and_after.png
+    :align: center
+
+|
+
+
+
+删除低质量滤波器
+~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: images/phase_quality_filter.png
+    :align: center
+
+|
+
+用于过滤掉低对比度质量的区域。可设置过滤强度, 强度越高, 去除的点云越多。
+如下图, 使用强度为0.3的相位质量滤波器后, 地板处低信噪比的区域就被过滤掉了。
+
+.. figure:: images/phase_quality_before.png
+    :align: center
+
+    未设置相位质量滤波的点云
+
+.. figure:: images/phase_quality_after.png
+    :align: center
+
+    使用强度为0.3的相位质量滤波后的点云
+
 
 填补空白
 ~~~~~~~~~~~~~~~~~~~~
@@ -218,29 +249,6 @@ fill order指填补的方向:
     :align: center
 
     空洞填补后的点云。
-
-|
-
-饱和滤镜
-~~~~~~~~~~~~~~~~~~~~
-
-.. figure:: images/saturation_filter.png
-    :align: center
-
-|
-
-此滤镜可去除曝光过度的区域。当三个 RGB 通道之一超过 255 时, 它会删除该像素。
-通常, G(绿色)是第一个曝光过度的通道。使用滤镜时, 会自动选择 HDR 模式, 如果不需要, 可以手动取消。
-
-.. figure:: images/saturation_before.png
-    :align: center
-
-    红色区域为过曝区域
-
-.. figure:: images/saturation_after.png
-    :align: center
-
-    带饱和过滤器的点云
 
 |
 
