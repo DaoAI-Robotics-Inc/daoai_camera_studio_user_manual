@@ -17,7 +17,10 @@ How can a robot pick an object?
 
        2. The end-effector coordinate system
 
-     - Heading row 1, column 2
+     - .. image:: images/tohand.png
+          :scale: 40%
+
+
 
    * - To be able to pick an object, the robot controller needs to 
    
@@ -30,7 +33,9 @@ How can a robot pick an object?
        sufficient to compute the joint angles that will move the 
        
        end-effector/gripper towards the object.
-     -
+     
+     - .. image:: images/tohand1.png
+          :scale: 40%
 
    * - Now, let’s assume that the pose of the object relative to 
    
@@ -38,10 +43,13 @@ How can a robot pick an object?
        
        into play.
 
-     - Row 2, column 2
+     - .. image:: images/tohand2.png
+          :scale: 40%
 
-DaoAI point clouds are given relative to the DaoAI camera’s coordinate system. The origin in this coordinate system is fixed at the middle of the DaoAI imager lens (internal 2D camera). A machine vision software can run detection and localization algorithms on this collection of data points. It can determine the pose of the object in DaoAI camera’s coordinate system ( 
-).
+DaoAI point clouds are given relative to the DaoAI camera’s coordinate system. The origin in this coordinate system is fixed at the middle of the DaoAI imager lens (internal 2D camera). A machine vision software can run detection and localization algorithms on this collection of data points. It can determine the pose of the object in DaoAI camera’s coordinate system (|1|).
+ 
+.. image:: images/together.png
+          :scale: 60%
 
 .. list-table:: 
    :widths: 20 20
@@ -56,13 +64,14 @@ DaoAI point clouds are given relative to the DaoAI camera’s coordinate system.
        
        to the robot base coordinate system.
 
-     -
+     - .. image:: images/tohand3.png
+          :scale: 40%
 
    * - The coordinate transformation that enables this is the 
    
        result of hand-eye calibration. For eye-to-hand systems, it 
        
-       is the pose of the camera relative to the robot’s base (
+       is the pose of the camera relative to the robot’s base ( |2|
 
        ) that is estimated with the hand-eye calibration.
        
@@ -74,9 +83,12 @@ DaoAI point clouds are given relative to the DaoAI camera’s coordinate system.
        
        by post-multiplying the pose of the camera relative to the 
        
-       robot, with the pose of the object relative to the camera:
+       robot, with the pose of the object relative to the camera: 
+      
+       |3|
 
-     - 
+     - .. image:: images/tohand4.png
+          :scale: 40%
     
 Eye-in-hand
 --------------------------
@@ -97,20 +109,205 @@ How can a robot pick an object?
        to the robot base coordinate system.
 
     
-     -
+     - .. image:: images/inhand.png
+          :scale: 40%
 
-   * - In this case, the transformation is done indirectly:
+   * - In this case, the transformation is done indirectly: |4|
 
        The pose of the end-effector relative to the base of the 
        
-       robot () is known, and is provided by the robot 
+       robot (|5|) is known, and is provided by the robot 
        
        controller. The pose of the camera relative to the end-
        
-       effector (), which is in this case constant, is 
+       effector (|6|), which is in this case constant, is 
        
        estimated from the hand-eye calibration.
 
-     - 
+     - .. image:: images/inhand1.png
+          :scale: 40%
 
-Now that we’ve defined the hand-eye calibration problem, let’s see :ref:`HHand-Eye Calibration Solution`.
+Now that we’ve defined the hand-eye calibration problem, let’s see :ref:`Hand-Eye Calibration Solution`.
+
+
+
+.. |1| raw:: html
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <msubsup>
+        <mi><b>H</b></mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>O</b></mi>
+          <mi><b>B</b></mi>
+          <mi><b>J</b></mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>C</b></mi>
+          <mi><b>A</b></mi>
+          <mi><b>M</b></mi>
+        </mrow>
+      </msubsup>
+    </math>
+
+.. |2| raw:: html
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <msubsup>
+        <mi><b>H</b></mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>C</b></mi>
+          <mi><b>A</b></mi>
+          <mi><b>M</b></mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>R</b></mi>
+          <mi><b>O</b></mi>
+          <mi><b>B</b></mi>
+        </mrow>
+      </msubsup>
+    </math>
+
+
+
+
+.. |3| raw:: html
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <msubsup>
+        <mi><b>H</b></mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>O</b></mi>
+          <mi><b>B</b></mi>
+          <mi><b>J</b></mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>R</b></mi>
+          <mi><b>O</b></mi>
+          <mi><b>B</b></mi>
+        </mrow>
+      </msubsup>
+      <mo>=</mo>
+      <msubsup>
+        <mi><b>H</b></mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>C</b></mi>
+          <mi><b>A</b></mi>
+          <mi><b>M</b></mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>R</b></mi>
+          <mi><b>O</b></mi>
+          <mi><b>B</b></mi>
+        </mrow>
+      </msubsup>
+      <mo>&#x22C5;</mo>
+      <msubsup>
+        <mi><b>H</b></mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>O</b></mi>
+          <mi><b>B</b></mi>
+          <mi><b>J</b></mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>C</b></mi>
+          <mi><b>A</b></mi>
+          <mi><b>M</b></mi>
+        </mrow>
+      </msubsup>
+    </math>
+
+
+.. |4| raw:: html
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <msubsup>
+        <mi><b>H</b></mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>O</b></mi>
+          <mi><b>B</b></mi>
+          <mi><b>J</b></mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>R</b></mi>
+          <mi><b>O</b></mi>
+          <mi><b>B</b></mi>
+        </mrow>
+      </msubsup>
+      <mo>=</mo>
+      <msubsup>
+        <mi><b>H</b></mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>E</b></mi>
+          <mi><b>E</b></mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>R</b></mi>
+          <mi><b>O</b></mi>
+          <mi><b>B</b></mi>
+        </mrow>
+      </msubsup>
+      <mo>&#x22C5;</mo>
+      <msubsup>
+        <mi><b>H</b></mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>C</b></mi>
+          <mi><b>A</b></mi>
+          <mi><b>M</b></mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>E</b></mi>
+          <mi><b>E</b></mi>
+        </mrow>
+      </msubsup>
+      <mo>&#x22C5;</mo>
+      <msubsup>
+        <mi><b>H</b></mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>O</b></mi>
+          <mi><b>B</b></mi>
+          <mi><b>J</b></mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>C</b></mi>
+          <mi><b>A</b></mi>
+          <mi><b>M</b></mi>
+        </mrow>
+      </msubsup>
+    </math>
+
+
+.. |6| raw:: html
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <msubsup>
+        <mi><b>H</b></mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>C</b></mi>
+          <mi><b>A</b></mi>
+          <mi><b>M</b></mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>E</b></mi>
+          <mi><b>E</b></mi>
+        
+        </mrow>
+      </msubsup>
+    </math>
+
+
+.. |5| raw:: html
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <msubsup>
+        <mi><b>H</b></mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>E</b></mi>
+          <mi><b>E</b></mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>R</b></mi>
+          <mi><b>O</b></mi>
+          <mi><b>B</b></mi>
+        </mrow>
+      </msubsup>
+    </math>

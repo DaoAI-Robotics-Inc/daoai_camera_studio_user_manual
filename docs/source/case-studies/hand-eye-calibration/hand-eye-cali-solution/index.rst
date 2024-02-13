@@ -18,73 +18,84 @@ How to solve the eye-to-hand calibration?
        
        next part of this tutorial.
 
-     - Heading row 1, column 2
+     - .. image:: images/hand1.png
+          :scale: 40%
     
    * - The calibration object is of known geometry. Thus, it can 
    
        be detected from the camera image. Further, its pose 
        
-       relative to the camera () can be estimated.
-     -
+       relative to the camera (|1|) can be estimated.
+     
+     - .. image:: images/hand2.png
+          :scale: 40%
      
    * - To calculate the relative pose between the camera and 
    
-       the robot (), we somehow need to close the circle 
+       the robot (|2|), we somehow need to close the circle 
        
        between the poses.
 
-     - Row 2, column 2
+     - .. image:: images/hand3.png
+          :scale: 40%
      
-   * - The pose of the end-effector relative to the robot base (
+   * - The pose of the end-effector relative to the robot base (|3|
 
        ) is also known, provided by the robot controller.
 
-     - Row 2, column 2
+     - .. image:: images/hand4.png
+          :scale: 40%
 
    * - The missing pose that will close the pose circle is the 
    
-       pose of the object relative to the end-effector ().
+       pose of the object relative to the end-effector (|4|).
 
-     - Row 2, column 2
+     - .. image:: images/hand5.png
+          :scale: 40%
 
    * - To get ‘rid’ of this pose or ‘fix’ it, we can mount the 
    
        calibration object onto the end-effector.
 
-     - Row 2, column 2
+     - .. image:: images/tohand.png
+          :scale: 40%
 
    * - Now it seems we have everything to close the pose circle 
    
        and thus calculate the pose of the camera relative to the 
        
-       robot (). However, it is not that simple.
+       robot (|5|). However, it is not that simple.
 
-     - Row 2, column 2
+     - .. image:: images/tohand1.png
+          :scale: 40%
+
 
    * - This is because we haven’t really got ‘rid’ of the relative 
    
-       pose (). However, we have made it constant. Now, 
+       pose (|4|). However, we have made it constant. Now, |4|
  
        will not change during the motion of the robot.
 
        This enables us to move a robot to a set of different 
        
-       postures. For each one, can be expressed as a 
+       postures. For each one, |5| can be expressed as a 
        
        function of the remaining two variable, known poses:
 
-            1. Robot to end-effector 
+            1. Robot to end-effector |3|
 
-            2. Camera to calibration object and one 
+            2. Camera to calibration object |1| and one 
             
-               constant, unknown pose.
+               constant, unknown pose |4|.
 
        With this set of equations, it is possible to utilize an 
        
        optimization technique, such as Tsai’s method, to 
        
-       calculate the desired pose .
-     - Row 2, column 2
+       calculate the desired pose |5|.
+     - .. image:: images/tohand2.png
+          :scale: 40%
+
 
 
 Eye-in-hand
@@ -102,25 +113,151 @@ How to solve the eye-in-hand calibration?
        
        the robot base is constant during the robot motion. 
 
-     -  Row 2, column 2
+     -  .. image:: images/inhand1.png
+          :scale: 40%
 
    * - This allows us to express the pose of the camera relative 
    
-       to the end-effector () as a function of two variable, 
+       to the end-effector (|6|) as a function of two variable, 
        
        known poses:
 
-            1. Robot to end-effector 
+            1. Robot to end-effector |3|
 
-            2. Camera to calibration object and one 
+            2. Camera to calibration object |1| and one 
             
-               constant, unknown pose.
+               constant, unknown pose |7|.
 
        Just as in the eye-to-hand configuration case, we can 
        
-       solve for.
+       solve for |6|.
 
-     - Row 2, column 2
+     - .. image:: images/inhand2.png
+          :scale: 40%
+
+Now that we’ve explained how to solve the hand-eye calibration problem, let’s see learn about :ref:`Calibration Object`.
 
 
+.. |1| raw:: html
+    
+    <math xmlns="http://www.w3.org/1998/Math/MathML">      
+      <msubsup>
+        <mi><b>H</b></mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>O</b></mi>
+          <mi><b>B</b></mi>
+          <mi><b>J</b></mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>C</b></mi>
+          <mi><b>A</b></mi>
+          <mi><b>M</b></mi>
+        </mrow>  
+      </msubsup>     
+    </math>
+    
 
+.. |2| raw:: html
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <msubsup>
+        <mi><b>H</b></mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>C</b></mi>
+          <mi><b>A</b></mi>
+          <mi><b>M</b></mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>R</b></mi>
+          <mi><b>O</b></mi>
+          <mi><b>B</b></mi>
+        </mrow>
+      </msubsup>
+    </math>
+
+.. |3| raw:: html
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <msubsup>
+        <mi><b>H</b></mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>E</b></mi>
+          <mi><b>E</b></mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>R</b></mi>
+          <mi><b>O</b></mi>
+          <mi><b>B</b></mi>
+        </mrow>
+      </msubsup>
+    </math>
+
+.. |4| raw:: html
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <msubsup>
+        <mi><b>H</b></mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>O</b></mi>
+          <mi><b>B</b></mi>
+          <mi><b>J</b></mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>E</b></mi>
+          <mi><b>E</b></mi>
+        </mrow>
+      </msubsup>
+    </math>
+
+.. |5| raw:: html
+    
+    <math xmlns="http://www.w3.org/1998/Math/MathML">      
+      <msubsup>
+        <mi><b>H</b></mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>C</b></mi>
+          <mi><b>A</b></mi>
+          <mi><b>M</b></mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>R</b></mi>
+          <mi><b>O</b></mi>
+          <mi><b>B</b></mi>
+        </mrow>  
+      </msubsup>     
+    </math>
+
+.. |6| raw:: html
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <msubsup>
+        <mi><b>H</b></mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>C</b></mi>
+          <mi><b>A</b></mi>
+          <mi><b>M</b></mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>E</b></mi>
+          <mi><b>E</b></mi>
+        </mrow>
+      </msubsup>
+    </math>
+
+.. |7| raw:: html
+    
+    <math xmlns="http://www.w3.org/1998/Math/MathML">      
+      <msubsup>
+        <mi><b>H</b></mi>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>O</b></mi>
+          <mi><b>B</b></mi>
+          <mi><b>J</b></mi>
+        </mrow>
+        <mrow data-mjx-texclass="ORD">
+          <mi><b>R</b></mi>
+          <mi><b>O</b></mi>
+          <mi><b>B</b></mi>
+        </mrow>  
+      </msubsup>     
+    </math>

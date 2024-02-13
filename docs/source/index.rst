@@ -40,7 +40,7 @@ Our DaoAI Camera Studio application is the supporting graphical user interface s
    case-studies/evaluate-accuracy/index
    case-studies/infield-calibration/index
    case-studies/use-multiple-daoai-cameras/index
-   .. case-studies/hand-eye-calibration/index
+   case-studies/hand-eye-calibration/index
 
 .. toctree::
    :maxdepth: 2
