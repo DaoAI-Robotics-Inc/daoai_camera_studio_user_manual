@@ -13,16 +13,14 @@ var rel_precision_off20 = document.getElementById("rel-precision-off20");
 const CAMERA_MAP = {
     0 : "BP AMR",
     1 : "BP AMR-GPU",
-    2 : "BP-S",
-    3 : "BP-M",
-    4 : "BP-L",
-    5 : "BP-Laser",
+    2 : "BP-M",
+    3 : "BP-L",
+    4 : "BP-Laser",
 };
 
 const CAMERA_FOCAL_LENGTH = {
     "BP AMR" : 680,
     "BP AMR-GPU" : 680,
-    "BP-S" : 680,
     "BP-M" : 1100,
     "BP-L" : 1550,
     "BP-Laser" : 1550,
@@ -31,7 +29,6 @@ const CAMERA_FOCAL_LENGTH = {
 const CAMERA_MIN_WORKING_DISTANCE = {
     "BP AMR" : 500,
     "BP AMR-GPU" : 500,
-    "BP-S" : 500,
     "BP-M" : 800,
     "BP-L" : 1000,
     "BP-Laser" : 1000,
@@ -40,7 +37,6 @@ const CAMERA_MIN_WORKING_DISTANCE = {
 const CAMERA_MAX_WORKING_DISTANCE = {
     "BP AMR" : 1000,
     "BP AMR-GPU" : 1000,
-    "BP-S" : 1000,
     "BP-M" : 1800,
     "BP-L" : 3000,
     "BP-Laser" : 3000,
@@ -67,7 +63,6 @@ const CAMERA_FOV_LENGTH = {
 const CAMERA_SPATIAL_RESOLUTION = {
     "BP AMR" : [0.29,0.35,0.40,0.46,0.52,0.58],
     "BP AMR-GPU" : [0.29,0.35,0.40,0.46,0.52,0.58],
-    "BP-S" : [0.23,0.28,0.33,0.37,0.41,0.47],
     "BP-M" : [0.29,0.33,0.37,0.40,0.44,0.47,0.51,0.55,0.58,0.62,0.66],
     "BP-L" : [0.47,0.52,0.56,0.61,0.66,0.70,0.75,0.80,0.84,0.89,0.94,0.99,1.03,1.08,1.13,1.17,1.22,1.27,1.31,1.36,1.41],
     "BP-Laser" : [0.56, 0.62, 0.68, 0.73, 0.79, 0.85, 0.9, 0.96, 1.02, 1.07, 1.13, 1.19, 1.24, 1.3, 1.36, 1.41, 1.47, 1.52, 1.58, 1.64, 1.69],
@@ -76,7 +71,6 @@ const CAMERA_SPATIAL_RESOLUTION = {
 const CAMERA_PRECISION = {
     "BP AMR" : [0.07,0.07,0.06,0.07,0.10,0.17],
     "BP AMR-GPU" : [0.07,0.07,0.06,0.07,0.10,0.17],
-    "BP-S" : [0.07,0.07,0.06,0.07,0.10,0.17], //using amr data, need to update after
     "BP-M" : [0.03,0.04,0.05,0.08,0.09,0.13,0.17,0.22,0.26,0.32,0.38],
     "BP-L" : [0.13,0.15,0.17,0.15,0.12,0.13,0.10,0.05,0.06,0.12,0.12,0.19,0.2,0.21,0.22,0.22,0.31,0.32,0.33,0.43,0.53],
     "BP-Laser" : [],
@@ -85,7 +79,6 @@ const CAMERA_PRECISION = {
 const CAMERA_PRECISION_OFF20 = {
     "BP AMR" : [0.22,0.53,0.69,0.86,1.03,1.22],
     "BP AMR-GPU" : [0.22,0.53,0.69,0.86,1.03,1.22],
-    "BP-S" : [0.22,0.53,0.69,0.86,1.03,1.22], //using amr data, need to update after
     "BP-M" : [0.03,0.04,0.07,0.10,0.12,0.16,0.20,0.25,0.30,0.36,0.42],
     "BP-L" : [0.40,0.45,0.51,0.52,0.53,0.58,0.58,0.57,0.61,0.71,0.74,0.84,0.87,0.90,0.94,0.97,1.08,1.12,1.16,1.28,1.14],
     "BP-Laser" : [],
@@ -94,7 +87,6 @@ const CAMERA_PRECISION_OFF20 = {
 const CAMERA_PRECISION_PERCENT = {
     "BP AMR" : [0.05,0.04,0.03,0.03,0.04,0.06],
     "BP AMR-GPU" : [0.05,0.04,0.03,0.03,0.04,0.06],
-    "BP-S" : [0.05,0.04,0.03,0.03,0.04,0.06], //using amr data, need to update after
     "BP-M" : [0.02,0.02,0.02,0.03,0.03,0.04,0.05,0.06,0.07,0.08,0.09],
     "BP-L" : [0.05,0.05,0.05,0.04,0.03,0.03,0.02,0.01,0.01,0.02,0.02,0.03,0.03,0.03,0.03,0.03,0.04,0.04,0.04,0.05,0.06],
     "BP-Laser" : [],
@@ -103,7 +95,6 @@ const CAMERA_PRECISION_PERCENT = {
 const CAMERA_PRECISION_OFF20_PERCENT = {
     "BP AMR" : [0.16,0.31,0.37,0.40,0.43],
     "BP AMR-GPU" : [0.16,0.31,0.37,0.40,0.43],
-    "BP-S" : [0.16,0.31,0.37,0.40,0.43], //using amr data, need to update after
     "BP-M" : [0.02,0.02,0.03,0.04,0.04,0.05,0.06,0.07,0.08,0.09,0.10],
     "BP-L" : [0.15,0.15,0.15,0.14,0.13,0.13,0.12,0.11,0.11,0.12,0.12,0.13,0.13,0.13,0.13,0.13,0.14,0.14,0.14,0.15,0.16],
     "BP-Laser" : [],
@@ -397,7 +388,7 @@ trackbar.addEventListener("input", function() {
 
 // Initialiazation
 var input = document.getElementsByClassName("camera-model-checkbox");
-input[4].checked = true; // Set default camera
+input[3].checked = true; // Set default camera
 updateInputBar();
 
 var inputs = document.getElementsByClassName("camera-model");
